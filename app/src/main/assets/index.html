@@ -184,7 +184,7 @@ function importBackup(){
   route();toastMessage(allSaved?t("backupRestored"):t("backupFail"));
  }catch(e){toastMessage(t("backupError"))}
 }
-function quickSuggestions(){const words=state.lang==="ru"?["Инсульт","Не дышит","Порез","Ушиб"]:["Stroke","Not breathing","Cut","Sprain"];return '<div class="search-examples">'+words.map(v=>'<button class="search-example" data-search="'+esc(v)+'">'+esc(v)+'</button>').join("")+'</div>'}
+function quickSuggestions(){const words=state.lang==="ru"?["Инсульт","Не дышит","Порез","Растяжение"]:["Stroke","Not breathing","Cut","Sprain"];return '<div class="search-examples">'+words.map(v=>'<button class="search-example" data-search="'+esc(v)+'">'+esc(v)+'</button>').join("")+'</div>'}
 
 function renderHome(){
  const priority=["cpr","stroke","bleeding","choking","heart","anaphylaxis"].map(id=>PAGES.find(p=>p.id===id)).filter(Boolean);
