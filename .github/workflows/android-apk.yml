@@ -1,0 +1,70 @@
+name: PULS Build APK and emulator install test
+on:
+  workflow_dispatch:
+  push:
+    branches: [qa/bootstrap]
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restore offline medical reference assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          for i in 1 2 3; do
+            FILE="PULS_offline_assets_part_${i}.zip"
+            test -s "$FILE" || { echo "::error::Missing $FILE — upload all 3 files to qa/bootstrap"; exit 1; }
+            unzip -q -o "$FILE" -d .
+          done
+      - name: Validate bilingual content and offline media
+        run: python3 tools/check_offline_content.py
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+      - name: Install required Android SDK
+        run: sdkmanager 'platforms;android-36' 'build-tools;35.0.0' 'platform-tools'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.13'
+      - name: Build debug APK
+        run: gradle --no-daemon :app:assembleDebug --stacktrace
+      - name: Confirm APK produced
+        run: |
+          test -s app/build/outputs/apk/debug/app-debug.apk
+          sha256sum app/build/outputs/apk/debug/app-debug.apk
+      - name: Install and launch in Android emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          emulator-options: -no-snapshot -no-window -no-audio -gpu swiftshader_indirect
+          disable-animations: true
+          script: |
+            adb install -r app/build/outputs/apk/debug/app-debug.apk
+            adb shell am start -W -n com.puls.firstaid.rebuild/.MainActivity
+            sleep 12
+            adb shell pidof com.puls.firstaid.rebuild
+            adb logcat -d -s PULS_QA:I -v brief | tee puls-launch-log.txt
+            grep -q "UI_READY:true" puls-launch-log.txt
+      - name: Save install-tested APK
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: PULS-Android-Install-Tested-APK
+          path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+      - name: Save launch diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: PULS-Android-Launch-Log
+          path: puls-launch-log.txt
+          if-no-files-found: ignore

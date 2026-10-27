@@ -1,0 +1,7 @@
+.gradle/
+**/build/
+local.properties
+*.iml
+.DS_Store
+.idea/
+# Keep the three deliberate offline content archives in the repository
