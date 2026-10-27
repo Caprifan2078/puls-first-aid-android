@@ -1,20 +1,9 @@
-# ПУЛЬС — QA сборка Android
+# ПУЛЬС: Android APK
 
-**Статус:** подготовлена настоящая сборка Android Gradle Plugin, но **APK ещё не собран и не подтверждён**. Репозиторий публичный: никаких личных данных загружать нельзя.
+`qa/bootstrap` builds an independent lightweight offline Android application with 16 first-aid topics, two languages and symptom search. It is **not** the full offline-media edition and **not medically certified**.
 
-## Как получить APK с телефона
+The GitHub Actions workflow assembles a real debug APK and confirms installation, foreground launch and WebView rendering on an Android 35 emulator before publishing the APK artifact `PULS-Android-APK-Tested`.
 
-1. Откройте ветку `qa/bootstrap`.
-2. Загрузите в **корень этой ветки** три файла:
-   - `PULS_offline_assets_part_1.zip`
-   - `PULS_offline_assets_part_2.zip`
-   - `PULS_offline_assets_part_3.zip`
-   Архивы содержат только файлы приложения. Не нужно их распаковывать.
-3. GitHub Actions `PULS Build APK and emulator install test` запускается при push в ветку `qa/bootstrap`. Для ручного запуска используйте `Actions` → `Run workflow` и выберите `qa/bootstrap`.
-4. **Только при зелёном статусе** будет опубликован артефакт `PULS-Android-Install-Tested-APK` с файлом `app-debug.apk`.
+If all three offline media ZIP archives are uploaded to this branch, the workflow instead restores the full existing content and checks its integrity before compiling.
 
-APK автоматически подписан debug-ключом GitHub Actions, имеет новый идентификатор `com.puls.firstaid.rebuild` и устанавливается отдельно от старых версий. **Не удаляйте старое приложение и не рассчитывайте на автоматический перенос данных.**
-
-Результат теста подтверждает лишь установку и запуск на эмуляторе API 35, не медицинскую достоверность инструкций и не работу на любом телефоне.
-
-Материалы в приложении — учебный справочник; перед применением критически важных алгоритмов требуется независимая медицинская экспертиза.
+Don't uninstall older PULS versions: this build uses a separate package name and keeps no user data shared with them.
