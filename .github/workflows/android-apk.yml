@@ -62,6 +62,13 @@ jobs:
         run: |
           test -s app/build/outputs/apk/debug/app-debug.apk
           sha256sum app/build/outputs/apk/debug/app-debug.apk
+      - name: Verify signed Android package
+        run: |
+          set -euo pipefail
+          APK="app/build/outputs/apk/debug/app-debug.apk"
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose "$APK"
+          "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "$APK" | head -n 8
+          unzip -t "$APK" | tail -n 1
       - name: Preserve compiled APK regardless of emulator outcome
         uses: actions/upload-artifact@v4
         with:
@@ -84,9 +91,9 @@ jobs:
           script: |
             set -e
             adb install -r app/build/outputs/apk/debug/app-debug.apk
-            adb shell am start -W -n com.puls.firstaid.rebuild.ui2/com.puls.firstaid.rebuild.MainActivity
+            adb shell am start -W -n com.puls.firstaid.rebuild.ui82/com.puls.firstaid.rebuild.MainActivity
             sleep 15
-            adb shell pidof com.puls.firstaid.rebuild.ui2
+            adb shell pidof com.puls.firstaid.rebuild.ui82
             adb logcat -d -s PULS_QA:I -v brief > puls-launch-log.txt
             cat puls-launch-log.txt
             grep -q "UI_READY:true" puls-launch-log.txt

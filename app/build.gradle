@@ -3,11 +3,11 @@ android {
     namespace 'com.puls.firstaid.rebuild'
     compileSdk 36
     defaultConfig {
-        applicationId 'com.puls.firstaid.rebuild.ui81'
+        applicationId 'com.puls.firstaid.rebuild.ui82'
         minSdk 26
         targetSdk 36
-        versionCode 3
-        versionName '8.1-design-preview'
+        versionCode 4
+        versionName '8.2-usable-offline'
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
