@@ -1,9 +1,9 @@
-# ПУЛЬС: Android APK
+# ПУЛЬС — Android UI 2.0
 
-`qa/bootstrap` builds an independent lightweight offline Android application with 16 first-aid topics, two languages and symptom search. It is **not** the full offline-media edition and **not medically certified**.
+Обновлённая облегчённая сборка, 41 инструкций по категориям, 5 вкладок: Главная, SOS, Справочник, Аптечки, Ещё. Избранное, три чек-листа, язык RU/EN, настройки экстренного номера и темы.
 
-The GitHub Actions workflow assembles a real debug APK and confirms installation, foreground launch and WebView rendering on an Android 35 emulator before publishing the APK artifact `PULS-Android-APK-Tested`.
+Приложение полностью работает без сети и не запрашивает разрешений на интернет/доступ к персональным данным. Все настройки остаются в WebView localStorage. Сохраняет отдельный Android ID `com.puls.firstaid.rebuild`; не удаляйте прежние версии и не ожидайте миграции их данных.
 
-If all three offline media ZIP archives are uploaded to this branch, the workflow instead restores the full existing content and checks its integrity before compiling.
+Сборка и подписывание выполняются GitHub Actions → `qa/bootstrap`. После компиляции публикуется артефакт `PULS-Android-Compiled-APK`. Тест эмулятора может не пройти по причине проблем с загрузкой виртуального Android; отсутствие теста не равно проблеме с APK.
 
-Don't uninstall older PULS versions: this build uses a separate package name and keeps no user data shared with them.
+⚠ Материалы образовательные, не прошли независимую медицинскую экспертизу. При опасности для жизни вызывайте местную экстренную помощь.
