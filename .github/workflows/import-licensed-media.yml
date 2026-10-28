@@ -19,8 +19,6 @@ jobs:
           import hashlib,json,pathlib,time,urllib.parse,urllib.request,subprocess,re
           # Exact Wikimedia Commons file pages manually checked on 29 Oct 2026.
           entries=[
-            ("back-blows.jpg","Back blows (back slaps) against choking for adult people.jpg","CC BY-SA 4.0","Trakotako","sos/choke"),
-            ("abdominal-thrusts.jpg","Abdominal thrusts against choking.jpg","Public domain","U.S. Army Medical Department Center and School","sos/choke"),
             ("chest-compression-hand-placement.jpg","Chest-compression-hand-placement.jpg","CC0 1.0","Another-anon-artist-234","sos/cpr"),
             ("recovery-position.jpg","Recovery position.jpg","CC BY-SA 3.0 FR","Rama","sos/unconscious"),
             ("direct-pressure.jpg","Direct-pressure-and-elevation.jpg","CC BY-SA 4.0","Mike6271","sos/bleeding"),
@@ -54,7 +52,7 @@ jobs:
             except Exception as e:
               failed.append({"file":filename,"error":str(e)})
               print("FAILED",name,repr(e),flush=True)
-            time.sleep(0.3)
+            time.sleep(12)
           # Keep original video plus Android-compatible conversion when possible.
           vid=out/"abdominal-thrusts.webm"
           if vid.exists():
