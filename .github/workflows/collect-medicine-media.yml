@@ -1,0 +1,102 @@
+name: QA collect verified original medicine and first-aid media
+on:
+  push:
+    branches: [qa/puls-real-media-20261029]
+    paths: [.github/workflows/collect-medicine-media.yml]
+permissions:
+  contents: read
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - name: Collect originals with API metadata and strict file validation
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p media
+          cat > /tmp/collect.py <<'PY'
+          import urllib.request,urllib.parse,urllib.error,json,time,re,pathlib,hashlib,subprocess
+          out=pathlib.Path("media")
+          candidates=[
+          ("cpr-training", "First aid Chest compressions Herzdruckmassage 01.JPG","sos/cpr"),
+          ("tourniquet-demo","U.S. Army Pfc. Sylvia Lopez demonstrates how to apply a tourniquet during training.jpg","sos/bleeding"),
+          ("salbutamol-inhaler","Salbutamol2.JPG","medicine/salbutamol"),
+          ("salbutamol-nebules","Salbutamol nebules for inhalation.jpg","medicine/salbutamol"),
+          ("cetirizine-example","Cetirizine - by Danny S.jpg","medicine/cetirizine"),
+          ("loratadine-tablets","Comprimidos de Loratadina.jpg","medicine/loratadine"),
+          ("omeprazole-capsules","Omeprazol Activis capsules.jpg","medicine/omeprazole"),
+          ("ibuprofen-tablets","Ibuprofen tablets in palm of hand.jpg","medicine/ibuprofen"),
+          ("aspirin-example","Aspirin (1).jpg","medicine/aspirin"),
+          ("ors-sachet","Oral rehydration salts (ORS) - Packet.jpg","medicine/oral-rehydration"),
+          ("diclofenac-gel","Diclofenac Schmerzgel 1.jpg","medicine/diclofenac"),
+          ("adrenaline-device","Adrenalina autoinyector1.JPG","medicine/adrenaline"),
+          ("cpr-video","CPR.webm","sos/cpr"),
+          ("autoinjector-video","Auvi-Q Injection.webm","sos/allergy"),
+          ]
+          meta=[]; failed=[]
+          useragent="PULS-FirstAid-QA-Media/0.2 (https://github.com/Caprifan2078/puls-first-aid-android; educational fair attribution)"
+          for slug,fn,topic in candidates:
+            title="File:"+fn
+            page="https://commons.wikimedia.org/wiki/"+urllib.parse.quote(title.replace(" ","_"),safe=":/()+")
+            args={"action":"query","format":"json","prop":"imageinfo","iiprop":"url|size|mime|extmetadata","iiurlwidth":"1200","titles":title}
+            url="https://commons.wikimedia.org/w/api.php?"+urllib.parse.urlencode(args)
+            try:
+              def req(u):
+                return urllib.request.Request(u,headers={"User-Agent":useragent,"Accept":"application/json, image/*, video/*;q=0.9","Referer":"https://commons.wikimedia.org/"})
+              info=None
+              for trial in range(3):
+                try:
+                  with urllib.request.urlopen(req(url),timeout=40) as f: data=json.load(f)
+                  info=next(iter(data["query"]["pages"].values()))["imageinfo"][0];break
+                except urllib.error.HTTPError as e:
+                  if e.code not in (429,503):raise
+                  time.sleep(5*(trial+1))
+              if info is None: raise RuntimeError("rate_limited")
+              md=info.get("extmetadata",{})
+              lic=re.sub(r"<[^>]+>","",md.get("LicenseShortName",{}).get("value","")).strip()
+              ok=(lic.startswith("CC BY ") or lic.startswith("CC BY-SA ") or lic.startswith("CC0") or lic.lower().startswith("public domain") or lic=="PD")
+              if not ok:raise RuntimeError("unapproved_license:"+lic)
+              mim=info.get("mime","")
+              isvideo=fn.lower().endswith(".webm")
+              if isvideo and mim not in ("video/webm","video/x-webm"):raise RuntimeError("unexpected_mime:"+mim)
+              if not isvideo and mim!="image/jpeg":raise RuntimeError("unexpected_mime:"+mim)
+              link=info.get("thumburl") if not isvideo else info.get("url")
+              if not link:link=info["url"]
+              # 14 MB limit on originals; webm can be larger but ffmpeg output limited separately
+              maxbytes=17_000_000
+              with urllib.request.urlopen(req(link),timeout=85) as f:b=f.read(maxbytes+1)
+              if len(b)>maxbytes or len(b)<3000:raise RuntimeError("bad_size:"+str(len(b)))
+              if isvideo:
+                if b[:4]!=bytes.fromhex("1a45dfa3"):raise RuntimeError("webm_magic_failed")
+              else:
+                if b[:3]!=bytes.fromhex("ffd8ff"):raise RuntimeError("jpeg_magic_failed")
+              ext=".webm" if isvideo else ".jpg"
+              local=slug+ext
+              (out/local).write_bytes(b)
+              author=re.sub(r"<[^>]+>","",md.get("Artist",{}).get("value","")).strip()[:320]
+              rec={"file":local,"commons_title":fn,"page":page,"author":author,"license":lic,"license_url":md.get("LicenseUrl",{}).get("value",""),"sha256":hashlib.sha256(b).hexdigest(),"size":len(b),"mime":mim,"topic":topic,"download_variant":"thumbnail up to 1200px" if not isvideo and link!=info["url"] else "original","clinical_approved":False}
+              meta.append(rec)
+              if isvideo:
+                target=out/(slug+".mp4")
+                p=subprocess.run(["ffmpeg","-nostdin","-hide_banner","-loglevel","error","-y","-i",str(out/local),"-an","-vf","scale='min(854,iw)':-2","-c:v","libx264","-preset","veryfast","-crf","27","-pix_fmt","yuv420p","-movflags","+faststart",str(target)],capture_output=True,text=True,timeout=90)
+                if p.returncode==0 and target.exists() and target.stat().st_size>12000:
+                  bb=target.read_bytes()
+                  meta.append({"file":target.name,"derived_from":local,"page":page,"author":author,"license":lic,"license_url":rec["license_url"],"sha256":hashlib.sha256(bb).hexdigest(),"size":len(bb),"mime":"video/mp4","topic":topic,"clinical_approved":False,"modification":"Removed audio, downscaled and transcoded H264 for offline Android"})
+                else:failed.append({"file":target.name,"error":p.stderr[-800:]})
+              print("OK",local,len(b),lic,flush=True)
+            except Exception as e:
+              failed.append({"file":fn,"error":str(e)});print("FAILED",fn,str(e),flush=True)
+            time.sleep(2)
+          (out/"manifest.json").write_text(json.dumps({"downloads":meta,"failed":failed,"notes":["Only licenses from Commons metadata accepted.","No clinical approval implied.","CC BY-SA credits and adapted-file conditions must be preserved."]},indent=2,ensure_ascii=False),"utf-8")
+          print("TOTAL",len(meta),"FAILED",len(failed),flush=True)
+          if not meta:raise SystemExit("No files retrieved")
+          PY
+          python3 /tmp/collect.py
+      - name: Export verified media bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: PULS-Real-Medicine-SOS-Media-20261029
+          path: media/
+          if-no-files-found: warn
