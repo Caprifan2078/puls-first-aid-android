@@ -1,0 +1,77 @@
+name: Curate original freely licensed first-aid media (QA only)
+on:
+  push:
+    branches: [qa/puls-real-media-20261029]
+    paths: [.github/workflows/import-licensed-media.yml]
+permissions:
+  contents: read
+jobs:
+  curate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Retrieve Commons originals with verified licenses and checksums
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p verified_media
+          cat > /tmp/puls_fetch.py <<'PY'
+          import hashlib,json,pathlib,time,urllib.parse,urllib.request,subprocess,re
+          # Exact Wikimedia Commons file pages manually checked on 29 Oct 2026.
+          entries=[
+            ("back-blows.jpg","Back blows (back slaps) against choking for adult people.jpg","CC BY-SA 4.0","Trakotako","sos/choke"),
+            ("abdominal-thrusts.jpg","Abdominal thrusts against choking.jpg","Public domain","U.S. Army Medical Department Center and School","sos/choke"),
+            ("chest-compression-hand-placement.jpg","Chest-compression-hand-placement.jpg","CC0 1.0","Another-anon-artist-234","sos/cpr"),
+            ("recovery-position.jpg","Recovery position.jpg","CC BY-SA 3.0 FR","Rama","sos/unconscious"),
+            ("direct-pressure.jpg","Direct-pressure-and-elevation.jpg","CC BY-SA 4.0","Mike6271","sos/bleeding"),
+            ("paracetamol.jpg","Paracétamol.JPG","Public domain","PulkoCitron","medicine/paracetamol"),
+            ("abdominal-thrusts.webm","VideoOfAbdoThrustsWM.webm","CC BY-SA 4.0","Doc James","sos/choke"),
+          ]
+          allowed=("CC BY-SA","CC0","Public domain","Public Domain")
+          out=pathlib.Path("verified_media"); result=[]; failed=[]
+          for name,filename,license_,author,topic in entries:
+            title="File:"+filename
+            source="https://commons.wikimedia.org/wiki/"+urllib.parse.quote(title.replace(" ","_"),safe=":/()")
+            url="https://commons.wikimedia.org/w/api.php?"+urllib.parse.urlencode({"action":"query","format":"json","prop":"imageinfo","iiprop":"url|extmetadata","titles":title})
+            try:
+              req=urllib.request.Request(url,headers={"User-Agent":"PULS-SourceMediaQA/0.1 (educational source verification; contact: github.com/Caprifan2078/puls-first-aid-android)","Accept":"application/json"})
+              with urllib.request.urlopen(req,timeout=25) as f: obj=json.load(f)
+              page=next(iter(obj["query"]["pages"].values()))
+              info=page["imageinfo"][0]
+              actual=re.sub(r"<[^>]+>","",info.get("extmetadata",{}).get("LicenseShortName",{}).get("value",""))
+              if not any(s.lower() in actual.lower() for s in allowed):
+                raise RuntimeError("License not on allowlist: "+repr(actual))
+              original=info["url"]
+              req2=urllib.request.Request(original,headers={"User-Agent":"PULS-SourceMediaQA/0.1 (educational QA, noncommercial testing)","Referer":"https://commons.wikimedia.org/"})
+              with urllib.request.urlopen(req2,timeout=65) as f:
+                data=f.read(20_000_001)
+              if len(data)>20_000_000 or len(data)<2_000: raise RuntimeError("invalid size "+str(len(data)))
+              expected=data[:3]==bytes.fromhex("ffd8ff") if name.endswith(".jpg") else data[:4]==bytes.fromhex("1a45dfa3")
+              if not expected: raise RuntimeError("invalid JPEG/WebM signature")
+              (out/name).write_bytes(data)
+              rec={"local":name,"file":filename,"source":source,"author":author,"license_page_checked":license_,"license_api":actual,"original_url":original,"sha256":hashlib.sha256(data).hexdigest(),"bytes":len(data),"topic":topic,"clinically_approved":False}
+              result.append(rec);print("DOWNLOADED",name,len(data),actual,flush=True)
+            except Exception as e:
+              failed.append({"file":filename,"error":str(e)})
+              print("FAILED",name,repr(e),flush=True)
+            time.sleep(0.3)
+          # Keep original video plus Android-compatible conversion when possible.
+          vid=out/"abdominal-thrusts.webm"
+          if vid.exists():
+            proc=subprocess.run(["ffmpeg","-nostdin","-hide_banner","-loglevel","error","-y","-i",str(vid),"-an","-c:v","libx264","-preset","veryfast","-crf","26","-pix_fmt","yuv420p","-movflags","+faststart",str(out/"abdominal-thrusts.mp4")],capture_output=True,text=True)
+            if proc.returncode==0 and (out/"abdominal-thrusts.mp4").stat().st_size>10000:
+              b=(out/"abdominal-thrusts.mp4").read_bytes()
+              result.append({"local":"abdominal-thrusts.mp4","derived_from":"abdominal-thrusts.webm","source":next(e["source"] for e in result if e["local"]=="abdominal-thrusts.webm"),"author":"Doc James","license_page_checked":"CC BY-SA 4.0","modification":"Transcoded VP8/WebM to H264/MP4 for Android playback","sha256":hashlib.sha256(b).hexdigest(),"bytes":len(b),"topic":"sos/choke","clinically_approved":False})
+            else:failed.append({"file":"abdominal-thrusts.mp4","error":proc.stderr[:1500]})
+          (out/"manifest.json").write_text(json.dumps({"retrieved":result,"failed":failed,"notice":"No image is clinically approved. Check technique and legal requirements before publishing. Attribution required for CC BY-SA."},indent=2,ensure_ascii=False))
+          print("SUCCESS",len(result),"FAILED",len(failed),flush=True)
+          if not result: raise SystemExit("No media could be downloaded")
+          PY
+          python3 /tmp/puls_fetch.py
+      - name: Upload original files and license verification
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: PULS-Wikimedia-Original-Media-QA
+          path: verified_media/
+          if-no-files-found: warn
