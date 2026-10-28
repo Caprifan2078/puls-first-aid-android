@@ -1,0 +1,57 @@
+name: PULS curated real images 9.8.5 QA
+on:
+  push:
+    branches: [qa/puls-real-media-20261029]
+    paths: [.github/workflows/curated-firstaid-985.yml]
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Download Commons original samples with API license and image checks
+        run: |
+          python -m pip install -q pillow
+          mkdir -p curated
+          cat > /tmp/puls_985.py <<'PY'
+          import urllib.request,urllib.parse,urllib.error,json,re,time,pathlib,hashlib
+          from PIL import Image
+          out=pathlib.Path("curated");out.mkdir(exist_ok=True)
+          items=[["frostbite-example","First-degree-frostbite.png","sos/frostbite"],["burn-example","1Veertje hand-burn-d06.jpg","sos/burn"],["ankle-rehab","Rehabilitation Exercises for an ankle sprain.jpg","topic/sprain"],["metformin-example","Metformin 500mg Tablets.jpg","medicine/metformin"],["atorvastatin-example","Atorvastatin40mg.jpg","medicine/atorvastatin"],["amoxicillin-example","Amoxicillin 500mg capsules on a plate (Sandoz).jpg","medicine/amoxicillin"],["pantoprazole-example","Pantoprazole 20mg.jpg","medicine/pantoprazole"],["vitamin-c-example","Vitamin C pill.jpg","medicine/ascorbic-acid"]]
+          result=[];errors=[]
+          for slug,name,topic in items:
+           try:
+            title="File:"+name
+            api="https://commons.wikimedia.org/w/api.php?"+urllib.parse.urlencode({"action":"query","format":"json","prop":"imageinfo","iiprop":"url|mime|size|extmetadata","iiurlwidth":"1100","titles":title})
+            head={"User-Agent":"PULS-licensed-media-qa/0.4 (https://github.com/Caprifan2078/puls-first-aid-android)","Referer":"https://commons.wikimedia.org/"}
+            with urllib.request.urlopen(urllib.request.Request(api,headers=head),timeout=25) as f: j=json.load(f)
+            entry=next(iter(j["query"]["pages"].values()))["imageinfo"][0]
+            meta=entry.get("extmetadata",{})
+            lic=re.sub(r"<[^>]*>","",meta.get("LicenseShortName",{}).get("value","")).strip()
+            if not (lic.lower().startswith("cc by") or lic.lower().startswith("cc0") or lic.lower().startswith("public domain") or lic.lower()=="pd"):raise ValueError("LICENSE "+lic)
+            url=entry.get("thumburl",entry["url"])
+            with urllib.request.urlopen(urllib.request.Request(url,headers=head),timeout=35) as f:data=f.read(7_000_001)
+            if len(data)>7_000_000:raise ValueError("too big")
+            ext=(".png" if data[:8]==bytes.fromhex("89504e470d0a1a0a") else ".jpg" if data[:3]==bytes.fromhex("ffd8ff") else "")
+            if not ext:raise ValueError("unknown image signature")
+            p=out/(slug+ext);p.write_bytes(data)
+            im=Image.open(p);im.verify()
+            author=re.sub(r"<[^>]*>","",meta.get("Artist",{}).get("value","")).strip()[:180]
+            result.append({"id":slug,"name":name,"topic":topic,"file":p.name,"bytes":len(data),"license":lic,"license_url":meta.get("LicenseUrl",{}).get("value",""),"author":author,"source":"https://commons.wikimedia.org/wiki/File:"+name.replace(" ","_"),"sha256":hashlib.sha256(data).hexdigest(),"clinical_review":"pending","sample_not_a_verified_RU_product":topic.startswith("medicine/")})
+            print("OK",slug,len(data),lic,flush=True)
+           except Exception as e:
+            errors.append({"id":slug,"error":str(e)});print("FAIL",slug,str(e),flush=True)
+           time.sleep(2)
+          (out/"manifest.json").write_text(json.dumps({"included":result,"failed":errors},ensure_ascii=False,indent=2),"utf-8")
+          if not result:raise SystemExit("No media downloaded")
+          
+          PY
+          python /tmp/puls_985.py
+      - name: Export verified curated files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: PULS-985-Curated-Images-QA
+          path: curated/
+          if-no-files-found: warn
