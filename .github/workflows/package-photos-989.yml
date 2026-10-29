@@ -1,0 +1,45 @@
+name: QA real medicine packaging photographs
+on:
+  push:
+    branches: [qa/puls-real-media-20261029]
+    paths: [.github/workflows/package-photos-989.yml]
+permissions:
+  contents: read
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Download CC licensed boxes as actual JPG
+        run: |
+          python - <<'PY'
+          import json,urllib.request,urllib.parse,re,hashlib,pathlib,time
+          out=pathlib.Path("packages");out.mkdir(exist_ok=True)
+          files=[("panadol-box.jpg","Panadol 500 mg.jpg","paracetamol"),("ibuprofen-products.jpg","IbuprofenProducts.jpg","ibuprofen")]
+          log=[]
+          headers={"User-Agent":"PULS-MedicinePackaging/0.1 (https://github.com/Caprifan2078/puls-first-aid-android)","Referer":"https://commons.wikimedia.org/"}
+          for name,fn,ingredient in files:
+            try:
+              api="https://commons.wikimedia.org/w/api.php?"+urllib.parse.urlencode({"action":"query","format":"json","prop":"imageinfo","iiprop":"url|extmetadata|mime","iiurlwidth":"900","titles":"File:"+fn})
+              with urllib.request.urlopen(urllib.request.Request(api,headers=headers),timeout=30) as f:
+                data=json.load(f)
+              item=next(iter(data["query"]["pages"].values()))["imageinfo"][0]
+              lic=re.sub("<[^>]+>","",item["extmetadata"]["LicenseShortName"]["value"])
+              if "CC BY-SA" not in lic:raise RuntimeError("Bad license:"+lic)
+              with urllib.request.urlopen(urllib.request.Request(item.get("thumburl") or item["url"],headers=headers),timeout=40) as f:
+                b=f.read(5_000_001)
+              if len(b)>5_000_000 or b[:3]!=bytes.fromhex("ffd8ff"):raise RuntimeError("invalid JPEG/size")
+              (out/name).write_bytes(b)
+              log.append({"file":name,"ingredient":ingredient,"original":fn,"source":"https://commons.wikimedia.org/wiki/File:"+fn.replace(" ","_"),"license":lic,"author":"JIP" if ingredient=="paracetamol" else "Styroks","sha256":hashlib.sha256(b).hexdigest(),"bytes":len(b),"notice":"Photograph of non-Russian example package, not proof of RU registration or dose"})
+              print("OK",name,len(b),flush=True)
+            except Exception as exc:print("FAIL",name,str(exc),flush=True)
+            time.sleep(2)
+          (out/"manifest.json").write_text(json.dumps(log,ensure_ascii=False,indent=2),"utf8")
+          if not log:raise SystemExit("No photos")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: PULS-989-Real-Packaging-Images
+          path: packages/
+          if-no-files-found: warn
