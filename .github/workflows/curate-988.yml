@@ -1,0 +1,58 @@
+name: QA PULS 9.8.8 genuine instructional photos
+on:
+  push:
+    branches: [qa/puls-real-media-20261029]
+    paths: [.github/workflows/curate-988.yml]
+permissions:
+  contents: read
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Collect Wikimedia originals with licenses and checksums
+        run: |
+          pip install -q pillow
+          mkdir -p verified
+          cat > /tmp/curate_988.py <<'PY'
+          import urllib.request,urllib.parse,json,re,time,pathlib,hashlib
+          from PIL import Image
+          out=pathlib.Path("verified");out.mkdir(exist_ok=True)
+          items=[["first-aid-gauze","Essential items for first aid.jpg","kits","Стерильные салфетки и пластыри","Gauze pads and plasters"],["pressure-dressing","Application of Pressure Dressing.svg","sos/bleeding","Учебная схема наложения давящей повязки","Pressure dressing diagram"],["arm-sling","202404 A man fixing his arm with a sling.svg","topic/fracture","Фиксация руки косыночной повязкой — иллюстрация","Arm sling illustration"],["hand-bandage","Learning First Aid (4976590939).jpg","topic/bandage-change","Учебная фотография перевязки кисти","Training hand bandaging photo"],["wound-saline","Wundspuelloesungen.JPG","topic/wound","Примеры растворов для промывания ран (не инструкция к использованию)","Wound rinse product examples"],["medical-tape","Adhesive surgical paper tape.jpg","kits","Медицинский фиксирующий пластырь","Surgical paper tape"]]
+          result=[];failed=[]
+          for slug,filename,topic,ru,en in items:
+           try:
+            name="File:"+filename
+            api="https://commons.wikimedia.org/w/api.php?"+urllib.parse.urlencode({"action":"query","format":"json","prop":"imageinfo","iiprop":"url|mime|extmetadata","iiurlwidth":"1080","titles":name})
+            headers={"User-Agent":"PULS-medical-QA-2026/0.5 (https://github.com/Caprifan2078/puls-first-aid-android)","Referer":"https://commons.wikimedia.org/"}
+            with urllib.request.urlopen(urllib.request.Request(api,headers=headers),timeout=35) as f: info=next(iter(json.load(f)["query"]["pages"].values()))["imageinfo"][0]
+            raw=info.get("extmetadata",{})
+            lic=re.sub(r"<[^>]+>","",raw.get("LicenseShortName",{}).get("value","")).strip()
+            good=lic.lower().startswith(("cc by ","cc by-sa ","cc0","public domain"))
+            if not good:raise RuntimeError("License not allowed: "+lic)
+            u=info.get("thumburl") or info["url"]
+            with urllib.request.urlopen(urllib.request.Request(u,headers=headers),timeout=60) as f:b=f.read(6000001)
+            if len(b)>6000000 or len(b)<3000:raise RuntimeError("invalid size "+str(len(b)))
+            ext=".jpg" if b[:3]==bytes.fromhex("ffd8ff") else ".png" if b[:8]==bytes.fromhex("89504e470d0a1a0a") else ""
+            if not ext:raise RuntimeError("invalid image header")
+            local=slug+ext
+            (out/local).write_bytes(b)
+            image=Image.open(out/local);image.verify()
+            author=re.sub(r"<[^>]+>","",raw.get("Artist",{}).get("value","")).strip()[:300]
+            result.append({"local":local,"file":filename,"topic":topic,"ru":ru,"en":en,"author":author,"license":lic,"license_url":raw.get("LicenseUrl",{}).get("value",""),"source":"https://commons.wikimedia.org/wiki/"+urllib.parse.quote(name.replace(" ","_"),safe=":/()+"),"sha256":hashlib.sha256(b).hexdigest(),"bytes":len(b),"clinical_review":"NOT REVIEWED","media_role":"instructional_sample_not_clinical_approval"})
+            print("SUCCESS",local,lic,len(b),flush=True)
+           except Exception as e:
+            failed.append({"file":filename,"reason":str(e)});print("FAILED",filename,str(e),flush=True)
+           time.sleep(2)
+          (out/"manifest.json").write_text(json.dumps({"included":result,"failed":failed},ensure_ascii=False,indent=2),"utf-8")
+          if not result:raise SystemExit("No files retrieved")
+          
+          PY
+          python /tmp/curate_988.py
+      - name: Save rights-verified original media
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: PULS-988-licensed-real-media
+          path: verified/
+          if-no-files-found: warn
