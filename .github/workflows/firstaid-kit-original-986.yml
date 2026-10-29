@@ -1,0 +1,38 @@
+name: QA open-licensed real first-aid kit photo
+on:
+  push:
+    branches: [qa/puls-real-media-20261029]
+    paths: [.github/workflows/firstaid-kit-original-986.yml]
+permissions:
+  contents: read
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Verify rights and retrieve genuine Wikimedia photo
+        run: |
+          python - <<'PY'
+          import urllib.request,urllib.parse,json,re,hashlib,pathlib
+          title="File:First aid kit.jpg"
+          root=pathlib.Path("downloaded");root.mkdir(exist_ok=True)
+          api="https://commons.wikimedia.org/w/api.php?"+urllib.parse.urlencode({"action":"query","format":"json","prop":"imageinfo","iiprop":"url|mime|extmetadata","iiurlwidth":"1000","titles":title})
+          headers={"User-Agent":"PULS-medical-QA/0.4 (https://github.com/Caprifan2078/puls-first-aid-android)","Referer":"https://commons.wikimedia.org/"}
+          with urllib.request.urlopen(urllib.request.Request(api,headers=headers),timeout=40) as stream: content=json.load(stream)
+          info=next(iter(content["query"]["pages"].values()))["imageinfo"][0]
+          md=info["extmetadata"]
+          license_=re.sub(r"<[^>]*>","",md["LicenseShortName"]["value"]).strip()
+          assert license_.startswith("CC BY-SA 4.0"),license_
+          url=info.get("thumburl") or info["url"]
+          with urllib.request.urlopen(urllib.request.Request(url,headers=headers),timeout=50) as stream: data=stream.read(3000001)
+          assert data[:3]==bytes.fromhex("ffd8ff") and 10000<len(data)<3000000
+          (root/"kit-photo.jpg").write_bytes(data)
+          (root/"license.json").write_text(json.dumps({"file":"kit-photo.jpg","title":title,"source":"https://commons.wikimedia.org/wiki/File:First_aid_kit.jpg","author":"Santeri Viinamäki","license":license_,"license_url":"https://creativecommons.org/licenses/by-sa/4.0/","sha256":hashlib.sha256(data).hexdigest(),"bytes":len(data),"clinical_use":"visual example of kit only"},indent=2))
+          print("VERIFIED",license_,len(data),flush=True)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: PULS-986-Original-FirstAid-Kit
+          path: downloaded/
+          if-no-files-found: warn
