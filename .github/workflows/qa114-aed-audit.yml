@@ -3,8 +3,6 @@ on:
   push:
     branches: ['qa/puls-qa114-open-media-20261104']
     paths: ['.github/workflows/qa114-aed-audit.yml']
-  pull_request:
-    branches: [main]
 permissions:
   contents: read
 jobs:
