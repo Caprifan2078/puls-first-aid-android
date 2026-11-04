@@ -1,4 +1,19 @@
-import json, urllib.request, urllib.parse, hashlib, pathlib, re, html
+import json, urllib.request, urllib.parse, urllib.error, hashlib, pathlib, re, html, time
+
+def request_with_backoff(req, timeout):
+    for attempt in range(3):
+        try:
+            return urllib.request.urlopen(req, timeout=timeout)
+        except urllib.error.HTTPError as exc:
+            if exc.code != 429 or attempt == 2:
+                raise
+            retry=exc.headers.get('Retry-After', '')
+            delay=max(30 * (2 ** attempt), int(retry) if retry.isdigit() else 0)
+            if delay > 180:
+                raise
+            print('Commons rate limited; waiting', delay, 'seconds', flush=True)
+            time.sleep(delay)
+
 entries=json.loads(pathlib.Path('qa114-media-candidates.json').read_text())
 out=pathlib.Path('review')
 out.mkdir(exist_ok=True)
@@ -6,10 +21,11 @@ result=[]
 headers={'User-Agent':'PULS-QA114-SourceAudit/1.0 (licensed first aid media review)'}
 for e in entries:
     row=dict(e)
+    time.sleep(6)
     try:
         q=urllib.parse.urlencode({'action':'query','format':'json','formatversion':2,'prop':'imageinfo','titles':'File:'+e['file'],'iiprop':'url|mime|size|sha1|extmetadata'})
         req=urllib.request.Request('https://commons.wikimedia.org/w/api.php?'+q,headers=headers)
-        with urllib.request.urlopen(req,timeout=45) as r:
+        with request_with_backoff(req,timeout=45) as r:
             info=json.load(r)['query']['pages'][0]['imageinfo'][0]
         md=info.get('extmetadata',{})
         clean=lambda x:' '.join(html.unescape(re.sub('<[^>]*>','',x or '')).lower().split())
@@ -27,7 +43,7 @@ for e in entries:
         if not 1024<=info['size']<=25000000: raise ValueError('size limit')
         u=urllib.parse.urlparse(info['url'])
         if u.scheme!='https' or u.hostname!='upload.wikimedia.org': raise ValueError('unexpected source')
-        with urllib.request.urlopen(urllib.request.Request(info['url'],headers=headers),timeout=90) as r:
+        with request_with_backoff(urllib.request.Request(info['url'],headers=headers),timeout=90) as r:
             if urllib.parse.urlparse(r.url).hostname!='upload.wikimedia.org': raise ValueError('unexpected redirect')
             data=r.read(25000001)
         sha=hashlib.sha1(data).hexdigest()
