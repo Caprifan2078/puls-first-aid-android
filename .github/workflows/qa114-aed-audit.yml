@@ -1,0 +1,46 @@
+name: QA114 original AED audit
+on:
+  push:
+    branches: ['qa/puls-qa114-open-media-20261104']
+    paths: ['.github/workflows/qa114-aed-audit.yml']
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch and validate original for review
+        shell: bash
+        run: |
+          mkdir -p review
+          python3 - <<'PY'
+          import urllib.request, json, hashlib, pathlib
+          from urllib.parse import urlencode, urlparse
+          h={'User-Agent':'PULS-QA114-media-audit/1.0'}
+          q=urlencode({'action':'query','format':'json','formatversion':2,'prop':'imageinfo','titles':'File:AED-trainingsample.jpg','iiprop':'url|mime|size|sha1|extmetadata'})
+          request=urllib.request.Request('https://commons.wikimedia.org/w/api.php?'+q,headers=h)
+          with urllib.request.urlopen(request,timeout=60) as r:
+              info=json.load(r)['query']['pages'][0]['imageinfo'][0]
+          md=info['extmetadata']
+          label=md.get('LicenseShortName',{}).get('value','').lower()
+          link=md.get('LicenseUrl',{}).get('value','').lower()
+          assert 'cc0' in label and 'publicdomain/zero/1.0' in link, 'License metadata mismatch'
+          assert info['mime']=='image/jpeg' and 1024<=info['size']<=25000000
+          u=urlparse(info['url'])
+          assert u.scheme=='https' and u.hostname=='upload.wikimedia.org'
+          with urllib.request.urlopen(urllib.request.Request(info['url'],headers=h),timeout=90) as r:
+              assert urlparse(r.url).hostname=='upload.wikimedia.org'
+              data=r.read(25000001)
+          assert len(data)==info['size']
+          assert hashlib.sha1(data).hexdigest()=='9114cc72d606f10736ee7af8eb5b791b02b1c6ec', 'Source differs from reviewed image'
+          pathlib.Path('review/aed-training-cc0.jpg').write_bytes(data)
+          pathlib.Path('review/source.json').write_text(json.dumps({'source':'https://commons.wikimedia.org/wiki/File:AED-trainingsample.jpg','author':'Stealth3327','license':'CC0 1.0','sha256':hashlib.sha256(data).hexdigest(),'note':'For visual review; not included in application.'},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: QA114-AED-original-for-review
+          path: review/
+          retention-days: 3
+          if-no-files-found: error
