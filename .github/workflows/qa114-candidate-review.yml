@@ -1,0 +1,20 @@
+name: QA114 original candidate review
+on:
+  push:
+    branches: ['qa/puls-qa114-open-media-20261104']
+    paths: ['.github/workflows/qa114-candidate-review.yml']
+permissions:
+  contents: read
+jobs:
+  originals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/qa114_review_originals.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: QA114-originals-review-only
+          path: review/
+          retention-days: 3
+          if-no-files-found: error
