@@ -2,7 +2,7 @@ name: QA114 original candidate review
 on:
   push:
     branches: ['qa/puls-qa114-open-media-20261104']
-    paths: ['.github/workflows/qa114-candidate-review.yml']
+    paths: ['.github/workflows/qa114-candidate-review.yml', 'tools/qa114_review_originals.py']
 permissions:
   contents: read
 jobs:
