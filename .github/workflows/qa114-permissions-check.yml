@@ -1,0 +1,9 @@
+name: QA114 permissions check
+on: [push]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo QA114-CI-READY
