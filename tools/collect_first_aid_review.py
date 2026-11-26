@@ -56,7 +56,11 @@ def collect(row):
         subprocess.run(command+[str(target)],check=True,timeout=180)
     subprocess.run(["ffmpeg","-nostdin","-v","error","-i",str(target),"-f","null","-"],check=True,timeout=180)
     return {"id":slug,"file":target.name,"title":title,"author":author,"license":lic,"license_url":ALLOWED[lic],
-        "source_license_url":raw_license_url or ALLOWED[lic],"derivative_license":lic,"reviewed_at":datetime.date.today().isoformat(),"rights_review":"pending",
+        "source_license_url":raw_license_url or ALLOWED[lic],"derivative_license":lic,"reviewed_at":datetime.date.today().isoformat(),"copyright_notice":plain(meta.get("CopyrightNotice",{}).get("value","")),
+        "credit_line":plain(meta.get("Credit",{}).get("value","")),
+        "attribution_required":plain(meta.get("AttributionRequired",{}).get("value","")),
+        "restrictions_notice":plain(meta.get("Restrictions",{}).get("value","")),
+        "rights_review":"pending",
         "source":"https://commons.wikimedia.org/wiki/File:"+urllib.parse.quote(row["file"].replace(" ","_"),safe=""),
         "original_sha1":sha,"original_sha256":hashlib.sha256(data).hexdigest(),
         "derivative_sha256":hashlib.sha256(target.read_bytes()).hexdigest(),"bytes":target.stat().st_size,

@@ -81,7 +81,11 @@ def collect(row):
         (OUT / (slug + ".jpg")).write_bytes(display)
     return {"id":slug,"title":title,"source":row["source"],"author":author,"license":license_name,
         "source_license_url":raw_license_url or LICENSES[license_name],"derivative_license":license_name,
-        "reviewed_at":datetime.date.today().isoformat(),"rights_review":"pending",
+        "reviewed_at":datetime.date.today().isoformat(),"copyright_notice":plain(meta.get("CopyrightNotice",{}).get("value","")),
+        "credit_line":plain(meta.get("Credit",{}).get("value","")),
+        "attribution_required":plain(meta.get("AttributionRequired",{}).get("value","")),
+        "restrictions_notice":plain(meta.get("Restrictions",{}).get("value","")),
+        "rights_review":"pending",
         "license_url":LICENSES[license_name],"original_sha256":hashlib.sha256(data).hexdigest(), "original_sha1":digest,
         "sha256":hashlib.sha256(display).hexdigest(), "bytes":len(display),"visual_review":"pending; QA only","modifications":"Resized to fit 1000px; metadata removed; JPEG re-encoded"}
 

@@ -91,6 +91,13 @@ def main():
     p.add_argument("--mode",choices=["qa","release"],required=True)
     p.add_argument("--apk",type=Path)
     args=p.parse_args()
+    if args.mode=="release":
+        approval=ASSETS.parents[3]/"release-review.json"
+        require(approval.is_file(),"production release blocked: independent review record missing")
+        review=json.loads(approval.read_text(encoding="utf-8"))
+        for key in ("copyright_review_ref","medical_review_ref","trademark_privacy_review_ref"):
+            require(nonempty(review.get(key)),"production release blocked: "+key)
+        require(review.get("approved") is True,"production release not approved")
     rows=audit(ASSETS,args.mode)
     credits=ASSETS/"media/credits.json"
     if args.apk:verify_apk(args.apk,ASSETS,rows)

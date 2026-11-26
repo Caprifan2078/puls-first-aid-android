@@ -18,3 +18,12 @@ android {
 dependencies {
     implementation 'androidx.webkit:webkit:1.13.0'
 }
+
+// Production builds must not bypass the rights gate. Debug builds remain QA-only.
+tasks.register('auditReleaseMediaRights', Exec) {
+    workingDir rootProject.projectDir
+    commandLine 'python3', 'tools/audit_media_rights.py', '--mode', 'release'
+}
+tasks.matching { it.name == 'preReleaseBuild' || it.name == 'mergeReleaseAssets' }.configureEach {
+    dependsOn tasks.named('auditReleaseMediaRights')
+}
