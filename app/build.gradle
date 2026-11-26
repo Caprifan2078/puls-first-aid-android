@@ -6,8 +6,8 @@ android {
         applicationId 'com.puls.firstaid.rebuild.ui83'
         minSdk 26
         targetSdk 36
-        versionCode 14
-        versionName '8.8.0-qa-reference'
+        versionCode 15
+        versionName '8.9.0-qa-100-reference'
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
