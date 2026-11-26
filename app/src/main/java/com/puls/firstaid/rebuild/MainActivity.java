@@ -6,8 +6,16 @@ import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Build;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
+import android.widget.FrameLayout;
 import android.util.Log;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import androidx.webkit.WebViewCompat;
+import androidx.webkit.WebViewFeature;
+import java.util.Collections;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
@@ -30,20 +38,80 @@ public final class MainActivity extends Activity {
     private WebView web;
     private ValueCallback<Uri[]> uploadCallback;
     private WebViewAssetLoader loader;
+    private int readyGeneration;
+    private boolean foreground;
+    private boolean emergencyAwake;
+    private String lastAppUrl = START_URL;
+    private boolean recoveredRenderer;
+
+    private void updateScreenAwake() {
+        if (foreground && emergencyAwake) getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        else getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+    }
+
+    private boolean isAppPage(String url) {
+        Uri uri = Uri.parse(url == null ? "" : url);
+        return "https".equals(uri.getScheme()) && "appassets.androidplatform.net".equalsIgnoreCase(uri.getHost())
+                && (uri.getPort() == -1 || uri.getPort() == 443) && "/assets/index.html".equals(uri.getPath());
+    }
+
+    private void checkUiReady(WebView view, int generation, int attempt) {
+        if (view != web || generation != readyGeneration || isFinishing() || isDestroyed()) return;
+        view.evaluateJavascript("document.readyState !== 'loading' && !!document.querySelector('#app h1') && !!document.querySelector('#nav a')", result -> {
+            if (view != web || generation != readyGeneration || isFinishing() || isDestroyed()) return;
+            if ("true".equals(result)) Log.i("PULS_QA", "UI_READY:true");
+            else if (attempt < 30) view.postDelayed(() -> checkUiReady(view, generation, attempt + 1), 1000);
+            else Log.e("PULS_QA", "UI_READY:false");
+        });
+    }
 
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
         loader = new WebViewAssetLoader.Builder()
                 .addPathHandler("/assets/", new WebViewAssetLoader.AssetsPathHandler(this))
                 .build();
+        String saved = state == null ? null : state.getString("puls_route");
+        lastAppUrl = safeAppRoute(saved);
         createWebView();
-        web.loadUrl(START_URL);
+        web.loadUrl(lastAppUrl);
+    }
+
+    private String safeAppRoute(String url) {
+        if (!isAppPage(url)) return START_URL;
+        String hash = Uri.parse(url).getEncodedFragment();
+        if (hash == null || hash.isEmpty()) return START_URL;
+        return hash.matches("/(?:home|sos|more|favorites|kits(?:/medicines)?|catalog(?:/[a-z0-9-]+)?|topic/[a-z0-9-]+)")
+                ? START_URL + "#" + hash : START_URL;
+    }
+
+    @Override protected void onSaveInstanceState(Bundle out) {
+        out.putString("puls_route", safeAppRoute(web == null ? lastAppUrl : web.getUrl()));
+        super.onSaveInstanceState(out);
     }
 
     private void createWebView() {
         web = new WebView(this);
         web.setBackgroundColor(0xFF091923);
-        setContentView(web);
+        if (Build.VERSION.SDK_INT >= 35) {
+            // Android 15/16 enforce edge-to-edge for this target SDK.
+            // Keep SOS, navigation and search above system bars and the keyboard.
+            FrameLayout frame = new FrameLayout(this);
+            frame.setBackgroundColor(0xFF091923);
+            frame.addView(web, new FrameLayout.LayoutParams(-1, -1));
+            getWindow().setDecorFitsSystemWindows(false);
+            WindowInsetsController controller = getWindow().getInsetsController();
+            if (controller != null) controller.setSystemBarsAppearance(0,
+                    WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS |
+                    WindowInsetsController.APPEARANCE_LIGHT_NAVIGATION_BARS);
+            frame.setOnApplyWindowInsetsListener((v, insets) -> {
+                android.graphics.Insets safe = insets.getInsets(WindowInsets.Type.systemBars()
+                        | WindowInsets.Type.displayCutout() | WindowInsets.Type.ime());
+                v.setPadding(safe.left, safe.top, safe.right, safe.bottom);
+                return WindowInsets.CONSUMED;
+            });
+            setContentView(frame);
+            frame.requestApplyInsets();
+        } else setContentView(web);
         WebSettings s = web.getSettings();
         s.setJavaScriptEnabled(true);
         s.setDomStorageEnabled(true);
@@ -53,6 +121,20 @@ public final class MainActivity extends Activity {
         s.setAllowUniversalAccessFromFileURLs(false);
         s.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
         s.setMediaPlaybackRequiresUserGesture(true);
+        emergencyAwake = false;
+        updateScreenAwake();
+        if (WebViewFeature.isFeatureSupported(WebViewFeature.WEB_MESSAGE_LISTENER)) {
+            WebViewCompat.addWebMessageListener(web, "PulsDisplay",
+                    Collections.singleton("https://appassets.androidplatform.net"),
+                    (view, message, origin, isMainFrame, reply) -> {
+                        if (view != web || !isMainFrame || !isAppPage(view.getUrl())) return;
+                        String data = message.getData();
+                        if ("on".equals(data) || "off".equals(data)) {
+                            emergencyAwake = "on".equals(data);
+                            updateScreenAwake();
+                        }
+                    });
+        }
         web.setWebViewClient(new WebViewClient() {
             @Override public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
                 Uri uri = request.getUrl();
@@ -66,16 +148,15 @@ public final class MainActivity extends Activity {
                 if (response != null) return response;
                 return new WebResourceResponse("text/plain", "UTF-8", 403, "Blocked", java.util.Collections.emptyMap(), new java.io.ByteArrayInputStream(new byte[0]));
             }
+            @Override public void doUpdateVisitedHistory(WebView view, String url, boolean reload) {
+                if (view == web && isAppPage(url)) lastAppUrl = safeAppRoute(url);
+            }
             @Override public void onPageFinished(WebView view, String url) {
-                if (START_URL.equals(url)) {
-                    view.evaluateJavascript(
-                            "document.readyState === 'complete' && !!document.body && document.body.innerText.length > 100",
-                            result -> Log.i("PULS_QA", "UI_READY:" + result));
-                }
+                if (isAppPage(url)) checkUiReady(view, ++readyGeneration, 0);
             }
             @Override public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                 Uri uri = request.getUrl();
-                if ("https".equals(uri.getScheme()) && "appassets.androidplatform.net".equalsIgnoreCase(uri.getHost()) && "/assets/index.html".equals(uri.getPath())) return false;
+                if (isAppPage(uri.toString())) return false;
                 try {
                     if (!request.isForMainFrame() || !request.hasGesture()) return true;
                     if ("tel".equalsIgnoreCase(uri.getScheme()) && uri.getSchemeSpecificPart().matches("\\+?[0-9]{2,7}")) {
@@ -95,8 +176,16 @@ public final class MainActivity extends Activity {
                 ViewGroup parent = (ViewGroup) view.getParent();
                 if (parent != null) parent.removeView(view);
                 view.destroy();
+                if (view != web || isFinishing() || isDestroyed()) return true;
+                readyGeneration++;
+                if (uploadCallback != null) {
+                    uploadCallback.onReceiveValue(null);
+                    uploadCallback = null;
+                }
+                String restore = recoveredRenderer ? START_URL : lastAppUrl;
+                recoveredRenderer = true;
                 createWebView();
-                web.loadUrl(START_URL);
+                web.loadUrl(restore);
                 return true;
             }
         });
@@ -111,7 +200,8 @@ public final class MainActivity extends Activity {
                     return true;
                 } catch (Exception ex) {
                     uploadCallback = null;
-                    return false;
+                    callback.onReceiveValue(null);
+                    return true;
                 }
             }
         });
@@ -174,6 +264,8 @@ public final class MainActivity extends Activity {
     }
 
     @Override protected void onPause() {
+        foreground = false;
+        updateScreenAwake();
         if (web != null) {
             web.evaluateJavascript("typeof pauseAidVideos==='function' && pauseAidVideos()", null);
             web.onPause();
@@ -182,7 +274,12 @@ public final class MainActivity extends Activity {
     }
     @Override protected void onResume() {
         super.onResume();
-        if (web != null) web.onResume();
+        foreground = true;
+        updateScreenAwake();
+        if (web != null) {
+            web.onResume();
+            web.evaluateJavascript("typeof notifyEmergencyAwake==='function' && notifyEmergencyAwake()", null);
+        }
     }
 
     @Override protected void onActivityResult(int code, int result, Intent data) {
@@ -197,7 +294,11 @@ public final class MainActivity extends Activity {
     }
     @Override protected void onDestroy() {
         if (uploadCallback != null) uploadCallback.onReceiveValue(null);
-        if (web != null) web.destroy();
+        readyGeneration++;
+        foreground = false;
+        emergencyAwake = false;
+        updateScreenAwake();
+        if (web != null) { web.destroy(); web = null; }
         super.onDestroy();
     }
 }

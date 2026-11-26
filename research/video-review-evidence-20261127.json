@@ -1,0 +1,108 @@
+{
+  "schema": 1,
+  "run": 45904037914,
+  "artifacts": [
+    {
+      "id": 15158085691,
+      "shard": 0
+    },
+    {
+      "id": 15158115415,
+      "shard": 1
+    }
+  ],
+  "notice": "Seven verified downloaded H.264 videos; three frames sampled from each and SHA-256 checked against archive report. No clinical or copyright approval. Never ship automatically.",
+  "records": [
+    {
+      "id": "video-review-05",
+      "title": "RCP",
+      "topic_hint": "cpr",
+      "declared_license": "CC BY-SA 3.0",
+      "duration_seconds": 117.59,
+      "codec": "h264",
+      "sha256_verified": true,
+      "frame_sample_reviewed": true,
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-13",
+      "title": "Primeros auxilios 107",
+      "topic_hint": "general-first-aid",
+      "declared_license": "CC BY-SA 3.0",
+      "duration_seconds": 22.85,
+      "codec": "h264",
+      "sha256_verified": true,
+      "frame_sample_reviewed": true,
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-17",
+      "title": "Measles",
+      "topic_hint": "health-education",
+      "declared_license": "CC BY-SA 4.0",
+      "duration_seconds": 463.73,
+      "codec": "h264",
+      "sha256_verified": true,
+      "frame_sample_reviewed": true,
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-21",
+      "title": "What Alcohol Does to Your Body",
+      "topic_hint": "health-education",
+      "declared_license": "CC BY 3.0",
+      "duration_seconds": 125.17,
+      "codec": "h264",
+      "sha256_verified": true,
+      "frame_sample_reviewed": true,
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-02",
+      "title": "Using an inhaler",
+      "topic_hint": "asthma",
+      "declared_license": "CC BY-SA 4.0",
+      "duration_seconds": 393.94,
+      "codec": "h264",
+      "sha256_verified": true,
+      "frame_sample_reviewed": true,
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-10",
+      "title": "Migimigi resuscitation",
+      "topic_hint": "cpr",
+      "declared_license": "CC BY 3.0",
+      "duration_seconds": 57.66,
+      "codec": "h264",
+      "sha256_verified": true,
+      "frame_sample_reviewed": true,
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-18",
+      "title": "Antimicrobial resistance video",
+      "topic_hint": "health-education",
+      "declared_license": "Public domain",
+      "duration_seconds": 254.32,
+      "codec": "h264",
+      "sha256_verified": true,
+      "frame_sample_reviewed": true,
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "publication": "blocked"
+    }
+  ]
+}

@@ -1,15 +1,25 @@
 name: PULS browser UI regression
 on:
   push:
-    branches: [qa/puls-ui-media-20261126]
+    branches: [qa/puls-ui-media-20261126, qa/puls-navigation-reliability-20261126]
     paths: ['app/src/main/assets/**','tools/browser_ui_smoke.mjs','tools/browser_media_smoke.mjs','.github/workflows/browser-ui.yml']
+  pull_request:
+    branches: [qa/puls-ui-media-20261126, qa/bootstrap, main]
+    paths: ['app/src/main/assets/**','tools/browser_ui_smoke.mjs','tools/browser_media_smoke.mjs','tools/ui_media.test.cjs','.github/workflows/browser-ui.yml']
   workflow_dispatch:
+concurrency:
+  group: puls-browser-ui-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
   browser:
     runs-on: ubuntu-24.04
-    timeout-minutes: 12
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        engine: [chromium, webkit]
     steps:
       - uses: actions/checkout@v4
         with:
@@ -20,10 +30,15 @@ jobs:
       - name: Install browser test runner
         run: |
           npm install --no-save --ignore-scripts playwright@1.56.1
-          npx playwright install --with-deps chromium chrome
+          if [ '${{ matrix.engine }}' = 'webkit' ]; then npx playwright install --with-deps webkit; else npx playwright install --with-deps chromium chrome; fi
+      - name: Test JavaScript guide, media and state invariants
+        run: node --test tools/ui_media.test.cjs
       - name: Test responsive UI and persistence
+        env:
+          PULS_ENGINE: ${{ matrix.engine }}
         run: node tools/browser_ui_smoke.mjs
       - name: Test synthetic offline media playback
+        if: matrix.engine == 'chromium'
         run: |
           if ! command -v ffmpeg >/dev/null; then
             sudo apt-get update -qq
@@ -34,6 +49,6 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: PULS-Browser-Screenshots
+          name: PULS-Browser-Screenshots-${{ matrix.engine }}
           path: puls-*.png
           if-no-files-found: warn

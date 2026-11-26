@@ -2,7 +2,7 @@ name: PULS first-aid media quarantine
 on:
   workflow_dispatch:
   push:
-    branches: [qa/puls-ui-media-20261126]
+    branches: [qa/puls-ui-media-20261126, qa/puls-navigation-reliability-20261126]
     paths:
       - 'tools/collect_first_aid_review.py'
       - 'tools/collect_ui_medicine_photos.py'
@@ -13,7 +13,7 @@ permissions:
 jobs:
   review:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
         with:

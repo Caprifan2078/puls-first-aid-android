@@ -34,3 +34,26 @@ class RightsGateTests(unittest.TestCase):
             with self.assertRaises(ValueError):audit(root,"qa")
             (folder/"untracked.jpg").unlink();(folder/"sample.jpg").write_bytes(b"changed")
             with self.assertRaises(ValueError):audit(root,"qa")
+
+    def test_firstaid_step_binding_is_exact(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d);folder=root/"media/firstaid";folder.mkdir(parents=True)
+            (root/"index.html").write_text('const PAGES='+json.dumps([dict(id="cpr",stepsRu=["RU"],stepsEn=["EN"])]),encoding="utf-8")
+            row=self.entry()
+            row.update(topic="cpr",file="sample.jpg",clinical_approval=True,rights_review="approved",visual_review="approved",review_ref="fixture-only",step_index=0,step_ru="RU",step_en="EN")
+            (folder/"sample.jpg").write_bytes(b"sample")
+            manifest=folder/"manifest.json"
+            manifest.write_text(json.dumps([row]))
+            self.assertEqual(len(audit(root,"qa")),1)
+            row["step_en"]="changed"
+            manifest.write_text(json.dumps([row]))
+            with self.assertRaises(ValueError):audit(root,"qa")
+            row["step_en"]="EN";row["topic"]="unknown"
+            manifest.write_text(json.dumps([row]))
+            with self.assertRaises(ValueError):audit(root,"qa")
+
+    def test_localized_deed_and_strict_host(self):
+        for suffix in ("deed","deed.en","deed.ru","deed.zh-hans","deed.pt_BR"):
+            self.assertEqual(validate_license_metadata("CC0 1.0","http://creativecommons.org/publicdomain/zero/1.0/"+suffix,"CC0 1.0"),LICENSES["CC0 1.0"])
+        for url in ("https://creativecommons.org.evil.example/publicdomain/zero/1.0/deed.en","https://creativecommons.org/licenses/by-nc/4.0/deed.en","https://creativecommons.org/publicdomain/zero/1.0/deed.en?x=1","https://creativecommons.org/publicdomain/zero/1.0/deed.en/extra"):
+            with self.assertRaises(ValueError):validate_license_metadata("CC0 1.0",url,"CC0 1.0")

@@ -1,0 +1,33 @@
+name: PULS priority video download review
+on:
+  pull_request:
+    branches: [qa/puls-ui-media-20261126]
+    paths: ['research/video-download-priority-20261127.json','tools/collect_priority_videos.py','tools/collect_first_aid_review.py','.github/workflows/priority-video-review.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  collect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        shard: [0, 1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check ffmpeg
+        run: |
+          command -v ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends ffmpeg)
+          python3 -m py_compile tools/collect_priority_videos.py tools/collect_first_aid_review.py
+      - name: Collect isolated review videos
+        run: python3 tools/collect_priority_videos.py --shard ${{ matrix.shard }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: PULS-video-review-${{ matrix.shard }}
+          path: video-review/
+          if-no-files-found: error

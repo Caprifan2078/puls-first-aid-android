@@ -30,7 +30,7 @@ def allowed(url):
         return (parsed.scheme=="https" and parsed.username is None and
                 parsed.password is None and parsed.port in (None,443) and
                 (host=="nhs.uk" or host.endswith(".nhs.uk") or
-                 host in {"www.resus.org.uk","resus.org.uk","www.sja.org.uk","sja.org.uk"}))
+                 host in {"www.resus.org.uk","resus.org.uk","www.sja.org.uk","sja.org.uk","medlineplus.gov","www.medlineplus.gov"}))
     except ValueError:
         return False
 
@@ -90,7 +90,7 @@ def audit(html):
             if field in detail and not (isinstance(detail[field],list) and len(detail[field])==2 and all(isinstance(s,str) and s.strip() for s in detail[field])):
                 errors.append("invalid bilingual "+field+": "+id)
         url=detail.get("source")
-        scope=("missing" if not url else detail.get("sourceKind") if detail.get("sourceKind") in ("index","candidate","context") else "individual")
+        scope=("missing" if not url else detail.get("sourceKind") if detail.get("sourceKind") in ("index","candidate","context","external-reference") else "individual")
         add("medicine",id,url,scope)
         if detail.get("interaction"):
             url=detail.get("interactionSource")
@@ -114,7 +114,7 @@ def main():
     if args.online and not report["errors"]:
         with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
             report["url_checks"]=dict(zip(urls,pool.map(check,urls)))
-    report["summary"]={kind:{scope:sum(e["kind"]==kind and e["scope"]==scope for e in report["entries"]) for scope in ("individual","candidate","context","index","missing")} for kind in ("guide","medicine","interaction","redflag")}
+    report["summary"]={kind:{scope:sum(e["kind"]==kind and e["scope"]==scope for e in report["entries"]) for scope in ("individual","candidate","context","index","external-reference","missing")} for kind in ("guide","medicine","interaction","redflag")}
     report["reachability_summary"]={status:sum(v["status"]==status for v in report["url_checks"].values()) for status in ("reachable","http-error","unverified","blocked","retired")}
     for url,result in report["url_checks"].items():
         if result["status"]!="reachable" or result.get("redirected"):

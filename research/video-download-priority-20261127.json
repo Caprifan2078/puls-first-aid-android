@@ -1,0 +1,432 @@
+{
+  "schema": 1,
+  "notice": "Priority review shortlist, not approved first aid techniques. Titles are hypotheses; topic_hint is not a reviewed binding.",
+  "records": [
+    {
+      "id": "video-review-01",
+      "file": "PulseOximeterUse.ogv",
+      "topic_hint": "equipment",
+      "expected_license": "CC0 1.0",
+      "source": "https://commons.wikimedia.org/wiki/File:PulseOximeterUse.ogv",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-02",
+      "file": "Using an inhaler.webm",
+      "topic_hint": "asthma",
+      "expected_license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Using_an_inhaler.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-03",
+      "file": "How to save lives with CPR.webm",
+      "topic_hint": "cpr",
+      "source": "https://commons.wikimedia.org/wiki/File:How_to_save_lives_with_CPR.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-04",
+      "file": "CPR.webm",
+      "topic_hint": "cpr",
+      "expected_license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:CPR.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-05",
+      "file": "RCP.ogv",
+      "topic_hint": "cpr",
+      "source": "https://commons.wikimedia.org/wiki/File:RCP.ogv",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "expected_license": "CC BY-SA 3.0"
+    },
+    {
+      "id": "video-review-06",
+      "file": "Hoe moet je reanimeren - EHBO.webm",
+      "topic_hint": "cpr",
+      "source": "https://commons.wikimedia.org/wiki/File:Hoe_moet_je_reanimeren_-_EHBO.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-07",
+      "file": "생명을 살리는 응급처치 - 심폐소생술을 배워보아요..webm",
+      "topic_hint": "cpr",
+      "source": "https://commons.wikimedia.org/wiki/File:%EC%83%9D%EB%AA%85%EC%9D%84_%EC%82%B4%EB%A6%AC%EB%8A%94_%EC%9D%91%EA%B8%89%EC%B2%98%EC%B9%98_-_%EC%8B%AC%ED%8F%90%EC%86%8C%EC%83%9D%EC%88%A0%EC%9D%84_%EB%B0%B0%EC%9B%8C%EB%B3%B4%EC%95%84%EC%9A%94..webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-08",
+      "file": "Save a Life Cymru - Training video.webm",
+      "topic_hint": "cpr",
+      "source": "https://commons.wikimedia.org/wiki/File:Save_a_Life_Cymru_-_Training_video.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-09",
+      "file": "Temeljni postopki oživljanja in uporaba defibrilatorja (HQ).webm",
+      "topic_hint": "aed",
+      "source": "https://commons.wikimedia.org/wiki/File:Temeljni_postopki_o%C5%BEivljanja_in_uporaba_defibrilatorja_(HQ).webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "expected_license": "CC BY 3.0"
+    },
+    {
+      "id": "video-review-10",
+      "file": "Migimigi izziv- Reši življenje z Jernejem Celcem – oživljanje.webm",
+      "topic_hint": "cpr",
+      "source": "https://commons.wikimedia.org/wiki/File:Migimigi_izziv-_Re%C5%A1i_%C5%BEivljenje_z_Jernejem_Celcem_%E2%80%93_o%C5%BEivljanje.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-11",
+      "file": "Hemblich.ogv",
+      "topic_hint": "choking",
+      "source": "https://commons.wikimedia.org/wiki/File:Hemblich.ogv",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-12",
+      "file": "VideoOfAbdoThrustsWM.webm",
+      "topic_hint": "choking",
+      "source": "https://commons.wikimedia.org/wiki/File:VideoOfAbdoThrustsWM.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-13",
+      "file": "Primeros auxilios 107.ogv",
+      "topic_hint": "general-first-aid",
+      "source": "https://commons.wikimedia.org/wiki/File:Primeros_auxilios_107.ogv",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-14",
+      "file": "Eerste hulp kisten-508705.ogv",
+      "topic_hint": "kits",
+      "source": "https://commons.wikimedia.org/wiki/File:Eerste_hulp_kisten-508705.ogv",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-15",
+      "file": "Heating pad in action.ogv",
+      "topic_hint": "equipment",
+      "source": "https://commons.wikimedia.org/wiki/File:Heating_pad_in_action.ogv",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-16",
+      "file": "Alpha gal syndrome.webm",
+      "topic_hint": "allergy",
+      "source": "https://commons.wikimedia.org/wiki/File:Alpha_gal_syndrome.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-17",
+      "file": "Measles.webm",
+      "topic_hint": "measles",
+      "source": "https://commons.wikimedia.org/wiki/File:Measles.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-18",
+      "file": "Antimicrobial resistance video.webm",
+      "topic_hint": "prevention",
+      "source": "https://commons.wikimedia.org/wiki/File:Antimicrobial_resistance_video.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-19",
+      "file": "Fred and the Voice of Food Safety- How to Avoid Food-Borne Illness.ogv",
+      "topic_hint": "food-safety",
+      "source": "https://commons.wikimedia.org/wiki/File:Fred_and_the_Voice_of_Food_Safety-_How_to_Avoid_Food-Borne_Illness.ogv",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-20",
+      "file": "UV radiation (explanatory video by German Federal Office for Radiation Protection).webm",
+      "topic_hint": "sun-safety",
+      "source": "https://commons.wikimedia.org/wiki/File:UV_radiation_(explanatory_video_by_German_Federal_Office_for_Radiation_Protection).webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-21",
+      "file": "What Alcohol Does to Your Body.webm",
+      "topic_hint": "health-education",
+      "source": "https://commons.wikimedia.org/wiki/File:What_Alcohol_Does_to_Your_Body.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-22",
+      "file": "Self-Management Education- Managing Chronic Conditions Beyond Medications.webm",
+      "topic_hint": "health-education",
+      "source": "https://commons.wikimedia.org/wiki/File:Self-Management_Education-_Managing_Chronic_Conditions_Beyond_Medications.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-23",
+      "file": "Self-Management Education- Skills for Managing Chronic Conditions.webm",
+      "topic_hint": "health-education",
+      "source": "https://commons.wikimedia.org/wiki/File:Self-Management_Education-_Skills_for_Managing_Chronic_Conditions.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-24",
+      "file": "Self-Management Education- Confidence to Manage Your Chronic Condition.webm",
+      "topic_hint": "health-education",
+      "source": "https://commons.wikimedia.org/wiki/File:Self-Management_Education-_Confidence_to_Manage_Your_Chronic_Condition.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-25",
+      "file": "En.Video-Abdominal thrusts.webm",
+      "topic_hint": "choking",
+      "source": "https://commons.wikimedia.org/wiki/File:En.Video-Abdominal_thrusts.webm",
+      "expected_license": "CC BY-SA 4.0",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-26",
+      "file": "Correct way to use inhaler.ogv",
+      "topic_hint": "asthma",
+      "source": "https://commons.wikimedia.org/wiki/File:Correct_way_to_use_inhaler.ogv",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-27",
+      "file": "What You Need To Know About Handwashing.webm",
+      "topic_hint": "hygiene",
+      "source": "https://commons.wikimedia.org/wiki/File:What_You_Need_To_Know_About_Handwashing.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-28",
+      "file": "Step-by-step Handwashing.webm",
+      "topic_hint": "hygiene",
+      "source": "https://commons.wikimedia.org/wiki/File:Step-by-step_Handwashing.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-29",
+      "file": "Wash Your Hands.webm",
+      "topic_hint": "hygiene",
+      "source": "https://commons.wikimedia.org/wiki/File:Wash_Your_Hands.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-30",
+      "file": "Emergency bandage application uk.webm",
+      "topic_hint": "bleeding",
+      "source": "https://commons.wikimedia.org/wiki/File:Emergency_bandage_application_uk.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-31",
+      "file": "RCP EMBARAZADA.ogv",
+      "topic_hint": "cpr-pregnancy",
+      "source": "https://commons.wikimedia.org/wiki/File:RCP_EMBARAZADA.ogv",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-32",
+      "file": "Migimigi izziv- Reši življenje z Jernejem Celcem.webm",
+      "topic_hint": "first-aid-education",
+      "source": "https://commons.wikimedia.org/wiki/File:Migimigi_izziv-_Re%C5%A1i_%C5%BEivljenje_z_Jernejem_Celcem.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-33",
+      "file": "Bebê engasgada é salva por policiais militares em Santa Maria.webm",
+      "topic_hint": "infant-choking-review",
+      "source": "https://commons.wikimedia.org/wiki/File:Beb%C3%AA_engasgada_%C3%A9_salva_por_policiais_militares_em_Santa_Maria.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-34",
+      "file": "EHBO diploma voor leerlingen Woudrichem - Altena TV.webm",
+      "topic_hint": "first-aid-education",
+      "source": "https://commons.wikimedia.org/wiki/File:EHBO_diploma_voor_leerlingen_Woudrichem_-_Altena_TV.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-35",
+      "file": "EHBO-vereniging Wimako- \"Wij zijn er klaar voor\".webm",
+      "topic_hint": "first-aid-education",
+      "source": "https://commons.wikimedia.org/wiki/File:EHBO-vereniging_Wimako-_%22Wij_zijn_er_klaar_voor%22.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-36",
+      "file": "UV Strahlung (Erklärvideo des Bundesamt für Strahlenschutz).webm",
+      "topic_hint": "sun-safety",
+      "source": "https://commons.wikimedia.org/wiki/File:UV_Strahlung_(Erkl%C3%A4rvideo_des_Bundesamt_f%C3%BCr_Strahlenschutz).webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-37",
+      "file": "Self-Management Education- Learn More. Feel Better. (3 minute).webm",
+      "topic_hint": "health-education",
+      "source": "https://commons.wikimedia.org/wiki/File:Self-Management_Education-_Learn_More._Feel_Better._(3_minute).webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-38",
+      "file": "Self-Management Education- Feel More In Control of your Chronic Condition.webm",
+      "topic_hint": "health-education",
+      "source": "https://commons.wikimedia.org/wiki/File:Self-Management_Education-_Feel_More_In_Control_of_your_Chronic_Condition.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-39",
+      "file": "What Is Addiction - National Institute on Drug Abuse.webm",
+      "topic_hint": "health-education",
+      "source": "https://commons.wikimedia.org/wiki/File:What_Is_Addiction_-_National_Institute_on_Drug_Abuse.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-40",
+      "file": "What Are the Health Risks of Vaping for Youth?.webm",
+      "topic_hint": "health-education",
+      "source": "https://commons.wikimedia.org/wiki/File:What_Are_the_Health_Risks_of_Vaping_for_Youth%3F.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-41",
+      "file": "MeaslesTrimmed2.webm",
+      "topic_hint": "measles",
+      "source": "https://commons.wikimedia.org/wiki/File:MeaslesTrimmed2.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-42",
+      "file": "Blood Donations Needed Among African Americans.webm",
+      "topic_hint": "health-education",
+      "source": "https://commons.wikimedia.org/wiki/File:Blood_Donations_Needed_Among_African_Americans.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-43",
+      "file": "PelvicBinding.webm",
+      "topic_hint": "professional-training-review",
+      "source": "https://commons.wikimedia.org/wiki/File:PelvicBinding.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-44",
+      "file": "Telemedicine – access to health care in rural areas.webm",
+      "topic_hint": "health-education",
+      "source": "https://commons.wikimedia.org/wiki/File:Telemedicine_%E2%80%93_access_to_health_care_in_rural_areas.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-45",
+      "file": "Health effects of repeated vaping during adolescence - The Real Cost - FDA.webm",
+      "topic_hint": "health-education",
+      "source": "https://commons.wikimedia.org/wiki/File:Health_effects_of_repeated_vaping_during_adolescence_-_The_Real_Cost_-_FDA.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    }
+  ]
+}

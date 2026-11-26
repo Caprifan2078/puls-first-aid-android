@@ -9,6 +9,11 @@ OUT = ROOT / "first-aid-review"
 LIMIT = 25_000_000
 ALLOWED = dict(LICENSES, **{"CC BY-SA 3.0 FR":"https://creativecommons.org/licenses/by-sa/3.0/fr/"})
 
+def valid_signature(data,kind):
+    if kind=="mp4":
+        return len(data)>=12 and data[4:8]==b"ftyp"
+    return kind in ("jpg","png","webm","ogv") and data.startswith({"jpg":b"\xff\xd8\xff","png":b"\x89PNG\r\n\x1a\n","webm":b"\x1a\x45\xdf\xa3","ogv":b"OggS"}[kind])
+
 def collect(row):
     slug = row["id"]
     if not re.fullmatch(r"[a-z0-9-]+", slug):
@@ -28,20 +33,21 @@ def collect(row):
     title=plain(meta.get("ObjectName",{}).get("value","")) or row["file"]
     if not author:
         raise ValueError("author missing")
-    kind = {"image/jpeg":"jpg","image/png":"png","video/webm":"webm"}.get(info["mime"])
-    if not kind or not 1024<=info["size"]<=LIMIT:
+    kind = {"image/jpeg":"jpg","image/png":"png","video/webm":"webm","video/ogg":"ogv","application/ogg":"ogv","video/mp4":"mp4"}.get(info["mime"])
+    limit=min(100_000_000,max(1024,int(row.get("max_bytes",LIMIT))))
+    if not kind or not 1024<=info["size"]<=limit:
         raise ValueError("MIME or size rejected")
     url = urllib.parse.urlsplit(info["url"])
     if url.scheme!="https" or url.hostname!="upload.wikimedia.org":
         raise ValueError("invalid source")
-    data = get(info["url"],LIMIT)
+    data = get(info["url"],limit)
     sha = hashlib.sha1(data).hexdigest()
     upstream = info["sha1"].lower()
     if not re.fullmatch("[0-9a-f]{40}",upstream):
         upstream=format(int(upstream,36),"040x")
     if len(data)!=info["size"] or sha!=upstream or (row.get("reviewed_original_sha1") and sha!=row["reviewed_original_sha1"]):
         raise ValueError("source checksum mismatch")
-    if not data.startswith({"jpg":b"\xff\xd8\xff","png":b"\x89PNG\r\n\x1a\n","webm":b"\x1a\x45\xdf\xa3"}[kind]):
+    if not valid_signature(data,kind):
         raise ValueError("invalid signature")
     ext="jpg" if kind in ("jpg","png") else "mp4"
     target=OUT/(slug+"."+ext)
@@ -54,8 +60,11 @@ def collect(row):
         else:
             command+=["-map","0:v:0","-map","0:a?","-vf","scale=1280:720:force_original_aspect_ratio=decrease:force_divisible_by=2","-c:v","libx264","-pix_fmt","yuv420p","-crf","25","-c:a","aac","-movflags","+faststart"]
         subprocess.run(command+[str(target)],check=True,timeout=180)
+        if ext=="mp4" and target.stat().st_size>35_000_000:
+            target.unlink(missing_ok=True)
+            raise ValueError("derived video exceeds 35 MB")
     subprocess.run(["ffmpeg","-nostdin","-v","error","-i",str(target),"-f","null","-"],check=True,timeout=180)
-    return {"id":slug,"file":target.name,"title":title,"author":author,"license":lic,"license_url":ALLOWED[lic],
+    return {"id":slug,"topic":row.get("topic"),"file":target.name,"title":title,"author":author,"license":lic,"license_url":ALLOWED[lic],
         "source_license_url":raw_license_url or ALLOWED[lic],"derivative_license":lic,"reviewed_at":datetime.date.today().isoformat(),"copyright_notice":plain(meta.get("CopyrightNotice",{}).get("value","")),
         "credit_line":plain(meta.get("Credit",{}).get("value","")),
         "attribution_required":plain(meta.get("AttributionRequired",{}).get("value","")),
@@ -63,7 +72,7 @@ def collect(row):
         "rights_review":"pending",
         "source":"https://commons.wikimedia.org/wiki/File:"+urllib.parse.quote(row["file"].replace(" ","_"),safe=""),
         "original_sha1":sha,"original_sha256":hashlib.sha256(data).hexdigest(),
-        "derivative_sha256":hashlib.sha256(target.read_bytes()).hexdigest(),"bytes":target.stat().st_size,
+        "sha256":hashlib.sha256(target.read_bytes()).hexdigest(),"bytes":target.stat().st_size,"ru":"","en":"","step_index":None,"review_ref":"",
         "modifications":"Resized/re-encoded; metadata removed; video converted to MP4; audio preserved where present",
         "clinical_approval":False,"visual_review":"pending","publication":"blocked; review only"}
 
@@ -71,6 +80,8 @@ def main():
     OUT.mkdir(exist_ok=True)
     entries=json.loads((ROOT/"media-review-20261126.json").read_text())["first_aid"]
     records=[]; failed=[]
+    if len(entries)>60 or len({x["id"] for x in entries})!=len(entries):
+        raise ValueError("candidate count or duplicate ID")
     for row in entries:
         try:
             records.append(collect(row))
