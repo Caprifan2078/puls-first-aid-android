@@ -44,6 +44,12 @@ try{
   assert.equal(await page.locator(".emergency-bar").count(),0);
   await page.evaluate(()=>{location.hash="#/topic/cpr"});
   await page.locator(".emergency-bar").waitFor({state:"visible"});
+  await page.evaluate(()=>{location.hash="#/topic/stroke"});
+  await page.locator(".guide-visual").waitFor({state:"visible"});
+  assert.equal(await page.locator(".guide-visual-item svg").count(),4);
+  await noOverflow();
+  await page.evaluate(()=>{location.hash="#/topic/cpr"});
+  await page.locator(".emergency-bar").waitFor({state:"visible"});
   assert.ok(await page.locator('a[href="tel:112"]').first().isVisible());
   await noOverflow();
   await page.screenshot({path:"puls-sos-"+width+".png"});
@@ -74,6 +80,12 @@ try{
   assert.ok(await page.locator(".med-info a.link").isVisible());
   await page.locator("#medicine-search").fill("zznoresults");
   assert.equal(await page.locator(".medicine-row").count(),0);
+  await page.locator("#medicine-search").fill("метотрексат");
+  assert.equal(await page.locator(".medicine-row").count(),1);
+  await page.locator(".med-info summary").click();
+  assert.ok(await page.locator(".med-redflag").isVisible());
+  assert.ok(await page.locator('.med-redflag a[href="#/topic/poison"]').isVisible());
+  await noOverflow();
   await page.locator("#medicine-search").fill("");
   assert.equal(await page.locator(".medicine-row").count(),200);
   await noOverflow();
