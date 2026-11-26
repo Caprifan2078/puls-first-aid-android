@@ -273,7 +273,7 @@ function searchTopicRows(q,category="all",criticalOnly=false){
 }
 function sosMatches(q){return searchTopicRows(q,"all",true)}
 function sosSearchResults(q){
- const ru=state.lang==="ru",rows=sosMatches(q),other=searchTopicRows(q).filter(p=>p.level!=="critical").slice(0,4);
+ const ru=state.lang==="ru",matches=searchTopicRows(q),rows=matches.filter(p=>p.level==="critical"),other=matches.filter(p=>p.level!=="critical").slice(0,4);
  const actions='<div class="sos-search-actions"><button class="mini" data-action="clear-sos-search">'+(ru?"Все экстренные ситуации":"All emergency situations")+'</button><a class="mini" href="#/catalog/all" data-sos-catalog="true">'+(ru?"Искать во всех инструкциях":"Search all guides")+'</a></div>';
  return '<p role="status" class="minor">'+(ru?"Варианты инструкций, не диагноз":"Matching guides, not a diagnosis")+'</p>'+
  (rows.length?'<div class="emergency-grid">'+rows.map(emergencyTile).join("")+'</div>':'')+
@@ -298,7 +298,7 @@ const MED_GROUPS=[["pain","Боль и температура","Pain and fever"]
 let medicineMedia=Object.create(null);
 let medicineQuery="";
 const MED_INFO="https://www.nhs.uk/medicines/";
-function medMatches(m,q){return norm(q).split(" ").filter(Boolean).every(w=>norm(m.ru+" "+m.en+" "+(m.aliases||"")).includes(w))}
+function medMatches(m,q){const terms=norm(q).split(" ").filter(Boolean);if(!terms.length)return !String(q??"").trim();return terms.every(w=>norm(m.ru+" "+m.en+" "+(m.aliases||"")).includes(w))}
 function medRows(q){return MEDICINES.filter(m=>medMatches(m,q))}
 const MED_LICENSE_URLS=new Set(["https://creativecommons.org/publicdomain/zero/1.0/","https://creativecommons.org/licenses/by-sa/4.0/","https://creativecommons.org/licenses/by-sa/3.0/","https://creativecommons.org/publicdomain/mark/1.0/","https://creativecommons.org/licenses/by/3.0/","https://creativecommons.org/licenses/by/4.0/"]);
 function safeTopicId(value){try{return decodeURIComponent(value||"")}catch(_){return ""}}
@@ -308,7 +308,7 @@ function renderMedDetails(m){const a=MED_DETAILS[m.id],ru=state.lang==="ru";if(!
 function restoreMedicineGroups(groups,query){document.querySelectorAll(".medicine-group").forEach(d=>{d.open=!!query.trim()||groups.includes(d.dataset.group)})}
 function renderMedicineGroups(q){
  const ru=state.lang==="ru",rows=medRows(q);
- if(!rows.length)return '<div class="empty" role="status">'+(ru?"Препараты не найдены":"No medicines found")+'</div>';
+ if(!rows.length)return '<div class="empty-search"><strong role="status">'+(ru?"Препараты не найдены":"No medicines found")+'</strong><p>'+(ru?"Попробуйте название или действующее вещество.":"Try the name or active ingredient.")+'</p><button data-action="clear-medicine-search">'+(ru?"Сбросить поиск":"Clear search")+'</button></div>';
  return MED_GROUPS.map(g=>{const matches=rows.filter(m=>m.group===g[0]);if(!matches.length)return "";return '<details class="kitcard medicine-group" data-group="'+esc(g[0])+'" '+(q.trim()?"open":"")+'><summary>'+esc(g[ru?1:2])+' <span class="minor">· '+matches.length+'</span></summary><div class="kititems">'+matches.map(m=>{const a=medicineMedia[m.id];return '<div class="medicine-row">'+(a?'<img loading="lazy" src="media/medicines/'+m.id+'.jpg" alt="'+esc((ru?"Пример упаковки или формы: ":"Example packaging or form: ")+m[state.lang])+'" width="88" height="88">':'')+'<div class="med-label"><strong>'+esc(m[state.lang])+'</strong><small>'+esc(m[ru?"en":"ru"])+'</small>'+renderMedDetails(m)+(a&&(a.rights_review!=="approved"||a.visual_review!=="approved")?'<small class="photo-pending">'+(ru?"Фото: предварительная проверка":"Photo: pending review")+'</small>':"")+(a?'<details class="photo-credit"><summary>'+(ru?"О фотографии":"Photo credits")+'</summary><small>'+esc(a.author+" · "+a.license+" · "+(a.modifications||""))+'</small><a class="link" href="'+esc(a.source)+'">'+(ru?"Источник":"Source")+'</a><a class="link" href="'+esc(a.license_url)+'">'+(ru?"Лицензия":"License")+'</a></details>':'')+'</div></div>'}).join("")+'</div></details>'}).join("");
 }
 function renderMedicineShelf(){
@@ -436,6 +436,7 @@ document.addEventListener("toggle",ev=>{if(ev.target.matches?.(".aid-media,.step
 document.addEventListener("play",ev=>{if(ev.target.matches?.(".aid-media video,.step-media video"))document.querySelectorAll(".aid-media video,.step-media video").forEach(v=>{if(v!==ev.target)v.pause()})},true);
 document.addEventListener("visibilitychange",()=>{if(document.hidden)pauseAidVideos();notifyEmergencyAwake()});
 window.addEventListener("pagehide",()=>{pauseAidVideos();try{window.PulsDisplay?.postMessage("off")}catch(_){}});
+document.addEventListener("click",ev=>{if(!ev.target.closest('[data-action="clear-medicine-search"]'))return;const f=$("#medicine-search");if(f){f.value="";updateMedicineSearch("");f.focus({preventScroll:true})}});
 document.addEventListener("input",ev=>{if(ev.target.id==="search")liveSearch();else if(ev.target.id==="medicine-search")updateMedicineSearch(ev.target.value);else if(ev.target.id==="sos-search")updateSosSearch(ev.target.value)});
 document.addEventListener("change",ev=>{if(ev.target.id==="keep-awake"){state.keepAwake=ev.target.checked;store.set("keepAwake",state.keepAwake);notifyEmergencyAwake();return}if(ev.target.id==="missing-only"){missingOnly=ev.target.checked;route(true);$("#missing-only")?.focus();return}if(ev.target.matches("[data-check]")){const key=ev.target.dataset.check;state.check[key]=ev.target.checked;store.set("check",state.check);const k=KITS.find(k=>key.startsWith(k.id+":"));const section=ev.target.closest(".kit-v84");if(missingOnly){route(true);document.querySelector('[data-kit="'+k?.id+'"]')?.focus({preventScroll:true})}else if(k&&section){ev.target.closest(".item").classList.toggle("checked",ev.target.checked);updateKitProgress(k,section);refreshKitOverview()}}});
 
