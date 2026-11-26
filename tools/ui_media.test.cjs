@@ -156,3 +156,19 @@ test('large step media groups show one primary photo and collapse extra media',(
 });
 
 test('expanded library includes 12 sourced guide drafts and 40 clearly labeled medicine records',()=>{const pages=vm.runInNewContext(js.slice(js.indexOf("const PAGES="),js.indexOf("const NAV="))+"PAGES");const refs=vm.runInNewContext(js.slice(js.indexOf("const AID_REFERENCE="),js.indexOf("function aidReference"))+"AID_REFERENCE");for(const id of ["severe-hypoglycaemia","neck-compression","nonblanching-rash","infant-dehydration","shingles-eye","uveitis-warning","hand-foot-mouth","chickenpox-risk","cellulitis","breast-abscess","pneumonia-warning","ear-infection-warning"])assert.ok(pages.some(p=>p.id===id)&&refs[id]);const ctx=vm.createContext({state:{lang:"ru"},esc:String,norm:v=>String(v||"").toLowerCase()});vm.runInContext(js.slice(js.indexOf("const MEDICINES="),js.indexOf("const KIT_GROUPS=")),ctx);for(const id of ["acarbose","glucagon","pregabalin","venlafaxine","trazodone","vortioxetine","moclobemide","lacosamide","brivaracetam","zonisamide","pramipexole","rasagiline","entacapone","rivastigmine","galantamine","sildenafil","tadalafil","sodium-alginate","miconazole","itraconazole","valaciclovir","oseltamivir","rifampicin","isoniazid","co-trimoxazole","salmeterol","formoterol","ipratropium","umeclidinium","brimonidine","dorzolamide","travoprost","bisoprolol-hydrochlorothiazide","hydrochlorothiazide","dabigatran","enoxaparin","fondaparinux","ticagrelor","sacubitril-valsartan","febuxostat"]){ctx.id=id;assert.equal(vm.runInContext("MED_DETAILS[id].sourceKind",ctx),"index");assert.ok(vm.runInContext("MED_DETAILS[id].caution.length===2",ctx));}});
+
+test('backup of the entire guide library round-trips, old schema remains compatible',()=>{
+ const pages=vm.runInNewContext(js.slice(js.indexOf("const PAGES="),js.indexOf("const NAV="))+"PAGES");
+ const area={value:""};let message="";
+ const state={lang:"ru",light:false,large:true,hicontrast:false,num:"112",saved:pages.map(p=>p.id),recent:[],check:{"home:0":true},keepAwake:false,kitOpen:"home"};
+ const ctx=vm.createContext({PAGES:pages,KITS:[{id:"home",items:[1]},{id:"travel",items:[1]}],state,document:{querySelector:()=>area},toastMessage:s=>message=s,t:s=>s,confirm:()=>true,store:{set:()=>true},route:()=>{}});
+ vm.runInContext(js.slice(js.indexOf("function makeBackup()"),js.indexOf("function quickSuggestions()")),ctx);
+ const exported=JSON.parse(vm.runInContext("JSON.stringify(makeBackup())",ctx));
+ assert.equal(exported.saved.length,pages.length);assert.equal(exported.keepAwake,false);
+ area.value=JSON.stringify(exported);state.saved=[];state.keepAwake=true;state.kitOpen="travel";
+ vm.runInContext("importBackup()",ctx);
+ assert.equal(message,"backupRestored");assert.equal(state.saved.length,pages.length);assert.equal(state.keepAwake,false);assert.equal(state.kitOpen,"home");
+ delete exported.keepAwake;delete exported.kitOpen;area.value=JSON.stringify(exported);state.keepAwake=true;
+ vm.runInContext("importBackup()",ctx);assert.equal(message,"backupRestored");assert.equal(state.keepAwake,true);
+ exported.keepAwake="false";area.value=JSON.stringify(exported);vm.runInContext("importBackup()",ctx);assert.equal(message,"backupError");assert.equal(state.keepAwake,true);
+});
