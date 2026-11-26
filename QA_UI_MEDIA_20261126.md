@@ -11,3 +11,5 @@ Privacy branch is divergent, not merged; review before release. Build and emulat
 8.19.5: action-first compact emergency layout, 8 immediate home shortcuts, step-bound clinically and rights-reviewed media, no automatic playback, direct media jump only when content exists. Candidate quarantine expanded by 15 files (30 total), including original photos and video. Quarantine is not packaged clinical media. No clinical text rewritten. New CI pending.
 
 Original decorative action/equipment cues: 103 mapped to existing steps across 34 guides. These are symbols, not clinical illustrations or technique demonstrations. Added synthetic JPEG loading and no-autoplay regression checks; fixed strict selector after nested credits were introduced.
+
+CI caught an isolated medicine-license fixture regression: the new topic database check ran even for medicine-only tests. Scoped it to actual first-aid records and added an exact-step/unknown-topic regression test.

@@ -57,11 +57,7 @@ def validate_record(a,category,mode):
     return a["id"]+".jpg"
 def audit(root,mode):
     seen=set();rows=[]
-    text=(root/"index.html").read_text(encoding="utf-8")
-    match=re.search(r"const PAGES\s*=\s*",text)
-    require(match is not None,"guide database missing")
-    pages,_=json.JSONDecoder().raw_decode(text[match.end():])
-    by_topic={p["id"]:p for p in pages}
+    by_topic=None
     for category in ("medicines","kits","firstaid"):
         folder=root/"media"/category
         manifest=folder/"manifest.json"
@@ -72,6 +68,12 @@ def audit(root,mode):
         for a in entries:
             name=validate_record(a,category,mode)
             if category=="firstaid":
+                if by_topic is None:
+                    text=(root/"index.html").read_text(encoding="utf-8")
+                    match=re.search(r"const PAGES\s*=\s*",text)
+                    require(match is not None,"guide database missing")
+                    pages,_=json.JSONDecoder().raw_decode(text[match.end():])
+                    by_topic={p["id"]:p for p in pages}
                 topic=by_topic.get(a.get("topic"))
                 require(topic is not None,"unknown first-aid topic")
                 if "step_index" in a:
