@@ -9,3 +9,7 @@
 - Никакая поисковая выдача не подтверждает соответствие препарату, технике, лицензии или клиническую пригодность. Независимая проверка обязательна. Нет автоматической публикации.
 - Отдельная ветка не отменяет текущую сборку APK.
 - Запросы по общим инструкциям могут не дать релевантных материалов. Не считать найденные кандидаты готовым наполнением.
+
+## Updated inventory — 27.11.2026
+
+Source: app commit `476a66ec36b21c261e1a29437dd302cf1f9b556d`. 447 base targets (162 guides, 240 medicines, 3 kits, 42 equipment positions), 246 additional action-specific step targets, 693 total, 1,386 photo/video search tasks. All 501 original bilingual guide steps retained. Search hints derive from existing symbolic action cues; these are retrieval hypotheses only. Step-specific matches retain the exact bilingual step and original topic ID; all still require independent clinical, visual and rights review. Download selection balances photos and videos within each target class. Existing download and byte caps remain unchanged; no additional paid resources or production publication.
