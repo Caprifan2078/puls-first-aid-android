@@ -64,6 +64,7 @@ def discover(target,kind):
 
 def main():
     a=argparse.ArgumentParser()
+    a.add_argument("--inventory",type=Path,default=INVENTORY)
     a.add_argument("--shard",type=int,required=True)
     a.add_argument("--shards",type=int,default=12)
     a.add_argument("--download-cap",type=int,default=8)
@@ -74,7 +75,7 @@ def main():
     out=ROOT/"mass-media-review"/f"shard-{args.shard:02d}"
     out.mkdir(parents=True,exist_ok=True)
     files=out/"files";files.mkdir(exist_ok=True);quarantine.OUT=files
-    targets=json.loads(INVENTORY.read_text(encoding="utf-8"))["targets"]
+    targets=json.loads(args.inventory.read_text(encoding="utf-8"))["targets"]
     todo=tasks(targets)[args.shard::args.shards]
     if args.limit: todo=todo[:args.limit]
     report=[]; pool={}

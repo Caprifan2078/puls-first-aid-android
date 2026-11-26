@@ -1,0 +1,38 @@
+name: PULS expansion media discovery
+on:
+  push:
+    branches: [qa/puls-media-expansion-20261126]
+    paths: ['media-inventory-expansion-20261126.json','.github/workflows/expansion-media.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        shard: [0, 1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate expansion inventory
+        run: |
+          python3 -c "import json; a=json.load(open('media-inventory-expansion-20261126.json'))['targets']; assert len(a)==52 and len({r['id'] for r in a})==52"
+          python3 -m py_compile tools/mass_media_discovery.py
+      - name: Discover and quarantine new targets
+        run: |
+          if ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends ffmpeg
+          fi
+          python3 tools/mass_media_discovery.py --inventory media-inventory-expansion-20261126.json --shard ${{ matrix.shard }} --shards 4 --download-cap 8 --byte-budget 60000000
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: PULS-expansion-review-${{ matrix.shard }}
+          path: mass-media-review/
+          if-no-files-found: warn
