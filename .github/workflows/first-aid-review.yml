@@ -1,0 +1,32 @@
+name: PULS first-aid media quarantine
+on:
+  workflow_dispatch:
+  push:
+    branches: [qa/puls-ui-media-20261126]
+    paths:
+      - 'tools/collect_first_aid_review.py'
+      - 'tools/collect_ui_medicine_photos.py'
+      - 'media-review-20261126.json'
+      - '.github/workflows/first-aid-review.yml'
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Verify and transcode candidate media outside app
+        run: |
+          command -v ffmpeg
+          python3 -m py_compile tools/collect_first_aid_review.py
+          python3 tools/collect_first_aid_review.py
+      - name: Upload review-only bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: PULS-First-Aid-REVIEW-ONLY
+          path: first-aid-review/
+          if-no-files-found: error

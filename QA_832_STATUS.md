@@ -1,0 +1,7 @@
+# PULS 8.3.2 QA — 2026-11-26
+Previous run 45765538509: APK build and signature OK, Node 3/3; emulator skipped, three of six photographs retrieved. CC0 API short name caused the other three to be rejected.
+Now: normalize only the exact CC0 alias; validate source checksum and re-encode display images with metadata removed. Nine medicine reference names and five categories. No prescription or dosing instructions added. Images are examples in a QA build, not a way to identify drugs.
+Navigation: category path synchronized, malformed URI handled, no broken images, preserve open groups on manifest arrival. WebView rejects non-asset resource loads; external navigation requires a main-frame user gesture. No content access. APK smoke uses the actual application ID ui83 and is required for the QA branch.
+First aid: separate quarantine workflow, no media copied into the Android assets. Original checksums and license recorded, review derivatives transcoded and decoded. Clinical and visual approval remains pending; no public clinical demonstration is released from quarantine.
+Privacy: copied current-tree PII scan, secret-history guard and ignore patterns from separate privacy branch. This is a selective port, not a merge of the divergent branch; review findings before release.
+Known blocker: full historical offline assets are not in this repository; compact QA edition has 41 topics. Never advertise full historical topic/media counts.

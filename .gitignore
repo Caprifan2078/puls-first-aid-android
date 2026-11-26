@@ -5,3 +5,54 @@ local.properties
 .DS_Store
 .idea/
 # Keep the three deliberate offline content archives in the repository
+
+# Build outputs
+*.apk
+*.aab
+# Privacy: local credentials and personal data
+.env
+.env.*
+!.env.example
+!.env.sample
+key.properties
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.p8
+*.key
+*.asc
+*.mobileprovision
+private/
+private-data/
+secrets/
+credentials/
+user-data/
+user-media/
+PRIVATE_FEEDBACK/
+screenshots/
+screen-recordings/
+backup/
+backups/
+exports/
+raw-exports/
+ChatExport_*/
+Telegram Desktop/
+*.session
+*.session-*
+*.tva
+*.tcap
+*.db
+*.db-*
+*.db.*
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+*.har
+*.pcap
+*.pcapng
+*.log
+first-aid-review/
+medicine-photo-qa-report.json
+__pycache__/
