@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Quarantine candidate first-aid media; never modify Android assets."""
-import hashlib, json, re, subprocess, tempfile, time, urllib.parse
+import datetime, hashlib, json, re, subprocess, tempfile, time, urllib.parse
 from pathlib import Path
 from collect_ui_medicine_photos import get, plain, normalize_license, LICENSES
+from audit_media_rights import validate_license_metadata
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "first-aid-review"
 LIMIT = 25_000_000
@@ -21,7 +22,10 @@ def collect(row):
         lic="CC BY-SA 3.0 FR"
     if lic != row["license"] or lic not in ALLOWED:
         raise ValueError("license mismatch: "+lic)
-    author = plain(meta.get("Artist",{}).get("value",""))
+    raw_license_url=plain(meta.get("LicenseUrl",{}).get("value",""))
+    validate_license_metadata(lic,raw_license_url,row["license"])
+    author=plain(meta.get("Attribution",{}).get("value","")) or plain(meta.get("Artist",{}).get("value",""))
+    title=plain(meta.get("ObjectName",{}).get("value","")) or row["file"]
     if not author:
         raise ValueError("author missing")
     kind = {"image/jpeg":"jpg","image/png":"png","video/webm":"webm"}.get(info["mime"])
@@ -51,7 +55,8 @@ def collect(row):
             command+=["-map","0:v:0","-map","0:a?","-vf","scale=1280:720:force_original_aspect_ratio=decrease:force_divisible_by=2","-c:v","libx264","-pix_fmt","yuv420p","-crf","25","-c:a","aac","-movflags","+faststart"]
         subprocess.run(command+[str(target)],check=True,timeout=180)
     subprocess.run(["ffmpeg","-nostdin","-v","error","-i",str(target),"-f","null","-"],check=True,timeout=180)
-    return {"id":slug,"file":target.name,"author":author,"license":lic,"license_url":ALLOWED[lic],
+    return {"id":slug,"file":target.name,"title":title,"author":author,"license":lic,"license_url":ALLOWED[lic],
+        "source_license_url":raw_license_url or ALLOWED[lic],"derivative_license":lic,"reviewed_at":datetime.date.today().isoformat(),"rights_review":"pending",
         "source":"https://commons.wikimedia.org/wiki/File:"+urllib.parse.quote(row["file"].replace(" ","_"),safe=""),
         "original_sha1":sha,"original_sha256":hashlib.sha256(data).hexdigest(),
         "derivative_sha256":hashlib.sha256(target.read_bytes()).hexdigest(),"bytes":target.stat().st_size,

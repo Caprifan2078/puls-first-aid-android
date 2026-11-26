@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """QA-only acquisition of licensed original medicine photographs; no runtime network."""
+import datetime
 import hashlib
 import html
 import json
@@ -10,6 +11,7 @@ import time
 import urllib.parse
 import urllib.request
 from pathlib import Path
+from audit_media_rights import validate_license_metadata
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "app/src/main/assets/media/medicines"
@@ -50,7 +52,10 @@ def collect(row):
     license_name = normalize_license(plain(meta["LicenseShortName"]["value"]))
     if license_name != row["license"] or license_name not in LICENSES:
         raise ValueError("license differs: " + license_name)
-    author = plain(meta.get("Artist", {}).get("value", ""))
+    raw_license_url = plain(meta.get("LicenseUrl", {}).get("value", ""))
+    validate_license_metadata(license_name, raw_license_url, row["license"])
+    author = plain(meta.get("Attribution", {}).get("value", "")) or plain(meta.get("Artist", {}).get("value", ""))
+    title = plain(meta.get("ObjectName", {}).get("value", "")) or row["file"]
     if not author or info["mime"] not in ("image/jpeg", "image/png") or info["size"] > LIMIT:
         raise ValueError("author, MIME or size rejected")
     url = urllib.parse.urlsplit(info["url"])
@@ -74,7 +79,9 @@ def collect(row):
         if not display.startswith(b"\xff\xd8\xff") or len(display)>1_000_000:
             raise ValueError("invalid derived JPEG")
         (OUT / (slug + ".jpg")).write_bytes(display)
-    return {"id":slug,"source":row["source"],"author":author,"license":license_name,
+    return {"id":slug,"title":title,"source":row["source"],"author":author,"license":license_name,
+        "source_license_url":raw_license_url or LICENSES[license_name],"derivative_license":license_name,
+        "reviewed_at":datetime.date.today().isoformat(),"rights_review":"pending",
         "license_url":LICENSES[license_name],"original_sha256":hashlib.sha256(data).hexdigest(), "original_sha1":digest,
         "sha256":hashlib.sha256(display).hexdigest(), "bytes":len(display),"visual_review":"pending; QA only","modifications":"Resized to fit 1000px; metadata removed; JPEG re-encoded"}
 
