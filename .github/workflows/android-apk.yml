@@ -76,6 +76,13 @@ jobs:
           print("Inline JavaScript chars:",len(matches[0]))
           PY
           node --check webview_app_check.js
+      - name: Test local video byte ranges on JVM
+        if: github.ref_name == 'qa/puls-ui-media-20261126'
+        run: |
+          TMP="$(mktemp -d)"
+          trap 'rm -rf "$TMP"' EXIT
+          javac -d "$TMP" app/src/main/java/com/puls/firstaid/rebuild/MediaByteRange.java tools/MediaByteRangeTest.java
+          java -cp "$TMP" com.puls.firstaid.rebuild.MediaByteRangeTest
       - name: Compile real debug APK
         run: gradle --no-daemon :app:assembleDebug --stacktrace
       - name: Verify APK exists

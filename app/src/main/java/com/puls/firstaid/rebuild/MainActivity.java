@@ -3,6 +3,7 @@ package com.puls.firstaid.rebuild;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.res.AssetFileDescriptor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +17,12 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 import androidx.webkit.WebViewAssetLoader;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
 
 public final class MainActivity extends Activity {
     private static final String START_URL = "https://appassets.androidplatform.net/assets/index.html";
@@ -48,7 +55,14 @@ public final class MainActivity extends Activity {
         s.setMediaPlaybackRequiresUserGesture(true);
         web.setWebViewClient(new WebViewClient() {
             @Override public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
-                WebResourceResponse response = loader.shouldInterceptRequest(request.getUrl());
+                Uri uri = request.getUrl();
+                String path = uri.getPath();
+                if ("https".equals(uri.getScheme()) && "appassets.androidplatform.net".equalsIgnoreCase(uri.getHost())
+                        && (uri.getPort() == -1 || uri.getPort() == 443)
+                        && path != null && path.matches("/assets/media/firstaid/[a-z0-9-]+\\.mp4")) {
+                    return serveLocalVideo(request, path.substring("/assets/".length()));
+                }
+                WebResourceResponse response = loader.shouldInterceptRequest(uri);
                 if (response != null) return response;
                 return new WebResourceResponse("text/plain", "UTF-8", 403, "Blocked", java.util.Collections.emptyMap(), new java.io.ByteArrayInputStream(new byte[0]));
             }
@@ -101,6 +115,74 @@ public final class MainActivity extends Activity {
                 }
             }
         });
+    }
+
+    private static WebResourceResponse emptyVideoResponse(int status, String reason, Map<String,String> headers) {
+        return new WebResourceResponse("text/plain", "UTF-8", status, reason, headers, new ByteArrayInputStream(new byte[0]));
+    }
+
+    /** Local assets only; seek with a bounded stream rather than loading the entire video into RAM. */
+    private WebResourceResponse serveLocalVideo(WebResourceRequest request, String path) {
+        Map<String,String> headers = new HashMap<>();
+        headers.put("Accept-Ranges", "bytes");
+        headers.put("Cache-Control", "no-store");
+        String method = request.getMethod();
+        if (!"GET".equals(method) && !"HEAD".equals(method)) {
+            headers.put("Allow", "GET, HEAD");
+            return emptyVideoResponse(405, "Method Not Allowed", headers);
+        }
+        String rangeHeader = null;
+        for (Map.Entry<String,String> entry : request.getRequestHeaders().entrySet()) {
+            if ("Range".equalsIgnoreCase(entry.getKey())) rangeHeader = entry.getValue();
+        }
+        AssetFileDescriptor fd = null;
+        InputStream stream = null;
+        try {
+            fd = getAssets().openFd(path);
+            long size = fd.getLength();
+            MediaByteRange range;
+            try {
+                range = MediaByteRange.parse(rangeHeader, size);
+            } catch (IllegalArgumentException invalid) {
+                headers.put("Content-Range", "bytes */" + size);
+                headers.put("Content-Length", "0");
+                return emptyVideoResponse(416, "Range Not Satisfiable", headers);
+            }
+            headers.put("Content-Length", Long.toString(range.length()));
+            if (range.partial) headers.put("Content-Range", "bytes " + range.start + "-" + range.end + "/" + size);
+            if ("HEAD".equals(method)) {
+                return new WebResourceResponse("video/mp4", null, range.partial ? 206 : 200,
+                        range.partial ? "Partial Content" : "OK", headers, new ByteArrayInputStream(new byte[0]));
+            }
+            stream = fd.createInputStream();
+            fd = null; // The auto-closing stream owns the descriptor.
+            MediaByteRange.skipFully(stream, range.start);
+            InputStream bounded = MediaByteRange.limit(stream, range.length());
+            WebResourceResponse response = new WebResourceResponse("video/mp4", null, range.partial ? 206 : 200,
+                    range.partial ? "Partial Content" : "OK", headers, bounded);
+            stream = null; // WebView owns the response body.
+            return response;
+        } catch (IOException | RuntimeException ex) {
+            Log.w("PULS_QA", "Local video unavailable", ex);
+            headers.remove("Content-Range");
+            headers.put("Content-Length", "0");
+            return emptyVideoResponse(404, "Not Found", headers);
+        } finally {
+            if (stream != null) try { stream.close(); } catch (IOException ignored) { }
+            if (fd != null) try { fd.close(); } catch (IOException ignored) { }
+        }
+    }
+
+    @Override protected void onPause() {
+        if (web != null) {
+            web.evaluateJavascript("typeof pauseAidVideos==='function' && pauseAidVideos()", null);
+            web.onPause();
+        }
+        super.onPause();
+    }
+    @Override protected void onResume() {
+        super.onResume();
+        if (web != null) web.onResume();
     }
 
     @Override protected void onActivityResult(int code, int result, Intent data) {

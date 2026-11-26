@@ -6,13 +6,14 @@ android {
         applicationId 'com.puls.firstaid.rebuild.ui83'
         minSdk 26
         targetSdk 36
-        versionCode 24
-        versionName '8.18.0-qa-visual-safety'
+        versionCode 25
+        versionName '8.19.0-qa-offline-player'
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
+    androidResources { noCompress += ['mp4'] }
     buildTypes { release { minifyEnabled false } }
 }
 dependencies {
