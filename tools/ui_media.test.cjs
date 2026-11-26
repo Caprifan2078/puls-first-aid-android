@@ -76,3 +76,20 @@ test('150-guide library retains paired instructions and prioritizes steps before
 test('150-guide milestone includes scene safety and distinct pediatric and injury guides',()=>{const pages=vm.runInNewContext(js.slice(js.indexOf("const PAGES="),js.indexOf("const NAV="))+"PAGES");const refs=vm.runInNewContext(js.slice(js.indexOf("const AID_REFERENCE="),js.indexOf("function aidReference"))+"AID_REFERENCE");assert.equal(pages.length,150);for(const id of ["scene-safety","traffic-collision","aortic-aneurysm","hyperglycemia","whooping-cough","child-asthma","acute-glaucoma","chemo-fever","jaw-injury","mushroom-poisoning"]){assert.ok(pages.some(p=>p.id===id)&&refs[id]);}assert.ok(js.slice(js.indexOf("function renderSos(){"),js.indexOf("function rankedTopics()")).includes("scene-safety-link"));});
 
 test('14 medication red flags link to sources and valid first aid guides; pictograms are original and complete',()=>{const ctx=vm.createContext({state:{lang:"ru"},esc:String,norm:v=>String(v||"").toLowerCase()});vm.runInContext(js.slice(js.indexOf("const MEDICINES="),js.indexOf("const KIT_GROUPS=")),ctx);const pages=vm.runInNewContext(js.slice(js.indexOf("const PAGES="),js.indexOf("const NAV="))+"PAGES");const flags=vm.runInContext('Object.entries(MED_DETAILS).filter(([id,m])=>m.redflag)',ctx);assert.equal(flags.length,14);for(const [id,m] of flags){assert.equal(m.redflag.length,2);assert.match(m.redflagSource,/^https:\/\/www\.nhs\.uk\//);if(m.redflagTopic)assert.ok(pages.some(p=>p.id===m.redflagTopic));}assert.ok(vm.runInContext('renderMedDetails(MEDICINES.find(m=>m.id==="methotrexate"))',ctx).includes("Когда нужна срочная помощь"));vm.runInContext(js.slice(js.indexOf("const GUIDE_PICTOGRAMS="),js.indexOf("function renderTopic(p){")),ctx);assert.equal(vm.runInContext("Object.keys(GUIDE_PICTOGRAMS).length",ctx),10);assert.equal(vm.runInContext("Object.keys(GUIDE_VISUALS).length",ctx),9);assert.ok(vm.runInContext("Object.values(GUIDE_VISUALS).flat().every(row=>GUIDE_PICTOGRAMS[row[0]]&&row[1]&&row[2])",ctx));assert.ok(vm.runInContext('renderGuideVisual({id:"stroke"})',ctx).includes("Краткая памятка"));assert.equal(vm.runInContext('renderGuideVisual({id:"nonexistent"})',ctx),"");});
+
+test('SOS search returns only critical topics and rejects punctuation',()=>{
+ const pages=vm.runInNewContext(js.slice(js.indexOf("const PAGES="),js.indexOf("const NAV="))+"PAGES");
+ const ctx=vm.createContext({PAGES:pages,norm:s=>String(s).toLowerCase().trim(),match:(p,q)=>(p.ru+" "+p.en+" "+p.aliases).toLowerCase().includes(q)});
+ vm.runInContext(js.slice(js.indexOf("function sosMatches("),js.indexOf("function sosSearchResults(")),ctx);
+ assert.ok(vm.runInContext('sosMatches("инсульт").some(p=>p.id==="stroke")',ctx));
+ assert.ok(vm.runInContext('sosMatches("инсульт").every(p=>p.level==="critical")',ctx));
+ assert.equal(vm.runInContext('sosMatches("").length',ctx),0);
+ assert.equal(vm.runInContext('sosMatches("x").length',ctx),0);
+});
+test('combined kit inventory uses all legacy positions and counts only checked booleans',()=>{
+ const kits=vm.runInNewContext(js.slice(js.indexOf('const KITS='),js.indexOf('const I='))+'KITS');
+ const ctx=vm.createContext({KITS:kits,state:{lang:"en",check:{"home:0":true,"travel:0":"true"}},esc:String});
+ vm.runInContext(js.slice(js.indexOf("function kitOverview("),js.indexOf("function refreshKitOverview(")),ctx);
+ const out=vm.runInContext("kitOverview()",ctx);
+ assert.ok(out.includes("1 / 42"));assert.equal((out.match(/<li>/g)||[]).length,41);
+});

@@ -2,7 +2,7 @@ name: PULS medical reference audit
 on:
   workflow_dispatch:
   push:
-    branches: [qa/puls-ui-media-20261126]
+    branches: [qa/puls-ui-media-20261126, qa/puls-navigation-reliability-20261126]
     paths:
       - 'app/src/main/assets/index.html'
       - 'tools/audit_medical_reference.py'
