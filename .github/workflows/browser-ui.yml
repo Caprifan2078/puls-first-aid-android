@@ -7,6 +7,9 @@ on:
     branches: [qa/puls-ui-media-20261126, qa/bootstrap, main]
     paths: ['app/src/main/assets/**','tools/browser_ui_smoke.mjs','tools/browser_media_smoke.mjs','tools/ui_media.test.cjs','.github/workflows/browser-ui.yml']
   workflow_dispatch:
+concurrency:
+  group: puls-browser-ui-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
