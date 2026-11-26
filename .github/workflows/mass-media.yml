@@ -2,7 +2,7 @@ name: PULS mass media discovery and quarantine
 on:
   push:
     branches: [qa/puls-mass-media-20261126]
-    paths: ['media-inventory-20261126.json','tools/mass_media_discovery.py','tools/test_mass_media_discovery.py','.github/workflows/mass-media.yml']
+    paths: ['media-inventory-20261126.json','tools/mass_media_discovery.py','tools/test_mass_media_discovery.py','tools/merge_mass_media_reports.py','.github/workflows/mass-media.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -34,3 +34,23 @@ jobs:
           name: PULS-mass-review-${{ matrix.shard }}
           path: mass-media-review/
           if-no-files-found: warn
+  aggregate:
+    if: always()
+    needs: discover
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: PULS-mass-review-*
+          path: mass-media-input
+      - run: python3 tools/merge_mass_media_reports.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PULS-mass-media-coverage
+          path: mass-media-summary/
+          if-no-files-found: error
