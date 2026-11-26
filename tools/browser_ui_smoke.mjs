@@ -42,6 +42,11 @@ try{
   await page.locator('[data-check="home:0"]').check();
   await page.reload();
   assert.ok(await page.locator('[data-check="home:0"]').isChecked());
+  assert.equal(await page.locator(".equipment-icon").count(),13);
+  await page.locator("#missing-only").check();
+  assert.equal(await page.locator('[data-check="home:0"]').count(),0);
+  await page.locator("#missing-only").uncheck();
+  assert.ok(await page.locator('[data-check="home:0"]').isChecked());
   await page.locator('[data-kit="travel"]').click();
   await page.locator('[data-check="travel:0"]').waitFor();
   assert.equal(await page.locator('.kit-v84 input[data-check]').count(),14);
