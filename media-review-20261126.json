@@ -66,6 +66,39 @@
       "author": "Jmh649",
       "source": "https://commons.wikimedia.org/wiki/File:Salbutamol2.JPG",
       "status": "source-license-checked; original and visual review pending"
+    },
+    {
+      "id": "diclofenac",
+      "ru": "Диклофенак (гель)",
+      "en": "Diclofenac gel",
+      "group": "pain",
+      "file": "Diclofenac Schmerzgel 1.jpg",
+      "license": "CC0 1.0",
+      "author": "Sciencia58",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac_Schmerzgel_1.jpg",
+      "status": "license page checked; original and visual review pending"
+    },
+    {
+      "id": "omeprazole",
+      "ru": "Омепразол",
+      "en": "Omeprazole",
+      "group": "digestive",
+      "file": "Omeprazol Activis capsules.jpg",
+      "license": "CC0 1.0",
+      "author": "W.carter",
+      "source": "https://commons.wikimedia.org/wiki/File:Omeprazol_Activis_capsules.jpg",
+      "status": "license page checked; original and visual review pending"
+    },
+    {
+      "id": "loperamide",
+      "ru": "Лоперамид",
+      "en": "Loperamide",
+      "group": "digestive",
+      "file": "Lopex.jpg",
+      "license": "CC BY-SA 4.0",
+      "author": null,
+      "source": "https://commons.wikimedia.org/wiki/File:Lopex.jpg",
+      "status": "license page checked; original and visual review pending"
     }
   ],
   "first_aid": [
@@ -112,30 +145,6 @@
       "reviewed_original_sha1": null
     },
     {
-      "id": "levothyroxine-photo",
-      "file": "Levothyroxine 25mcg Tablets.jpg",
-      "license": "Public domain",
-      "reviewed_original_sha1": null
-    },
-    {
-      "id": "loperamide-photo",
-      "file": "Lopex.jpg",
-      "license": "CC BY-SA 4.0",
-      "reviewed_original_sha1": "65feddb00150e8b3bbc701f1f5a48576615e6ede"
-    },
-    {
-      "id": "naproxen-photo",
-      "file": "Naproxen.JPG",
-      "license": "Public domain",
-      "reviewed_original_sha1": null
-    },
-    {
-      "id": "amlodipine-photo",
-      "file": "Amlodipin Sandoz bottle.jpg",
-      "license": "CC BY-SA 4.0",
-      "reviewed_original_sha1": "ecf35b9a426eff08ac1b6ba5a61d344759b8b89d"
-    },
-    {
       "id": "recovery-position",
       "file": "Recovery position.jpg",
       "license": "CC BY-SA 3.0 FR",
@@ -150,5 +159,25 @@
       "clinical_review": "pending"
     }
   ],
-  "policy": "No candidate implies downloaded media or clinical approval. Check original, rights, privacy and technique. First-aid media are not published until clinical review."
+  "policy": "No candidate implies downloaded media or clinical approval. Check original, rights, privacy and technique. First-aid media are not published until clinical review.",
+  "deferred_medicine_photos": [
+    {
+      "id": "levothyroxine-photo",
+      "file": "Levothyroxine 25mcg Tablets.jpg",
+      "license": "Public domain",
+      "reviewed_original_sha1": null
+    },
+    {
+      "id": "naproxen-photo",
+      "file": "Naproxen.JPG",
+      "license": "Public domain",
+      "reviewed_original_sha1": null
+    },
+    {
+      "id": "amlodipine-photo",
+      "file": "Amlodipin Sandoz bottle.jpg",
+      "license": "CC BY-SA 4.0",
+      "reviewed_original_sha1": "ecf35b9a426eff08ac1b6ba5a61d344759b8b89d"
+    }
+  ]
 }

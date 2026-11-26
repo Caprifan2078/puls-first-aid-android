@@ -34,7 +34,9 @@ jobs:
       - name: Acquire QA medicine photographs (compact UI branch only)
         if: github.ref_name == 'qa/puls-ui-media-20261126'
         run: |
+          command -v ffmpeg
           python3 -m py_compile tools/collect_ui_medicine_photos.py
+          python3 -m unittest discover -s tools -p 'test_photo*.py'
           python3 tools/collect_ui_medicine_photos.py
           node --test tools/ui_media.test.cjs
       - name: Publish medicine photo QA report
@@ -90,9 +92,8 @@ jobs:
           if-no-files-found: error
       - name: Install and open in Android emulator
         id: emulator
-        if: github.event_name == 'workflow_dispatch'
-        timeout-minutes: 12
-        continue-on-error: true
+        if: github.event_name == 'workflow_dispatch' || github.ref_name == 'qa/puls-ui-media-20261126'
+        timeout-minutes: 18
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 35
@@ -104,14 +105,15 @@ jobs:
           script: |
             set -e
             adb install -r app/build/outputs/apk/debug/app-debug.apk
-            adb shell am start -W -n com.puls.firstaid.rebuild.ui82/com.puls.firstaid.rebuild.MainActivity
+            adb shell am start -W -n com.puls.firstaid.rebuild.ui83/com.puls.firstaid.rebuild.MainActivity
             sleep 15
-            adb shell pidof com.puls.firstaid.rebuild.ui82
+            adb shell pidof com.puls.firstaid.rebuild.ui83
             adb logcat -d -s PULS_QA:I -v brief > puls-launch-log.txt
             cat puls-launch-log.txt
             grep -q "UI_READY:true" puls-launch-log.txt
+            adb exec-out screencap -p > puls-home.png
       - name: Publish installation-tested APK
-        if: github.event_name == 'workflow_dispatch' && steps.emulator.outcome == 'success'
+        if: steps.emulator.outcome == 'success'
         uses: actions/upload-artifact@v4
         with:
           name: PULS-Android-APK-Tested
@@ -122,5 +124,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: PULS-Android-Diagnostics
-          path: puls-launch-log.txt
+          path: |
+            puls-launch-log.txt
+            puls-home.png
           if-no-files-found: ignore

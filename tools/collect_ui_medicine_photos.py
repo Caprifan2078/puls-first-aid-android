@@ -4,6 +4,8 @@ import hashlib
 import html
 import json
 import re
+import subprocess
+import tempfile
 import time
 import urllib.parse
 import urllib.request
@@ -16,6 +18,9 @@ UA = "PULS-MedicinePhotoQA/1.0 (https://github.com/Caprifan2078/puls-first-aid-a
 LICENSES = {"CC0 1.0": "https://creativecommons.org/publicdomain/zero/1.0/",
             "CC BY-SA 4.0": "https://creativecommons.org/licenses/by-sa/4.0/",
             "CC BY-SA 3.0": "https://creativecommons.org/licenses/by-sa/3.0/"}
+
+def normalize_license(value):
+    return {"CC0": "CC0 1.0"}.get(value, value)
 
 def plain(value):
     return html.unescape(re.sub(r"<[^>]*>", "", value)).strip()
@@ -39,7 +44,7 @@ def collect(row):
         "titles":"File:" + row["file"],"prop":"imageinfo","iiprop":"url|mime|size|sha1|extmetadata"})
     info = json.loads(get("https://commons.wikimedia.org/w/api.php?" + query, 2_000_000))["query"]["pages"][0]["imageinfo"][0]
     meta = info["extmetadata"]
-    license_name = plain(meta["LicenseShortName"]["value"])
+    license_name = normalize_license(plain(meta["LicenseShortName"]["value"]))
     if license_name != row["license"] or license_name not in LICENSES:
         raise ValueError("license differs: " + license_name)
     author = plain(meta.get("Artist", {}).get("value", ""))
@@ -55,14 +60,25 @@ def collect(row):
     upstream = info["sha1"]
     if digest.lower() != upstream.lower() and int(digest, 16) != int(upstream, 36):
         raise ValueError("original SHA-1 mismatch")
-    (OUT / (slug + ".jpg")).write_bytes(data)
+    # Preserve original digest, resize to a local derivative without EXIF/GPS metadata.
+    with tempfile.TemporaryDirectory() as temp:
+        original = Path(temp) / "original.jpg"
+        original.write_bytes(data)
+        target = Path(temp) / "display.jpg"
+        subprocess.run(["ffmpeg","-nostdin","-v","error","-i",str(original),"-map_metadata","-1","-vf","scale=1000:1000:force_original_aspect_ratio=decrease","-frames:v","1","-q:v","3",str(target)], check=True, timeout=45)
+        display = target.read_bytes()
+        if not display.startswith(b"\xff\xd8\xff") or len(display)>1_000_000:
+            raise ValueError("invalid derived JPEG")
+        (OUT / (slug + ".jpg")).write_bytes(display)
     return {"id":slug,"source":row["source"],"author":author,"license":license_name,
-        "license_url":LICENSES[license_name],"sha256":hashlib.sha256(data).hexdigest(),
-        "bytes":len(data),"visual_review":"pending; QA only","modifications":"none"}
+        "license_url":LICENSES[license_name],"original_sha256":hashlib.sha256(data).hexdigest(), "original_sha1":digest,
+        "sha256":hashlib.sha256(display).hexdigest(), "bytes":len(display),"visual_review":"pending; QA only","modifications":"Resized to fit 1000px; metadata removed; JPEG re-encoded"}
 
 def main():
     candidates = json.loads((ROOT / "media-review-20261126.json").read_text())["medicine_photos"]
     OUT.mkdir(parents=True, exist_ok=True)
+    for stale in OUT.glob("*.jpg"):
+        stale.unlink()
     rows, failed = [], []
     for row in candidates:
         try:

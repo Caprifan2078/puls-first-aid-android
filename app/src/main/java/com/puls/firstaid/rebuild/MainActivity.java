@@ -41,14 +41,16 @@ public final class MainActivity extends Activity {
         s.setJavaScriptEnabled(true);
         s.setDomStorageEnabled(true);
         s.setAllowFileAccess(false);
-        s.setAllowContentAccess(true);
+        s.setAllowContentAccess(false);
         s.setAllowFileAccessFromFileURLs(false);
         s.setAllowUniversalAccessFromFileURLs(false);
         s.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
         s.setMediaPlaybackRequiresUserGesture(true);
         web.setWebViewClient(new WebViewClient() {
             @Override public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
-                return loader.shouldInterceptRequest(request.getUrl());
+                WebResourceResponse response = loader.shouldInterceptRequest(request.getUrl());
+                if (response != null) return response;
+                return new WebResourceResponse("text/plain", "UTF-8", 403, "Blocked", java.util.Collections.emptyMap(), new java.io.ByteArrayInputStream(new byte[0]));
             }
             @Override public void onPageFinished(WebView view, String url) {
                 if (START_URL.equals(url)) {
@@ -59,9 +61,10 @@ public final class MainActivity extends Activity {
             }
             @Override public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                 Uri uri = request.getUrl();
-                if ("https".equals(uri.getScheme()) && "appassets.androidplatform.net".equalsIgnoreCase(uri.getHost())) return false;
+                if ("https".equals(uri.getScheme()) && "appassets.androidplatform.net".equalsIgnoreCase(uri.getHost()) && "/assets/index.html".equals(uri.getPath())) return false;
                 try {
-                    if ("tel".equalsIgnoreCase(uri.getScheme())) {
+                    if (!request.isForMainFrame() || !request.hasGesture()) return true;
+                    if ("tel".equalsIgnoreCase(uri.getScheme()) && uri.getSchemeSpecificPart().matches("\\+?[0-9]{2,7}")) {
                         startActivity(new Intent(Intent.ACTION_DIAL, uri));
                     } else if ("https".equalsIgnoreCase(uri.getScheme()) || "http".equalsIgnoreCase(uri.getScheme())) {
                         startActivity(new Intent(Intent.ACTION_VIEW, uri));

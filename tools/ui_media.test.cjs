@@ -10,8 +10,8 @@ test('medicine shelf is grouped, bilingual and has no empty image slots',()=>{
  const ctx=vm.createContext({state:{lang:'ru'},esc:v=>String(v)});
  vm.runInContext(chunk,ctx);
  const ru=vm.runInContext('renderMedicineShelf()',ctx);
- assert.equal((ru.match(/medicine-group/g)||[]).length,4);
- assert.equal((ru.match(/medicine-row/g)||[]).length,6);
+ assert.equal((ru.match(/medicine-group/g)||[]).length,5);
+ assert.equal((ru.match(/medicine-row/g)||[]).length,9);
  assert.ok(!ru.includes('<img'));
  assert.ok(ru.includes('Не определяйте препарат по фото'));
  const en=vm.runInContext('state.lang="en";renderMedicineShelf()',ctx);
@@ -23,4 +23,17 @@ test('emergency call and saved guide access remain',()=>{
  assert.ok(page.includes('id="langbtn"'));
  assert.ok(js.includes('id="backup"'));
  assert.ok(js.includes('aria-expanded='));
+});
+
+test('malformed topic IDs and stale catalog categories are safe',()=>{
+ const ctx=vm.createContext({CATS:[["all"],["injuries"]]});
+ vm.runInContext(js.slice(js.indexOf("function safeTopicId"),js.indexOf("function renderMedicineShelf")),ctx);
+ assert.equal(vm.runInContext('safeTopicId("%")',ctx),"");
+ assert.equal(vm.runInContext('catalogCategory(undefined)',ctx),"all");
+ assert.equal(vm.runInContext('catalogCategory("injuries")',ctx),"injuries");
+ assert.ok(js.includes('history.replaceState(null,"","#/catalog/"+state.cat)'));
+});
+test('broken photo disappears and open category is restored after manifest load',()=>{
+ assert.ok(js.includes('ev.target.remove()'));
+ assert.ok(js.includes('d.open=groups.includes(d.dataset.group)'));
 });
