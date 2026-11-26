@@ -12,6 +12,7 @@ try{
  browser=await chromium.launch({headless:true,args:["--no-sandbox"]});
  for(const width of [320,390,768]){
   const ctx=await browser.newContext({viewport:{width,height:844},isMobile:width<500,hasTouch:width<500,deviceScaleFactor:1});
+  await ctx.addInitScript(()=>{window.qaAwake=[];window.PulsDisplay={postMessage(v){window.qaAwake.push(v)}}});
   const page=await ctx.newPage(),errors=[];
   page.on("pageerror",e=>errors.push(e.message));
   const url="http://127.0.0.1:"+server.address().port+"/index.html";
@@ -24,6 +25,7 @@ try{
   try {
   const noOverflow=async()=>assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),"horizontal overflow "+width+" "+page.url());
   await page.goto(url+"#/home");
+  assert.equal(await page.evaluate(()=>window.qaAwake.at(-1)),"off");
   assert.equal(await page.locator("#home-browse .emergency-tile:visible").count(),8);
   await page.locator("#search").fill("инсульт");
   assert.ok(page.url().endsWith("#/home"),"search must remain on home");
@@ -34,6 +36,7 @@ try{
   assert.ok(await page.locator("#home-browse").isVisible());
   await page.locator('nav a[href="#/sos"]').click();
   await page.locator(".sos-heading").waitFor({state:"visible"});
+  assert.equal(await page.evaluate(()=>window.qaAwake.at(-1)),"on");
   assert.equal(await page.locator(".emergency-tile:visible").count(),8);
   assert.ok(await page.locator('.scene-safety-link[href="#/topic/scene-safety"]').isVisible());
   await page.locator('[data-sos-category="children"] summary').click();

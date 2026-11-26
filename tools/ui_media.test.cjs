@@ -133,3 +133,12 @@ test('real panic search phrases prioritize relevant guides without diagnosis or 
  ctx.q="zzznoresults";assert.equal(vm.runInContext("sosMatches(q).length",ctx),0);
  assert.ok(vm.runInContext("SEARCH_PHRASES.every(([ids,phrases])=>phrases.length&&ids.every(id=>PAGES.some(p=>p.id===id)))",ctx));
 });
+
+test('screen awake only in visible emergency mode and respects preference',()=>{
+ const ctx=vm.createContext({state:{keepAwake:true},document:{hidden:false,body:{classList:{contains:()=>true}}},window:{PulsDisplay:{postMessage:v=>sent.push(v)}}});
+ const sent=[];
+ vm.runInContext(js.slice(js.indexOf("function notifyEmergencyAwake("),js.indexOf("function renderMore(){")),ctx);
+ vm.runInContext("notifyEmergencyAwake()",ctx);assert.equal(sent.at(-1),"on");
+ ctx.document.hidden=true;vm.runInContext("notifyEmergencyAwake()",ctx);assert.equal(sent.at(-1),"off");
+ ctx.document.hidden=false;ctx.state.keepAwake=false;vm.runInContext("notifyEmergencyAwake()",ctx);assert.equal(sent.at(-1),"off");
+});

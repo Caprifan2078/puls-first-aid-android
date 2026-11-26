@@ -8,6 +8,10 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import androidx.webkit.WebViewCompat;
+import androidx.webkit.WebViewFeature;
+import java.util.Collections;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
@@ -31,6 +35,13 @@ public final class MainActivity extends Activity {
     private ValueCallback<Uri[]> uploadCallback;
     private WebViewAssetLoader loader;
     private int readyGeneration;
+    private boolean foreground;
+    private boolean emergencyAwake;
+
+    private void updateScreenAwake() {
+        if (foreground && emergencyAwake) getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        else getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+    }
 
     private boolean isAppPage(String url) {
         Uri uri = Uri.parse(url == null ? "" : url);
@@ -70,6 +81,20 @@ public final class MainActivity extends Activity {
         s.setAllowUniversalAccessFromFileURLs(false);
         s.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
         s.setMediaPlaybackRequiresUserGesture(true);
+        emergencyAwake = false;
+        updateScreenAwake();
+        if (WebViewFeature.isFeatureSupported(WebViewFeature.WEB_MESSAGE_LISTENER)) {
+            WebViewCompat.addWebMessageListener(web, "PulsDisplay",
+                    Collections.singleton("https://appassets.androidplatform.net"),
+                    (view, message, origin, isMainFrame, reply) -> {
+                        if (view != web || !isMainFrame || !isAppPage(view.getUrl())) return;
+                        String data = message.getData();
+                        if ("on".equals(data) || "off".equals(data)) {
+                            emergencyAwake = "on".equals(data);
+                            updateScreenAwake();
+                        }
+                    });
+        }
         web.setWebViewClient(new WebViewClient() {
             @Override public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
                 Uri uri = request.getUrl();
@@ -188,6 +213,8 @@ public final class MainActivity extends Activity {
     }
 
     @Override protected void onPause() {
+        foreground = false;
+        updateScreenAwake();
         if (web != null) {
             web.evaluateJavascript("typeof pauseAidVideos==='function' && pauseAidVideos()", null);
             web.onPause();
@@ -196,7 +223,12 @@ public final class MainActivity extends Activity {
     }
     @Override protected void onResume() {
         super.onResume();
-        if (web != null) web.onResume();
+        foreground = true;
+        updateScreenAwake();
+        if (web != null) {
+            web.onResume();
+            web.evaluateJavascript("typeof notifyEmergencyAwake==='function' && notifyEmergencyAwake()", null);
+        }
     }
 
     @Override protected void onActivityResult(int code, int result, Intent data) {
@@ -212,6 +244,9 @@ public final class MainActivity extends Activity {
     @Override protected void onDestroy() {
         if (uploadCallback != null) uploadCallback.onReceiveValue(null);
         readyGeneration++;
+        foreground = false;
+        emergencyAwake = false;
+        updateScreenAwake();
         if (web != null) { web.destroy(); web = null; }
         super.onDestroy();
     }
