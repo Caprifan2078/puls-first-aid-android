@@ -48,7 +48,8 @@
       "source": "https://commons.wikimedia.org/wiki/File:RCP.ogv",
       "clinical_approval": false,
       "rights_review": "pending",
-      "visual_review": "pending"
+      "visual_review": "pending",
+      "expected_license": "CC BY-SA 3.0"
     },
     {
       "id": "video-review-06",
@@ -84,7 +85,8 @@
       "source": "https://commons.wikimedia.org/wiki/File:Temeljni_postopki_o%C5%BEivljanja_in_uporaba_defibrilatorja_(HQ).webm",
       "clinical_approval": false,
       "rights_review": "pending",
-      "visual_review": "pending"
+      "visual_review": "pending",
+      "expected_license": "CC BY 3.0"
     },
     {
       "id": "video-review-10",
@@ -217,6 +219,61 @@
       "file": "Self-Management Education- Confidence to Manage Your Chronic Condition.webm",
       "topic_hint": "health-education",
       "source": "https://commons.wikimedia.org/wiki/File:Self-Management_Education-_Confidence_to_Manage_Your_Chronic_Condition.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-25",
+      "file": "En.Video-Abdominal thrusts.webm",
+      "topic_hint": "choking",
+      "source": "https://commons.wikimedia.org/wiki/File:En.Video-Abdominal_thrusts.webm",
+      "expected_license": "CC BY-SA 4.0",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-26",
+      "file": "Correct way to use inhaler.ogv",
+      "topic_hint": "asthma",
+      "source": "https://commons.wikimedia.org/wiki/File:Correct_way_to_use_inhaler.ogv",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-27",
+      "file": "What You Need To Know About Handwashing.webm",
+      "topic_hint": "hygiene",
+      "source": "https://commons.wikimedia.org/wiki/File:What_You_Need_To_Know_About_Handwashing.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-28",
+      "file": "Step-by-step Handwashing.webm",
+      "topic_hint": "hygiene",
+      "source": "https://commons.wikimedia.org/wiki/File:Step-by-step_Handwashing.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-29",
+      "file": "Wash Your Hands.webm",
+      "topic_hint": "hygiene",
+      "source": "https://commons.wikimedia.org/wiki/File:Wash_Your_Hands.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending"
+    },
+    {
+      "id": "video-review-30",
+      "file": "Emergency bandage application uk.webm",
+      "topic_hint": "bleeding",
+      "source": "https://commons.wikimedia.org/wiki/File:Emergency_bandage_application_uk.webm",
       "clinical_approval": false,
       "rights_review": "pending",
       "visual_review": "pending"
