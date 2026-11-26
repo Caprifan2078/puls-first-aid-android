@@ -171,11 +171,14 @@ const title=(h,p)=>'<div class="screenhead"><div class="kicker" style="color:var
 Object.assign(I.ru,{categories:"По ситуациям",recent:"Недавно открывали",noRecent:"Откройте инструкцию — она появится здесь",fastStart:"Начни с главного",safety:"Убедись, что место безопасно",phone:"При угрозе жизни звони в экстренную службу",follow:"Выполняй указания диспетчера",related:"Похожие инструкции",prepared:"Готовность аптечек",readyKits:"Отметь важные вещи в списках",browseAll:"Смотреть весь справочник",firstHelp:"Первая помощь",settingsNote:"Информация хранится на этом устройстве. Если очистить данные приложения, избранное и отметки аптечек будут потеряны.",review:"Перед применением сложных процедур нужен специалист. Алгоритмы — учебные."});
 Object.assign(I.en,{categories:"Browse situations",recent:"Recently opened",noRecent:"Open a guide to see it here",fastStart:"Start with the essentials",safety:"Make sure the scene is safe",phone:"Call local emergency services for life threats",follow:"Follow dispatcher instructions",related:"Related guides",prepared:"Kit readiness",readyKits:"Tick what you have in your kits",browseAll:"Explore the full library",firstHelp:"First aid",settingsNote:"Preferences stay on this device. Clearing app data erases bookmarks and kit checklists.",review:"For complex interventions, seek professional advice. Guides are educational."});
 state.recent=store.get("recent",[]);
-if(!Array.isArray(state.recent))state.recent=[];
-if(!Array.isArray(state.saved))state.saved=[];
+const knownTopicIds=new Set(PAGES.map(p=>p.id));
+function cleanTopicIds(values,limit){return Array.isArray(values)?[...new Set(values.filter(x=>typeof x==="string"&&knownTopicIds.has(x)))].slice(0,limit):[]}
+state.recent=cleanTopicIds(state.recent,7);
+state.saved=cleanTopicIds(state.saved,PAGES.length);
 if(state.kitOpen!==""&&!KITS.some(k=>k.id===state.kitOpen))state.kitOpen="home";
 if(typeof state.num!=="string"||!/^\+?[0-9]{2,7}$/.test(state.num))state.num="112";
-if(!state.check||typeof state.check!=="object")state.check={};
+const knownKitKeys=new Set(KITS.flatMap(k=>k.items.map((_,i)=>k.id+":"+i)));
+state.check=state.check&&typeof state.check==="object"&&!Array.isArray(state.check)?Object.fromEntries(Object.entries(state.check).filter(([key,value])=>knownKitKeys.has(key)&&value===true)):{};
 const CAT_ICONS={emergency:"✚",injuries:"⊕",everyday:"♡",environment:"☼",children:"♧"};
 function sectionTitle(k,href,label){return '<div class="sectiontop"><h2>'+esc(t(k))+'</h2>'+(href?'<a class="link" href="'+href+'">'+esc(label||t("show"))+' ↗</a>':"")+'</div>'}
 function categoryTile(c){const n=PAGES.filter(p=>p.category===c[0]).length;return '<a class="category-card" href="#/catalog/'+esc(c[0])+'"><span class="cat-icon">'+esc(CAT_ICONS[c[0]]||"▦")+'</span><strong>'+esc(c[state.lang==="ru"?1:2])+'</strong><small>'+n+' '+esc(t("count"))+'</small></a>'}
@@ -201,7 +204,7 @@ let toastHide;
 function toastMessage(msg){const el=document.querySelector("#puls-toast");if(!el)return;el.textContent=msg;el.hidden=false;if(toastHide)clearTimeout(toastHide);toastHide=setTimeout(()=>{el.hidden=true},2800)}
 function makeBackup(){
  const ids=new Set(PAGES.map(p=>p.id)),allowed=new Set(KITS.flatMap(k=>k.items.map((_,i)=>k.id+":"+i)));
- return {format:"puls-backup",schema:1,lang:state.lang,light:!!state.light,large:!!state.large,hicontrast:!!state.hicontrast,num:state.num,saved:state.saved.filter(id=>ids.has(id)),recent:state.recent.filter(id=>ids.has(id)).slice(0,7),check:Object.fromEntries(Object.entries(state.check).filter(([k,v])=>allowed.has(k)&&v===true))};
+ return {format:"puls-backup",schema:1,lang:state.lang,light:!!state.light,large:!!state.large,hicontrast:!!state.hicontrast,num:state.num,keepAwake:state.keepAwake!==false,kitOpen:state.kitOpen,saved:[...new Set(state.saved.filter(id=>ids.has(id)))],recent:[...new Set(state.recent.filter(id=>ids.has(id)))].slice(0,7),check:Object.fromEntries(Object.entries(state.check).filter(([k,v])=>allowed.has(k)&&v===true))};
 }
 function showBackup(){const area=document.querySelector("#backup-text");if(!area)return;area.value=JSON.stringify(makeBackup(),null,2);area.focus();area.select();toastMessage(t("backupSaved"))}
 async function copyBackup(){const area=document.querySelector("#backup-text");if(!area)return;if(!area.value.trim())showBackup();try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(area.value);toastMessage(t("backupCopied"))}else{area.focus();area.select();toastMessage(t("backupSaved"))}}catch(e){area.focus();area.select();toastMessage(t("backupSaved"))}}
@@ -214,14 +217,16 @@ function importBackup(){
   if(!v||Array.isArray(v)||v.format!=="puls-backup"||v.schema!==1)throw Error("format");
   if(!["ru","en"].includes(v.lang)||typeof v.light!=="boolean"||typeof v.large!=="boolean"||typeof v.hicontrast!=="boolean")throw Error("options");
   if(typeof v.num!=="string"||!new RegExp("^\\+?[0-9]{2,7}$").test(v.num))throw Error("phone");
-  if(!Array.isArray(v.saved)||!Array.isArray(v.recent)||v.saved.length>100||v.recent.length>100||!v.check||Array.isArray(v.check)||typeof v.check!=="object"||Object.keys(v.check).length>150)throw Error("entries");
+  if(!Array.isArray(v.saved)||!Array.isArray(v.recent)||v.saved.length>Math.max(PAGES.length,1000)||v.recent.length>100||!v.check||Array.isArray(v.check)||typeof v.check!=="object"||Object.keys(v.check).length>Math.max(KITS.reduce((n,k)=>n+k.items.length,0),150))throw Error("entries");
+  if(v.keepAwake!==undefined&&typeof v.keepAwake!=="boolean")throw Error("awake");
+  if(v.kitOpen!==undefined&&v.kitOpen!==""&&!KITS.some(k=>k.id===v.kitOpen))throw Error("kit");
   if(!confirm(t("backupAsk")))return;
   const ids=new Set(PAGES.map(p=>p.id)),keys=new Set(KITS.flatMap(k=>k.items.map((_,i)=>k.id+":"+i)));
   const saved=[...new Set(v.saved.filter(x=>typeof x==="string"&&ids.has(x)))];
   const recent=[...new Set(v.recent.filter(x=>typeof x==="string"&&ids.has(x)))].slice(0,7);
   const check=Object.fromEntries(Object.entries(v.check).filter(([key,val])=>keys.has(key)&&val===true));
-  Object.assign(state,{lang:v.lang,light:v.light,large:v.large,hicontrast:v.hicontrast,num:v.num,saved,recent,check});
-  const fields=["lang","light","large","hicontrast","num","saved","recent","check"];
+  Object.assign(state,{lang:v.lang,light:v.light,large:v.large,hicontrast:v.hicontrast,num:v.num,saved,recent,check,keepAwake:v.keepAwake??state.keepAwake,kitOpen:v.kitOpen??state.kitOpen});
+  const fields=["lang","light","large","hicontrast","num","saved","recent","check","keepAwake","kitOpen"];
   const allSaved=fields.map(key=>store.set(key,state[key])).every(Boolean);
   route();toastMessage(allSaved?t("backupRestored"):t("backupFail"));
  }catch(e){toastMessage(t("backupError"))}
