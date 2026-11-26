@@ -1,0 +1,4521 @@
+{
+  "schema": 1,
+  "scope": "Source links only; not clinical content or approval. Outside Android assets.",
+  "records": [
+    {
+      "id": "condition:acanthosis-nigricans",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/acanthosis-nigricans/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:achalasia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/achalasia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:acne",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/acne/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:acoustic-neuroma",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/acoustic-neuroma/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:acromegaly",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/acromegaly/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:actinic-keratoses",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/actinic-keratoses/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:actinomycosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/actinomycosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:acute-cholecystitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/acute-cholecystitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:acute-kidney-injury",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/acute-kidney-injury/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:acute-lymphoblastic-leukaemia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/acute-lymphoblastic-leukaemia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:acute-myeloid-leukaemia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/acute-myeloid-leukaemia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:acute-respiratory-distress-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/acute-respiratory-distress-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:adenomyosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/adenomyosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:adhd-adults",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/adhd-adults/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:adhd-children-teenagers",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/adhd-children-teenagers/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:age-related-macular-degeneration-amd",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/age-related-macular-degeneration-amd/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:albinism",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/albinism/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:alcohol-related-liver-disease-arld",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/alcohol-related-liver-disease-arld/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:alcohol-use-disorder",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/alcohol-use-disorder/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:allergic-rhinitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/allergic-rhinitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:allergies",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/allergies/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:alzheimers-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/alzheimers-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:amyloidosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/amyloidosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:anabolic-steroid-misuse",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/anabolic-steroid-misuse/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:anal-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/anal-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:anal-fissure",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/anal-fissure/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:anal-fistula",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/anal-fistula/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:androgen-insensitivity-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/androgen-insensitivity-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:angelman-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/angelman-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:angina",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/angina/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:ankylosing-spondylitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/ankylosing-spondylitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:antiphospholipid-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/antiphospholipid-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:aphasia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/aphasia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:arrhythmia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/arrhythmia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:arthritis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/arthritis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:asbestosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/asbestosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:aspergillosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/aspergillosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:astigmatism",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/astigmatism/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:ataxia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/ataxia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:atherosclerosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/atherosclerosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:athletes-foot",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/athletes-foot/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:atopic-eczema",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/atopic-eczema/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:atrial-fibrillation",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/atrial-fibrillation/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:auditory-processing-disorder",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/auditory-processing-disorder/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:autism",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/autism/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:autosomal-dominant-polycystic-kidney-disease-adpkd",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/autosomal-dominant-polycystic-kidney-disease-adpkd/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:autosomal-recessive-polycystic-kidney-disease-arpkd",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/autosomal-recessive-polycystic-kidney-disease-arpkd/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:back-pain",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/back-pain/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bacterial-vaginosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bacterial-vaginosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bakers-cyst",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bakers-cyst/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:balanitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/balanitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bartholins-cyst",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bartholins-cyst/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bedbugs",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bedbugs/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:behcets-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/behcets-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bells-palsy",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bells-palsy/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bile-duct-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bile-duct-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bird-flu",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bird-flu/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:birthmarks",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/birthmarks/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:black-eye",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/black-eye/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bladder-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bladder-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bladder-pain-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bladder-pain-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bladder-stones",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bladder-stones/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:blepharitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/blepharitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:boils",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/boils/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bone-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bone-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bone-cyst",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bone-cyst/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:botulism",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/botulism/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bowel-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bowel-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bowel-incontinence",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bowel-incontinence/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bowel-polyps",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bowel-polyps/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bowens-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bowens-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:brain-abscess",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/brain-abscess/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:brain-aneurysm",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/brain-aneurysm/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:brain-tumours",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/brain-tumours/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:breast-cancer-in-men",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/breast-cancer-in-men/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:breast-cancer-in-women",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/breast-cancer-in-women/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:broken-collarbone",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/broken-collarbone/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:broken-leg",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/broken-leg/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bronchiectasis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bronchiectasis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bronchitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bronchitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:brucellosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/brucellosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:brugada-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/brugada-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bullous-pemphigoid",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bullous-pemphigoid/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bunions",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bunions/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:bursitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/bursitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:c-difficile",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/c-difficile/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:cardiomyopathy",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/cardiomyopathy/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:cardiovascular-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/cardiovascular-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:carpal-tunnel-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/carpal-tunnel-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:cataracts",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/cataracts/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:catarrh",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/catarrh/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:cavernoma",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/cavernoma/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:cerebral-palsy",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/cerebral-palsy/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:cervical-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/cervical-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:cervical-spondylosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/cervical-spondylosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:charcot-marie-tooth-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/charcot-marie-tooth-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:charles-bonnet-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/charles-bonnet-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:chest-infection",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/chest-infection/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:chiari-malformation",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/chiari-malformation/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:chilblains",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/chilblains/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:childhood-cataracts",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/childhood-cataracts/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:chlamydia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/chlamydia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:cholera",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/cholera/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:cholesteatoma",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/cholesteatoma/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:chronic-fatigue-syndrome-cfs",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/chronic-fatigue-syndrome-cfs/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:chronic-lymphocytic-leukaemia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/chronic-lymphocytic-leukaemia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:chronic-myeloid-leukaemia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/chronic-myeloid-leukaemia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:chronic-obstructive-pulmonary-disease-copd",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/chronic-obstructive-pulmonary-disease-copd/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:chronic-pancreatitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/chronic-pancreatitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:chronic-traumatic-encephalopathy",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/chronic-traumatic-encephalopathy/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:cirrhosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/cirrhosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:cleft-lip-and-palate",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/cleft-lip-and-palate/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:club-foot",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/club-foot/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:cluster-headaches",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/cluster-headaches/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:coeliac-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/coeliac-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:cold-sores",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/cold-sores/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:colic",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/colic/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:colour-vision-deficiency",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/colour-vision-deficiency/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:common-cold",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/common-cold/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:complex-regional-pain-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/complex-regional-pain-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:congenital-heart-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/congenital-heart-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:conjunctivitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/conjunctivitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:constipation",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/constipation/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:contact-dermatitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/contact-dermatitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:corns-and-calluses",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/corns-and-calluses/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:coronary-heart-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/coronary-heart-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:corticobasal-degeneration",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/corticobasal-degeneration/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:costochondritis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/costochondritis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:covid-19",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/covid-19/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:cradle-cap",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/cradle-cap/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:craniosynostosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/craniosynostosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:creutzfeldt-jakob-disease-cjd",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/creutzfeldt-jakob-disease-cjd/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:crohns-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/crohns-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:cushings-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/cushings-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:cyclical-vomiting-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/cyclical-vomiting-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:cyclospora",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/cyclospora/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:cystic-fibrosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/cystic-fibrosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:cytomegalovirus-cmv",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/cytomegalovirus-cmv/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:dandruff",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/dandruff/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:dementia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/dementia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:dementia-with-lewy-bodies",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/dementia-with-lewy-bodies/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:dengue",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/dengue/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:developmental-coordination-disorder-dyspraxia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/developmental-coordination-disorder-dyspraxia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:developmental-coordination-disorder-dyspraxia-in-adults",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/developmental-coordination-disorder-dyspraxia-in-adults/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:developmental-dysplasia-of-the-hip",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/developmental-dysplasia-of-the-hip/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:diabetes",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/diabetes/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:diabetes-insipidus",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/diabetes-insipidus/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:diabetic-retinopathy",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/diabetic-retinopathy/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:differences-in-sex-development",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/differences-in-sex-development/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:digeorge-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/digeorge-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:diphtheria",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/diphtheria/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:discoid-eczema",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/discoid-eczema/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:diverticular-disease-and-diverticulitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/diverticular-disease-and-diverticulitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:downs-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/downs-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:dupuytrens-contracture",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/dupuytrens-contracture/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:dysarthria",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/dysarthria/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:dysentery",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/dysentery/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:dyslexia-in-adults",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/dyslexia-in-adults/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:dyslexia-in-children",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/dyslexia-in-children/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:dystonia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/dystonia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:early-or-delayed-puberty",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/early-or-delayed-puberty/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:early-or-premature-menopause",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/early-or-premature-menopause/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:earwax-build-up",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/earwax-build-up/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:ebola",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/ebola/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:ectopic-pregnancy",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/ectopic-pregnancy/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:ectropion",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/ectropion/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:edwards-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/edwards-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:ehlers-danlos-syndromes-eds",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/ehlers-danlos-syndromes-eds/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:ejaculation-problems",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/ejaculation-problems/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:encephalitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/encephalitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:endocarditis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/endocarditis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:endometriosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/endometriosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:enlarged-prostate",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/enlarged-prostate/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:epidermolysis-bullosa",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/epidermolysis-bullosa/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:epididymitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/epididymitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:epilepsy",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/epilepsy/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:erection-problems-erectile-dysfunction",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/erection-problems-erectile-dysfunction/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:erythema-multiforme",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/erythema-multiforme/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:erythema-nodosum",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/erythema-nodosum/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:erythrocytosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/erythrocytosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:erythromelalgia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/erythromelalgia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:excessive-daytime-sleepiness-hypersomnia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/excessive-daytime-sleepiness-hypersomnia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:excessive-sweating-hyperhidrosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/excessive-sweating-hyperhidrosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:eye-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/eye-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:face-blindness",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/face-blindness/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:falls",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/falls/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:female-genital-mutilation-fgm",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/female-genital-mutilation-fgm/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:femoral-hernia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/femoral-hernia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:fetal-alcohol-spectrum-disorder",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/fetal-alcohol-spectrum-disorder/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:fibroids",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/fibroids/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:fibromyalgia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/fibromyalgia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:flat-feet",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/flat-feet/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:flat-head-syndrome-plagiocephaly-brachycephaly",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/flat-head-syndrome-plagiocephaly-brachycephaly/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:flu",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/flu/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:food-allergy",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/food-allergy/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:food-intolerance",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/food-intolerance/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:food-poisoning",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/food-poisoning/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:foot-drop",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/foot-drop/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:frontotemporal-dementia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/frontotemporal-dementia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:frozen-shoulder",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/frozen-shoulder/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:fungal-nail-infection",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/fungal-nail-infection/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:gallbladder-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/gallbladder-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:gallstones",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/gallstones/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:ganglion-cyst",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/ganglion-cyst/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:gangrene",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/gangrene/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:gastritis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/gastritis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:gastroparesis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/gastroparesis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:gender-dysphoria-and-incongruence",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/gender-dysphoria-and-incongruence/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:genital-herpes",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/genital-herpes/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:genital-warts",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/genital-warts/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:gestational-diabetes",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/gestational-diabetes/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:giardiasis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/giardiasis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:gilberts-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/gilberts-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:glandular-fever",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/glandular-fever/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:glomerulonephritis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/glomerulonephritis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:glue-ear",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/glue-ear/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:goitre",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/goitre/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:gonorrhoea",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/gonorrhoea/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:gout",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/gout/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:granuloma-annulare",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/granuloma-annulare/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:granulomatosis-with-polyangiitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/granulomatosis-with-polyangiitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:group-b-strep",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/group-b-strep/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:growing-pains",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/growing-pains/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:guillain-barre-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/guillain-barre-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:gum-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/gum-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:gynaecomastia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/gynaecomastia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:haemochromatosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/haemochromatosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:haemophilia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/haemophilia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:hamstring-injury",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/hamstring-injury/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:hantavirus",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/hantavirus/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:hay-fever",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/hay-fever/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:head-lice-and-nits",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/head-lice-and-nits/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:heart-attack",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/heart-attack/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:heart-block",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/heart-block/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:heart-failure",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/heart-failure/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:heart-valve-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/heart-valve-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:heartburn-and-acid-reflux",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/heartburn-and-acid-reflux/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:heat-rash-prickly-heat",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/heat-rash-prickly-heat/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:heavy-periods",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/heavy-periods/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:henoch-schonlein-purpura-hsp",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/henoch-schonlein-purpura-hsp/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:hepatitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/hepatitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:hepatitis-a",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/hepatitis-a/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:hepatitis-b",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/hepatitis-b/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:hepatitis-c",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/hepatitis-c/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:hereditary-haemorrahagic-telangiectasia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/hereditary-haemorrahagic-telangiectasia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:hereditary-spastic-paraplegia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/hereditary-spastic-paraplegia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:herpes-simplex-eye-infections",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/herpes-simplex-eye-infections/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:herpetic-whitlow",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/herpetic-whitlow/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:hiatus-hernia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/hiatus-hernia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:hib",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/hib/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:hidradenitis-suppurativa",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/hidradenitis-suppurativa/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:high-blood-pressure",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/high-blood-pressure/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:high-cholesterol",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/high-cholesterol/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:hirschsprungs-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/hirschsprungs-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:hiv-and-aids",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/hiv-and-aids/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:hodgkin-lymphoma",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/hodgkin-lymphoma/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:human-papilloma-virus-hpv",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/human-papilloma-virus-hpv/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:huntingtons-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/huntingtons-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:hydrocephalus",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/hydrocephalus/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:hydronephrosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/hydronephrosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:hyperacusis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/hyperacusis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:hyperparathyroidism",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/hyperparathyroidism/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:hypoparathyroidism",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/hypoparathyroidism/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:ichthyosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/ichthyosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:idiopathic-pulmonary-fibrosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/idiopathic-pulmonary-fibrosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:impetigo",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/impetigo/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:indigestion",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/indigestion/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:infected-piercings",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/infected-piercings/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:infertility",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/infertility/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:inflammatory-bowel-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/inflammatory-bowel-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:ingrown-hairs",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/ingrown-hairs/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:ingrown-toenail",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/ingrown-toenail/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:insomnia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/insomnia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:intracranial-hypertension",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/intracranial-hypertension/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:iron-deficiency-anaemia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/iron-deficiency-anaemia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:irritable-bowel-syndrome-ibs",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/irritable-bowel-syndrome-ibs/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:japanese-encephalitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/japanese-encephalitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:jaundice",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/jaundice/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:jet-lag",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/jet-lag/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:joint-hypermobility-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/joint-hypermobility-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:kawasaki-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/kawasaki-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:keloid-scars",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/keloid-scars/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:keratosis-pilaris",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/keratosis-pilaris/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:kidney-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/kidney-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:kidney-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/kidney-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:klinefelters-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/klinefelters-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:kyphosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/kyphosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:labial-fusion",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/labial-fusion/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:labyrinthitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/labyrinthitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:lactose-intolerance",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/lactose-intolerance/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:lambert-eaton-myasthenic-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/lambert-eaton-myasthenic-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:laryngeal-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/laryngeal-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:laryngitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/laryngitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:lazy-eye",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/lazy-eye/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:learning-disabilities",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/learning-disabilities/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:leg-cramps",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/leg-cramps/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:leg-ulcer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/leg-ulcer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:legionnaires-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/legionnaires-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:leptospirosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/leptospirosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:leukoplakia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/leukoplakia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:lichen-planus",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/lichen-planus/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:lichen-sclerosus",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/lichen-sclerosus/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:lipoedema",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/lipoedema/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:lipoma",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/lipoma/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:listeriosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/listeriosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:liver-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/liver-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:liver-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/liver-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:long-covid",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/long-covid/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:long-qt-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/long-qt-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:long-sightedness",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/long-sightedness/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:low-blood-pressure-hypotension",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/low-blood-pressure-hypotension/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:low-sperm-count",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/low-sperm-count/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:low-white-blood-cell-count",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/low-white-blood-cell-count/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:lung-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/lung-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:lupus",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/lupus/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:lyme-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/lyme-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:lymphoedema",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/lymphoedema/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:macular-hole",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/macular-hole/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:malaria",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/malaria/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:male-menopause",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/male-menopause/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:malignant-brain-tumour",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/malignant-brain-tumour/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:mallet-finger",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/mallet-finger/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:malnutrition",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/malnutrition/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:marfan-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/marfan-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:mastitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/mastitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:mastocytosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/mastocytosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:measles",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/measles/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:medically-unexplained-symptoms",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/medically-unexplained-symptoms/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:melanoma-skin-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/melanoma-skin-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:menieres-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/menieres-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:meniscus-tear",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/meniscus-tear/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:menopause-and-perimenopause",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/menopause-and-perimenopause/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:mesothelioma",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/mesothelioma/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:metabolic-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/metabolic-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:middle-east-respiratory-syndrome-mers",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/middle-east-respiratory-syndrome-mers/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:migraine",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/migraine/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:miscarriage",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/miscarriage/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:molar-pregnancy",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/molar-pregnancy/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:moles",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/moles/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:molluscum-contagiosum",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/molluscum-contagiosum/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:mortons-neuroma",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/mortons-neuroma/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:motor-neurone-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/motor-neurone-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:mouth-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/mouth-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:mouth-ulcers",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/mouth-ulcers/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:mpox",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/mpox/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:mrsa",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/mrsa/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:mucositis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/mucositis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:multiple-sclerosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/multiple-sclerosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:multiple-system-atrophy",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/multiple-system-atrophy/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:mumps",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/mumps/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:muscular-dystrophy",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/muscular-dystrophy/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:myasthenia-gravis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/myasthenia-gravis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:myelodysplastic-syndrome-mds",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/myelodysplastic-syndrome-mds/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:myeloma",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/myeloma/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:myositis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/myositis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:narcolepsy",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/narcolepsy/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:nasal-and-sinus-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/nasal-and-sinus-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:nasal-polyps",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/nasal-polyps/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:nasopharyngeal-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/nasopharyngeal-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:necrotising-fasciitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/necrotising-fasciitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:neonatal-herpes",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/neonatal-herpes/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:neonatal-respiratory-distress-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/neonatal-respiratory-distress-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:nephrotic-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/nephrotic-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:neurofibromatosis-type-1",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/neurofibromatosis-type-1/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:neurofibromatosis-type-2",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/neurofibromatosis-type-2/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:neuromyelitis-optica",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/neuromyelitis-optica/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:night-terrors",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/night-terrors/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:non-alcoholic-fatty-liver-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/non-alcoholic-fatty-liver-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:non-allergic-rhinitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/non-allergic-rhinitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:non-cancerous-benign-brain-tumours",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/non-cancerous-benign-brain-tumours/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:non-hodgkin-lymphoma",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/non-hodgkin-lymphoma/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:non-melanoma-skin-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/non-melanoma-skin-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:noonan-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/noonan-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:norovirus",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/norovirus/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:oedema",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/oedema/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:oesophageal-atresia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/oesophageal-atresia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:oesophageal-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/oesophageal-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:oral-thrush-mouth-thrush",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/oral-thrush-mouth-thrush/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:orf",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/orf/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:osteoarthritis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/osteoarthritis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:osteomyelitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/osteomyelitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:osteophyte",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/osteophyte/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:osteoporosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/osteoporosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:otosclerosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/otosclerosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:ovarian-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/ovarian-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:ovarian-cyst",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/ovarian-cyst/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:overactive-thyroid-hyperthyroidism",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/overactive-thyroid-hyperthyroidism/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:overweight-and-obesity",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/overweight-and-obesity/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pagets-disease-bone",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pagets-disease-bone/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pagets-disease-nipple",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pagets-disease-nipple/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pancreatic-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pancreatic-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:parkinsons-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/parkinsons-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pataus-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pataus-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pelvic-inflammatory-disease-pid",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pelvic-inflammatory-disease-pid/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pelvic-organ-prolapse",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pelvic-organ-prolapse/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pemphigus-vulgaris",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pemphigus-vulgaris/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:penile-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/penile-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pericarditis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pericarditis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:periods",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/periods/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:peripheral-arterial-disease-pad",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/peripheral-arterial-disease-pad/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:peripheral-neuropathy",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/peripheral-neuropathy/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:peritonitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/peritonitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:peyronies-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/peyronies-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:phaeochromocytoma",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/phaeochromocytoma/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:phimosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/phimosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:phlebitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/phlebitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:piles-haemorrhoids",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/piles-haemorrhoids/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pilonidal-sinus",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pilonidal-sinus/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pityriasis-rosea",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pityriasis-rosea/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pityriasis-versicolor",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pityriasis-versicolor/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:plantar-fasciitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/plantar-fasciitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pleurisy",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pleurisy/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pmdd-premenstrual-dysphoric-disorder",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pmdd-premenstrual-dysphoric-disorder/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:polio",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/polio/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:polyendocrine-metabolic-ovarian-syndrome-pmos",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/polyendocrine-metabolic-ovarian-syndrome-pmos/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:polyhydramnios",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/polyhydramnios/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:polymorphic-light-eruption",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/polymorphic-light-eruption/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:polymyalgia-rheumatica",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/polymyalgia-rheumatica/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pompholyx",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pompholyx/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:post-herpetic-neuralgia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/post-herpetic-neuralgia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:postural-tachycardia-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/postural-tachycardia-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:prader-willi-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/prader-willi-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pre-eclampsia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pre-eclampsia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pre-menstrual-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pre-menstrual-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pressure-sores",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pressure-sores/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:primary-biliary-cholangitis-pbc",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/primary-biliary-cholangitis-pbc/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:problems-swallowing-pills",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/problems-swallowing-pills/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:progressive-supranuclear-palsy-psp",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/progressive-supranuclear-palsy-psp/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:prostate-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/prostate-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:prostatitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/prostatitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:psoriasis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/psoriasis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:psoriatic-arthritis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/psoriatic-arthritis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pubic-lice",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pubic-lice/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pudendal-neuralgia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pudendal-neuralgia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pulmonary-hypertension",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pulmonary-hypertension/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:pyoderma-gangrenosum",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/pyoderma-gangrenosum/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:q-fever",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/q-fever/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:raynauds",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/raynauds/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:reactive-arthritis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/reactive-arthritis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:reflux-in-babies",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/reflux-in-babies/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:repetitive-strain-injury-rsi",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/repetitive-strain-injury-rsi/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:respiratory-syncytial-virus-rsv",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/respiratory-syncytial-virus-rsv/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:respiratory-tract-infection",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/respiratory-tract-infection/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:restless-legs-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/restless-legs-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:restricted-growth",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/restricted-growth/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:retinal-ocular-migraine",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/retinal-ocular-migraine/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:retinoblastoma",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/retinoblastoma/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:rett-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/rett-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:reyes-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/reyes-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:rhesus-disease-hdfn",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/rhesus-disease-hdfn/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:rheumatic-fever",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/rheumatic-fever/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:rheumatoid-arthritis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/rheumatoid-arthritis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:rickets-and-osteomalacia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/rickets-and-osteomalacia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:ringworm",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/ringworm/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:rosacea",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/rosacea/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:roseola",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/roseola/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:rubella",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/rubella/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:salivary-gland-stones",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/salivary-gland-stones/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:sarcoidosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/sarcoidosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:scabies",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/scabies/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:scarlet-fever",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/scarlet-fever/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:scars",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/scars/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:schistosomiasis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/schistosomiasis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:scleroderma",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/scleroderma/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:scoliosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/scoliosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:scurvy",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/scurvy/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:sexually-transmitted-infections-stis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/sexually-transmitted-infections-stis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:shin-splints",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/shin-splints/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:short-sightedness",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/short-sightedness/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:shoulder-impingement-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/shoulder-impingement-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:sick-building-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/sick-building-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:silicosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/silicosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:sinusitis-sinus-infection",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/sinusitis-sinus-infection/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:sjogrens-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/sjogrens-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:skin-abscess",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/skin-abscess/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:skin-cyst",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/skin-cyst/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:skin-tags",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/skin-tags/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:slapped-cheek-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/slapped-cheek-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:sleep-apnoea",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/sleep-apnoea/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:sleep-paralysis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/sleep-paralysis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:sleepwalking",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/sleepwalking/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:slipped-disc",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/slipped-disc/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:soft-tissue-sarcoma",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/soft-tissue-sarcoma/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:spina-bifida",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/spina-bifida/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:spinal-muscular-atrophy-sma",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/spinal-muscular-atrophy-sma/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:spondylolisthesis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/spondylolisthesis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:squint",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/squint/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:stammering",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/stammering/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:staphylococcal-infections",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/staphylococcal-infections/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:stevens-johnson-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/stevens-johnson-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:stillbirth",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/stillbirth/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:stomach-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/stomach-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:stomach-ulcer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/stomach-ulcer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:strep-a",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/strep-a/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:stretch-marks",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/stretch-marks/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:stroke",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/stroke/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:stye",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/stye/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:subdural-haematoma",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/subdural-haematoma/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:supraventricular-tachycardia-svt",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/supraventricular-tachycardia-svt/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:swollen-arms-and-hands-oedema",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/swollen-arms-and-hands-oedema/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:syphilis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/syphilis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:tailbone-coccyx-pain",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/tailbone-coccyx-pain/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:temporal-arteritis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/temporal-arteritis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:temporomandibular-disorder-tmd",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/temporomandibular-disorder-tmd/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:tendonitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/tendonitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:tennis-elbow",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/tennis-elbow/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:tension-headaches",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/tension-headaches/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:testicular-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/testicular-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:thalassaemia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/thalassaemia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:thoracic-outlet-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/thoracic-outlet-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:threadworms",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/threadworms/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:thrombophilia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/thrombophilia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:thrush-in-men-and-women",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/thrush-in-men-and-women/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:thyroid-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/thyroid-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:tick-borne-encephalitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/tick-borne-encephalitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:tics",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/tics/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:tinnitus",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/tinnitus/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:tongue-tie",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/tongue-tie/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:tonsillitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/tonsillitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:tooth-decay",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/tooth-decay/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:tourette-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/tourette-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:toxocariasis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/toxocariasis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:toxoplasmosis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/toxoplasmosis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:trichomoniasis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/trichomoniasis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:trigeminal-neuralgia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/trigeminal-neuralgia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:trigger-finger",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/trigger-finger/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:tuberculosis-tb",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/tuberculosis-tb/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:turner-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/turner-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:type-1-diabetes",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/type-1-diabetes/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:type-2-diabetes",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/type-2-diabetes/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:typhoid-fever",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/typhoid-fever/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:typhus",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/typhus/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:ulcerative-colitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/ulcerative-colitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:umbilical-hernia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/umbilical-hernia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:underactive-thyroid-hypothyroidism",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/underactive-thyroid-hypothyroidism/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:undescended-testicles",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/undescended-testicles/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:urethritis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/urethritis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:urinary-incontinence",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/urinary-incontinence/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:urinary-tract-infections-utis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/urinary-tract-infections-utis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:vaginal-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/vaginal-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:vaginismus",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/vaginismus/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:vaginitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/vaginitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:varicose-eczema",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/varicose-eczema/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:varicose-veins",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/varicose-veins/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:vascular-dementia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/vascular-dementia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:vasculitis",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/vasculitis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:vertigo",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/vertigo/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:vitamin-b12-or-folate-deficiency-anaemia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/vitamin-b12-or-folate-deficiency-anaemia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:vitiligo",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/vitiligo/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:von-willebrand-disease",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/von-willebrand-disease/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:vulval-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/vulval-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:vulvodynia",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/vulvodynia/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:warts-and-verrucas",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/warts-and-verrucas/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:whiplash",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/whiplash/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:wolff-parkinson-white-syndrome",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/wolff-parkinson-white-syndrome/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:womb-cancer",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/womb-cancer/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:yellow-fever",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/yellow-fever/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "condition:zika",
+      "category": "condition",
+      "source": "https://www.nhs.uk/conditions/zika/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/conditions/"
+    },
+    {
+      "id": "medicine:acrivastine",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/acrivastine/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:amitriptyline-for-depression",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/amitriptyline-for-depression/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:amitriptyline-for-pain",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/amitriptyline-for-pain/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:antibiotics",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/antibiotics/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:anticoagulants",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/anticoagulants/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:antidepressants",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/antidepressants/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:antifungal-medicines",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/antifungal-medicines/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:beclometasone-nasal-spray",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/beclometasone-nasal-spray/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:beclometasone-skin-creams",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/beclometasone-skin-creams/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:beta-blockers",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/beta-blockers/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:betamethasone-eyes-ears-and-nose",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/betamethasone-eyes-ears-and-nose/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:betamethasone-skin",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/betamethasone-skin/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:bisacodyl",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/bisacodyl/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:buprenorphine-for-pain",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/buprenorphine-for-pain/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:carbocisteine",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/carbocisteine/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:chlorphenamine-including-piriton",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/chlorphenamine-including-piriton/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:clonazepam",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/clonazepam/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:co-codamol-for-adults",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/co-codamol-for-adults/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:co-codamol-for-children",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/co-codamol-for-children/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:co-dydramol",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/co-dydramol/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:codeine",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/codeine/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:continuous-combined-hrt",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/continuous-combined-hrt/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:contraceptive-injections-medroxyprogesterone",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/contraceptive-injections-medroxyprogesterone/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:decongestants",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/decongestants/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:dexamethasone-eye-drops",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/dexamethasone-eye-drops/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:dexamethasone-tablets-and-liquid",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/dexamethasone-tablets-and-liquid/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:diazepam",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/diazepam/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:dihydrocodeine",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/dihydrocodeine/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:diphenhydramine",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/diphenhydramine/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:fentanyl",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/fentanyl/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:fluticasone-inhalers",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/fluticasone-inhalers/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:fusidic-acid",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/fusidic-acid/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:gaviscon",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/gaviscon/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:gliclazide",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/gliclazide/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:hormone-replacement-therapy-hrt",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/hormone-replacement-therapy-hrt/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:hydrocortisone",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/hydrocortisone/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:hydrocortisone-buccal-tablets",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/hydrocortisone-buccal-tablets/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:hydrocortisone-for-piles-and-itchy-bottom",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/hydrocortisone-for-piles-and-itchy-bottom/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:hydrocortisone-injections",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/hydrocortisone-injections/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:hydrocortisone-rectal-foam",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/hydrocortisone-rectal-foam/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:hydrocortisone-tablets",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/hydrocortisone-tablets/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:ibuprofen-and-codeine-nurofen-plus",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/ibuprofen-and-codeine-nurofen-plus/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:ibuprofen-for-children",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/ibuprofen-for-children/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:ketoconazole-cream-and-shampoo",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/ketoconazole-cream-and-shampoo/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:levetiracetam",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/levetiracetam/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:lorazepam",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/lorazepam/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:medical-cannabis",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/medical-cannabis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:methadone",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/methadone/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:methylphenidate-adults",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/methylphenidate-adults/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:methylphenidate-children",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/methylphenidate-children/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:mometasone-for-skin",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/mometasone-for-skin/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:mometasone-nasal-spray",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/mometasone-nasal-spray/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:montelukast",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/montelukast/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:morphine",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/morphine/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:nsaids",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/nsaids/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:nystatin",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/nystatin/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:oestrogen-tablets-patches-gel-and-spray",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/oestrogen-tablets-patches-gel-and-spray/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:oxycodone",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/oxycodone/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:paracetamol-for-children",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/paracetamol-for-children/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:prednisolone-tablets-and-liquid",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/prednisolone-tablets-and-liquid/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:pregabalin",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/pregabalin/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:prep-pre-exposure-prophylaxis",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/prep-pre-exposure-prophylaxis/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:pseudoephedrine",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/pseudoephedrine/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:ranitidine",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/ranitidine/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:senna",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/senna/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:sequential-combined-hrt-tablets-and-patches",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/sequential-combined-hrt-tablets-and-patches/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:sildenafil-viagra",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/sildenafil-viagra/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:statins",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/statins/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:steroids",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/steroids/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:sumatriptan",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/sumatriptan/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:tadalafil",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/tadalafil/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:thiamine-vitamin-b1",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/thiamine-vitamin-b1/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:tibolone",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/tibolone/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:timolol-eye-drops",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/timolol-eye-drops/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:tiotropium-inhalers",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/tiotropium-inhalers/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:tirzepatide",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/tirzepatide/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:tolterodine",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/tolterodine/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:tramadol",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/tramadol/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:trazodone",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/trazodone/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:utrogestan",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/utrogestan/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:vaginal-oestrogen",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/vaginal-oestrogen/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:valproic-acid",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/valproic-acid/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:varenicline",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/varenicline/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:venlafaxine",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/venlafaxine/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:zolpidem",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/zolpidem/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    },
+    {
+      "id": "medicine:zopiclone",
+      "category": "medicine",
+      "source": "https://www.nhs.uk/medicines/zopiclone/",
+      "status": "pending_clinical_and_translation_review",
+      "source_index": "https://www.nhs.uk/medicines/"
+    }
+  ]
+}
