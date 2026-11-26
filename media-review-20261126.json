@@ -99,6 +99,127 @@
       "author": null,
       "source": "https://commons.wikimedia.org/wiki/File:Lopex.jpg",
       "status": "license page checked; original and visual review pending"
+    },
+    {
+      "id": "aspirin",
+      "ru": "Ацетилсалициловая кислота",
+      "en": "Aspirin",
+      "group": "pain",
+      "aliases": "аспирин",
+      "file": "Bayer Aspirin Pills.jpg",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Bayer_Aspirin_Pills.jpg",
+      "status": "license page checked; original, packaging and visual review pending"
+    },
+    {
+      "id": "hydrocortisone",
+      "ru": "Гидрокортизон (крем)",
+      "en": "Hydrocortisone cream",
+      "group": "skin",
+      "aliases": "гидрокортизон",
+      "file": "Tube of hydrocortisone cream.jpg",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tube_of_hydrocortisone_cream.jpg",
+      "status": "license page checked; original, packaging and visual review pending"
+    },
+    {
+      "id": "clotrimazole",
+      "ru": "Клотримазол",
+      "en": "Clotrimazole",
+      "group": "skin",
+      "aliases": "клотримазол",
+      "file": "Europharm Lab Clotrimazole Cream Antimycotic Drug.jpg",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Europharm_Lab_Clotrimazole_Cream_Antimycotic_Drug.jpg",
+      "status": "license page checked; original, packaging and visual review pending"
+    },
+    {
+      "id": "chlorhexidine",
+      "ru": "Хлоргексидин",
+      "en": "Chlorhexidine",
+      "group": "skin",
+      "aliases": "хлоргексидин",
+      "file": "Hibiclens-low-res-219x288.jpg",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Hibiclens-low-res-219x288.jpg",
+      "status": "license page checked; original, packaging and visual review pending"
+    },
+    {
+      "id": "fexofenadine",
+      "ru": "Фексофенадин",
+      "en": "Fexofenadine",
+      "group": "allergy",
+      "aliases": "аллегра",
+      "file": "AllegraFX.jpg",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:AllegraFX.jpg",
+      "status": "license page checked; original, packaging and visual review pending"
+    },
+    {
+      "id": "macrogol",
+      "ru": "Макрогол",
+      "en": "Macrogol",
+      "group": "digestive",
+      "aliases": "форлакс",
+      "file": "Forlax 4g Macrogol 4000-ar.jpg",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Forlax_4g_Macrogol_4000-ar.jpg",
+      "status": "license page checked; original, packaging and visual review pending"
+    },
+    {
+      "id": "epinephrine",
+      "ru": "Адреналин (автоинъектор)",
+      "en": "Epinephrine autoinjector",
+      "group": "personal",
+      "aliases": "эпинефрин эпипен adrenaline epipen",
+      "file": "Epipen.jpg",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Epipen.jpg",
+      "status": "license page checked; original, packaging and visual review pending"
+    },
+    {
+      "id": "amlodipine",
+      "ru": "Амлодипин",
+      "en": "Amlodipine",
+      "group": "personal",
+      "aliases": "амлодипин",
+      "file": "Amlodipin Sandoz bottle.jpg",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Amlodipin_Sandoz_bottle.jpg",
+      "status": "license page checked; original, packaging and visual review pending"
+    },
+    {
+      "id": "metformin",
+      "ru": "Метформин",
+      "en": "Metformin",
+      "group": "personal",
+      "aliases": "глюкофаж",
+      "file": "Glucophage 500mg tbl.jpg",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Glucophage_500mg_tbl.jpg",
+      "status": "license page checked; original, packaging and visual review pending"
+    },
+    {
+      "id": "naproxen",
+      "ru": "Напроксен",
+      "en": "Naproxen",
+      "group": "pain",
+      "aliases": "напроксен",
+      "file": "Naproxen.JPG",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Naproxen.JPG",
+      "status": "license page checked; original, packaging and visual review pending"
+    },
+    {
+      "id": "levothyroxine",
+      "ru": "Левотироксин",
+      "en": "Levothyroxine",
+      "group": "personal",
+      "aliases": "левотироксин",
+      "file": "Levothyroxine 25mcg Tablets.jpg",
+      "license": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Levothyroxine_25mcg_Tablets.jpg",
+      "status": "license page checked; original, packaging and visual review pending"
     }
   ],
   "first_aid": [
@@ -202,26 +323,7 @@
     }
   ],
   "policy": "No candidate implies downloaded media or clinical approval. Check original, rights, privacy and technique. First-aid media are not published until clinical review.",
-  "deferred_medicine_photos": [
-    {
-      "id": "levothyroxine-photo",
-      "file": "Levothyroxine 25mcg Tablets.jpg",
-      "license": "Public domain",
-      "reviewed_original_sha1": null
-    },
-    {
-      "id": "naproxen-photo",
-      "file": "Naproxen.JPG",
-      "license": "Public domain",
-      "reviewed_original_sha1": null
-    },
-    {
-      "id": "amlodipine-photo",
-      "file": "Amlodipin Sandoz bottle.jpg",
-      "license": "CC BY-SA 4.0",
-      "reviewed_original_sha1": "ecf35b9a426eff08ac1b6ba5a61d344759b8b89d"
-    }
-  ],
+  "deferred_medicine_photos": [],
   "kit_photos": [
     {
       "id": "home-kit-example",

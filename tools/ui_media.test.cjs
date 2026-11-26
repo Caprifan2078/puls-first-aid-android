@@ -7,11 +7,11 @@ const js=page.match(/<script>([\s\S]*?)<\/script>/)[1];
 test('inline script compiles',()=>assert.doesNotThrow(()=>new vm.Script(js)));
 test('medicine shelf is grouped, bilingual and has no empty image slots',()=>{
  const chunk=js.slice(js.indexOf('const MEDICINES='),js.indexOf('const KIT_GROUPS='));
- const ctx=vm.createContext({state:{lang:'ru'},esc:v=>String(v)});
+ const ctx=vm.createContext({state:{lang:'ru'},esc:v=>String(v),norm:v=>String(v||"").toLowerCase()});
  vm.runInContext(chunk,ctx);
  const ru=vm.runInContext('renderMedicineShelf()',ctx);
- assert.equal((ru.match(/medicine-group/g)||[]).length,5);
- assert.equal((ru.match(/medicine-row/g)||[]).length,9);
+ assert.equal((ru.match(/medicine-group/g)||[]).length,7);
+ assert.equal((ru.match(/medicine-row/g)||[]).length,27);
  assert.ok(!ru.includes('<img'));
  assert.ok(ru.includes('Не определяйте препарат по фото'));
  const en=vm.runInContext('state.lang="en";renderMedicineShelf()',ctx);
@@ -42,3 +42,5 @@ test('all three kit group mappings cover each item exactly once and keep legacy 
 test('SOS priority topics are unique and exist',()=>{const pages=vm.runInNewContext(js.slice(js.indexOf('const PAGES='),js.indexOf('const KITS='))+'PAGES');const order=vm.runInNewContext(js.slice(js.indexOf('const SOS_ORDER='),js.indexOf('const SOS_LABELS='))+'SOS_ORDER');assert.equal(new Set(order).size,order.length);for(const id of order)assert.ok(pages.some(p=>p.id===id));});
 
 test('unapproved first-aid media never renders; approved paths are local only',()=>{const ctx=vm.createContext({PAGES:[{id:"cpr"}],MED_LICENSE_URLS:new Set(["https://creativecommons.org/licenses/by-sa/4.0/"]),state:{lang:"ru"},esc:String});vm.runInContext(js.slice(js.indexOf("const AID_MEDIA_LICENSES"),js.indexOf("function renderTopic(p)")),ctx);const record={topic:"cpr",file:"sample.mp4",sha256:"a".repeat(64),author:"Author",license:"CC BY-SA 4.0",license_url:"https://creativecommons.org/licenses/by-sa/4.0/",source:"https://commons.wikimedia.org/wiki/File:Sample.webm",ru:"Тест",en:"Test",clinical_approval:false,visual_review:"pending",review_ref:"test-only"};ctx.record=record;assert.equal(vm.runInContext("validateAidMedia([record]).length",ctx),0);assert.equal(vm.runInContext('renderAidMedia({id:"cpr"})',ctx),"");record.clinical_approval=true;record.visual_review="approved";assert.equal(vm.runInContext("validateAidMedia([record]).length",ctx),1);assert.ok(vm.runInContext('approvedAidMedia=validateAidMedia([record]);renderAidMedia({id:"cpr"})',ctx).includes('controls playsinline preload="none"'));record.file="../sample.mp4";assert.equal(vm.runInContext("validateAidMedia([record]).length",ctx),0);});
+
+test('medicine search finds generic and aliases, rejects unmatched queries',()=>{const ctx=vm.createContext({state:{lang:"ru"},esc:String,norm:v=>String(v||"").toLowerCase()});vm.runInContext(js.slice(js.indexOf("const MEDICINES="),js.indexOf("const KIT_GROUPS=")),ctx);assert.equal(vm.runInContext('medRows("регидрон")[0].id',ctx),"ors");assert.equal(vm.runInContext('medRows("aspirin")[0].id',ctx),"aspirin");assert.equal(vm.runInContext('medRows("zz-no-match").length',ctx),0);assert.equal(vm.runInContext('medRows("").length',ctx),27);});

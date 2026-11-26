@@ -17,10 +17,11 @@ LIMIT = 8_000_000
 UA = "PULS-MedicinePhotoQA/1.0 (https://github.com/Caprifan2078/puls-first-aid-android)"
 LICENSES = {"CC0 1.0": "https://creativecommons.org/publicdomain/zero/1.0/",
             "CC BY-SA 4.0": "https://creativecommons.org/licenses/by-sa/4.0/",
-            "CC BY-SA 3.0": "https://creativecommons.org/licenses/by-sa/3.0/"}
+            "CC BY-SA 3.0": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "Public domain": "https://creativecommons.org/publicdomain/mark/1.0/"}
 
 def normalize_license(value):
-    return {"CC0": "CC0 1.0"}.get(value, value)
+    return {"CC0": "CC0 1.0", "Public Domain": "Public domain", "PD": "Public domain"}.get(value, value)
 
 def plain(value):
     return html.unescape(re.sub(r"<[^>]*>", "", value)).strip()
@@ -48,13 +49,14 @@ def collect(row):
     if license_name != row["license"] or license_name not in LICENSES:
         raise ValueError("license differs: " + license_name)
     author = plain(meta.get("Artist", {}).get("value", ""))
-    if not author or info["mime"] != "image/jpeg" or info["size"] > LIMIT:
+    if not author or info["mime"] not in ("image/jpeg", "image/png") or info["size"] > LIMIT:
         raise ValueError("author, MIME or size rejected")
     url = urllib.parse.urlsplit(info["url"])
     if url.scheme != "https" or url.hostname != "upload.wikimedia.org":
         raise ValueError("unexpected media host")
     data = get(info["url"], LIMIT)
-    if len(data) != info["size"] or not data.startswith(b"\xff\xd8\xff") or not data.endswith(b"\xff\xd9"):
+    valid_signature = (data.startswith(b"\xff\xd8\xff") and data.endswith(b"\xff\xd9")) if info["mime"]=="image/jpeg" else data.startswith(b"\x89PNG\r\n\x1a\n")
+    if len(data) != info["size"] or not valid_signature:
         raise ValueError("invalid JPEG")
     digest = hashlib.sha1(data).hexdigest()
     upstream = info["sha1"]
@@ -62,7 +64,7 @@ def collect(row):
         raise ValueError("original SHA-1 mismatch")
     # Preserve original digest, resize to a local derivative without EXIF/GPS metadata.
     with tempfile.TemporaryDirectory() as temp:
-        original = Path(temp) / "original.jpg"
+        original = Path(temp) / ("original.png" if info["mime"]=="image/png" else "original.jpg")
         original.write_bytes(data)
         target = Path(temp) / "display.jpg"
         subprocess.run(["ffmpeg","-nostdin","-v","error","-i",str(original),"-map_metadata","-1","-vf","scale=1000:1000:force_original_aspect_ratio=decrease","-frames:v","1","-q:v","3",str(target)], check=True, timeout=45)
