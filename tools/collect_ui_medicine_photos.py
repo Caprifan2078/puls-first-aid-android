@@ -18,7 +18,9 @@ UA = "PULS-MedicinePhotoQA/1.0 (https://github.com/Caprifan2078/puls-first-aid-a
 LICENSES = {"CC0 1.0": "https://creativecommons.org/publicdomain/zero/1.0/",
             "CC BY-SA 4.0": "https://creativecommons.org/licenses/by-sa/4.0/",
             "CC BY-SA 3.0": "https://creativecommons.org/licenses/by-sa/3.0/",
-            "Public domain": "https://creativecommons.org/publicdomain/mark/1.0/"}
+            "Public domain": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "CC BY 3.0": "https://creativecommons.org/licenses/by/3.0/",
+            "CC BY 4.0": "https://creativecommons.org/licenses/by/4.0/"}
 
 def normalize_license(value):
     return {"CC0": "CC0 1.0", "Public Domain": "Public domain", "PD": "Public domain"}.get(value, value)

@@ -172,10 +172,10 @@
       "en": "Epinephrine autoinjector",
       "group": "personal",
       "aliases": "эпинефрин эпипен adrenaline epipen",
-      "file": "Epipen.jpg",
-      "license": "CC BY-SA 3.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Epipen.jpg",
-      "status": "license page checked; original, packaging and visual review pending"
+      "file": "Epi-Pen (1).JPG",
+      "license": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Epi-Pen_(1).JPG",
+      "status": "alternative source-license checked; original and visual review pending"
     },
     {
       "id": "amlodipine",
@@ -334,10 +334,10 @@
     },
     {
       "id": "travel-kit-example",
-      "file": "First aid kit.jpg",
-      "license": "CC BY-SA 4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:First_aid_kit.jpg",
-      "status": "source-license checked; contents illustrative, not specific kit checklist"
+      "file": "First-aid travel kit 1.jpg",
+      "license": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:First-aid_travel_kit_1.jpg",
+      "status": "alternative source-license checked; original and visual review pending"
     },
     {
       "id": "outdoor-kit-example",
