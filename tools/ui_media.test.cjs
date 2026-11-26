@@ -80,7 +80,7 @@ test('14 medication red flags link to sources and valid first aid guides; pictog
 test('SOS search returns only critical topics and rejects punctuation',()=>{
  const pages=vm.runInNewContext(js.slice(js.indexOf("const PAGES="),js.indexOf("const NAV="))+"PAGES");
  const ctx=vm.createContext({PAGES:pages,norm:s=>String(s).toLowerCase().trim(),match:(p,q)=>(p.ru+" "+p.en+" "+p.aliases).toLowerCase().includes(q)});
- vm.runInContext(js.slice(js.indexOf("function sosMatches("),js.indexOf("function sosSearchResults(")),ctx);
+ vm.runInContext(js.slice(js.indexOf("const SEARCH_PHRASES="),js.indexOf("function sosSearchResults(")),ctx);
  assert.ok(vm.runInContext('sosMatches("инсульт").some(p=>p.id==="stroke")',ctx));
  assert.ok(vm.runInContext('sosMatches("инсульт").every(p=>p.level==="critical")',ctx));
  assert.equal(vm.runInContext('sosMatches("").length',ctx),0);
@@ -114,4 +114,20 @@ test('symbolic step cues map only to existing steps and are decorative',()=>{
   const p=pages.find(p=>p.id===id);assert.ok(p,id);assert.equal(icons.length,p.stepsRu.length,id);
   ctx.p=p;for(let i=0;i<icons.length;i++)if(icons[i])assert.ok(vm.runInContext("renderStepCue(p,"+i+")",ctx).includes('aria-hidden="true"'));
  }
+});
+
+test('real panic search phrases prioritize relevant guides without diagnosis or automatic navigation',()=>{
+ const pages=vm.runInNewContext(js.slice(js.indexOf("const PAGES="),js.indexOf("const NAV="))+"PAGES");
+ const ctx=vm.createContext({PAGES:pages});
+ const norm=js.split("\n").find(x=>x.startsWith("const norm="));
+ const fuzzy=js.split("\n").find(x=>x.startsWith("const match="));
+ const edit=js.slice(js.indexOf("function oneEdit("),js.indexOf("\n}",js.indexOf("function oneEdit("))+2);
+ vm.runInContext(norm+"\n"+fuzzy+"\n"+edit+"\n"+js.slice(js.indexOf("const SEARCH_PHRASES="),js.indexOf("function sosSearchResults(")),ctx);
+ const cases=[["сильно течёт кровь","bleeding"],["потерял сознание","unconscious"],["человек не дышит","cpr"],["ребёнок не дышит","child-cpr"],["младенец подавился","infant-choking"],["не могу вдохнуть","asthma"],["перекосило лицо","stroke"],["болит грудь","heart"],["chest pain","heart"],["baby not breathing","child-cpr"],["без сознания но дышит","unconscious"],["не дышет","cpr"],["ударило током","electric"],["сильное кровотечение после родов","postpartum-bleeding"]];
+ for(const [q,id] of cases){ctx.q=q;const got=vm.runInContext("sosMatches(q)",ctx);assert.ok(got.slice(0,2).some(p=>p.id===id),q+" => "+got.slice(0,2).map(p=>p.id));assert.ok(got.every(p=>p.level==="critical"))}
+ ctx.q="сильно течет кровь";assert.equal(vm.runInContext("sosMatches(q)[0].id",ctx),"bleeding");
+ ctx.q="ребенок не дышит";assert.equal(vm.runInContext("sosMatches(q)[0].id",ctx),"child-cpr");
+ ctx.q="не дышит";assert.ok(vm.runInContext("sosMatches(q).slice(0,2).some(p=>p.id==='child-cpr')",ctx));
+ ctx.q="zzznoresults";assert.equal(vm.runInContext("sosMatches(q).length",ctx),0);
+ assert.ok(vm.runInContext("SEARCH_PHRASES.every(([ids,phrases])=>phrases.length&&ids.every(id=>PAGES.some(p=>p.id===id)))",ctx));
 });

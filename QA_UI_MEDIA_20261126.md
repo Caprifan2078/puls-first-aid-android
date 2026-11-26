@@ -13,3 +13,5 @@ Privacy branch is divergent, not merged; review before release. Build and emulat
 Original decorative action/equipment cues: 103 mapped to existing steps across 34 guides. These are symbols, not clinical illustrations or technique demonstrations. Added synthetic JPEG loading and no-autoplay regression checks; fixed strict selector after nested credits were introduced.
 
 CI caught an isolated medicine-license fixture regression: the new topic database check ran even for medicine-only tests. Scoped it to actual first-aid records and added an exact-step/unknown-topic regression test.
+
+8.19.6: 39 curated phrase groups (182 Russian/English search phrases) prioritize relevant existing guides, preserve adult/child variants, no automatic diagnosis/navigation. Added emergency call on home search with critical or zero results; no-results SOS offers clear search and full catalog. No medical instructions rewritten.

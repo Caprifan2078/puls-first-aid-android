@@ -37,9 +37,14 @@ try{
   assert.ok(await page.locator('#sos-results a[href="#/topic/stroke"]').isVisible());
   assert.ok(await page.locator('.sos-heading a[href="tel:112"]').isVisible());
   assert.ok(!(await page.locator("#sos-browse").isVisible()));
+  await page.locator("#sos-search").fill("сильно течёт кровь");
+  assert.ok(await page.locator('#sos-results a[href="#/topic/bleeding"]').first().isVisible());
+  await page.locator("#sos-search").fill("ребенок не дышит");
+  assert.equal(await page.locator('#sos-results .emergency-tile').first().getAttribute("href"),"#/topic/child-cpr");
   await page.locator("#sos-search").fill("zznoresults");
   assert.equal(await page.locator("#sos-results .emergency-tile").count(),0);
-  await page.locator("#sos-search").fill("");
+  await page.locator('[data-action="clear-sos-search"]').click();
+  assert.equal(await page.locator("#sos-search").inputValue(),"");
   assert.equal(await page.locator(".emergency-tile:visible").count(),8);
   await noOverflow();
   await page.locator('.emergency-tile[href="#/topic/cpr"]').click();
