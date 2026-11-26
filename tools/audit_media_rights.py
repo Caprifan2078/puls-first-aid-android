@@ -94,12 +94,20 @@ def audit(root,mode):
     return sorted(rows,key=lambda a:a["asset"])
 def verify_apk(apk,root,rows):
     expected={"assets/"+a["asset"]:a["sha256"] for a in rows}
-    expected["assets/media/credits.json"]=hashlib.sha256((root/"media/credits.json").read_bytes()).hexdigest()
+    metadata={"assets/index.html","assets/media/credits.json"}
+    for category in ("medicines","kits","firstaid"):
+        manifest=root/"media"/category/"manifest.json"
+        if manifest.is_file():
+            metadata.add("assets/"+manifest.relative_to(root).as_posix())
+    for name in metadata:
+        expected[name]=hashlib.sha256((root/name.removeprefix("assets/")).read_bytes()).hexdigest()
     with zipfile.ZipFile(apk) as z:
         names=z.namelist()
         require(len(names)==len(set(names)),"duplicate APK entries")
         found={n for n in names if n.startswith("assets/") and PurePosixPath(n).suffix.lower() in MEDIA_EXT}
-        require(found==set(expected)-{"assets/media/credits.json"},"APK contains unregistered media")
+        require(found==set(expected)-metadata,"APK contains unregistered media")
+        known_manifests={"assets/media/"+c+"/manifest.json" for c in ("medicines","kits","firstaid")}
+        require(set(names)&known_manifests==metadata&known_manifests,"APK media manifest inventory mismatch")
         for name,digest in expected.items():require(hashlib.sha256(z.read(name)).hexdigest()==digest,"APK digest mismatch "+name)
 def main():
     p=argparse.ArgumentParser()
