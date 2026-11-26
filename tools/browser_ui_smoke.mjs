@@ -46,6 +46,21 @@ try{
   assert.ok(await page.locator('#sos-results a[href="#/topic/stroke"]').isVisible());
   assert.ok(await page.locator('.sos-heading a[href="tel:112"]').isVisible());
   assert.ok(!(await page.locator("#sos-browse").isVisible()));
+  // A new SOS visit starts with emergency shortcuts; browser Back restores its search.
+  await page.locator('#sos-results a[href="#/topic/stroke"]').first().click();
+  await page.locator(".step-list").waitFor({state:"visible"});
+  await page.locator('#back').click();
+  await page.waitForURL(u=>u.hash==="#/sos");
+  assert.equal(await page.locator("#sos-search").inputValue(),"инсульт");
+  await page.locator('nav a[href="#/home"]').click();
+  await page.locator('nav a[href="#/sos"]').click();
+  await page.locator(".sos-heading").waitFor({state:"visible"});
+  assert.equal(await page.locator("#sos-search").inputValue(),"");
+  assert.equal(await page.locator(".emergency-tile:visible").count(),8);
+  await page.locator("#sos-search").fill("инсульт");
+  await page.locator('nav a[href="#/sos"]').click();
+  assert.equal(await page.locator("#sos-search").inputValue(),"");
+  assert.ok(await page.locator('.sos-heading a[href="tel:112"]').isVisible());
   await page.locator("#sos-search").fill("сильно течёт кровь");
   assert.ok(await page.locator('#sos-results a[href="#/topic/bleeding"]').first().isVisible());
   await page.locator("#sos-search").fill("ребенок не дышит");
