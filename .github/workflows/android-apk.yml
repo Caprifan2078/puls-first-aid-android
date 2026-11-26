@@ -135,13 +135,6 @@ jobs:
             adb logcat -d -s AndroidRuntime:E chromium:E PULS_QA:I -v brief > puls-runtime-log.txt
             cat puls-launch-log.txt
             grep -q "UI_READY:true" puls-launch-log.txt
-      - name: Publish installation-tested APK
-        if: steps.emulator.outcome == 'success'
-        uses: actions/upload-artifact@v4
-        with:
-          name: PULS-Android-APK-Tested
-          path: app/build/outputs/apk/debug/app-debug.apk
-          if-no-files-found: error
       - name: Publish diagnostics
         if: always()
         uses: actions/upload-artifact@v4
@@ -152,3 +145,58 @@ jobs:
             puls-home.png
             puls-runtime-log.txt
           if-no-files-found: ignore
+
+  modern-android:
+    name: Android 15 installation and edge-to-edge smoke
+    if: github.event_name == 'workflow_dispatch' || github.ref_name == 'qa/puls-navigation-reliability-20261126' || github.ref_name == 'qa/puls-ui-media-20261126'
+    needs: android
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: PULS-Android-Compiled-APK
+          path: apk
+      - uses: android-actions/setup-android@v3
+        with:
+          packages: platform-tools
+      - name: Enable KVM
+        run: |
+          if [ -e /dev/kvm ]; then sudo chmod a+rw /dev/kvm; fi
+      - name: Install exact compiled APK on API 35
+        uses: reactivecircus/android-emulator-runner@v2
+        env:
+          ANDROID_I_WANT_MY_TCG: 'yes'
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          emulator-options: -no-snapshot -no-window -no-audio -gpu swiftshader
+          disable-animations: true
+          script: |
+            set -e
+            adb logcat -c
+            adb install -r apk/app-debug.apk
+            adb shell am start -W -n com.puls.firstaid.rebuild.ui83/com.puls.firstaid.rebuild.MainActivity
+            for i in $(seq 1 45); do adb logcat -d -s PULS_QA:I -v brief > puls-api35-launch.txt; grep -q "UI_READY:true" puls-api35-launch.txt && break; sleep 2; done
+            grep -q "UI_READY:true" puls-api35-launch.txt
+            adb shell pidof com.puls.firstaid.rebuild.ui83
+            adb exec-out screencap -p > puls-api35-home.png
+            adb logcat -d -s AndroidRuntime:E chromium:E PULS_QA:I -v brief > puls-api35-runtime.txt
+            sha256sum apk/app-debug.apk > apk/apk.sha256
+      - name: Publish API 30 and 35 installation-tested APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: PULS-Android-APK-Tested
+          path: apk/
+          if-no-files-found: error
+      - name: Publish Android 15 diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: PULS-Android-API35-Diagnostics
+          path: puls-api35-*
+          if-no-files-found: warn
