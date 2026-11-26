@@ -1,4 +1,4 @@
-import { chromium } from "playwright";
+import { chromium, webkit, devices } from "playwright";
 import assert from "node:assert/strict";
 import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
@@ -9,9 +9,11 @@ const server=createServer(async(req,res)=>{try{const url=new URL(req.url,"http:/
 await new Promise(r=>server.listen(0,"127.0.0.1",r));
 let browser;
 try{
- browser=await chromium.launch({headless:true,args:["--no-sandbox"]});
+ const engine=process.env.PULS_ENGINE||"chromium";
+ if(!["chromium","webkit"].includes(engine))throw Error("unsupported engine");
+ browser=await (engine==="webkit"?webkit:chromium).launch(engine==="webkit"?{headless:true}:{headless:true,args:["--no-sandbox"]});
  for(const width of [320,390,768]){
-  const ctx=await browser.newContext({viewport:{width,height:844},isMobile:width<500,hasTouch:width<500,deviceScaleFactor:1});
+  const ctx=await browser.newContext({...((engine==="webkit"&&width<500)?devices["iPhone 13"]:{}),viewport:{width,height:844},isMobile:width<500,hasTouch:width<500,deviceScaleFactor:1});
   await ctx.addInitScript(()=>{window.qaAwake=[];window.PulsDisplay={postMessage(v){window.qaAwake.push(v)}}});
   const page=await ctx.newPage(),errors=[];
   page.on("pageerror",e=>errors.push(e.message));
@@ -108,7 +110,7 @@ try{
   assert.ok(page.url().endsWith("#/topic/cpr"));
   assert.ok(await page.evaluate(()=>window.scrollY)>0,"saving must not reset scroll");
   await page.locator(".sav").evaluate(el=>el.click());
-  await page.screenshot({path:"puls-sos-"+width+".png"});
+  await page.screenshot({path:"puls-"+engine+"-sos-"+width+".png"});
   // Start a clean navigation chain and exercise two consecutive article Back actions.
   await page.goto(url+"#/sos");
   await page.locator('.emergency-tile[href="#/topic/cpr"]').click();
@@ -146,7 +148,7 @@ try{
   await page.locator('[data-check="outdoor:0"]').waitFor();
   assert.equal(await page.locator('.kit-v84 input[data-check]').count(),15);
   await noOverflow();
-  await page.screenshot({path:"puls-kit-"+width+".png"});
+  await page.screenshot({path:"puls-"+engine+"-kit-"+width+".png"});
   await page.locator('a[href="#/kits/medicines"]').click();
   await page.locator("#medicine-search").fill("регидрон");
   assert.equal(await page.locator(".medicine-row").count(),1);
@@ -169,7 +171,7 @@ try{
   await page.locator("#medicine-search").fill("");
   assert.equal(await page.locator(".medicine-row").count(),240);
   await noOverflow();
-  await page.screenshot({path:"puls-medicines-"+width+".png"});
+  await page.screenshot({path:"puls-"+engine+"-medicines-"+width+".png"});
   await page.locator('nav a[href="#/catalog"]').click();
   await page.locator("[data-cat]").first().waitFor();
   const category=await page.locator("[data-cat]").evaluateAll(nodes=>nodes.map(n=>n.dataset.cat).find(x=>x!=="all"));assert.ok(category);
@@ -209,7 +211,7 @@ try{
   await noOverflow();
   assert.deepEqual(externalRequests,[],"offline workflows must not make external requests");
   assert.deepEqual(errors,[],"uncaught JS errors at "+width);
-  console.log("PASS browser viewport",width);
-  } catch(error) { await page.screenshot({path:"puls-failure-"+width+".png"}).catch(()=>{});console.log("Page errors:",errors);throw error; } finally { await ctx.close(); }
+  console.log("PASS browser viewport",engine,width);
+  } catch(error) { await page.screenshot({path:"puls-"+engine+"-failure-"+width+".png"}).catch(()=>{});console.log("Page errors:",errors);throw error; } finally { await ctx.close(); }
  }
 }finally{await browser?.close();server.close()}
