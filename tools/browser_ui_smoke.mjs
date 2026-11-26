@@ -15,6 +15,7 @@ try{
   const page=await ctx.newPage(),errors=[];
   page.on("pageerror",e=>errors.push(e.message));
   const url="http://127.0.0.1:"+server.address().port+"/index.html";
+  try {
   const noOverflow=async()=>assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),"horizontal overflow "+width+" "+page.url());
   await page.goto(url+"#/home");
   await page.locator("#search").fill("инсульт");
@@ -25,22 +26,27 @@ try{
   await page.locator("#search").fill("");
   assert.ok(await page.locator("#home-browse").isVisible());
   await page.locator('nav a[href="#/sos"]').click();
+  await page.locator(".sos-heading").waitFor({state:"visible"});
   assert.ok(await page.locator(".emergency-tile").count()>=8);
   await noOverflow();
   await page.locator('.emergency-tile[href="#/topic/cpr"]').click();
+  await page.locator(".step-list").waitFor({state:"visible"});
   assert.ok(await page.locator(".step-list .step").count()>0);
   assert.ok(await page.locator('a[href="tel:112"]').first().isVisible());
   await noOverflow();
   await page.screenshot({path:"puls-sos-"+width+".png"});
   await page.locator('nav a[href="#/kits"]').click();
+  await page.locator(".kit-switch").waitFor({state:"visible"});
   assert.equal(await page.locator(".kit-v84").count(),3);
   assert.equal(await page.locator('.kit-v84 input[data-check]').count(),13);
   await page.locator('[data-check="home:0"]').check();
   await page.reload();
   assert.ok(await page.locator('[data-check="home:0"]').isChecked());
   await page.locator('[data-kit="travel"]').click();
+  await page.locator('[data-check="travel:0"]').waitFor();
   assert.equal(await page.locator('.kit-v84 input[data-check]').count(),14);
   await page.locator('[data-kit="outdoor"]').click();
+  await page.locator('[data-check="outdoor:0"]').waitFor();
   assert.equal(await page.locator('.kit-v84 input[data-check]').count(),15);
   await noOverflow();
   await page.screenshot({path:"puls-kit-"+width+".png"});
@@ -56,6 +62,7 @@ try{
   await noOverflow();
   await page.screenshot({path:"puls-medicines-"+width+".png"});
   await page.locator('nav a[href="#/catalog"]').click();
+  await page.locator("[data-cat]").first().waitFor();
   const category=await page.locator("[data-cat]").evaluateAll(nodes=>nodes.map(n=>n.dataset.cat).find(x=>x!=="all"));assert.ok(category);
   await page.locator('[data-cat="'+category+'"]').click();
   assert.ok(page.url().endsWith("#/catalog/"+category));
@@ -65,7 +72,7 @@ try{
   assert.equal(await page.locator("html").getAttribute("lang"),"en");
   await noOverflow();
   assert.deepEqual(errors,[],"uncaught JS errors at "+width);
-  await ctx.close();
   console.log("PASS browser viewport",width);
+  } catch(error) { await page.screenshot({path:"puls-failure-"+width+".png"}).catch(()=>{});console.log("Page errors:",errors);throw error; } finally { await ctx.close(); }
  }
 }finally{await browser?.close();server.close()}
