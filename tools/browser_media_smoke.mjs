@@ -67,8 +67,16 @@ try {
  assert.equal(await page.locator('video[src$="wrong-step.mp4"]').count(),0);
  assert.ok(await page.locator("#media-jump").isVisible());
  await page.locator("#media-jump").click();
+ assert.ok(!(await inline.isVisible()),"additional video is collapsed");
+ const extra=page.locator(".step-extra-media>summary");
+ await extra.click();
+ assert.ok(await inline.isVisible());
  await inline.evaluate(async v=>{v.muted=true;await v.play()});
  await page.waitForFunction(()=>document.querySelector('.step-media video').currentTime>0);
+ await extra.click();
+ await page.waitForFunction(()=>document.querySelector('.step-media video').paused);
+ await extra.click();
+ await inline.evaluate(async v=>{await v.play()});
  await clickMediaSummary();
  const video=page.locator('video[src$="fixture.mp4"]');
  await video.evaluate(async v=>{v.muted=true;await v.play()});

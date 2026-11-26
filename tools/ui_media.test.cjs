@@ -142,3 +142,14 @@ test('screen awake only in visible emergency mode and respects preference',()=>{
  ctx.document.hidden=true;vm.runInContext("notifyEmergencyAwake()",ctx);assert.equal(sent.at(-1),"off");
  ctx.document.hidden=false;ctx.state.keepAwake=false;vm.runInContext("notifyEmergencyAwake()",ctx);assert.equal(sent.at(-1),"off");
 });
+
+test('large step media groups show one primary photo and collapse extra media',()=>{
+ const ctx=vm.createContext({PAGES:[{id:"cpr",stepsRu:["RU"],stepsEn:["EN"]}],MED_LICENSE_URLS:new Set(["https://creativecommons.org/licenses/by-sa/4.0/"]),state:{lang:"en"},esc:String});
+ vm.runInContext(js.slice(js.indexOf("const AID_MEDIA_LICENSES"),js.indexOf("const AID_REFERENCE")),ctx);
+ const row={topic:"cpr",file:"fixture.mp4",sha256:"a".repeat(64),author:"Author",license:"CC BY-SA 4.0",license_url:"https://creativecommons.org/licenses/by-sa/4.0/",source:"https://commons.wikimedia.org/wiki/File:Fixture.webm",ru:"Фото",en:"Photo",clinical_approval:true,visual_review:"approved",rights_review:"approved",review_ref:"test",step_index:0,step_ru:"RU",step_en:"EN"};
+ ctx.rows=[row,{...row,file:"first.jpg"},{...row,file:"second.jpg"}];
+ const out=vm.runInContext("approvedAidMedia=validateAidMedia(rows);renderStepAidMedia(PAGES[0],0)",ctx);
+ assert.ok(out.indexOf("first.jpg")<out.indexOf("step-extra-media"));
+ assert.ok(out.indexOf("step-extra-media")<out.indexOf("fixture.mp4"));
+ assert.match(out,/<details class="step-extra-media">/);
+});
