@@ -4,7 +4,7 @@ on:
     branches: [qa/puls-ui-media-20261126, qa/puls-navigation-reliability-20261126]
     paths: ['app/src/main/assets/**','tools/browser_ui_smoke.mjs','tools/browser_media_smoke.mjs','.github/workflows/browser-ui.yml']
   pull_request:
-    branches: [qa/bootstrap, main]
+    branches: [qa/puls-ui-media-20261126, qa/bootstrap, main]
     paths: ['app/src/main/assets/**','tools/browser_ui_smoke.mjs','tools/browser_media_smoke.mjs','tools/ui_media.test.cjs','.github/workflows/browser-ui.yml']
   workflow_dispatch:
 permissions:
