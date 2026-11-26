@@ -6,8 +6,8 @@ android {
         applicationId 'com.puls.firstaid.rebuild.ui83'
         minSdk 26
         targetSdk 36
-        versionCode 25
-        versionName '8.19.0-qa-offline-player'
+        versionCode 26
+        versionName '8.19.1-qa-offline-player'
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17

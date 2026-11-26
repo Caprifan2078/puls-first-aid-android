@@ -3,6 +3,9 @@ on:
   workflow_dispatch:
   push:
     branches: [qa/bootstrap, qa/puls-ui-media-20261126]
+concurrency:
+  group: puls-android-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   android:
     runs-on: ubuntu-24.04
