@@ -36,6 +36,13 @@ try{
   await page.locator(".step-list").waitFor({state:"visible"});
   assert.ok(await page.locator(".step-list .step").count()>0);
   assert.ok(await page.locator('.age-guide-links a[href="#/topic/child-cpr"]').isVisible());
+  assert.ok(await page.locator(".emergency-bar").isVisible());
+  assert.ok(await page.locator(".step-list").evaluate(el=>Boolean(el.compareDocumentPosition(document.querySelector(".age-guide-links")) & Node.DOCUMENT_POSITION_FOLLOWING)));
+  await page.evaluate(()=>{location.hash="#/topic/finger-fracture"});
+  await page.locator(".urgent-advice").waitFor({state:"visible"});
+  assert.equal(await page.locator(".emergency-bar").count(),0);
+  await page.evaluate(()=>{location.hash="#/topic/cpr"});
+  await page.locator(".emergency-bar").waitFor({state:"visible"});
   assert.ok(await page.locator('a[href="tel:112"]').first().isVisible());
   await noOverflow();
   await page.screenshot({path:"puls-sos-"+width+".png"});
