@@ -197,3 +197,18 @@ test('library status distinguishes photo-only, video-only and full guide coverag
  assert.deepEqual(result,{guides:3,critical:1,photoGuides:2,videoGuides:2,both:1,criticalBoth:1,photos:3,videos:2});
  assert.equal(vm.runInContext("guideMediaCoverage(pages,[]).both",ctx),0);
 });
+
+test('all 162 bilingual guides and seven primary screens render complete steps and valid topic links',()=>{
+ const cut=js.indexOf('window.addEventListener("hashchange",()=>route());');
+ assert.ok(cut>0);
+ const ctx=vm.createContext({localStorage:{getItem:()=>null,setItem:()=>{}},location:{hash:"#/home"},history:{state:null,replaceState(){}},window:{addEventListener(){}},document:{addEventListener(){},querySelector(){return null},querySelectorAll(){return []},body:{classList:{contains:()=>false}}}});
+ vm.runInContext(js.slice(0,cut),ctx);
+ const result=JSON.parse(vm.runInContext(`JSON.stringify((()=>{
+ const ids=new Set(PAGES.map(p=>p.id));let screens=0,steps=0,unknown=[];
+ function scan(html){screens++;if(!html.includes("<h1>"))throw Error("no title");for(const m of html.matchAll(/href="#\\/topic\\/([^"]+)"/g))if(!ids.has(decodeURIComponent(m[1])))unknown.push(m[1]);}
+ for(const lang of ["ru","en"]){state.lang=lang;for(const p of PAGES){const html=renderTopic(p);scan(html);const n=(html.match(/class="step"/g)||[]).length;if(n!==(lang==="ru"?p.stepsRu:p.stepsEn).length)throw Error("step mismatch "+p.id);steps+=n;if(p.level==="critical"&&!html.includes('href="tel:112"'))throw Error("missing SOS "+p.id)}
+ for(const [hash,render] of [["#/home",renderHome],["#/sos",renderSos],["#/catalog",renderCatalog],["#/kits",renderKits],["#/kits/medicines",renderKits],["#/more",renderMore],["#/favorites",renderFavorites]]){location.hash=hash;scan(render())}}
+ return {screens,steps,unknown};
+ })())`,ctx));
+ assert.deepEqual(result,{screens:338,steps:1002,unknown:[]});
+});
