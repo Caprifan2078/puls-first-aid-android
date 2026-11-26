@@ -91,6 +91,28 @@ def main():
     (OUT / "manifest.json").write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
     (ROOT / "medicine-photo-qa-report.json").write_text(json.dumps({"retrieved":rows,"failed":failed}, ensure_ascii=False, indent=2), encoding="utf-8")
     print("Retrieved", len(rows), "of", len(candidates), "QA photos; not a release")
+    collect_kits()
+
+def collect_kits():
+    global OUT
+    OUT = ROOT / "app/src/main/assets/media/kits"
+    OUT.mkdir(parents=True, exist_ok=True)
+    for stale in OUT.glob("*.jpg"):
+        stale.unlink()
+    rows, failed = [], []
+    for row in json.loads((ROOT / "media-review-20261126.json").read_text())["kit_photos"]:
+        try:
+            rows.append(collect(row))
+            print("KIT OK", row["id"], flush=True)
+        except Exception as exc:
+            failed.append({"id":row["id"],"error":str(exc)})
+            print("KIT SKIP", row["id"], str(exc), flush=True)
+        time.sleep(2)
+    (OUT / "manifest.json").write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
+    report = ROOT / "medicine-photo-qa-report.json"
+    data = json.loads(report.read_text())
+    data["kits"] = {"retrieved":rows,"failed":failed}
+    report.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
 if __name__ == "__main__":
     main()

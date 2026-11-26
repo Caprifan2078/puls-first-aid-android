@@ -179,5 +179,28 @@
       "license": "CC BY-SA 4.0",
       "reviewed_original_sha1": "ecf35b9a426eff08ac1b6ba5a61d344759b8b89d"
     }
+  ],
+  "kit_photos": [
+    {
+      "id": "home-kit-example",
+      "file": "Standard First Aid Kit and Essential Emergency Medical Supplies 01.jpg",
+      "license": "CC0 1.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Standard_First_Aid_Kit_and_Essential_Emergency_Medical_Supplies_01.jpg",
+      "status": "source-license checked; contents illustrative, not specific kit checklist"
+    },
+    {
+      "id": "travel-kit-example",
+      "file": "First aid kit.jpg",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:First_aid_kit.jpg",
+      "status": "source-license checked; contents illustrative, not specific kit checklist"
+    },
+    {
+      "id": "outdoor-kit-example",
+      "file": "Essential items for first aid.jpg",
+      "license": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Essential_items_for_first_aid.jpg",
+      "status": "source-license checked; contents illustrative, not specific kit checklist"
+    }
   ]
 }

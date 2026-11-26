@@ -6,7 +6,7 @@ const page=fs.readFileSync('app/src/main/assets/index.html','utf8');
 const js=page.match(/<script>([\s\S]*?)<\/script>/)[1];
 test('inline script compiles',()=>assert.doesNotThrow(()=>new vm.Script(js)));
 test('medicine shelf is grouped, bilingual and has no empty image slots',()=>{
- const chunk=js.slice(js.indexOf('const MEDICINES='),js.indexOf('function renderKits(){'));
+ const chunk=js.slice(js.indexOf('const MEDICINES='),js.indexOf('const KIT_GROUPS='));
  const ctx=vm.createContext({state:{lang:'ru'},esc:v=>String(v)});
  vm.runInContext(chunk,ctx);
  const ru=vm.runInContext('renderMedicineShelf()',ctx);
@@ -37,3 +37,6 @@ test('broken photo disappears and open category is restored after manifest load'
  assert.ok(js.includes('ev.target.remove()'));
  assert.ok(js.includes('d.open=groups.includes(d.dataset.group)'));
 });
+
+test('all three kit group mappings cover each item exactly once and keep legacy keys',()=>{const kits=vm.runInNewContext(js.slice(js.indexOf('const KITS='),js.indexOf('const I='))+'KITS');const groups=vm.runInNewContext(js.slice(js.indexOf('const KIT_GROUPS='),js.indexOf('const KIT_SOURCE='))+'KIT_GROUPS');assert.deepEqual(Array.from(kits,k=>k.id),['home','travel','outdoor']);for(const k of kits){const ids=Array.from(groups[k.id].flatMap(g=>g[2])).sort((a,b)=>a-b);assert.deepEqual(ids,Array.from({length:k.items.length},(_,i)=>i));assert.ok(k.items.length>=13);}});
+test('SOS priority topics are unique and exist',()=>{const pages=vm.runInNewContext(js.slice(js.indexOf('const PAGES='),js.indexOf('const KITS='))+'PAGES');const order=vm.runInNewContext(js.slice(js.indexOf('const SOS_ORDER='),js.indexOf('const SOS_LABELS='))+'SOS_ORDER');assert.equal(new Set(order).size,order.length);for(const id of order)assert.ok(pages.some(p=>p.id===id));});
