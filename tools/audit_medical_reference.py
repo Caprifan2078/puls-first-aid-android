@@ -50,6 +50,8 @@ def check(url):
             final=resp.geturl()
             if not allowed(final):
                 return {"status":"blocked"}
+            if urllib.parse.urlsplit(final).path.rstrip("/") in {"/medicine-page-no-longer-available","/page-not-found","/404"}:
+                return {"status":"retired","http":resp.status,"final":final}
             return {"status":"reachable","http":resp.status,"final":final,
                     "redirected":url.rstrip("/")!=final.rstrip("/")}
     except urllib.error.HTTPError as e:
@@ -108,7 +110,7 @@ def main():
         with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
             report["url_checks"]=dict(zip(urls,pool.map(check,urls)))
     report["summary"]={kind:{scope:sum(e["kind"]==kind and e["scope"]==scope for e in report["entries"]) for scope in ("individual","candidate","index","missing")} for kind in ("guide","medicine","interaction")}
-    report["reachability_summary"]={status:sum(v["status"]==status for v in report["url_checks"].values()) for status in ("reachable","http-error","unverified","blocked")}
+    report["reachability_summary"]={status:sum(v["status"]==status for v in report["url_checks"].values()) for status in ("reachable","http-error","unverified","blocked","retired")}
     for url,result in report["url_checks"].items():
         if result["status"]!="reachable" or result.get("redirected"):
             print("SOURCE",url,json.dumps(result,ensure_ascii=False))
