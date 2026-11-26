@@ -109,7 +109,8 @@ test('symbolic step cues map only to existing steps and are decorative',()=>{
  const ctx=vm.createContext({state:{lang:"ru"},esc:String});
  vm.runInContext(js.slice(js.indexOf("const GUIDE_PICTOGRAMS="),js.indexOf("function renderTopic(p){")),ctx);
  const mappings=vm.runInContext("STEP_CUES",ctx);
- assert.equal(Object.keys(mappings).length,46);
+ assert.ok(pages.filter(p=>p.level==='critical').every(p=>mappings[p.id]?.length===p.stepsRu.length&&mappings[p.id].some(Boolean)));
+ assert.equal(Object.keys(mappings).length,87);
  for(const [id,icons] of Object.entries(mappings)){
   const p=pages.find(p=>p.id===id);assert.ok(p,id);assert.equal(icons.length,p.stepsRu.length,id);
   ctx.p=p;for(let i=0;i<icons.length;i++)if(icons[i])assert.ok(vm.runInContext("renderStepCue(p,"+i+")",ctx).includes('aria-hidden="true"'));

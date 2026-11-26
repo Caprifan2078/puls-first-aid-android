@@ -21,3 +21,5 @@ Follow-up: explicit phrase order now wins over incidental body-text matches, gen
 8.19.7: native foreground-only emergency screen awake via origin-restricted WebMessageListener (setting defaults on; unsupported WebView gracefully falls back), cached search normalization, larger reviewed-media manifest capacity, primary photo at each step with extra media collapsed, local coverage counts for photos/videos/medicines/kits. New CI pending. 8.19.6 passed Android install and browser regression.
 
 8.19.8: 12 new bilingual guide drafts tied to NHS or NHS trust patient sources; 40 reference medicine cards with class, explicit index-only source and no dosing. 162 guides, 501 steps, 240 medicines. 12 new symbolic cue mappings. Independent clinical review remains pending; no new approved media. Source scope must not be represented as medical approval.
+
+8.19.9: all 73 critical guides have hand-mapped symbolic action cues; 246 nonempty icons in 87 guides. No change in clinical instructions. QA medicine and kit photos visibly labeled pending review if approvals missing. This is not photographic or clinical coverage.
