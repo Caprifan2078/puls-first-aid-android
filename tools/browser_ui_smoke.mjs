@@ -64,7 +64,7 @@ try{
   await page.locator("#medicine-search").fill("zznoresults");
   assert.equal(await page.locator(".medicine-row").count(),0);
   await page.locator("#medicine-search").fill("");
-  assert.equal(await page.locator(".medicine-row").count(),47);
+  assert.equal(await page.locator(".medicine-row").count(),70);
   await noOverflow();
   await page.screenshot({path:"puls-medicines-"+width+".png"});
   await page.locator('nav a[href="#/catalog"]').click();
