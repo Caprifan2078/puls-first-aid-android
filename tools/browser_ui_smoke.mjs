@@ -146,7 +146,7 @@ try{
   assert.ok(await page.locator('.med-redflag a[href="#/topic/poison"]').isVisible());
   await noOverflow();
   await page.locator("#medicine-search").fill("");
-  assert.equal(await page.locator(".medicine-row").count(),200);
+  assert.equal(await page.locator(".medicine-row").count(),240);
   await noOverflow();
   await page.screenshot({path:"puls-medicines-"+width+".png"});
   await page.locator('nav a[href="#/catalog"]').click();
@@ -160,7 +160,7 @@ try{
   assert.equal(await page.locator("html").getAttribute("lang"),"en");
   await page.locator('nav a[href="#/more"]').click();
   await page.locator('.library-status summary').click();
-  assert.ok((await page.locator('.library-status').innerText()).includes("150 guides"));
+  assert.ok((await page.locator('.library-status').innerText()).includes("162 guides"));
   await page.locator('[data-action="size"]').click();
   await page.locator('nav a[href="#/sos"]').click();
   await page.locator('#sos-search').fill("stroke");
