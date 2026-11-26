@@ -1,0 +1,31 @@
+name: PULS medical reference audit
+on:
+  workflow_dispatch:
+  push:
+    branches: [qa/puls-ui-media-20261126]
+    paths:
+      - 'app/src/main/assets/index.html'
+      - 'tools/audit_medical_reference.py'
+      - '.github/workflows/medical-reference-audit.yml'
+permissions:
+  contents: read
+concurrency:
+  group: puls-medical-reference-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate medical reference structure
+        run: python3 tools/audit_medical_reference.py
+      - name: Check source reachability
+        run: python3 tools/audit_medical_reference.py --online
+      - name: Upload medical reference audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: PULS-Medical-Reference-Audit
+          path: medical-reference-audit.json
+          if-no-files-found: warn
