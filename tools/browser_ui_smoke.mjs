@@ -32,6 +32,7 @@ try{
   await page.locator('.emergency-tile[href="#/topic/cpr"]').click();
   await page.locator(".step-list").waitFor({state:"visible"});
   assert.ok(await page.locator(".step-list .step").count()>0);
+  assert.ok(await page.locator('.age-guide-links a[href="#/topic/child-cpr"]').isVisible());
   assert.ok(await page.locator('a[href="tel:112"]').first().isVisible());
   await noOverflow();
   await page.screenshot({path:"puls-sos-"+width+".png"});
@@ -63,7 +64,7 @@ try{
   await page.locator("#medicine-search").fill("zznoresults");
   assert.equal(await page.locator(".medicine-row").count(),0);
   await page.locator("#medicine-search").fill("");
-  assert.equal(await page.locator(".medicine-row").count(),27);
+  assert.equal(await page.locator(".medicine-row").count(),47);
   await noOverflow();
   await page.screenshot({path:"puls-medicines-"+width+".png"});
   await page.locator('nav a[href="#/catalog"]').click();
