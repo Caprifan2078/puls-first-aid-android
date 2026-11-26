@@ -45,7 +45,7 @@ try {
   }catch{res.writeHead(404);res.end()}
  });
  await new Promise(r=>server.listen(0,"127.0.0.1",r));
- browser=await chromium.launch({headless:true,args:["--no-sandbox"]});
+ browser=await chromium.launch({channel:"chrome",headless:true,args:["--no-sandbox"]});
  const ctx=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
  const page=await ctx.newPage(),errors=[];
  const clickMediaSummary=async()=>{const summary=page.locator(".aid-media>summary");await summary.evaluate(el=>el.scrollIntoView({block:"center",behavior:"instant"}));await summary.click();};

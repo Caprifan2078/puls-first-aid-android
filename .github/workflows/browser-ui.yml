@@ -20,7 +20,7 @@ jobs:
       - name: Install browser test runner
         run: |
           npm install --no-save --ignore-scripts playwright@1.56.1
-          npx playwright install --with-deps chromium
+          npx playwright install --with-deps chromium chrome
       - name: Test responsive UI and persistence
         run: node tools/browser_ui_smoke.mjs
       - name: Test synthetic offline media playback
