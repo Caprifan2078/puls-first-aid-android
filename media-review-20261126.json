@@ -157,6 +157,48 @@
       "license": "CC BY-SA 4.0",
       "author": "TinasBabyInc",
       "clinical_review": "pending"
+    },
+    {
+      "id": "cpr-video",
+      "file": "CPR.webm",
+      "license": "CC BY-SA 4.0",
+      "topic": "cpr",
+      "clinical_review": "pending"
+    },
+    {
+      "id": "cpr-explainer",
+      "file": "How to save lives with CPR.webm",
+      "license": "CC BY-SA 3.0",
+      "topic": "cpr",
+      "clinical_review": "pending"
+    },
+    {
+      "id": "recovery-illustration",
+      "file": "People - Recovery position -- Smart-Servier.png",
+      "license": "CC BY-SA 3.0",
+      "topic": "unconscious",
+      "clinical_review": "pending"
+    },
+    {
+      "id": "recovery-training",
+      "file": "Recovery position maneuver.jpg",
+      "license": "CC BY-SA 3.0 FR",
+      "topic": "unconscious",
+      "clinical_review": "pending"
+    },
+    {
+      "id": "cpr-training-photo",
+      "file": "CPR Training Demonstration.jpg",
+      "license": "CC BY-SA 4.0",
+      "topic": "cpr",
+      "clinical_review": "pending"
+    },
+    {
+      "id": "autoinjector-illustration",
+      "file": "Epinephrine-injection.png",
+      "license": "CC0 1.0",
+      "topic": "anaphylaxis",
+      "clinical_review": "pending"
     }
   ],
   "policy": "No candidate implies downloaded media or clinical approval. Check original, rights, privacy and technique. First-aid media are not published until clinical review.",

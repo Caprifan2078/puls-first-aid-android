@@ -17,12 +17,14 @@ def collect(row):
     info = json.loads(get("https://commons.wikimedia.org/w/api.php?"+query,2_000_000))["query"]["pages"][0]["imageinfo"][0]
     meta = info["extmetadata"]
     lic = normalize_license(plain(meta["LicenseShortName"]["value"]))
+    if lic.lower()=="cc by-sa 3.0 fr":
+        lic="CC BY-SA 3.0 FR"
     if lic != row["license"] or lic not in ALLOWED:
         raise ValueError("license mismatch: "+lic)
     author = plain(meta.get("Artist",{}).get("value",""))
     if not author:
         raise ValueError("author missing")
-    kind = {"image/jpeg":"jpg","video/webm":"webm"}.get(info["mime"])
+    kind = {"image/jpeg":"jpg","image/png":"png","video/webm":"webm"}.get(info["mime"])
     if not kind or not 1024<=info["size"]<=LIMIT:
         raise ValueError("MIME or size rejected")
     url = urllib.parse.urlsplit(info["url"])
@@ -35,15 +37,15 @@ def collect(row):
         upstream=format(int(upstream,36),"040x")
     if len(data)!=info["size"] or sha!=upstream or (row.get("reviewed_original_sha1") and sha!=row["reviewed_original_sha1"]):
         raise ValueError("source checksum mismatch")
-    if not data.startswith(b"\xff\xd8\xff" if kind=="jpg" else b"\x1a\x45\xdf\xa3"):
+    if not data.startswith({"jpg":b"\xff\xd8\xff","png":b"\x89PNG\r\n\x1a\n","webm":b"\x1a\x45\xdf\xa3"}[kind]):
         raise ValueError("invalid signature")
-    ext="jpg" if kind=="jpg" else "mp4"
+    ext="jpg" if kind in ("jpg","png") else "mp4"
     target=OUT/(slug+"."+ext)
     with tempfile.TemporaryDirectory() as tmp:
         original=Path(tmp)/("original."+kind)
         original.write_bytes(data)
         command=["ffmpeg","-nostdin","-v","error","-i",str(original),"-map_metadata","-1","-map_chapters","-1"]
-        if kind=="jpg":
+        if kind in ("jpg","png"):
             command+=["-vf","scale=1280:1280:force_original_aspect_ratio=decrease","-frames:v","1","-q:v","3"]
         else:
             command+=["-map","0:v:0","-map","0:a?","-vf","scale=1280:720:force_original_aspect_ratio=decrease:force_divisible_by=2","-c:v","libx264","-pix_fmt","yuv420p","-crf","25","-c:a","aac","-movflags","+faststart"]

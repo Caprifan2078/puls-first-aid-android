@@ -1,0 +1,5 @@
+# PULS 8.4.0 QA
+Three kits: home 13, travel 14, outdoors 15. Original item indices 0–7 retained for local checkmarks and backup compatibility. Three functional groups per kit. Source for basic supplies: https://www.redcross.org/get-help/how-to-prepare-for-emergencies/anatomy-of-a-first-aid-kit.html ; outdoor additions are preparedness suggestions, not a mandatory medical kit.
+Home and SOS simplified; eight priority emergency topics, no duplicate priority tiles, inline SVG navigation icons, large text and persistent call action on critical topics. No new clinical instruction text.
+Medicine shelf is a separate tab, nine active ingredient names. Three kit photo candidates and six more first-aid media candidates added. The approved first-aid manifest is intentionally empty until a qualified review. Review workflow is not clinical validation; playback on Android remains unverified. Media UI is optional, local-only, without autoplay, with attribution and no placeholders when unavailable.
+Historical full pack still missing. QA branch only; no release or merge.
