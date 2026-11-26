@@ -6,6 +6,10 @@ import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Build;
+import android.view.WindowInsets;
+import android.view.WindowInsetsController;
+import android.widget.FrameLayout;
 import android.util.Log;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -37,6 +41,8 @@ public final class MainActivity extends Activity {
     private int readyGeneration;
     private boolean foreground;
     private boolean emergencyAwake;
+    private String lastAppUrl = START_URL;
+    private boolean recoveredRenderer;
 
     private void updateScreenAwake() {
         if (foreground && emergencyAwake) getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -64,14 +70,48 @@ public final class MainActivity extends Activity {
         loader = new WebViewAssetLoader.Builder()
                 .addPathHandler("/assets/", new WebViewAssetLoader.AssetsPathHandler(this))
                 .build();
+        String saved = state == null ? null : state.getString("puls_route");
+        lastAppUrl = safeAppRoute(saved);
         createWebView();
-        web.loadUrl(START_URL);
+        web.loadUrl(lastAppUrl);
+    }
+
+    private String safeAppRoute(String url) {
+        if (!isAppPage(url)) return START_URL;
+        String hash = Uri.parse(url).getEncodedFragment();
+        if (hash == null || hash.isEmpty()) return START_URL;
+        return hash.matches("/(?:home|sos|more|favorites|kits(?:/medicines)?|catalog(?:/[a-z0-9-]+)?|topic/[a-z0-9-]+)")
+                ? START_URL + "#" + hash : START_URL;
+    }
+
+    @Override protected void onSaveInstanceState(Bundle out) {
+        out.putString("puls_route", safeAppRoute(web == null ? lastAppUrl : web.getUrl()));
+        super.onSaveInstanceState(out);
     }
 
     private void createWebView() {
         web = new WebView(this);
         web.setBackgroundColor(0xFF091923);
-        setContentView(web);
+        if (Build.VERSION.SDK_INT >= 35) {
+            // Android 15/16 enforce edge-to-edge for this target SDK.
+            // Keep SOS, navigation and search above system bars and the keyboard.
+            FrameLayout frame = new FrameLayout(this);
+            frame.setBackgroundColor(0xFF091923);
+            frame.addView(web, new FrameLayout.LayoutParams(-1, -1));
+            getWindow().setDecorFitsSystemWindows(false);
+            WindowInsetsController controller = getWindow().getInsetsController();
+            if (controller != null) controller.setSystemBarsAppearance(0,
+                    WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS |
+                    WindowInsetsController.APPEARANCE_LIGHT_NAVIGATION_BARS);
+            frame.setOnApplyWindowInsetsListener((v, insets) -> {
+                android.graphics.Insets safe = insets.getInsets(WindowInsets.Type.systemBars()
+                        | WindowInsets.Type.displayCutout() | WindowInsets.Type.ime());
+                v.setPadding(safe.left, safe.top, safe.right, safe.bottom);
+                return WindowInsets.CONSUMED;
+            });
+            setContentView(frame);
+            frame.requestApplyInsets();
+        } else setContentView(web);
         WebSettings s = web.getSettings();
         s.setJavaScriptEnabled(true);
         s.setDomStorageEnabled(true);
@@ -108,6 +148,9 @@ public final class MainActivity extends Activity {
                 if (response != null) return response;
                 return new WebResourceResponse("text/plain", "UTF-8", 403, "Blocked", java.util.Collections.emptyMap(), new java.io.ByteArrayInputStream(new byte[0]));
             }
+            @Override public void doUpdateVisitedHistory(WebView view, String url, boolean reload) {
+                if (view == web && isAppPage(url)) lastAppUrl = safeAppRoute(url);
+            }
             @Override public void onPageFinished(WebView view, String url) {
                 if (isAppPage(url)) checkUiReady(view, ++readyGeneration, 0);
             }
@@ -133,8 +176,16 @@ public final class MainActivity extends Activity {
                 ViewGroup parent = (ViewGroup) view.getParent();
                 if (parent != null) parent.removeView(view);
                 view.destroy();
+                if (view != web || isFinishing() || isDestroyed()) return true;
+                readyGeneration++;
+                if (uploadCallback != null) {
+                    uploadCallback.onReceiveValue(null);
+                    uploadCallback = null;
+                }
+                String restore = recoveredRenderer ? START_URL : lastAppUrl;
+                recoveredRenderer = true;
                 createWebView();
-                web.loadUrl(START_URL);
+                web.loadUrl(restore);
                 return true;
             }
         });
