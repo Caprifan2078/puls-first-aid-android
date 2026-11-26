@@ -24,7 +24,8 @@ def valid_source(s):
 def normalize_url(s):
     u=urlsplit(s)
     if u.scheme not in ("http","https") or u.netloc!="creativecommons.org" or u.query or u.fragment:return ""
-    return "https://creativecommons.org"+u.path.rstrip("/").removesuffix("/deed").rstrip("/")+"/"
+    path=re.sub(r"/deed(?:\.[a-zA-Z]{2,3}(?:[-_][a-zA-Z0-9]{2,8})*)?/?$","",u.path.rstrip("/"))
+    return "https://creativecommons.org"+path.rstrip("/")+"/"
 def validate_license_metadata(label,raw_url,expected):
     require(label==expected and label in LICENSES,"license label mismatch")
     if label=="Public domain":
