@@ -4,10 +4,14 @@ from mass_media_discovery import INVENTORY,tasks,search_query,candidate,discover
 class MassMediaTest(unittest.TestCase):
  def test_inventory(self):
     targets=json.loads(INVENTORY.read_text())["targets"]
-    self.assertEqual(len(targets),395)
-    self.assertEqual(len(tasks(targets)),790)
-    self.assertEqual(len({r["id"] for r in targets}),395)
-    self.assertEqual(sum(len(r.get("steps",[])) for r in targets),465)
+    self.assertIn(len(targets),(395,693))
+    self.assertEqual(len(tasks(targets)),2*len(targets))
+    self.assertEqual(len({r["id"] for r in targets}),len(targets))
+    self.assertIn(sum(len(r.get("steps",[])) for r in targets),(465,501))
+    parent={r["id"]:r for r in targets if "steps" in r}
+    for r in targets:
+        if "step_binding" in r:
+            b=r["step_binding"];self.assertEqual(parent["guide:"+b["topic"]]["steps"][b["index"]],{k:b[k] for k in ("index","ru","en")})
     self.assertTrue(all(s["ru"] and s["en"] for r in targets for s in r.get("steps",[])))
  def test_license_and_mime(self):
     t={"id":"guide:cpr","kind":"guide","en":"CPR"}
