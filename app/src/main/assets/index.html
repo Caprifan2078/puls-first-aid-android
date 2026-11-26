@@ -468,7 +468,7 @@ document.addEventListener("click",e=>{
   requestAnimationFrame(()=>{const f=document.querySelector("#search");if(f){f.value=state.q;f.focus()}});
   return;
  }
- if(action==="media-jump"){e.stopImmediatePropagation();const first=document.querySelector(".step-media .aid-figure")?.closest(".step-media")||document.querySelector(".aid-media .aid-figure")?.closest(".aid-media");if(first){if(first.tagName==="DETAILS")first.open=true;first.scrollIntoView({block:"start",behavior:"instant"});}return;}
+ if(action==="media-jump"){e.stopImmediatePropagation();const first=document.querySelector(".step-media .aid-figure")?.closest(".step-media")||document.querySelector(".aid-media .aid-figure")?.closest(".aid-media");if(first){if(first.tagName==="DETAILS")first.open=true;else if(!first.querySelector(":scope > .aid-figure")){const extra=first.querySelector(".step-extra-media");if(extra)extra.open=true}first.scrollIntoView({block:"start",behavior:"instant"});}return;}
  if(!["backup-export","backup-copy","backup-import","hicontrast"].includes(action))return;
  e.stopImmediatePropagation();
  if(action==="backup-export")showBackup();
