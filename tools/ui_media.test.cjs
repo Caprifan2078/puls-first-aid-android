@@ -172,3 +172,18 @@ test('backup of the entire guide library round-trips, old schema remains compati
  vm.runInContext("importBackup()",ctx);assert.equal(message,"backupRestored");assert.equal(state.keepAwake,true);
  exported.keepAwake="false";area.value=JSON.stringify(exported);vm.runInContext("importBackup()",ctx);assert.equal(message,"backupError");assert.equal(state.keepAwake,true);
 });
+
+test('reviewed media index matches the manifest, rejects invalid records and refreshes',()=>{
+ const PAGES=[{id:"cpr",stepsRu:["r"],stepsEn:["e"]},{id:"stroke",stepsRu:["r"],stepsEn:["e"]}];
+ const license="https://creativecommons.org/publicdomain/zero/1.0/";
+ const ctx=vm.createContext({PAGES,state:{lang:"ru"},esc:String,MED_LICENSE_URLS:new Set([license])});
+ vm.runInContext(js.slice(js.indexOf("const AID_MEDIA_LICENSES"),js.indexOf("const AID_REFERENCE")),ctx);
+ const fixture=i=>({topic:i%2?"cpr":"stroke",file:"sample-"+i+".jpg",sha256:"a".repeat(64),author:"Synthetic QA",license:"CC0 1.0",license_url:license,source:"https://commons.wikimedia.org/wiki/File:Sample.jpg",ru:"Тест",en:"Test",clinical_approval:true,visual_review:"approved",rights_review:"approved",review_ref:"TEST ONLY"});
+ ctx.records=[null,{...fixture(6000),clinical_approval:false},{...fixture(6001),step_index:0,step_ru:"changed",step_en:"e"},...Array.from({length:5200},(_,i)=>fixture(i)),fixture(0)];
+ vm.runInContext("approvedAidMedia=validateAidMedia(records)",ctx);
+ assert.equal(vm.runInContext("approvedAidMedia.length",ctx),5000);
+ for(const id of ["cpr","stroke"]){ctx.id=id;assert.deepEqual(Array.from(vm.runInContext("topicAidRows({id}).map(a=>a.file)",ctx)),Array.from(vm.runInContext("approvedAidMedia.filter(a=>a.topic===id).map(a=>a.file)",ctx)));}
+ ctx.records=[fixture(1)];vm.runInContext("approvedAidMedia=validateAidMedia(records)",ctx);
+ assert.equal(vm.runInContext('topicAidRows({id:"cpr"}).length',ctx),1);
+ assert.equal(vm.runInContext('topicAidRows({id:"stroke"}).length',ctx),0);
+});
