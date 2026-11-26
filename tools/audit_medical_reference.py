@@ -88,7 +88,7 @@ def audit(html):
             if field in detail and not (isinstance(detail[field],list) and len(detail[field])==2 and all(isinstance(s,str) and s.strip() for s in detail[field])):
                 errors.append("invalid bilingual "+field+": "+id)
         url=detail.get("source")
-        scope=("missing" if not url else "index" if detail.get("sourceKind")=="index" else "individual")
+        scope=("missing" if not url else detail.get("sourceKind") if detail.get("sourceKind") in ("index","candidate") else "individual")
         add("medicine",id,url,scope)
         if detail.get("interaction"):
             url=detail.get("interactionSource")
@@ -107,7 +107,12 @@ def main():
     if args.online and not report["errors"]:
         with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
             report["url_checks"]=dict(zip(urls,pool.map(check,urls)))
-    report["summary"]={kind:{scope:sum(e["kind"]==kind and e["scope"]==scope for e in report["entries"]) for scope in ("individual","index","missing")} for kind in ("guide","medicine","interaction")}
+    report["summary"]={kind:{scope:sum(e["kind"]==kind and e["scope"]==scope for e in report["entries"]) for scope in ("individual","candidate","index","missing")} for kind in ("guide","medicine","interaction")}
+    report["reachability_summary"]={status:sum(v["status"]==status for v in report["url_checks"].values()) for status in ("reachable","http-error","unverified","blocked")}
+    for url,result in report["url_checks"].items():
+        if result["status"]!="reachable" or result.get("redirected"):
+            print("SOURCE",url,json.dumps(result,ensure_ascii=False))
+    print("REACHABILITY",json.dumps(report["reachability_summary"]))
     OUTPUT.write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding="utf-8")
     print(json.dumps({"guides":report["guides"],"medicines":report["medicines"],"summary":report["summary"],"errors":report["errors"],"unique_urls":len(urls),"online_checked":len(report["url_checks"])},ensure_ascii=False))
     if report["errors"]:raise SystemExit(1)
