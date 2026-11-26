@@ -1,0 +1,3984 @@
+{
+  "schema": 1,
+  "notice": "File page references only. Category membership cannot identify a medication. No confirmed rights, visual identity or clinical relevance. Not Android assets.",
+  "records": [
+    {
+      "file": "Paracetamol substance photo.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Paracetamol_substance_photo.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Paracetamol-from-xtal-3D-balls.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Paracetamol-from-xtal-3D-balls.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "3d Molecule of Paracetamol.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:3d_Molecule_of_Paracetamol.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Acetaminophen metabolism.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Acetaminophen_metabolism.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Acetaminophen-3D-molecular-model-engraved-render-CAS-103-90-2.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Acetaminophen-3D-molecular-model-engraved-render-CAS-103-90-2.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Acetaminophen.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Acetaminophen.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Acetaminophen.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Acetaminophen.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Acetanilide metabolisme.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Acetanilide_metabolisme.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Acetominophen Raman.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Acetominophen_Raman.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "AM404 skel.png",
+      "source": "https://commons.wikimedia.org/wiki/File:AM404_skel.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Axelrod.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Axelrod.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Biotransformacion.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Biotransformacion.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ce-Paracetamol.PNG",
+      "source": "https://commons.wikimedia.org/wiki/File:Ce-Paracetamol.PNG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ce-Paracetamol2.PNG",
+      "source": "https://commons.wikimedia.org/wiki/File:Ce-Paracetamol2.PNG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ce-Paracetamol3.PNG",
+      "source": "https://commons.wikimedia.org/wiki/File:Ce-Paracetamol3.PNG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ce-Paracetamol4.PNG",
+      "source": "https://commons.wikimedia.org/wiki/File:Ce-Paracetamol4.PNG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Celanese method for the preparation of paracetamol.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Celanese_method_for_the_preparation_of_paracetamol.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Celanese synthesis of paracetamol.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Celanese_synthesis_of_paracetamol.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Citodon minor.JPEG",
+      "source": "https://commons.wikimedia.org/wiki/File:Citodon_minor.JPEG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Classic syntheses of paracetamol.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Classic_syntheses_of_paracetamol.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Complexity and Scale of Structures within Crystalline Materials.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Complexity_and_Scale_of_Structures_within_Crystalline_Materials.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Crystal Architecture and Intermolecular Interactions.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Crystal_Architecture_and_Intermolecular_Interactions.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Current-model-of-TXNDC5-interactions-with-different-compounds.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Current-model-of-TXNDC5-interactions-with-different-compounds.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Fioricet.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Fioricet.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Hepatische Verstoffwechselung von Methacetin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Hepatische_Verstoffwechselung_von_Methacetin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Hodinová skla.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Hodinov%C3%A1_skla.webp",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Hydrocodone bitartrate acetaminophen Chemical Structure Depiction.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Hydrocodone_bitartrate_acetaminophen_Chemical_Structure_Depiction.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "It-is-hypothesized-that-acetaminophen-production-in-space-is-possible-despite-resource-availability-constraints-if-an-an.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:It-is-hypothesized-that-acetaminophen-production-in-space-is-possible-despite-resource-availability-constraints-if-an-an.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Jcth-4-131-g001.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Jcth-4-131-g001.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Kalottenmodell N-acetyl-para-aminophenol.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Kalottenmodell_N-acetyl-para-aminophenol.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Logo-tylenol (1).png",
+      "source": "https://commons.wikimedia.org/wiki/File:Logo-tylenol_(1).png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Metabolism of paracetamol.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Metabolism_of_paracetamol.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Molecule paracetamol 3D.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Molecule_paracetamol_3D.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Métabolisme paracetamol-ar.png",
+      "source": "https://commons.wikimedia.org/wiki/File:M%C3%A9tabolisme_paracetamol-ar.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Métabolisme paracetamol.png",
+      "source": "https://commons.wikimedia.org/wiki/File:M%C3%A9tabolisme_paracetamol.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Oxycocet.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Oxycocet.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Painted building in downtown Kingston, Jamaica (32983964230).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Painted_building_in_downtown_Kingston%2C_Jamaica_(32983964230).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Paracetamol Electron Map.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Paracetamol_Electron_Map.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Paracetamol metabolism (de).png",
+      "source": "https://commons.wikimedia.org/wiki/File:Paracetamol_metabolism_(de).png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Paracetamol metabolism.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Paracetamol_metabolism.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Paracetamol synthese.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Paracetamol_synthese.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Paracetamol-3D-balls.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Paracetamol-3D-balls.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Paracetamol-3D-vdW.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Paracetamol-3D-vdW.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Paracetamol-3D.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Paracetamol-3D.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Paracetamol-from-xtal-3D-vdW.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Paracetamol-from-xtal-3D-vdW.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Paracetamol-potential.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Paracetamol-potential.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Paracetamol-rod-povray.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Paracetamol-rod-povray.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Paracetamol-rod.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Paracetamol-rod.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Paracetamol-skeletal.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Paracetamol-skeletal.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Paracetamol.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Paracetamol.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "PCTsintesis.png",
+      "source": "https://commons.wikimedia.org/wiki/File:PCTsintesis.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "PH-shift paracetamol.png",
+      "source": "https://commons.wikimedia.org/wiki/File:PH-shift_paracetamol.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Phac do ngo doc paracetamol.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Phac_do_ngo_doc_paracetamol.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Phasendiagramm Theophyllin Paracetamol.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Phasendiagramm_Theophyllin_Paracetamol.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Phenacetin from paracetamol.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Phenacetin_from_paracetamol.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Polar-surface-area.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Polar-surface-area.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "President Trump Makes an Announcement on Medical and Scientific Findings for America's Children.webm",
+      "source": "https://commons.wikimedia.org/wiki/File:President_Trump_Makes_an_Announcement_on_Medical_and_Scientific_Findings_for_America's_Children.webm",
+      "kind": "video",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Rumack Matthew nomogram with treatment (study) line-vi.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Rumack_Matthew_nomogram_with_treatment_(study)_line-vi.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Synthesis of paracetamol from phenol.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Synthesis_of_paracetamol_from_phenol.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Synthesis of paracetamol.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Synthesis_of_paracetamol.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Tylenol recommending woman that are pregnant should not take any of their products.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Tylenol_recommending_woman_that_are_pregnant_should_not_take_any_of_their_products.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Gtk-dialog-info-14px.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Gtk-dialog-info-14px.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "paracetamol",
+        "ibuprofen",
+        "aspirin",
+        "amoxicillin",
+        "metformin",
+        "salbutamol",
+        "cetirizine",
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "(S)-ibuprofen-3D-sticks.png",
+      "source": "https://commons.wikimedia.org/wiki/File:(S)-ibuprofen-3D-sticks.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "(S)-ibuprofen-3D-vdW.png",
+      "source": "https://commons.wikimedia.org/wiki/File:(S)-ibuprofen-3D-vdW.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "200mg ibuprofen tablets.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:200mg_ibuprofen_tablets.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amneal Pharmaceuticals ibuprofen tablets.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Amneal_Pharmaceuticals_ibuprofen_tablets.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ardinex.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Ardinex.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "BHC Ibuprofen synthesis.png",
+      "source": "https://commons.wikimedia.org/wiki/File:BHC_Ibuprofen_synthesis.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "BHC synthesis of ibuprofen 2.png",
+      "source": "https://commons.wikimedia.org/wiki/File:BHC_synthesis_of_ibuprofen_2.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "BHC synthesis of ibuprofen.png",
+      "source": "https://commons.wikimedia.org/wiki/File:BHC_synthesis_of_ibuprofen.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Boots synthesis of ibuprofen.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Boots_synthesis_of_ibuprofen.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Bottle of Ibuprofen tablets with cap removed and tablets in front.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Bottle_of_Ibuprofen_tablets_with_cap_removed_and_tablets_in_front.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Burana600.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Burana600.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "BuranaSlow.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:BuranaSlow.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "CNX Chem 04 04 GreenChem.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:CNX_Chem_04_04_GreenChem.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Crystalline Ibuprofen.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Crystalline_Ibuprofen.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Crystallization Ibuprofen Salt.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Crystallization_Ibuprofen_Salt.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Cyclooxygenase-1 with bound ibuprofen 1EQG.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Cyclooxygenase-1_with_bound_ibuprofen_1EQG.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Day 4 of Calvin Lock, after suffering a severe allergic reaction to Ibuprofen.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Day_4_of_Calvin_Lock%2C_after_suffering_a_severe_allergic_reaction_to_Ibuprofen.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Drugs (2441806385).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Drugs_(2441806385).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Equate Ibuprofen Pills and Bottle.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Equate_Ibuprofen_Pills_and_Bottle.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Equate Ibuprofen Pills and Meijer Aceteminophen Caplets.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Equate_Ibuprofen_Pills_and_Meijer_Aceteminophen_Caplets.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Equate Ibuprofen Pills.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Equate_Ibuprofen_Pills.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Generic Ipubrofen.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Generic_Ipubrofen.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "I-2 (5328056165).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:I-2_(5328056165).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibalgin-400.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibalgin-400.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibalgin.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibalgin.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "IBPCOP.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:IBPCOP.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "IBUCAP 01.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:IBUCAP_01.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofeenitabletteja.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofeenitabletteja.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen 200 mg tablets (19019373514).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen_200_mg_tablets_(19019373514).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen 3D Model.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen_3D_Model.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen 400.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen_400.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen 8329.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen_8329.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen 8330.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen_8330.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen 8331.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen_8331.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen 8332.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen_8332.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen 8333.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen_8333.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen 8334.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen_8334.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen Blue Plaque, BioCity, Nottingham 01.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen_Blue_Plaque%2C_BioCity%2C_Nottingham_01.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen Blue Plaque, BioCity, Nottingham 02.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen_Blue_Plaque%2C_BioCity%2C_Nottingham_02.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen Delivery via Smart Polysiloxane.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen_Delivery_via_Smart_Polysiloxane.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen léčivé přípravky.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen_l%C3%A9%C4%8Div%C3%A9_p%C5%99%C3%ADpravky.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen made in DE for the RU market in UA colours, May 2026 04.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen_made_in_DE_for_the_RU_market_in_UA_colours%2C_May_2026_04.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen Polka~Dots 2 (3456983069).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen_Polka~Dots_2_(3456983069).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen synthesis.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen_synthesis.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen syrup.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen_syrup.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen tablets in palm of hand.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen_tablets_in_palm_of_hand.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen to the Rescue -33 366- (6820556819).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen_to_the_Rescue_-33_366-_(6820556819).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen, (+-)-3D-molecular-model-engraved-render-CAS-15687-27-1.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen%2C_(%2B-)-3D-molecular-model-engraved-render-CAS-15687-27-1.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen-2D-skeletal.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen-2D-skeletal.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen-3544.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen-3544.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen-3D-balls.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen-3D-balls.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen-3D-sticks.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen-3D-sticks.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen-3D-vdW.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen-3D-vdW.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen-400.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen-400.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen-Enantiomere Strukturformeln.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen-Enantiomere_Strukturformeln.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen-racemic-2D-skeletal.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen-racemic-2D-skeletal.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen-unit-cell-3D-balls.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen-unit-cell-3D-balls.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen-unit-cell-enantiomers-3D-balls.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen-unit-cell-enantiomers-3D-balls.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen-unit-cell-enantiomers-3D-vdW.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen-unit-cell-enantiomers-3D-vdW.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen-xtal-enantiomers-3D-vdW.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen-xtal-enantiomers-3D-vdW.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofen.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofen.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofenato de sodio.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofenato_de_sodio.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "IbuprofenBottle.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:IbuprofenBottle.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofeno 1.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofeno_1.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ibuprofeno.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Ibuprofeno.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "IbuprofenProducts.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:IbuprofenProducts.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Man giving ibuprofen to a woman that has migraine.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Man_giving_ibuprofen_to_a_woman_that_has_migraine.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Medication potofen(Ibuprofen).JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Medication_potofen(Ibuprofen).JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Modafen.jpeg",
+      "source": "https://commons.wikimedia.org/wiki/File:Modafen.jpeg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Molecule ibuprofene 3D.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Molecule_ibuprofene_3D.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Nurofen tablets on pharmacy shelf.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Nurofen_tablets_on_pharmacy_shelf.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ode to ibuprofen (6803440657).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ode_to_ibuprofen_(6803440657).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Pile of 200mg generic Ibuprofen tablets.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Pile_of_200mg_generic_Ibuprofen_tablets.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "R-ibuprofen-A-2D-skeletal.png",
+      "source": "https://commons.wikimedia.org/wiki/File:R-ibuprofen-A-2D-skeletal.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "R-ibuprofen-B-2D-skeletal.png",
+      "source": "https://commons.wikimedia.org/wiki/File:R-ibuprofen-B-2D-skeletal.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "RexallDG.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:RexallDG.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "S-ibuprofen-A-2D-skeletal.png",
+      "source": "https://commons.wikimedia.org/wiki/File:S-ibuprofen-A-2D-skeletal.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "S-ibuprofen-B-2D-skeletal.png",
+      "source": "https://commons.wikimedia.org/wiki/File:S-ibuprofen-B-2D-skeletal.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Synthesis of ibuprofen.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Synthesis_of_ibuprofen.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Synthesis of Ibuprofen.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Synthesis_of_Ibuprofen.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "The Chiral Switch Concept.png",
+      "source": "https://commons.wikimedia.org/wiki/File:The_Chiral_Switch_Concept.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Tulehduskipulaakkeita.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Tulehduskipulaakkeita.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "ibuprofen"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Acetylsalicylicacid-crystals.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Acetylsalicylicacid-crystals.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Synthesis of Aspirin Lab - NCSSM.webm",
+      "source": "https://commons.wikimedia.org/wiki/File:Synthesis_of_Aspirin_Lab_-_NCSSM.webm",
+      "kind": "video",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26827-Wermsdorf-1936-Adolf-Hitler-Straße-Brück & Sohn Kunstverlag.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26827-Wermsdorf-1936-Adolf-Hitler-Stra%C3%9Fe-Br%C3%BCck_%26_Sohn_Kunstverlag.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "5 grain aspirin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:5_grain_aspirin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Acylpyrin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Acylpyrin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Advertisement for 'Empirin', Burroughs Wellcome, 1939 Wellcome L0035378.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Advertisement_for_'Empirin'%2C_Burroughs_Wellcome%2C_1939_Wellcome_L0035378.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Antiplatelet effect aspirin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Antiplatelet_effect_aspirin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "ARTESiA.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:ARTESiA.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Aspirin (1).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Aspirin_(1).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Aspirin (2247084833).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Aspirin_(2247084833).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Aspirin and other Salicylates(2).png",
+      "source": "https://commons.wikimedia.org/wiki/File:Aspirin_and_other_Salicylates(2).png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Aspirin and other Salicylates.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Aspirin_and_other_Salicylates.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Aspirin recrystalization.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Aspirin_recrystalization.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Aspirin-Fläschchen.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Aspirin-Fl%C3%A4schchen.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Aspirin-Smart 01 ies.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Aspirin-Smart_01_ies.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Aspirin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Aspirin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Aspirina 3.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Aspirina_3.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Aspirina.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Aspirina.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Aspirine macro shot.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Aspirine_macro_shot.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Aspirine synthétisé non séché.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Aspirine_synth%C3%A9tis%C3%A9_non_s%C3%A9ch%C3%A9.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Aspirine-1923.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Aspirine-1923.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Aspirine. Hopitaux Civils de Paris.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Aspirine._Hopitaux_Civils_de_Paris.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Aspirinum glass.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Aspirinum_glass.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Augrabies-Monkey-Asprin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Augrabies-Monkey-Asprin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Bayer Aspirin ad 11 15 1925.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Bayer_Aspirin_ad_11_15_1925.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Bayer Aspirin Pills.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Bayer_Aspirin_Pills.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Bear Aspirin.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Bear_Aspirin.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Big Aspirin Bottle.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Big_Aspirin_Bottle.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Box of aspirin tablets, London, England, 1949-1966 Wellcome L0058543.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Box_of_aspirin_tablets%2C_London%2C_England%2C_1949-1966_Wellcome_L0058543.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Centrs, Centra rajons, Rīga, Latvia - panoramio (8).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Centrs%2C_Centra_rajons%2C_R%C4%ABga%2C_Latvia_-_panoramio_(8).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Certified Pharmacal Company Aspirin Pillbox, 12 Tablet Size - DPLA - 20af93437607a6cb96a90b327d5a7a4b (page 2).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Certified_Pharmacal_Company_Aspirin_Pillbox%2C_12_Tablet_Size_-_DPLA_-_20af93437607a6cb96a90b327d5a7a4b_(page_2).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Co che td chong ngung ket tieu cau cua Aspirin.PNG",
+      "source": "https://commons.wikimedia.org/wiki/File:Co_che_td_chong_ngung_ket_tieu_cau_cua_Aspirin.PNG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "COLLECTIE TROPENMUSEUM De ingang van de grote Pasar te Malang Oost-Java. TMnr 60005859.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:COLLECTIE_TROPENMUSEUM_De_ingang_van_de_grote_Pasar_te_Malang_Oost-Java._TMnr_60005859.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Cordoba-tranvia.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Cordoba-tranvia.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Courbe titrage direct de l'aspirine par pHmétrie.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Courbe_titrage_direct_de_l'aspirine_par_pHm%C3%A9trie.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "D-BW-Heidelberg - Deutsches Apothekenmuseum - Aspirin 1.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:D-BW-Heidelberg_-_Deutsches_Apothekenmuseum_-_Aspirin_1.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "D-BW-Heidelberg - Deutsches Apothekenmuseum - Aspirin 2.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:D-BW-Heidelberg_-_Deutsches_Apothekenmuseum_-_Aspirin_2.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Dreser Aspirin Pharmakologie.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Dreser_Aspirin_Pharmakologie.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "DRK ASS.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:DRK_ASS.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Aspirin Effect (Packung) 20241025 Mattes.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Aspirin_Effect_(Packung)_20241025_Mattes.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Excedrin Migraine.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Excedrin_Migraine.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "F. Hoffmann ASS-Protokoll.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:F._Hoffmann_ASS-Protokoll.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Flower of aspirin.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Flower_of_aspirin.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Illuminaties, SFA022816859.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Illuminaties%2C_SFA022816859.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "LPdF N° 114 1600355 (1916).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:LPdF_N%C2%B0_114_1600355_(1916).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Macrofotografia aspirina.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Macrofotografia_aspirina.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Madonna With The Child.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Madonna_With_The_Child.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Mainz Adler Apotheke Aspirin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Mainz_Adler_Apotheke_Aspirin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Metabolic Acidosis Caused by Aspirin Poisoning In Dogs.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Metabolic_Acidosis_Caused_by_Aspirin_Poisoning_In_Dogs.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Muestra de tiempos de sangrado.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Muestra_de_tiempos_de_sangrado.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Nicholas Aspro advertising envelope 1931.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Nicholas_Aspro_advertising_envelope_1931.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Old Package of Aspirin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Old_Package_of_Aspirin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Orange pills.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Orange_pills.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Pharmacy,glass.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Pharmacy%2Cglass.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Pill on sill (49823786477).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Pill_on_sill_(49823786477).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Reacció de síntesi de l'àcid acetilsalicílic (aspirina).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Reacci%C3%B3_de_s%C3%ADntesi_de_l'%C3%A0cid_acetilsalic%C3%ADlic_(aspirina).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Regular strength enteric coated aspirin tablets 2.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Regular_strength_enteric_coated_aspirin_tablets_2.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Regular strength enteric coated aspirin tablets.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Regular_strength_enteric_coated_aspirin_tablets.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Regular strength enteric coated aspirin yellow tablets.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Regular_strength_enteric_coated_aspirin_yellow_tablets.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Salicilatos en orina. Laboratorios ITESM CCM..jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Salicilatos_en_orina._Laboratorios_ITESM_CCM..jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Smart ForTwo GenI BR450 facelift 2003-2007 BAYER ASPIRIN EFFECT backleft 2008-04-24 U.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Smart_ForTwo_GenI_BR450_facelift_2003-2007_BAYER_ASPIRIN_EFFECT_backleft_2008-04-24_U.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Smart ForTwo GenI BR450 facelift 2003-2007 BAYER ASPIRIN EFFECT frontleft 2008-04-24 U.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Smart_ForTwo_GenI_BR450_facelift_2003-2007_BAYER_ASPIRIN_EFFECT_frontleft_2008-04-24_U.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "StateLibQld 1 100788.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:StateLibQld_1_100788.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Swebebahn Wuppertal 17.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Swebebahn_Wuppertal_17.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Taylor Map - European Salicylic Medicine Co.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Taylor_Map_-_European_Salicylic_Medicine_Co.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Une aspirine pour deux.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Une_aspirine_pour_deux.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Universe - aspirin.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Universe_-_aspirin.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Witthauer Heilkunde.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Witthauer_Heilkunde.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Wuppertal Anlieferung des neuen GTW 2014-11-14 014.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Wuppertal_Anlieferung_des_neuen_GTW_2014-11-14_014.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Кристаллы аспирина под микроскопом-2.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:%D0%9A%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BB%D0%BB%D1%8B_%D0%B0%D1%81%D0%BF%D0%B8%D1%80%D0%B8%D0%BD%D0%B0_%D0%BF%D0%BE%D0%B4_%D0%BC%D0%B8%D0%BA%D1%80%D0%BE%D1%81%D0%BA%D0%BE%D0%BF%D0%BE%D0%BC-2.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Кристаллы аспирина под микроскопом.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:%D0%9A%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BB%D0%BB%D1%8B_%D0%B0%D1%81%D0%BF%D0%B8%D1%80%D0%B8%D0%BD%D0%B0_%D0%BF%D0%BE%D0%B4_%D0%BC%D0%B8%D0%BA%D1%80%D0%BE%D1%81%D0%BA%D0%BE%D0%BF%D0%BE%D0%BC.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Кристаллы аспирина.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:%D0%9A%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BB%D0%BB%D1%8B_%D0%B0%D1%81%D0%BF%D0%B8%D1%80%D0%B8%D0%BD%D0%B0.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Лекарственные препараты под микроскопом. Аспирин.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:%D0%9B%D0%B5%D0%BA%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5_%D0%BF%D1%80%D0%B5%D0%BF%D0%B0%D1%80%D0%B0%D1%82%D1%8B_%D0%BF%D0%BE%D0%B4_%D0%BC%D0%B8%D0%BA%D1%80%D0%BE%D1%81%D0%BA%D0%BE%D0%BF%D0%BE%D0%BC._%D0%90%D1%81%D0%BF%D0%B8%D1%80%D0%B8%D0%BD.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Разрушение кристаллов.webm",
+      "source": "https://commons.wikimedia.org/wiki/File:%D0%A0%D0%B0%D0%B7%D1%80%D1%83%D1%88%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BA%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BB%D0%BB%D0%BE%D0%B2.webm",
+      "kind": "video",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Рост кристаллов (асп).webm",
+      "source": "https://commons.wikimedia.org/wiki/File:%D0%A0%D0%BE%D1%81%D1%82_%D0%BA%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BB%D0%BB%D0%BE%D0%B2_(%D0%B0%D1%81%D0%BF).webm",
+      "kind": "video",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Рост кристаллов (аспирин)-2.webm",
+      "source": "https://commons.wikimedia.org/wiki/File:%D0%A0%D0%BE%D1%81%D1%82_%D0%BA%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BB%D0%BB%D0%BE%D0%B2_(%D0%B0%D1%81%D0%BF%D0%B8%D1%80%D0%B8%D0%BD)-2.webm",
+      "kind": "video",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Рост кристаллов (аспирин).webm",
+      "source": "https://commons.wikimedia.org/wiki/File:%D0%A0%D0%BE%D1%81%D1%82_%D0%BA%D1%80%D0%B8%D1%81%D1%82%D0%B0%D0%BB%D0%BB%D0%BE%D0%B2_(%D0%B0%D1%81%D0%BF%D0%B8%D1%80%D0%B8%D0%BD).webm",
+      "kind": "video",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "الأسبرين.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:%D8%A7%D9%84%D8%A3%D8%B3%D8%A8%D8%B1%D9%8A%D9%86.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "ปฏิทินจากยาทัมใจ 1941.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:%E0%B8%9B%E0%B8%8F%E0%B8%B4%E0%B8%97%E0%B8%B4%E0%B8%99%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B8%A2%E0%B8%B2%E0%B8%97%E0%B8%B1%E0%B8%A1%E0%B9%83%E0%B8%88_1941.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "aspirin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxicillin-3D-balls.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxicillin-3D-balls.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "20190311 阿莫西林胶囊.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:20190311_%E9%98%BF%E8%8E%AB%E8%A5%BF%E6%9E%97%E8%83%B6%E5%9B%8A.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Allergic exanthema amoxicillin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Allergic_exanthema_amoxicillin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoksicilin 500 091208.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoksicilin_500_091208.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoksiklav.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoksiklav.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxi-drops and amoxi-tabs.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxi-drops_and_amoxi-tabs.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxicilina y ácido clavulanico dosificación.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxicilina_y_%C3%A1cido_clavulanico_dosificaci%C3%B3n.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxicilina.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxicilina.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxicillin 500mg capsules on a plate (Sandoz).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxicillin_500mg_capsules_on_a_plate_(Sandoz).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxicillin drug.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxicillin_drug.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxicillin pill.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxicillin_pill.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxicillin rash 11 hours after 17th dose.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxicillin_rash_11_hours_after_17th_dose.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxicillin rash 26 hours after 17th dose.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxicillin_rash_26_hours_after_17th_dose.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxicillin rash 3 hours after 17th dose.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxicillin_rash_3_hours_after_17th_dose.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxicillin substance photo.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxicillin_substance_photo.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxicillin-2D-skeletal.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxicillin-2D-skeletal.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxicillin-3D-vdW.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxicillin-3D-vdW.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxicillin-from-xtal-3D-bs-17.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxicillin-from-xtal-3D-bs-17.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxicillin-from-xtal-3D-sf.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxicillin-from-xtal-3D-sf.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxicillin-from-xtal-Mercury-3D-balls.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxicillin-from-xtal-Mercury-3D-balls.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxicillin.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxicillin.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxicilline Mylan 1g.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxicilline_Mylan_1g.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxicilline.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxicilline.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxil.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxil.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxycillin rash in infectious mononucleosis on back of hand.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxycillin_rash_in_infectious_mononucleosis_on_back_of_hand.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amoxycillin rash in infectious mononucleosis.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Amoxycillin_rash_in_infectious_mononucleosis.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Antibiotic pills.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Antibiotic_pills.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Antibiotics.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Antibiotics.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Astamocil.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Astamocil.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Augmentin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Augmentin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "ClearRx prescription bottles - Flickr - bartsz.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:ClearRx_prescription_bottles_-_Flickr_-_bartsz.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Emmox Amoxicillin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Emmox_Amoxicillin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Medication amoxycillin capsule.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Medication_amoxycillin_capsule.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Nomoxil.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Nomoxil.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Novamoxin (amoxicillin), 24 June 2010.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Novamoxin_(amoxicillin)%2C_24_June_2010.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "NOVAMOXIN antibiotic.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:NOVAMOXIN_antibiotic.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ospamox 1000 mg tbl.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ospamox_1000_mg_tbl.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Pills (2317765201).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Pills_(2317765201).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Pink Amoxicillin Pills (875 mg) (RX 763) (31253739).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Pink_Amoxicillin_Pills_(875_mg)_(RX_763)_(31253739).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "أموكسيسيلين انتاج مصنع سامراء Amoxicillin SDI production.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:%D8%A3%D9%85%D9%88%D9%83%D8%B3%D9%8A%D8%B3%D9%8A%D9%84%D9%8A%D9%86_%D8%A7%D9%86%D8%AA%D8%A7%D8%AC_%D9%85%D8%B5%D9%86%D8%B9_%D8%B3%D8%A7%D9%85%D8%B1%D8%A7%D8%A1_Amoxicillin_SDI_production.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "ランサップ400 20080511.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:%E3%83%A9%E3%83%B3%E3%82%B5%E3%83%83%E3%83%97400_20080511.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "構造式 Amoxicillin.png",
+      "source": "https://commons.wikimedia.org/wiki/File:%E6%A7%8B%E9%80%A0%E5%BC%8F_Amoxicillin.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amoxicillin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Metformin-from-xtal-3D-balls.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Metformin-from-xtal-3D-balls.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "metformin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diabetesmedication.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Diabetesmedication.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "metformin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diabetmin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Diabetmin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "metformin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Drug1-page0001.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Drug1-page0001.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "metformin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Environmental-and-Genetic-Preconditioning-for-Long-Term-Anoxia-Responses-Requires-AMPK-in-pone.0016790.s001.ogv",
+      "source": "https://commons.wikimedia.org/wiki/File:Environmental-and-Genetic-Preconditioning-for-Long-Term-Anoxia-Responses-Requires-AMPK-in-pone.0016790.s001.ogv",
+      "kind": "video",
+      "medicine_candidates": [
+        "metformin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Environmental-and-Genetic-Preconditioning-for-Long-Term-Anoxia-Responses-Requires-AMPK-in-pone.0016790.s002.ogv",
+      "source": "https://commons.wikimedia.org/wiki/File:Environmental-and-Genetic-Preconditioning-for-Long-Term-Anoxia-Responses-Requires-AMPK-in-pone.0016790.s002.ogv",
+      "kind": "video",
+      "medicine_candidates": [
+        "metformin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Glucophage 500mg tbl.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Glucophage_500mg_tbl.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "metformin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ijms-23-14163-g001-550.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Ijms-23-14163-g001-550.webp",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "metformin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Metformin (NIH BioArt 340).png",
+      "source": "https://commons.wikimedia.org/wiki/File:Metformin_(NIH_BioArt_340).png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "metformin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Metformin 500mg Tablets.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Metformin_500mg_Tablets.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "metformin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Metformin Formulae.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Metformin_Formulae.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "metformin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Metformin molecule ball.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Metformin_molecule_ball.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "metformin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Metformin molecule spacefill.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Metformin_molecule_spacefill.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "metformin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Metformin-HCl substance photo.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Metformin-HCl_substance_photo.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "metformin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Metformin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Metformin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "metformin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Metformin3d.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Metformin3d.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "metformin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Siofor 500 mg tbl.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Siofor_500_mg_tbl.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "metformin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Synjardy 5 mg-1000 mg tbl.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Synjardy_5_mg-1000_mg_tbl.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "metformin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "盐酸二甲双胍.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:%E7%9B%90%E9%85%B8%E4%BA%8C%E7%94%B2%E5%8F%8C%E8%83%8D.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "metformin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "(R)- and (S)-salbutamol ball-and-stick models.png",
+      "source": "https://commons.wikimedia.org/wiki/File:(R)-_and_(S)-salbutamol_ball-and-stick_models.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Albuterol 2.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Albuterol_2.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Albuterol Inhaler.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Albuterol_Inhaler.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Albuterol Sulfate (1).JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Albuterol_Sulfate_(1).JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Albuterol synthesis 1.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Albuterol_synthesis_1.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Albuterol synthesis 2.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Albuterol_synthesis_2.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Cipla inhaler.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Cipla_inhaler.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Easyhaler Buventol inhaler.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Easyhaler_Buventol_inhaler.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Fluticasonejf.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Fluticasonejf.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Futurepharmacol-03-00019-g001-550.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Futurepharmacol-03-00019-g001-550.webp",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ijms-23-14207-g002.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ijms-23-14207-g002.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Inhalateur pour l'asthme isolé sur fond blanc (1) 01.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Inhalateur_pour_l'asthme_isol%C3%A9_sur_fond_blanc_(1)_01.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Inhalateur pour l'asthme isolé sur fond blanc (1) 02.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Inhalateur_pour_l'asthme_isol%C3%A9_sur_fond_blanc_(1)_02.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Inhalateur pour l'asthme isolé sur fond blanc (1) 03.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Inhalateur_pour_l'asthme_isol%C3%A9_sur_fond_blanc_(1)_03.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Inhalateur pour l'asthme isolé sur fond blanc (1) 04.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Inhalateur_pour_l'asthme_isol%C3%A9_sur_fond_blanc_(1)_04.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Inhalateur pour l'asthme isolé sur fond blanc (1) 05.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Inhalateur_pour_l'asthme_isol%C3%A9_sur_fond_blanc_(1)_05.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Inhalateur pour l'asthme isolé sur fond blanc (1) 06.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Inhalateur_pour_l'asthme_isol%C3%A9_sur_fond_blanc_(1)_06.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Inhalateur pour l'asthme isolé sur fond blanc (1) 07.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Inhalateur_pour_l'asthme_isol%C3%A9_sur_fond_blanc_(1)_07.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Inhalateur pour l'asthme isolé sur fond blanc (1) 08.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Inhalateur_pour_l'asthme_isol%C3%A9_sur_fond_blanc_(1)_08.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "IntWholesaleSalbutamol.png",
+      "source": "https://commons.wikimedia.org/wiki/File:IntWholesaleSalbutamol.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "RS-salbutamol-from-xtal-3D-balls.png",
+      "source": "https://commons.wikimedia.org/wiki/File:RS-salbutamol-from-xtal-3D-balls.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Salbutamol Enantiomers Structural Formulae.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Salbutamol_Enantiomers_Structural_Formulae.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Salbutamol nebules for inhalation.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Salbutamol_nebules_for_inhalation.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Salbutamol sstructure.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Salbutamol_sstructure.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Salbutamol structure.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Salbutamol_structure.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Salbutamol-2D-skeletal.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Salbutamol-2D-skeletal.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Salbutamol-racemic-2D-skeletal.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Salbutamol-racemic-2D-skeletal.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Salbutamol.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Salbutamol.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Salbutamol2.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Salbutamol2.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Sultanol.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Sultanol.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ventolin 2mg.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Ventolin_2mg.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ventolin CFC.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Ventolin_CFC.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ventolin Inhaler N 100 ug inh.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ventolin_Inhaler_N_100_ug_inh.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ventolin® HFA (Albuterol Sulfate) Inhaler.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ventolin%C2%AE_HFA_(Albuterol_Sulfate)_Inhaler.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ventolín (Salbutamol).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ventol%C3%ADn_(Salbutamol).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "salbutamol"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Cetirizin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Cetirizin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "cetirizine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "CETIRIZINA.png",
+      "source": "https://commons.wikimedia.org/wiki/File:CETIRIZINA.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "cetirizine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Cetirizine - by Danny S.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Cetirizine_-_by_Danny_S.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "cetirizine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Cetirizine spacefill 3D.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Cetirizine_spacefill_3D.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "cetirizine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Cetirizine synthesis.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Cetirizine_synthesis.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "cetirizine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Cetirizine-ball-and-stick.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Cetirizine-ball-and-stick.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "cetirizine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Cetirizine.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Cetirizine.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "cetirizine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Cetirizine10.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Cetirizine10.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "cetirizine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Cetrizine Enantiomers Structural Formulae.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Cetrizine_Enantiomers_Structural_Formulae.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "cetirizine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Enantiómero inactivo.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Enanti%C3%B3mero_inactivo.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "cetirizine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "HCL farmaco.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:HCL_farmaco.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "cetirizine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "SW7104(Cetirizine STELLA) 11-07-2022.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:SW7104(Cetirizine_STELLA)_11-07-2022.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "cetirizine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Zyrtec-D blister pack.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Zyrtec-D_blister_pack.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "cetirizine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "(R)-omeprazole ball-and-stick model from xtal 2015.png",
+      "source": "https://commons.wikimedia.org/wiki/File:(R)-omeprazole_ball-and-stick_model_from_xtal_2015.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "42 Prilosec Tablets (2320087442).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:42_Prilosec_Tablets_(2320087442).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Losec dosage 20mg.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Losec_dosage_20mg.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Mecanismo de accion.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Mecanismo_de_accion.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Metabolismo hepático omeprazol.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Metabolismo_hep%C3%A1tico_omeprazol.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Molecula Omeprazol.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Molecula_Omeprazol.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Omeprazol 2012-10-14-0779.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Omeprazol_2012-10-14-0779.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Omeprazol 2012-10-14-0782.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Omeprazol_2012-10-14-0782.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Omeprazol Activis bottle.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Omeprazol_Activis_bottle.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Omeprazol Activis capsules.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Omeprazol_Activis_capsules.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Omeprazol-Strukturformeln V.3.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Omeprazol-Strukturformeln_V.3.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Omeprazol-Strukturformeln.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Omeprazol-Strukturformeln.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Omeprazol.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Omeprazol.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Omeprazole 10mg UK.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Omeprazole_10mg_UK.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Omeprazole 20mg.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Omeprazole_20mg.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Omeprazole 3d structure.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Omeprazole_3d_structure.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Omeprazole 40mg vial white background.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Omeprazole_40mg_vial_white_background.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Omeprazole 40mg vial yellow background.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Omeprazole_40mg_vial_yellow_background.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Omeprazole enantiomers ball-and-stick models from xtal 2015.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Omeprazole_enantiomers_ball-and-stick_models_from_xtal_2015.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Omeprazole irreversible & widely prescribed (14013706558).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Omeprazole_irreversible_%26_widely_prescribed_(14013706558).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Omeprazole-3D-balls.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Omeprazole-3D-balls.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Omeprazole.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Omeprazole.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Omeprazole2.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Omeprazole2.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Ortanol 20 mg cps.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Ortanol_20_mg_cps.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Phenoletherirl.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Phenoletherirl.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Prilosec (275903160).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Prilosec_(275903160).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "オメプラゾール20mg.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:%E3%82%AA%E3%83%A1%E3%83%97%E3%83%A9%E3%82%BE%E3%83%BC%E3%83%AB20mg.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    }
+  ]
+}
