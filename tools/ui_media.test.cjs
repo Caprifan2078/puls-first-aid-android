@@ -187,3 +187,13 @@ test('reviewed media index matches the manifest, rejects invalid records and ref
  assert.equal(vm.runInContext('topicAidRows({id:"cpr"}).length',ctx),1);
  assert.equal(vm.runInContext('topicAidRows({id:"stroke"}).length',ctx),0);
 });
+
+test('library status distinguishes photo-only, video-only and full guide coverage',()=>{
+ const ctx=vm.createContext({});
+ vm.runInContext(js.slice(js.indexOf("function guideMediaCoverage"),js.indexOf("function mediaCoverage")),ctx);
+ ctx.pages=[{id:"a",level:"critical"},{id:"b",level:"urgent"},{id:"c",level:"critical"},{id:"d",level:"urgent"}];
+ ctx.records=[{topic:"a",file:"one.jpg"},{topic:"a",file:"two.jpg"},{topic:"a",file:"three.mp4"},{topic:"b",file:"four.mp4"},{topic:"d",file:"five.jpg"},{topic:"unknown",file:"six.jpg"}];
+ const result=JSON.parse(vm.runInContext("JSON.stringify(guideMediaCoverage(pages,records))",ctx));
+ assert.deepEqual(result,{guides:3,critical:1,photoGuides:2,videoGuides:2,both:1,criticalBoth:1,photos:3,videos:2});
+ assert.equal(vm.runInContext("guideMediaCoverage(pages,[]).both",ctx),0);
+});
