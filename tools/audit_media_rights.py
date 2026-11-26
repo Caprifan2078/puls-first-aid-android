@@ -50,11 +50,18 @@ def validate_record(a,category,mode):
         require(nonempty(a.get("public_domain_basis")) and nonempty(a.get("jurisdictions")),"public domain review missing")
     if category=="firstaid":
         require(a.get("clinical_approval") is True,"clinical approval missing")
+        if "step_index" in a:
+            require(type(a["step_index"]) is int and a["step_index"]>=0 and nonempty(a.get("step_ru")) and nonempty(a.get("step_en")),"invalid step binding")
         require(re.fullmatch(r"[a-z0-9-]+\.(jpg|mp4)",a.get("file","")),"invalid firstaid file")
         return a["file"]
     return a["id"]+".jpg"
 def audit(root,mode):
     seen=set();rows=[]
+    text=(root/"index.html").read_text(encoding="utf-8")
+    match=re.search(r"const PAGES\s*=\s*",text)
+    require(match is not None,"guide database missing")
+    pages,_=json.JSONDecoder().raw_decode(text[match.end():])
+    by_topic={p["id"]:p for p in pages}
     for category in ("medicines","kits","firstaid"):
         folder=root/"media"/category
         manifest=folder/"manifest.json"
@@ -64,6 +71,12 @@ def audit(root,mode):
         ids=set()
         for a in entries:
             name=validate_record(a,category,mode)
+            if category=="firstaid":
+                topic=by_topic.get(a.get("topic"))
+                require(topic is not None,"unknown first-aid topic")
+                if "step_index" in a:
+                    i=a["step_index"]
+                    require(i<len(topic["stepsRu"]) and i<len(topic["stepsEn"]) and a["step_ru"]==topic["stepsRu"][i] and a["step_en"]==topic["stepsEn"][i],"reviewed step text changed")
             require(a["id"] not in ids,"duplicate id "+a["id"])
             ids.add(a["id"])
             path=folder/name

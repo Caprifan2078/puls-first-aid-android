@@ -29,12 +29,13 @@ def collect(row):
     if not author:
         raise ValueError("author missing")
     kind = {"image/jpeg":"jpg","image/png":"png","video/webm":"webm"}.get(info["mime"])
-    if not kind or not 1024<=info["size"]<=LIMIT:
+    limit=min(100_000_000,max(LIMIT,int(row.get("max_bytes",LIMIT))))
+    if not kind or not 1024<=info["size"]<=limit:
         raise ValueError("MIME or size rejected")
     url = urllib.parse.urlsplit(info["url"])
     if url.scheme!="https" or url.hostname!="upload.wikimedia.org":
         raise ValueError("invalid source")
-    data = get(info["url"],LIMIT)
+    data = get(info["url"],limit)
     sha = hashlib.sha1(data).hexdigest()
     upstream = info["sha1"].lower()
     if not re.fullmatch("[0-9a-f]{40}",upstream):
@@ -55,7 +56,7 @@ def collect(row):
             command+=["-map","0:v:0","-map","0:a?","-vf","scale=1280:720:force_original_aspect_ratio=decrease:force_divisible_by=2","-c:v","libx264","-pix_fmt","yuv420p","-crf","25","-c:a","aac","-movflags","+faststart"]
         subprocess.run(command+[str(target)],check=True,timeout=180)
     subprocess.run(["ffmpeg","-nostdin","-v","error","-i",str(target),"-f","null","-"],check=True,timeout=180)
-    return {"id":slug,"file":target.name,"title":title,"author":author,"license":lic,"license_url":ALLOWED[lic],
+    return {"id":slug,"topic":row.get("topic"),"file":target.name,"title":title,"author":author,"license":lic,"license_url":ALLOWED[lic],
         "source_license_url":raw_license_url or ALLOWED[lic],"derivative_license":lic,"reviewed_at":datetime.date.today().isoformat(),"copyright_notice":plain(meta.get("CopyrightNotice",{}).get("value","")),
         "credit_line":plain(meta.get("Credit",{}).get("value","")),
         "attribution_required":plain(meta.get("AttributionRequired",{}).get("value","")),
@@ -63,7 +64,7 @@ def collect(row):
         "rights_review":"pending",
         "source":"https://commons.wikimedia.org/wiki/File:"+urllib.parse.quote(row["file"].replace(" ","_"),safe=""),
         "original_sha1":sha,"original_sha256":hashlib.sha256(data).hexdigest(),
-        "derivative_sha256":hashlib.sha256(target.read_bytes()).hexdigest(),"bytes":target.stat().st_size,
+        "sha256":hashlib.sha256(target.read_bytes()).hexdigest(),"bytes":target.stat().st_size,"ru":"","en":"","step_index":None,"review_ref":"",
         "modifications":"Resized/re-encoded; metadata removed; video converted to MP4; audio preserved where present",
         "clinical_approval":False,"visual_review":"pending","publication":"blocked; review only"}
 
@@ -71,6 +72,8 @@ def main():
     OUT.mkdir(exist_ok=True)
     entries=json.loads((ROOT/"media-review-20261126.json").read_text())["first_aid"]
     records=[]; failed=[]
+    if len(entries)>60 or len({x["id"] for x in entries})!=len(entries):
+        raise ValueError("candidate count or duplicate ID")
     for row in entries:
         try:
             records.append(collect(row))

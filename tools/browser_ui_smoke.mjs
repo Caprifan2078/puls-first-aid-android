@@ -18,6 +18,7 @@ try{
   try {
   const noOverflow=async()=>assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),"horizontal overflow "+width+" "+page.url());
   await page.goto(url+"#/home");
+  assert.equal(await page.locator("#home-browse .emergency-tile:visible").count(),8);
   await page.locator("#search").fill("инсульт");
   assert.ok(page.url().endsWith("#/home"),"search must remain on home");
   assert.ok(await page.locator("#home-results").isVisible());
@@ -44,6 +45,9 @@ try{
   await page.locator('.emergency-tile[href="#/topic/cpr"]').click();
   await page.locator(".step-list").waitFor({state:"visible"});
   assert.ok(await page.locator(".step-list .step").count()>0);
+  assert.ok(await page.locator(".step-list .step").first().evaluate(el=>{const r=el.getBoundingClientRect();return r.top>=0&&r.top<innerHeight*.65&&r.bottom<=innerHeight}),"first action must be visible without scrolling");
+  assert.equal(await page.locator(".step-list .step-media:not(:empty)").count(),0);
+  assert.ok(!(await page.locator("#media-jump").isVisible()));
   assert.ok(await page.locator('.age-guide-links a[href="#/topic/child-cpr"]').isVisible());
   assert.ok(await page.locator(".emergency-bar").isVisible());
   assert.ok(await page.locator(".step-list").evaluate(el=>Boolean(el.compareDocumentPosition(document.querySelector(".age-guide-links")) & Node.DOCUMENT_POSITION_FOLLOWING)));

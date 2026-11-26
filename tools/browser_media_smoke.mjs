@@ -15,14 +15,15 @@ try {
  const filename=join(temp,"fixture.mp4");
  execFileSync("ffmpeg",["-nostdin","-v","error","-f","lavfi","-i","testsrc2=size=320x180:rate=15","-t","5","-c:v","libx264","-pix_fmt","yuv420p","-movflags","+faststart",filename]);
  const bytes=await readFile(filename);
- const record={topic:"cpr",file:"fixture.mp4",sha256:createHash("sha256").update(bytes).digest("hex"),author:"Synthetic QA fixture",license:"CC0 1.0",license_url:"https://creativecommons.org/publicdomain/zero/1.0/",source:"https://commons.wikimedia.org/wiki/File:Test-only-fixture.mp4",ru:"Тестовый ролик",en:"Test clip",clinical_approval:true,visual_review:"approved",review_ref:"SYNTHETIC TEST ONLY"};
- const manifest=[record,{...record,file:"second.mp4"},{...record,file:"missing.mp4"},{...record,file:"rejected.mp4",clinical_approval:false}];
+ const record={topic:"cpr",file:"fixture.mp4",sha256:createHash("sha256").update(bytes).digest("hex"),author:"Synthetic QA fixture",license:"CC0 1.0",license_url:"https://creativecommons.org/publicdomain/zero/1.0/",source:"https://commons.wikimedia.org/wiki/File:Test-only-fixture.mp4",ru:"Тестовый ролик",en:"Test clip",clinical_approval:true,visual_review:"approved",rights_review:"approved",review_ref:"SYNTHETIC TEST ONLY"};
+ const stepRu="Убедись, что подходить безопасно. Проверь, реагирует ли человек.",stepEn="Make sure it is safe to approach. Check responsiveness.";
+ const manifest=[record,{...record,file:"inline.mp4",step_index:0,step_ru:stepRu,step_en:stepEn},{...record,file:"wrong-step.mp4",step_index:0,step_ru:"changed",step_en:stepEn},{...record,file:"second.mp4"},{...record,file:"missing.mp4"},{...record,file:"rejected.mp4",clinical_approval:false}];
  const requests=[];
  server=createServer(async(req,res)=>{
   try {
    const path=new URL(req.url,"http://localhost").pathname;
    if(path==="/media/firstaid/manifest.json"){res.writeHead(200,{"Content-Type":"application/json"});return res.end(JSON.stringify(manifest))}
-   if(path==="/media/firstaid/fixture.mp4"||path==="/media/firstaid/second.mp4"){
+   if(path==="/media/firstaid/fixture.mp4"||path==="/media/firstaid/second.mp4"||path==="/media/firstaid/inline.mp4"){
     requests.push(req.headers.range||"full");
     const header=req.headers.range;
     const range=/^bytes=(\d*)-(\d*)$/.exec(header||"");
@@ -55,9 +56,17 @@ try {
  assert.equal(await page.locator(".aid-media video").count(),3,"unapproved record must not render");
  assert.equal(await page.locator('video[src$="rejected.mp4"]').count(),0);
  assert.ok(await page.locator(".step-list").isVisible(),"medical steps remain visible");
+ const inline=page.locator('.step-media video[src$="inline.mp4"]');
+ assert.equal(await page.locator('.step-media[data-step-index="0"] video').count(),1);
+ assert.equal(await page.locator('video[src$="wrong-step.mp4"]').count(),0);
+ assert.ok(await page.locator("#media-jump").isVisible());
+ await page.locator("#media-jump").click();
+ await inline.evaluate(async v=>{v.muted=true;await v.play()});
+ await page.waitForFunction(()=>document.querySelector('.step-media video').currentTime>0);
  await clickMediaSummary();
  const video=page.locator('video[src$="fixture.mp4"]');
  await video.evaluate(async v=>{v.muted=true;await v.play()});
+ await page.waitForFunction(()=>document.querySelector('.step-media video').paused);
  await page.waitForFunction(()=>document.querySelector('video[src$="fixture.mp4"]').currentTime>0.15);
  const second=page.locator('video[src$="second.mp4"]');
  await second.evaluate(async v=>{v.muted=true;await v.play()});
