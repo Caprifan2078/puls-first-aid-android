@@ -2,7 +2,7 @@ name: PULS Android APK — build and install test
 on:
   workflow_dispatch:
   push:
-    branches: [qa/bootstrap]
+    branches: [qa/bootstrap, qa/puls-ui-media-20261126]
 jobs:
   android:
     runs-on: ubuntu-latest
@@ -31,6 +31,19 @@ jobs:
             echo "::error::Found only $parts/3 content packs; upload all three or none."
             exit 1
           fi
+      - name: Acquire QA medicine photographs (compact UI branch only)
+        if: github.ref_name == 'qa/puls-ui-media-20261126'
+        run: |
+          python3 -m py_compile tools/collect_ui_medicine_photos.py
+          python3 tools/collect_ui_medicine_photos.py
+          node --test tools/ui_media.test.cjs
+      - name: Publish medicine photo QA report
+        if: always() && github.ref_name == 'qa/puls-ui-media-20261126'
+        uses: actions/upload-artifact@v4
+        with:
+          name: PULS-Medicine-Photo-QA-Report
+          path: medicine-photo-qa-report.json
+          if-no-files-found: warn
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
