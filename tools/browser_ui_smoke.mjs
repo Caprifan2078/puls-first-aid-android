@@ -154,6 +154,12 @@ try{
   assert.ok(await page.locator(".med-info a.link").isVisible());
   await page.locator("#medicine-search").fill("zznoresults");
   assert.equal(await page.locator(".medicine-row").count(),0);
+  await page.locator('[data-action="clear-medicine-search"]').click();
+  assert.equal(await page.locator("#medicine-search").inputValue(),"");
+  assert.equal(await page.locator(".medicine-row").count(),240);
+  await page.locator("#medicine-search").fill("???");
+  assert.equal(await page.locator(".medicine-row").count(),0);
+  await page.locator('[data-action="clear-medicine-search"]').click();
   await page.locator("#medicine-search").fill("метотрексат");
   assert.equal(await page.locator(".medicine-row").count(),1);
   await page.locator(".med-info summary").click();
