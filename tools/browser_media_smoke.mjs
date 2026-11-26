@@ -103,6 +103,13 @@ try {
  await missing.evaluate(v=>v.load());
  await missing.waitFor({state:"detached"});
  assert.equal(await page.locator(".aid-media video").count(),2);
+ // If the primary step image fails, remaining collapsed video must be reachable.
+ await page.locator('.step-media img').evaluate(img=>img.dispatchEvent(new Event("error")));
+ await page.locator('.step-media img').waitFor({state:"detached"});
+ await page.locator("#media-jump").click();
+ assert.ok(await page.locator('.step-media .step-extra-media').evaluate(d=>d.open));
+ assert.ok(await page.locator('.step-media video[src$="inline.mp4"]').isVisible());
+ assert.equal(await page.locator('.step-media video[src$="inline.mp4"]').evaluate(v=>v.paused),true);
  assert.ok(requests.length>0,"fixture actually requested");
  assert.deepEqual(errors,[]);
  console.log("PASS browser media: playback, seek, collapse pause, route pause, corrupt/missing removal, unapproved hidden");
