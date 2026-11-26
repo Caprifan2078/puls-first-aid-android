@@ -186,7 +186,7 @@ jobs:
             adb shell pidof com.puls.firstaid.rebuild.ui83
             adb exec-out screencap -p > puls-api35-home.png
             adb logcat -d -s AndroidRuntime:E chromium:E PULS_QA:I -v brief > puls-api35-runtime.txt
-            sha256sum apk/app-debug.apk > apk/apk.sha256
+            (cd apk && sha256sum app-debug.apk > apk.sha256)
       - name: Publish API 30 and 35 installation-tested APK
         uses: actions/upload-artifact@v4
         with:
