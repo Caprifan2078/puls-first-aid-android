@@ -277,6 +277,156 @@
       "clinical_approval": false,
       "rights_review": "pending",
       "visual_review": "pending"
+    },
+    {
+      "id": "video-review-31",
+      "file": "RCP EMBARAZADA.ogv",
+      "topic_hint": "cpr-pregnancy",
+      "source": "https://commons.wikimedia.org/wiki/File:RCP_EMBARAZADA.ogv",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-32",
+      "file": "Migimigi izziv- Reši življenje z Jernejem Celcem.webm",
+      "topic_hint": "first-aid-education",
+      "source": "https://commons.wikimedia.org/wiki/File:Migimigi_izziv-_Re%C5%A1i_%C5%BEivljenje_z_Jernejem_Celcem.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-33",
+      "file": "Bebê engasgada é salva por policiais militares em Santa Maria.webm",
+      "topic_hint": "infant-choking-review",
+      "source": "https://commons.wikimedia.org/wiki/File:Beb%C3%AA_engasgada_%C3%A9_salva_por_policiais_militares_em_Santa_Maria.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-34",
+      "file": "EHBO diploma voor leerlingen Woudrichem - Altena TV.webm",
+      "topic_hint": "first-aid-education",
+      "source": "https://commons.wikimedia.org/wiki/File:EHBO_diploma_voor_leerlingen_Woudrichem_-_Altena_TV.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-35",
+      "file": "EHBO-vereniging Wimako- \"Wij zijn er klaar voor\".webm",
+      "topic_hint": "first-aid-education",
+      "source": "https://commons.wikimedia.org/wiki/File:EHBO-vereniging_Wimako-_%22Wij_zijn_er_klaar_voor%22.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-36",
+      "file": "UV Strahlung (Erklärvideo des Bundesamt für Strahlenschutz).webm",
+      "topic_hint": "sun-safety",
+      "source": "https://commons.wikimedia.org/wiki/File:UV_Strahlung_(Erkl%C3%A4rvideo_des_Bundesamt_f%C3%BCr_Strahlenschutz).webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-37",
+      "file": "Self-Management Education- Learn More. Feel Better. (3 minute).webm",
+      "topic_hint": "health-education",
+      "source": "https://commons.wikimedia.org/wiki/File:Self-Management_Education-_Learn_More._Feel_Better._(3_minute).webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-38",
+      "file": "Self-Management Education- Feel More In Control of your Chronic Condition.webm",
+      "topic_hint": "health-education",
+      "source": "https://commons.wikimedia.org/wiki/File:Self-Management_Education-_Feel_More_In_Control_of_your_Chronic_Condition.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-39",
+      "file": "What Is Addiction - National Institute on Drug Abuse.webm",
+      "topic_hint": "health-education",
+      "source": "https://commons.wikimedia.org/wiki/File:What_Is_Addiction_-_National_Institute_on_Drug_Abuse.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-40",
+      "file": "What Are the Health Risks of Vaping for Youth?.webm",
+      "topic_hint": "health-education",
+      "source": "https://commons.wikimedia.org/wiki/File:What_Are_the_Health_Risks_of_Vaping_for_Youth%3F.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-41",
+      "file": "MeaslesTrimmed2.webm",
+      "topic_hint": "measles",
+      "source": "https://commons.wikimedia.org/wiki/File:MeaslesTrimmed2.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-42",
+      "file": "Blood Donations Needed Among African Americans.webm",
+      "topic_hint": "health-education",
+      "source": "https://commons.wikimedia.org/wiki/File:Blood_Donations_Needed_Among_African_Americans.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-43",
+      "file": "PelvicBinding.webm",
+      "topic_hint": "professional-training-review",
+      "source": "https://commons.wikimedia.org/wiki/File:PelvicBinding.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-44",
+      "file": "Telemedicine – access to health care in rural areas.webm",
+      "topic_hint": "health-education",
+      "source": "https://commons.wikimedia.org/wiki/File:Telemedicine_%E2%80%93_access_to_health_care_in_rural_areas.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
+    },
+    {
+      "id": "video-review-45",
+      "file": "Health effects of repeated vaping during adolescence - The Real Cost - FDA.webm",
+      "topic_hint": "health-education",
+      "source": "https://commons.wikimedia.org/wiki/File:Health_effects_of_repeated_vaping_during_adolescence_-_The_Real_Cost_-_FDA.webm",
+      "clinical_approval": false,
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "publication": "blocked"
     }
   ]
 }
