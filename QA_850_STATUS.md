@@ -1,0 +1,5 @@
+# PULS 8.5.0 QA
+Reference: 27 active ingredient entries across 7 categories; 20 medicine photo candidates, 3 kit candidates, 15 first-aid review candidates. 7 new names do not yet have photo candidates. Original nine photos retrieved successfully in run 45766146932; first-aid quarantine 14/15 in 45766781380. Counts are not claims of current APK inclusion.
+Search: medicine generic and alias search; title/alias matches ranked ahead of guide-body matches; search stays on home instead of redirecting at first keypress; SOS entry remains accessible. Photo credit disclosure collapsed.
+UI tests: browser smoke at 320/390/768 px exercises SOS, checklists, persistence, search and language. This is not native Android proof. Previous Android build compiled and signed but emulator could not boot due to no hardware acceleration. QA retries API 30 with explicitly enabled TCG fallback; no success asserted.
+Historical full pack still absent from repository and filename search in Library returned no result. Medical review remains necessary for procedure media. All changes are QA-only.
