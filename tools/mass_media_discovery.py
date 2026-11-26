@@ -86,7 +86,9 @@ def main():
             for item in found:
                 key=item["id"]
                 if key not in pool: pool[key]={**item,"matches":[]}
-                pool[key]["matches"].append({"target":target["id"],"kind":kind,"query":item["query"]})
+                match={"target":target["id"],"kind":kind,"query":item["query"]}
+                if target.get("step_binding"):match["step_binding"]=target["step_binding"]
+                pool[key]["matches"].append(match)
         except Exception as e:
             row.update(status="error",error=str(e)[:300])
             if isinstance(e,urllib.error.HTTPError) and e.code in (429,503):time.sleep(20)
@@ -99,8 +101,8 @@ def main():
     chosen=[];failed=[];used=0;attempts=0
     def rank(x):
         return (not any(m["target"] in critical for m in x["matches"]),x["rights_class"]!="cc0-or-pd",x["original_bytes"])
-    buckets={k:[] for k in ("guide","medicine","kit","equipment")}
-    for x in sorted(pool.values(),key=rank):buckets[x["target"].split(":")[0]].append(x)
+    buckets={(k,media):[] for k in ("guide","medicine","kit","equipment") for media in ("video","photo")}
+    for x in sorted(pool.values(),key=rank):buckets[(x["target"].split(":")[0],x["kind"])].append(x)
     ordered=[]
     while any(buckets.values()):
         for k in buckets:
@@ -117,7 +119,7 @@ def main():
             failed.append({"id":x["id"],"error":str(e)[:300]})
             for ext in ("jpg","mp4"):(files/(x["id"]+"."+ext)).unlink(missing_ok=True)
         time.sleep(2)
-    (out/"download-report.json").write_text(json.dumps({"review_only":chosen,"failed":failed,"attempted_original_bytes":used},ensure_ascii=False,indent=2),encoding="utf-8")
+    (out/"download-report.json").write_text(json.dumps({"review_only":chosen,"failed":failed,"attempted_original_bytes":used,"photo_downloads":sum(d["file"].endswith(".jpg") for d in chosen),"video_downloads":sum(d["file"].endswith(".mp4") for d in chosen)},ensure_ascii=False,indent=2),encoding="utf-8")
     print("SUMMARY",len(report),"queries",len(pool),"unique metadata candidates",len(chosen),"downloaded review files",flush=True)
     if report and all(r["status"]=="error" for r in report):raise SystemExit("all discovery requests failed")
 if __name__=="__main__":main()
