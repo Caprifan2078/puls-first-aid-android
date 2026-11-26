@@ -53,6 +53,7 @@ try {
  browser=await chromium.launch({channel:"chrome",headless:true,args:["--no-sandbox"]});
  const ctx=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
  const page=await ctx.newPage(),errors=[];
+ page.setDefaultTimeout(10000);
  const clickMediaSummary=async()=>{const summary=page.locator(".aid-media>summary");await summary.evaluate(el=>el.scrollIntoView({block:"center",behavior:"instant"}));await summary.click();};
  page.on("pageerror",e=>errors.push(e.message));
  await page.goto("http://127.0.0.1:"+server.address().port+"/index.html#/topic/cpr");
@@ -121,8 +122,12 @@ try {
   await route.fulfill({json:[null,{id:"paracetamol",author:"Synthetic QA",license:"CC0 1.0",license_url:"https://creativecommons.org/publicdomain/zero/1.0/",source:"https://commons.wikimedia.org/wiki/File:Test-only-fixture.jpg"}]});
  });
  await page.route("**/media/medicines/paracetamol.jpg",route=>route.fulfill({contentType:"image/jpeg",body:photoBytes}));
- await page.goto("http://127.0.0.1:"+server.address().port+"/index.html#/kits/medicines",{waitUntil:"domcontentloaded"});
- await seen;
+ // Query change forces a new document; hash-only navigation never reloads manifests.
+ let seenTimer;
+ try {
+  await page.goto("http://127.0.0.1:"+server.address().port+"/index.html?qa=late-manifest#/kits/medicines",{waitUntil:"domcontentloaded"});
+  await Promise.race([seen,new Promise((_,reject)=>{seenTimer=setTimeout(()=>reject(new Error("Medicine manifest request did not start")),10000)})]);
+ } catch(error) {releaseManifest();throw error} finally {clearTimeout(seenTimer)}
  await page.locator("#medicine-search").fill("парацетамол");
  await page.locator("#medicine-search").evaluate(el=>{window.qaMedicineInput=el;el.focus()});
  releaseManifest();
