@@ -51,3 +51,9 @@ class RightsGateTests(unittest.TestCase):
             row["step_en"]="EN";row["topic"]="unknown"
             manifest.write_text(json.dumps([row]))
             with self.assertRaises(ValueError):audit(root,"qa")
+
+    def test_localized_deed_and_strict_host(self):
+        for suffix in ("deed","deed.en","deed.ru","deed.zh-hans","deed.pt_BR"):
+            self.assertEqual(validate_license_metadata("CC0 1.0","http://creativecommons.org/publicdomain/zero/1.0/"+suffix,"CC0 1.0"),LICENSES["CC0 1.0"])
+        for url in ("https://creativecommons.org.evil.example/publicdomain/zero/1.0/deed.en","https://creativecommons.org/licenses/by-nc/4.0/deed.en","https://creativecommons.org/publicdomain/zero/1.0/deed.en?x=1","https://creativecommons.org/publicdomain/zero/1.0/deed.en/extra"):
+            with self.assertRaises(ValueError):validate_license_metadata("CC0 1.0",url,"CC0 1.0")
