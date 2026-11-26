@@ -1,0 +1,154 @@
+{
+  "date": "2026-11-26",
+  "medicine_photos": [
+    {
+      "id": "paracetamol",
+      "ru": "Парацетамол",
+      "en": "Paracetamol",
+      "group": "pain",
+      "file": "Panadol Tab.jpg",
+      "license": "CC0 1.0",
+      "author": "Abdsomod",
+      "source": "https://commons.wikimedia.org/wiki/File:Panadol_Tab.jpg",
+      "status": "source-license-checked; original and visual review pending"
+    },
+    {
+      "id": "ibuprofen",
+      "ru": "Ибупрофен",
+      "en": "Ibuprofen",
+      "group": "pain",
+      "file": "Bottle of Ibuprofen tablets with cap removed and tablets in front.jpg",
+      "license": "CC0 1.0",
+      "author": null,
+      "source": "https://commons.wikimedia.org/wiki/File:Bottle_of_Ibuprofen_tablets_with_cap_removed_and_tablets_in_front.jpg",
+      "status": "source-license-checked; original and visual review pending"
+    },
+    {
+      "id": "cetirizine",
+      "ru": "Цетиризин",
+      "en": "Cetirizine",
+      "group": "allergy",
+      "file": "Cetirizin.jpg",
+      "license": "CC0 1.0",
+      "author": "Telaneo",
+      "source": "https://commons.wikimedia.org/wiki/File:Cetirizin.jpg",
+      "status": "source-license-checked; original and visual review pending"
+    },
+    {
+      "id": "loratadine",
+      "ru": "Лоратадин",
+      "en": "Loratadine",
+      "group": "allergy",
+      "file": "Fortune NT-Alergi tablet (contains Loratadine 10mg).jpg",
+      "license": "CC BY-SA 4.0",
+      "author": "Mk2010",
+      "source": "https://commons.wikimedia.org/wiki/File:Fortune_NT-Alergi_tablet_(contains_Loratadine_10mg).jpg",
+      "status": "source-license-checked; original and visual review pending"
+    },
+    {
+      "id": "ors",
+      "ru": "Соли для пероральной регидратации",
+      "en": "Oral rehydration salts",
+      "group": "hydration",
+      "file": "Oral rehydration salts (ORS) - Packet.jpg",
+      "license": "CC BY-SA 4.0",
+      "author": "Cjp24",
+      "source": "https://commons.wikimedia.org/wiki/File:Oral_rehydration_salts_(ORS)_-_Packet.jpg",
+      "status": "source-license-checked; original and visual review pending"
+    },
+    {
+      "id": "salbutamol",
+      "ru": "Сальбутамол",
+      "en": "Salbutamol",
+      "group": "breathing",
+      "file": "Salbutamol2.JPG",
+      "license": "CC BY-SA 3.0",
+      "author": "Jmh649",
+      "source": "https://commons.wikimedia.org/wiki/File:Salbutamol2.JPG",
+      "status": "source-license-checked; original and visual review pending"
+    }
+  ],
+  "first_aid": [
+    {
+      "id": "aed-training-cc0",
+      "file": "AED-trainingsample.jpg",
+      "license": "CC0 1.0",
+      "reviewed_original_sha1": "9114cc72d606f10736ee7af8eb5b791b02b1c6ec"
+    },
+    {
+      "id": "cpr-training-cc0",
+      "file": "Training- CPR.jpg",
+      "license": "CC0 1.0",
+      "reviewed_original_sha1": "1cdda1894679a01d54d1d7fbe60940904a0edd11"
+    },
+    {
+      "id": "infant-cpr-manikin",
+      "file": "Pediatric CPR training mannequin (infant)-bs.jpg",
+      "license": "CC BY-SA 4.0",
+      "reviewed_original_sha1": null
+    },
+    {
+      "id": "eyewash-station",
+      "file": "Emergency eyewash station.jpg",
+      "license": "CC BY-SA 4.0",
+      "reviewed_original_sha1": "14834f446539bf32c56823c526f188792cd6cf7f"
+    },
+    {
+      "id": "eyewash-demonstration",
+      "file": "Eyewash demonstration.webm",
+      "license": "CC BY-SA 4.0",
+      "reviewed_original_sha1": "ca5397d77f94fbc842666522999b17e7738cff00"
+    },
+    {
+      "id": "adult-inhaler-photo",
+      "file": "Spacer for MDI inhalers therapy.jpg",
+      "license": "CC BY-SA 3.0",
+      "reviewed_original_sha1": "3cb959bb1a92806af00fc3865840e8f2cdbee3b7"
+    },
+    {
+      "id": "inhaler-dose-counters",
+      "file": "Metered dose.JPG",
+      "license": "CC BY-SA 4.0",
+      "reviewed_original_sha1": null
+    },
+    {
+      "id": "levothyroxine-photo",
+      "file": "Levothyroxine 25mcg Tablets.jpg",
+      "license": "Public domain",
+      "reviewed_original_sha1": null
+    },
+    {
+      "id": "loperamide-photo",
+      "file": "Lopex.jpg",
+      "license": "CC BY-SA 4.0",
+      "reviewed_original_sha1": "65feddb00150e8b3bbc701f1f5a48576615e6ede"
+    },
+    {
+      "id": "naproxen-photo",
+      "file": "Naproxen.JPG",
+      "license": "Public domain",
+      "reviewed_original_sha1": null
+    },
+    {
+      "id": "amlodipine-photo",
+      "file": "Amlodipin Sandoz bottle.jpg",
+      "license": "CC BY-SA 4.0",
+      "reviewed_original_sha1": "ecf35b9a426eff08ac1b6ba5a61d344759b8b89d"
+    },
+    {
+      "id": "recovery-position",
+      "file": "Recovery position.jpg",
+      "license": "CC BY-SA 3.0 FR",
+      "author": "Rama",
+      "clinical_review": "pending"
+    },
+    {
+      "id": "cpr-aed-training",
+      "file": "CPR, First Aid and AED.jpg",
+      "license": "CC BY-SA 4.0",
+      "author": "TinasBabyInc",
+      "clinical_review": "pending"
+    }
+  ],
+  "policy": "No candidate implies downloaded media or clinical approval. Check original, rights, privacy and technique. First-aid media are not published until clinical review."
+}
