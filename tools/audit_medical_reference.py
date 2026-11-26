@@ -86,7 +86,7 @@ def audit(html):
         id=m["id"]; detail=details.get(id,{})
         if m.get("group") not in group_ids or not all((m.get("ru"),m.get("en"),detail.get("ru"),detail.get("en"))):
             errors.append("invalid medicine record: "+id)
-        for field in ("caution","interaction"):
+        for field in ("caution","interaction","redflag"):
             if field in detail and not (isinstance(detail[field],list) and len(detail[field])==2 and all(isinstance(s,str) and s.strip() for s in detail[field])):
                 errors.append("invalid bilingual "+field+": "+id)
         url=detail.get("source")
@@ -96,6 +96,11 @@ def audit(html):
             url=detail.get("interactionSource")
             if not url:errors.append("missing interaction source: "+id)
             add("interaction",id,url,"individual" if url else "missing")
+        if detail.get("redflag"):
+            url=detail.get("redflagSource")
+            if not url:errors.append("missing red flag source: "+id)
+            if detail.get("redflagTopic") and detail["redflagTopic"] not in pids:errors.append("invalid red flag topic: "+id)
+            add("redflag",id,url,"individual" if url else "missing")
     return {"guides":len(pages),"medicines":len(meds),"groups":len(groups),
             "errors":errors,"entries":entries,"notice":"Structural and URL reachability checks only. Independent clinical review remains pending."}
 
@@ -109,7 +114,7 @@ def main():
     if args.online and not report["errors"]:
         with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
             report["url_checks"]=dict(zip(urls,pool.map(check,urls)))
-    report["summary"]={kind:{scope:sum(e["kind"]==kind and e["scope"]==scope for e in report["entries"]) for scope in ("individual","candidate","context","index","missing")} for kind in ("guide","medicine","interaction")}
+    report["summary"]={kind:{scope:sum(e["kind"]==kind and e["scope"]==scope for e in report["entries"]) for scope in ("individual","candidate","context","index","missing")} for kind in ("guide","medicine","interaction","redflag")}
     report["reachability_summary"]={status:sum(v["status"]==status for v in report["url_checks"].values()) for status in ("reachable","http-error","unverified","blocked","retired")}
     for url,result in report["url_checks"].items():
         if result["status"]!="reachable" or result.get("redirected"):
