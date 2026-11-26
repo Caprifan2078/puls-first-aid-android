@@ -127,6 +127,8 @@ test('real panic search phrases prioritize relevant guides without diagnosis or 
  for(const [q,id] of cases){ctx.q=q;const got=vm.runInContext("sosMatches(q)",ctx);assert.ok(got.slice(0,2).some(p=>p.id===id),q+" => "+got.slice(0,2).map(p=>p.id));assert.ok(got.every(p=>p.level==="critical"))}
  ctx.q="сильно течет кровь";assert.equal(vm.runInContext("sosMatches(q)[0].id",ctx),"bleeding");
  ctx.q="ребенок не дышит";assert.equal(vm.runInContext("sosMatches(q)[0].id",ctx),"child-cpr");
+ ctx.q="chest pain";assert.equal(vm.runInContext("sosMatches(q)[0].id",ctx),"heart");
+ ctx.q="ожог";assert.equal(vm.runInContext("searchTopicRows(q)[0].id",ctx),"burn");
  ctx.q="не дышит";assert.ok(vm.runInContext("sosMatches(q).slice(0,2).some(p=>p.id==='child-cpr')",ctx));
  ctx.q="zzznoresults";assert.equal(vm.runInContext("sosMatches(q).length",ctx),0);
  assert.ok(vm.runInContext("SEARCH_PHRASES.every(([ids,phrases])=>phrases.length&&ids.every(id=>PAGES.some(p=>p.id===id)))",ctx));

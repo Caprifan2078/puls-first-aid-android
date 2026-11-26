@@ -15,6 +15,12 @@ try{
   const page=await ctx.newPage(),errors=[];
   page.on("pageerror",e=>errors.push(e.message));
   const url="http://127.0.0.1:"+server.address().port+"/index.html";
+  const externalRequests=[];
+  await ctx.route("**/*",route=>{
+    const u=new URL(route.request().url());
+    if(u.origin!==new URL(url).origin){externalRequests.push(u.origin);return route.abort()}
+    return route.continue();
+  });
   try {
   const noOverflow=async()=>assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),"horizontal overflow "+width+" "+page.url());
   await page.goto(url+"#/home");
@@ -41,6 +47,8 @@ try{
   assert.ok(await page.locator('#sos-results a[href="#/topic/bleeding"]').first().isVisible());
   await page.locator("#sos-search").fill("ребенок не дышит");
   assert.equal(await page.locator('#sos-results .emergency-tile').first().getAttribute("href"),"#/topic/child-cpr");
+  await page.locator("#sos-search").fill("ожог");
+  assert.ok(await page.locator('.sos-other a[href="#/topic/burn"]').isVisible());
   await page.locator("#sos-search").fill("zznoresults");
   assert.equal(await page.locator("#sos-results .emergency-tile").count(),0);
   await page.locator('[data-action="clear-sos-search"]').click();
@@ -157,6 +165,7 @@ try{
   assert.ok(await page.locator('.sos-heading a[href="tel:112"]').isVisible());
   await noOverflow();
   await noOverflow();
+  assert.deepEqual(externalRequests,[],"offline workflows must not make external requests");
   assert.deepEqual(errors,[],"uncaught JS errors at "+width);
   console.log("PASS browser viewport",width);
   } catch(error) { await page.screenshot({path:"puls-failure-"+width+".png"}).catch(()=>{});console.log("Page errors:",errors);throw error; } finally { await ctx.close(); }
