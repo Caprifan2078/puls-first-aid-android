@@ -106,6 +106,24 @@ try {
  assert.ok(requests.length>0,"fixture actually requested");
  assert.deepEqual(errors,[]);
  console.log("PASS browser media: playback, seek, collapse pause, route pause, corrupt/missing removal, unapproved hidden");
+ // A late photo manifest must not replace a focused medicine search input.
+ let releaseManifest,manifestSeen;
+ const gate=new Promise(r=>{releaseManifest=r}),seen=new Promise(r=>{manifestSeen=r});
+ await page.route("**/media/medicines/manifest.json",async route=>{
+  manifestSeen();await gate;
+  await route.fulfill({json:[null,{id:"paracetamol",author:"Synthetic QA",license:"CC0 1.0",license_url:"https://creativecommons.org/publicdomain/zero/1.0/",source:"https://commons.wikimedia.org/wiki/File:Test-only-fixture.jpg"}]});
+ });
+ await page.route("**/media/medicines/paracetamol.jpg",route=>route.fulfill({contentType:"image/jpeg",body:photoBytes}));
+ await page.goto("http://127.0.0.1:"+server.address().port+"/index.html#/kits/medicines",{waitUntil:"domcontentloaded"});
+ await seen;
+ await page.locator("#medicine-search").fill("парацетамол");
+ await page.locator("#medicine-search").evaluate(el=>{window.qaMedicineInput=el;el.focus()});
+ releaseManifest();
+ await page.waitForFunction(()=>document.querySelector(".medicine-row img")?.naturalWidth>0);
+ assert.equal(await page.evaluate(()=>document.activeElement===window.qaMedicineInput),true,"late media cannot replace the active input");
+ assert.equal(await page.locator("#medicine-search").inputValue(),"парацетамол");
+ assert.deepEqual(errors,[]);
+ console.log("PASS late medicine media, malformed manifest entry and focus preservation");
  await ctx.close();
 } finally {
  await browser?.close();
