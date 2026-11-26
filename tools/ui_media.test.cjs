@@ -35,7 +35,7 @@ test('malformed topic IDs and stale catalog categories are safe',()=>{
 });
 test('broken photo disappears and open category is restored after manifest load',()=>{
  assert.ok(js.includes('ev.target.remove()'));
- assert.ok(js.includes('d.open=groups.includes(d.dataset.group)'));
+ const groups=[{dataset:{group:'pain'},open:false},{dataset:{group:'skin'},open:true}];const ctx=vm.createContext({document:{querySelectorAll:()=>groups}});vm.runInContext(js.slice(js.indexOf('function restoreMedicineGroups'),js.indexOf('function renderMedicineGroups')),ctx);vm.runInContext('restoreMedicineGroups(["pain"],"")',ctx);assert.deepEqual(groups.map(g=>g.open),[true,false]);vm.runInContext('restoreMedicineGroups([],"test")',ctx);assert.deepEqual(groups.map(g=>g.open),[true,true]);
 });
 
 test('all three kit group mappings cover each item exactly once and keep legacy keys',()=>{const kits=vm.runInNewContext(js.slice(js.indexOf('const KITS='),js.indexOf('const I='))+'KITS');const groups=vm.runInNewContext(js.slice(js.indexOf('const KIT_GROUPS='),js.indexOf('const KIT_SOURCE='))+'KIT_GROUPS');assert.deepEqual(Array.from(kits,k=>k.id),['home','travel','outdoor']);for(const k of kits){const ids=Array.from(groups[k.id].flatMap(g=>g[2])).sort((a,b)=>a-b);assert.deepEqual(ids,Array.from({length:k.items.length},(_,i)=>i));assert.ok(k.items.length>=13);}});
@@ -46,3 +46,5 @@ test('unapproved first-aid media never renders; approved paths are local only',(
 test('medicine search finds generic and aliases, rejects unmatched queries',()=>{const ctx=vm.createContext({state:{lang:"ru"},esc:String,norm:v=>String(v||"").toLowerCase()});vm.runInContext(js.slice(js.indexOf("const MEDICINES="),js.indexOf("const KIT_GROUPS=")),ctx);assert.equal(vm.runInContext('medRows("регидрон")[0].id',ctx),"ors");assert.equal(vm.runInContext('medRows("aspirin")[0].id',ctx),"aspirin");assert.equal(vm.runInContext('medRows("zz-no-match").length',ctx),0);assert.equal(vm.runInContext('medRows("").length',ctx),27);});
 
 test('home search no longer forces navigation or uses invalid search selection API',()=>{const body=js.slice(js.indexOf("function liveSearch()"),js.indexOf('document.addEventListener("error"'));assert.ok(body.includes('$("#home-browse").hidden=active'));assert.ok(!body.includes('location.hash="#/catalog"'));assert.ok(!body.includes("setSelectionRange"));});
+
+test('all medicine cards contain reference classification and source status, no dosing tables',()=>{const ctx=vm.createContext({state:{lang:"ru"},esc:String,norm:v=>String(v||"").toLowerCase()});vm.runInContext(js.slice(js.indexOf("const MEDICINES="),js.indexOf("const KIT_GROUPS=")),ctx);assert.equal(vm.runInContext('MEDICINES.filter(m=>MED_DETAILS[m.id]).length',ctx),27);assert.equal(vm.runInContext('Object.values(MED_DETAILS).filter(m=>m.source).length',ctx),25);assert.ok(vm.runInContext('renderMedDetails(MEDICINES.find(m=>m.id==="calamine"))',ctx).includes("источник требует проверки"));});

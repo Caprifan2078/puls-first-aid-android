@@ -16,7 +16,7 @@ try{
   page.on("pageerror",e=>errors.push(e.message));
   const url="http://127.0.0.1:"+server.address().port+"/index.html";
   const noOverflow=async()=>assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),"horizontal overflow "+width+" "+page.url());
-  await page.goto(url);
+  await page.goto(url+"#/home");
   await page.locator("#search").fill("инсульт");
   assert.ok(page.url().endsWith("#/home"),"search must remain on home");
   assert.ok(await page.locator("#home-results").isVisible());
@@ -47,6 +47,8 @@ try{
   await page.locator('a[href="#/kits/medicines"]').click();
   await page.locator("#medicine-search").fill("регидрон");
   assert.equal(await page.locator(".medicine-row").count(),1);
+  await page.locator(".med-info summary").click();
+  assert.ok(await page.locator(".med-info a.link").isVisible());
   await page.locator("#medicine-search").fill("zznoresults");
   assert.equal(await page.locator(".medicine-row").count(),0);
   await page.locator("#medicine-search").fill("");
@@ -54,8 +56,9 @@ try{
   await noOverflow();
   await page.screenshot({path:"puls-medicines-"+width+".png"});
   await page.locator('nav a[href="#/catalog"]').click();
-  await page.locator('[data-cat="injuries"]').click();
-  assert.ok(page.url().endsWith("#/catalog/injuries"));
+  const category=await page.locator("[data-cat]").evaluateAll(nodes=>nodes.map(n=>n.dataset.cat).find(x=>x!=="all"));assert.ok(category);
+  await page.locator('[data-cat="'+category+'"]').click();
+  assert.ok(page.url().endsWith("#/catalog/"+category));
   await page.locator('[data-cat="all"]').click();
   assert.ok(page.url().endsWith("#/catalog/all"));
   await page.locator("#langbtn").click();

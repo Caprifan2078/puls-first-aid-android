@@ -5,7 +5,7 @@ on:
     branches: [qa/bootstrap, qa/puls-ui-media-20261126]
 jobs:
   android:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 45
     permissions:
       contents: read
@@ -94,6 +94,9 @@ jobs:
           name: PULS-Android-Compiled-APK
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
+      - name: Enable KVM if provided by runner
+        run: |
+          if [ -e /dev/kvm ]; then sudo chmod a+rw /dev/kvm; else echo 'KVM unavailable; using explicit software fallback'; fi
       - name: Install and open in Android emulator
         id: emulator
         if: github.event_name == 'workflow_dispatch' || github.ref_name == 'qa/puls-ui-media-20261126'
