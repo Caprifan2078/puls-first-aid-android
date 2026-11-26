@@ -158,7 +158,7 @@ try{
   assert.equal(await page.locator(".medicine-row").count(),0);
   await page.locator('[data-action="clear-medicine-search"]').click();
   assert.equal(await page.locator("#medicine-search").inputValue(),"");
-  assert.equal(await page.locator(".medicine-row").count(),240);
+  assert.equal(await page.locator(".medicine-row").count(),322);
   await page.locator("#medicine-search").fill("???");
   assert.equal(await page.locator(".medicine-row").count(),0);
   await page.locator('[data-action="clear-medicine-search"]').click();
@@ -169,7 +169,7 @@ try{
   assert.ok(await page.locator('.med-redflag a[href="#/topic/poison"]').isVisible());
   await noOverflow();
   await page.locator("#medicine-search").fill("");
-  assert.equal(await page.locator(".medicine-row").count(),240);
+  assert.equal(await page.locator(".medicine-row").count(),322);
   await noOverflow();
   await page.screenshot({path:"puls-"+engine+"-medicines-"+width+".png"});
   await page.locator('nav a[href="#/catalog"]').click();
