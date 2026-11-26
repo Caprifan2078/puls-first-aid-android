@@ -685,7 +685,13 @@
         "metformin",
         "salbutamol",
         "cetirizine",
-        "omeprazole"
+        "omeprazole",
+        "loratadine",
+        "diclofenac",
+        "doxycycline",
+        "azithromycin",
+        "amlodipine",
+        "insulin"
       ],
       "rights_review": "pending",
       "visual_review": "pending",
@@ -3975,6 +3981,3042 @@
       "kind": "photo_candidate",
       "medicine_candidates": [
         "omeprazole"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Common cold drugs 01.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Common_cold_drugs_01.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "loratadine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Common cold drugs 02.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Common_cold_drugs_02.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "loratadine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Comprimidos de Loratadina.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Comprimidos_de_Loratadina.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "loratadine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Fortune NT-Alergi tablet (contains Loratadine 10mg).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Fortune_NT-Alergi_tablet_(contains_Loratadine_10mg).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "loratadine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Loratadin.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Loratadin.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "loratadine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Loratadine - 3d, portrait orientation.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Loratadine_-_3d%2C_portrait_orientation.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "loratadine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Loratadine-3d-balls.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Loratadine-3d-balls.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "loratadine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Loratadine-3d-vdW.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Loratadine-3d-vdW.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "loratadine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Loratadine10mg.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Loratadine10mg.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "loratadine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Mecanismo de acción de Desloratadina.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Mecanismo_de_acci%C3%B3n_de_Desloratadina.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "loratadine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Mecanismo de acción de Loratadina.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Mecanismo_de_acci%C3%B3n_de_Loratadina.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "loratadine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Mecanismo y efectos farmacológicos DE LORATADINA.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Mecanismo_y_efectos_farmacol%C3%B3gicos_DE_LORATADINA.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "loratadine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "クラリチン.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:%E3%82%AF%E3%83%A9%E3%83%AA%E3%83%81%E3%83%B3.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "loratadine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenac-from-xtal-3D-bs-17.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac-from-xtal-3D-bs-17.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Analgetika.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Analgetika.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Arthrotec50.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Arthrotec50.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Blockade-of-leukocyte-haptokinesis-and-haptotaxis-by-ketoprofen-diclofenac-and-SC-560-1471-2172-12-64-S1.ogv",
+      "source": "https://commons.wikimedia.org/wiki/File:Blockade-of-leukocyte-haptokinesis-and-haptotaxis-by-ketoprofen-diclofenac-and-SC-560-1471-2172-12-64-S1.ogv",
+      "kind": "video",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Blockade-of-leukocyte-haptokinesis-and-haptotaxis-by-ketoprofen-diclofenac-and-SC-560-1471-2172-12-64-S2.ogv",
+      "source": "https://commons.wikimedia.org/wiki/File:Blockade-of-leukocyte-haptokinesis-and-haptotaxis-by-ketoprofen-diclofenac-and-SC-560-1471-2172-12-64-S2.ogv",
+      "kind": "video",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Caataflam.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Caataflam.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "COFENAC SR.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:COFENAC_SR.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenac 3D 2ek.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac_3D_2ek.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenac 3D.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac_3D.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenac Duo 75 mg cps.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac_Duo_75_mg_cps.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenac léčivé přípravky 2.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac_l%C3%A9%C4%8Div%C3%A9_p%C5%99%C3%ADpravky_2.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenac modele.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac_modele.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenac Natrium 50mg Aurobindo.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac_Natrium_50mg_Aurobindo.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenac Schmerzgel 1.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac_Schmerzgel_1.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenac Sodium 0.1%.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac_Sodium_0.1%25.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenac sodium 100mg.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac_sodium_100mg.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenac sodium IV 75mg.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac_sodium_IV_75mg.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenac Synthesen.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac_Synthesen.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenac syntheses.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac_syntheses.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenac Topical Gel.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac_Topical_Gel.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenac Twelve+half mg.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac_Twelve%2Bhalf_mg.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenac+Misoprostol.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac%2BMisoprostol.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenac-from-xtal-3D-sf.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac-from-xtal-3D-sf.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenac-Sodium-Slow-Release-Tab-20191002 193311.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac-Sodium-Slow-Release-Tab-20191002_193311.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenac.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenac.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenac.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclofenacsynthesis1.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclofenacsynthesis1.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Dicloflexec50.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Dicloflexec50.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diclomol Gel.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Diclomol_Gel.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diklak.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Diklak.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Dolmina.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Dolmina.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "LOFNAC GEL.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:LOFNAC_GEL.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Medicaments tractament hiperuricèmia i gota.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Medicaments_tractament_hiperuric%C3%A8mia_i_gota.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Pharmaceutical capsule, microtomography (1).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Pharmaceutical_capsule%2C_microtomography_(1).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Pharmaceutical capsule, microtomography (2).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Pharmaceutical_capsule%2C_microtomography_(2).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Pharmaceutical capsule, microtomography (3).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Pharmaceutical_capsule%2C_microtomography_(3).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Pharmaceutical capsule, microtomography (4).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Pharmaceutical_capsule%2C_microtomography_(4).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Pharmaceutical capsule, microtomography (5).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Pharmaceutical_capsule%2C_microtomography_(5).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Pharmaceutical capsule, microtomography (6).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Pharmaceutical_capsule%2C_microtomography_(6).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Pharmaceutical capsule, microtomography (7).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Pharmaceutical_capsule%2C_microtomography_(7).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Pharmacological Capsule Diclofenac μCT RIGHT.ogv",
+      "source": "https://commons.wikimedia.org/wiki/File:Pharmacological_Capsule_Diclofenac_%CE%BCCT_RIGHT.ogv",
+      "kind": "video",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Pharmacological Capsule Diclofenac μCT.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Pharmacological_Capsule_Diclofenac_%CE%BCCT.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Voltaren tablets.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Voltaren_tablets.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Voltaren25m6185857.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Voltaren25m6185857.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Вольтарен Эмульгель.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:%D0%92%D0%BE%D0%BB%D1%8C%D1%82%D0%B0%D1%80%D0%B5%D0%BD_%D0%AD%D0%BC%D1%83%D0%BB%D1%8C%D0%B3%D0%B5%D0%BB%D1%8C.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Лекарственные препараты под микроскопом. Фаниган.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:%D0%9B%D0%B5%D0%BA%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5_%D0%BF%D1%80%D0%B5%D0%BF%D0%B0%D1%80%D0%B0%D1%82%D1%8B_%D0%BF%D0%BE%D0%B4_%D0%BC%D0%B8%D0%BA%D1%80%D0%BE%D1%81%D0%BA%D0%BE%D0%BF%D0%BE%D0%BC._%D0%A4%D0%B0%D0%BD%D0%B8%D0%B3%D0%B0%D0%BD.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "diclofenac"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Bottle of Doxycycline (37280175550).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Bottle_of_Doxycycline_(37280175550).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Doksiciklin 100 091208.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Doksiciklin_100_091208.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Doxycyclin-3d.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Doxycyclin-3d.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Doxycyclin.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Doxycyclin.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Doxycycline 100mg capsules.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Doxycycline_100mg_capsules.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Doxycycline 3D ball.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Doxycycline_3D_ball.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Doxycycline 3D spacefill.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Doxycycline_3D_spacefill.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Doxycycline 3d structure.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Doxycycline_3d_structure.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Doxycycline ball-and-stick model from xtal 2012.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Doxycycline_ball-and-stick_model_from_xtal_2012.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Doxycycline Hyclate 100 mg (B 312) Pills - Antibiotic (55006065566).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Doxycycline_Hyclate_100_mg_(B_312)_Pills_-_Antibiotic_(55006065566).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Doxycycline hyclate substance photo.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Doxycycline_hyclate_substance_photo.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Doxycycline hyclate substance photo2.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Doxycycline_hyclate_substance_photo2.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Doxycycline mechanism.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Doxycycline_mechanism.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Doxycycline pills.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Doxycycline_pills.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Doxycycline Sensitivity in Multidrug-Resistant Acinetobacter baumannii Complex.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Doxycycline_Sensitivity_in_Multidrug-Resistant_Acinetobacter_baumannii_Complex.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Doxycycline Structural Formulae.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Doxycycline_Structural_Formulae.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Doxycycline, Atovaquone, Ritonavir, Trimethoprim, Dapsone, in one image.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Doxycycline%2C_Atovaquone%2C_Ritonavir%2C_Trimethoprim%2C_Dapsone%2C_in_one_image.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Doxycycline.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Doxycycline.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "DoxyIAM.png",
+      "source": "https://commons.wikimedia.org/wiki/File:DoxyIAM.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "DoxyMM.png",
+      "source": "https://commons.wikimedia.org/wiki/File:DoxyMM.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "OH bond charge density resulting from IAM.png",
+      "source": "https://commons.wikimedia.org/wiki/File:OH_bond_charge_density_resulting_from_IAM.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "OH bond charge density resulting from MM.png",
+      "source": "https://commons.wikimedia.org/wiki/File:OH_bond_charge_density_resulting_from_MM.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "US Navy 050101-N-4166B-041 Hospital Corpsman 3rd Class Kevin Herbert packs Doxycycline, a Malaria medication.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:US_Navy_050101-N-4166B-041_Hospital_Corpsman_3rd_Class_Kevin_Herbert_packs_Doxycycline%2C_a_Malaria_medication.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "US Navy 081114-N-7526R-098 Hospitalman Knasi Kusi separates Doxycycline Hyclate malaria medication into weekly doses in the pharmacy at Seth Michaud emergency medical facility at Camp Lemonier, Djibouti (CLDJ).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:US_Navy_081114-N-7526R-098_Hospitalman_Knasi_Kusi_separates_Doxycycline_Hyclate_malaria_medication_into_weekly_doses_in_the_pharmacy_at_Seth_Michaud_emergency_medical_facility_at_Camp_Lemonier%2C_Djibouti_(CLDJ).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "USMC-101022-M-0761B-010.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:USMC-101022-M-0761B-010.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "doxycycline"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Azithromycin 3d structure.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Azithromycin_3d_structure.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "azithromycin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Azithromycin 250mg.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Azithromycin_250mg.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "azithromycin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Azithromycin antibiotics prescription 8285637447 o.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Azithromycin_antibiotics_prescription_8285637447_o.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "azithromycin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Azithromycin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Azithromycin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "azithromycin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Azithromycin.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Azithromycin.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "azithromycin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Azithromycin.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Azithromycin.webp",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "azithromycin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Azitromycin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Azitromycin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "azithromycin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Sumamed tablete 091208.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Sumamed_tablete_091208.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "azithromycin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "ZITHROMAC.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:ZITHROMAC.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "azithromycin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Zithromax (Azithromycin) tablets.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Zithromax_(Azithromycin)_tablets.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "azithromycin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Хемомицин.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:%D0%A5%D0%B5%D0%BC%D0%BE%D0%BC%D0%B8%D1%86%D0%B8%D0%BD.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "azithromycin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "(±)-Amlodipine Enantiomers Structural Formulae.png",
+      "source": "https://commons.wikimedia.org/wiki/File:(%C2%B1)-Amlodipine_Enantiomers_Structural_Formulae.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amlodipine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Agen-5.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Agen-5.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amlodipine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amlator 10-5 mg tbl.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Amlator_10-5_mg_tbl.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amlodipine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amlodipin Sandoz bottle.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Amlodipin_Sandoz_bottle.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amlodipine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amlodipine 3D ball.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Amlodipine_3D_ball.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amlodipine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amlodipine 3D spacefill.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Amlodipine_3D_spacefill.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amlodipine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amlodipine 3d structure.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Amlodipine_3d_structure.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amlodipine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amlodipine ball-and-stick model from xtal 2010.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Amlodipine_ball-and-stick_model_from_xtal_2010.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amlodipine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amlodipine side effect.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Amlodipine_side_effect.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amlodipine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amlodipine Structural Formulae.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Amlodipine_Structural_Formulae.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amlodipine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amlodipine.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Amlodipine.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amlodipine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Amlodipine.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Amlodipine.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amlodipine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Apo-amlo 5 mg tbl.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Apo-amlo_5_mg_tbl.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amlodipine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Exforge.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Exforge.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amlodipine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Lisinoprilamlodipine.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Lisinoprilamlodipine.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amlodipine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Lopridam 8 mg-2,5 mg-10 mg tbl.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Lopridam_8_mg-2%2C5_mg-10_mg_tbl.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amlodipine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Normodipin.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Normodipin.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amlodipine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Norvasc.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Norvasc.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amlodipine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Prestance 10 mg-5 mg tbl.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Prestance_10_mg-5_mg_tbl.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amlodipine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Prestance 5 mg-5 mg tbl.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Prestance_5_mg-5_mg_tbl.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "amlodipine"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "InsulinHexamer.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:InsulinHexamer.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "PDB 1jk8 EBI.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:PDB_1jk8_EBI.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "014-insulin-4ins.png",
+      "source": "https://commons.wikimedia.org/wiki/File:014-insulin-4ins.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "1967-03 1967年人工合成蛋白质胰岛素.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:1967-03_1967%E5%B9%B4%E4%BA%BA%E5%B7%A5%E5%90%88%E6%88%90%E8%9B%8B%E7%99%BD%E8%B4%A8%E8%83%B0%E5%B2%9B%E7%B4%A0.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "2014-365-307 Eight Bottles (22753934382).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:2014-365-307_Eight_Bottles_(22753934382).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "2014-365-352 Drip of Life (16052964201).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:2014-365-352_Drip_of_Life_(16052964201).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Cerimônia de inauguração da planta de produção de insulina da Biomm (53679730582).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Cerim%C3%B4nia_de_inaugura%C3%A7%C3%A3o_da_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53679730582).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Cerimônia de inauguração da planta de produção de insulina da Biomm (53679730607).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Cerim%C3%B4nia_de_inaugura%C3%A7%C3%A3o_da_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53679730607).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Cerimônia de inauguração da planta de produção de insulina da Biomm (53679730677).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Cerim%C3%B4nia_de_inaugura%C3%A7%C3%A3o_da_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53679730677).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Cerimônia de inauguração da planta de produção de insulina da Biomm (53679779347).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Cerim%C3%B4nia_de_inaugura%C3%A7%C3%A3o_da_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53679779347).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Cerimônia de inauguração da planta de produção de insulina da Biomm (53680592126).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Cerim%C3%B4nia_de_inaugura%C3%A7%C3%A3o_da_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680592126).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Cerimônia de inauguração da planta de produção de insulina da Biomm (53680592261).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Cerim%C3%B4nia_de_inaugura%C3%A7%C3%A3o_da_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680592261).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Cerimônia de inauguração da planta de produção de insulina da Biomm (53680810796).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Cerim%C3%B4nia_de_inaugura%C3%A7%C3%A3o_da_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680810796).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Cerimônia de inauguração da planta de produção de insulina da Biomm (53680817938).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Cerim%C3%B4nia_de_inaugura%C3%A7%C3%A3o_da_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680817938).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Cerimônia de inauguração da planta de produção de insulina da Biomm (53680818143).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Cerim%C3%B4nia_de_inaugura%C3%A7%C3%A3o_da_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680818143).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Cerimônia de inauguração da planta de produção de insulina da Biomm (53680818163).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Cerim%C3%B4nia_de_inaugura%C3%A7%C3%A3o_da_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680818163).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Cerimônia de inauguração da planta de produção de insulina da Biomm (53680867103).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Cerim%C3%B4nia_de_inaugura%C3%A7%C3%A3o_da_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680867103).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Cerimônia de inauguração da planta de produção de insulina da Biomm (53680956199).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Cerim%C3%B4nia_de_inaugura%C3%A7%C3%A3o_da_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680956199).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Cerimônia de inauguração da planta de produção de insulina da Biomm (53680956259).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Cerim%C3%B4nia_de_inaugura%C3%A7%C3%A3o_da_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680956259).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Cerimônia de inauguração da planta de produção de insulina da Biomm (53681004874).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Cerim%C3%B4nia_de_inaugura%C3%A7%C3%A3o_da_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53681004874).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Cerimônia de inauguração da planta de produção de insulina da Biomm (53681004909).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Cerim%C3%B4nia_de_inaugura%C3%A7%C3%A3o_da_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53681004909).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Cerimônia de inauguração da planta de produção de insulina da Biomm (53681038713).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Cerim%C3%B4nia_de_inaugura%C3%A7%C3%A3o_da_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53681038713).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Cerimônia de inauguração da planta de produção de insulina da Biomm (53681051045).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Cerim%C3%B4nia_de_inaugura%C3%A7%C3%A3o_da_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53681051045).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Cerimônia de inauguração da planta de produção de insulina da Biomm (53681051135).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Cerim%C3%B4nia_de_inaugura%C3%A7%C3%A3o_da_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53681051135).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Cerimônia de inauguração da planta de produção de insulina da Biomm (53681271095).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Cerim%C3%B4nia_de_inaugura%C3%A7%C3%A3o_da_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53681271095).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53679342717).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53679342717).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53679342837).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53679342837).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53679342977).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53679342977).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53679343132).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53679343132).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53679343147).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53679343147).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53679343367).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53679343367).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53679343517).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53679343517).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53679343847).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53679343847).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53679343997).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53679343997).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53679344587).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53679344587).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53679344602).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53679344602).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680205051).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680205051).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680205386).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680205386).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680205496).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680205496).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680205506).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680205506).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680205601).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680205601).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680206421).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680206421).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680429003).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680429003).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680429378).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680429378).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680429868).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680429868).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680430188).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680430188).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680430423).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680430423).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680567309).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680567309).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680567334).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680567334).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680567499).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680567499).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680567614).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680567614).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680567939).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680567939).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680567984).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680567984).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680568279).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680568279).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680568334).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680568334).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680568409).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680568409).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680568764).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680568764).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680568954).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680568954).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680569139).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680569139).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680569169).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680569169).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680569174).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680569174).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680665205).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680665205).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680665355).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680665355).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680665495).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680665495).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680665615).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680665615).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680665845).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680665845).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680666125).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680666125).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680666245).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680666245).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680666325).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680666325).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680666510).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680666510).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680666525).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680666525).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680666635).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680666635).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "26.04.2024 - Visita à planta de produção de insulina da Biomm (53680666980).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:26.04.2024_-_Visita_%C3%A0_planta_de_produ%C3%A7%C3%A3o_de_insulina_da_Biomm_(53680666980).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "2وظيفة الإنسولين.png",
+      "source": "https://commons.wikimedia.org/wiki/File:2%D9%88%D8%B8%D9%8A%D9%81%D8%A9_%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D9%88%D9%84%D9%8A%D9%86.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "3وظيفة الإنسولين.png",
+      "source": "https://commons.wikimedia.org/wiki/File:3%D9%88%D8%B8%D9%8A%D9%81%D8%A9_%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D9%88%D9%84%D9%8A%D9%86.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "4وظيفة الإنسولين.png",
+      "source": "https://commons.wikimedia.org/wiki/File:4%D9%88%D8%B8%D9%8A%D9%81%D8%A9_%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D9%88%D9%84%D9%8A%D9%86.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "5وظيفة الإنسولين.png",
+      "source": "https://commons.wikimedia.org/wiki/File:5%D9%88%D8%B8%D9%8A%D9%81%D8%A9_%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D9%88%D9%84%D9%8A%D9%86.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "6وظيفة الإنسولين.png",
+      "source": "https://commons.wikimedia.org/wiki/File:6%D9%88%D8%B8%D9%8A%D9%81%D8%A9_%D8%A7%D9%84%D8%A5%D9%86%D8%B3%D9%88%D9%84%D9%8A%D9%86.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "@dailyshoot- 2010-03-20- Liquids can be still and reflective or in motion and chaotic. Make a photograph of something liquid today. -ds125 (4449910430).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:%40dailyshoot-_2010-03-20-_Liquids_can_be_still_and_reflective_or_in_motion_and_chaotic._Make_a_photograph_of_something_liquid_today._-ds125_(4449910430).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "A Burroughs Wellcome information leaflet concerning Insulin Wellcome L0041520.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:A_Burroughs_Wellcome_information_leaflet_concerning_Insulin_Wellcome_L0041520.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "A-Helical-Structural-Nucleus-Is-the-Primary-Elongating-Unit-of-Insulin-Amyloid-Fibrils-pbio.0050134.sv001.ogv",
+      "source": "https://commons.wikimedia.org/wiki/File:A-Helical-Structural-Nucleus-Is-the-Primary-Elongating-Unit-of-Insulin-Amyloid-Fibrils-pbio.0050134.sv001.ogv",
+      "kind": "video",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "A-Helical-Structural-Nucleus-Is-the-Primary-Elongating-Unit-of-Insulin-Amyloid-Fibrils-pbio.0050134.sv002.ogv",
+      "source": "https://commons.wikimedia.org/wiki/File:A-Helical-Structural-Nucleus-Is-the-Primary-Elongating-Unit-of-Insulin-Amyloid-Fibrils-pbio.0050134.sv002.ogv",
+      "kind": "video",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "A-local-glucose-and-oxygen-concentration-based-insulin-secretion-model-for-pancreatic-islets-1742-4682-8-20-S2.ogv",
+      "source": "https://commons.wikimedia.org/wiki/File:A-local-glucose-and-oxygen-concentration-based-insulin-secretion-model-for-pancreatic-islets-1742-4682-8-20-S2.ogv",
+      "kind": "video",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "A-local-glucose-and-oxygen-concentration-based-insulin-secretion-model-for-pancreatic-islets-1742-4682-8-20-S3.ogv",
+      "source": "https://commons.wikimedia.org/wiki/File:A-local-glucose-and-oxygen-concentration-based-insulin-secretion-model-for-pancreatic-islets-1742-4682-8-20-S3.ogv",
+      "kind": "video",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "A-Novel-Role-for-the-Centrosomal-Protein-Pericentrin-in-Regulation-of-Insulin-Secretory-Vesicle-pone.0011812.s004.ogv",
+      "source": "https://commons.wikimedia.org/wiki/File:A-Novel-Role-for-the-Centrosomal-Protein-Pericentrin-in-Regulation-of-Insulin-Secretory-Vesicle-pone.0011812.s004.ogv",
+      "kind": "video",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Actrapid vial.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Actrapid_vial.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Advert for Insulin by Wellcome Wellcome L0041430.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Advert_for_Insulin_by_Wellcome_Wellcome_L0041430.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Advertisement for insulin, Burroughs Wellcome, 1930 Wellcome L0035381.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Advertisement_for_insulin%2C_Burroughs_Wellcome%2C_1930_Wellcome_L0035381.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Advertisement, insulin made by Burroughs Wellcome, 1929 Wellcome L0035388.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Advertisement%2C_insulin_made_by_Burroughs_Wellcome%2C_1929_Wellcome_L0035388.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Aliran Proses Untuk Pembuatan Insulin.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Aliran_Proses_Untuk_Pembuatan_Insulin.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Apidra 100 IU-ml inj.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Apidra_100_IU-ml_inj.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Artificial pancreas.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Artificial_pancreas.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Banting and Best.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Banting_and_Best.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Blackbox revisited by Pierre De Meyts, alias Chuck.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Blackbox_revisited_by_Pierre_De_Meyts%2C_alias_Chuck.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Chart of course under Insulin Therapy,case 6 Wellcome L0031616.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Chart_of_course_under_Insulin_Therapy%2Ccase_6_Wellcome_L0031616.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Constantine Trent Champion de Crespigny B-11150.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Constantine_Trent_Champion_de_Crespigny_B-11150.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Critical-Role-of-Gap-Junction-Coupled-KATP-Channel-Activity-for-Regulated-Insulin-Secretion-pbio.0040026.sv001.ogv",
+      "source": "https://commons.wikimedia.org/wiki/File:Critical-Role-of-Gap-Junction-Coupled-KATP-Channel-Activity-for-Regulated-Insulin-Secretion-pbio.0040026.sv001.ogv",
+      "kind": "video",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Critical-Role-of-Gap-Junction-Coupled-KATP-Channel-Activity-for-Regulated-Insulin-Secretion-pbio.0040026.sv002.ogv",
+      "source": "https://commons.wikimedia.org/wiki/File:Critical-Role-of-Gap-Junction-Coupled-KATP-Channel-Activity-for-Regulated-Insulin-Secretion-pbio.0040026.sv002.ogv",
+      "kind": "video",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Critical-Role-of-Gap-Junction-Coupled-KATP-Channel-Activity-for-Regulated-Insulin-Secretion-pbio.0040026.sv003.ogv",
+      "source": "https://commons.wikimedia.org/wiki/File:Critical-Role-of-Gap-Junction-Coupled-KATP-Channel-Activity-for-Regulated-Insulin-Secretion-pbio.0040026.sv003.ogv",
+      "kind": "video",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "CSIRO ScienceImage 2738 First Three Domains of Insulin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_2738_First_Three_Domains_of_Insulin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "CSIRO ScienceImage 355 Representation of Insulin Structure.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:CSIRO_ScienceImage_355_Representation_of_Insulin_Structure.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diabetes Type I and II.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Diabetes_Type_I_and_II.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Diabetiic Elsie Needham insulin P10122 0001-680x1024 (cropped).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Diabetiic_Elsie_Needham_insulin_P10122_0001-680x1024_(cropped).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Drei wichtige Hormone für den Stoffwechsel Terra X.webm",
+      "source": "https://commons.wikimedia.org/wiki/File:Drei_wichtige_Hormone_f%C3%BCr_den_Stoffwechsel_Terra_X.webm",
+      "kind": "video",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Elsie Needham insulin P10122 0001-680x1024 (3x4 crop).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Elsie_Needham_insulin_P10122_0001-680x1024_(3x4_crop).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Elsie Needham insulin P10122 0001-680x1024.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Elsie_Needham_insulin_P10122_0001-680x1024.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "FGF21 lrg.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:FGF21_lrg.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Fisher study alcohol wipes.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Fisher_study_alcohol_wipes.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Frederick Banting CS&TM.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Frederick_Banting_CS%26TM.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Generic insulin degludec.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Generic_insulin_degludec.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Glucose curve feline 10wks.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Glucose_curve_feline_10wks.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Glucose curve feline 3wks.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Glucose_curve_feline_3wks.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Glykogenstoffwechsel Hormone.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Glykogenstoffwechsel_Hormone.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "HBB location.png",
+      "source": "https://commons.wikimedia.org/wiki/File:HBB_location.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Hoechst Genforschung Insulin E.coli Werbung 1985.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Hoechst_Genforschung_Insulin_E.coli_Werbung_1985.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Holograph letter. Wellcome L0003630.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Holograph_letter._Wellcome_L0003630.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Holograph letter. Wellcome L0003631.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Holograph_letter._Wellcome_L0003631.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Human insulin 100IU-ml vial white background.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Human_insulin_100IU-ml_vial_white_background.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Human insulin 100IU-ml vial yellow background.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Human_insulin_100IU-ml_vial_yellow_background.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Human Insulin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Human_Insulin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin 3d structure.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_3d_structure.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin Basaglar Pen.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_Basaglar_Pen.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin basal bolus.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_basal_bolus.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin Collage.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_Collage.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin degludec hexamer 4AKJ.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_degludec_hexamer_4AKJ.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin Delivery Devices (hy).png",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_Delivery_Devices_(hy).png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin Delivery Devices-es.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_Delivery_Devices-es.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin Delivery Devices.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_Delivery_Devices.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin gene activation.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_gene_activation.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin glulisine 6GV0 spacefill.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_glulisine_6GV0_spacefill.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin green microtrees.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_green_microtrees.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin icodec - Teoria dei pori delle vie di trasporto dell'insulina.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_icodec_-_Teoria_dei_pori_delle_vie_di_trasporto_dell'insulina.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin Maturation.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_Maturation.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin microtrees.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_microtrees.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin primary structure.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_primary_structure.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin secretion.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_secretion.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin ses ss.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_ses_ss.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin short-intermediate-long acting.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_short-intermediate-long_acting.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin Step 1 Roll Bottle.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_Step_1_Roll_Bottle.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin Step 2 Withdraw Dose.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_Step_2_Withdraw_Dose.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin Synthese.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_Synthese.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin synthesis.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin_synthesis.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin&Syringe.JPG",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin%26Syringe.JPG",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin-IGF1 pathway.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin-IGF1_pathway.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulin2.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulin2.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulina.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulina.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulincrystals.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulincrystals.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insuline1.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Insuline1.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "InsulinMonomer.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:InsulinMonomer.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "InsulinMultimediaExhibit.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:InsulinMultimediaExhibit.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulinpath.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulinpath.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulinrezeptor.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulinrezeptor.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Insulinstruktur.png",
+      "source": "https://commons.wikimedia.org/wiki/File:Insulinstruktur.png",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Inzulin-aspartát.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Inzulin-aspart%C3%A1t.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Inzulín (cropped).jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Inzul%C3%ADn_(cropped).jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Inzulín.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Inzul%C3%ADn.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Islet of Langerhans and Insulin.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Islet_of_Langerhans_and_Insulin.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "L'insulina icodec one weekly.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:L'insulina_icodec_one_weekly.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Lantus vial.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Lantus_vial.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
+      ],
+      "rights_review": "pending",
+      "visual_review": "pending",
+      "clinical_approval": false
+    },
+    {
+      "file": "Male Nurses- Life at Runwell Hospital, Wickford, Essex, 1943 D14313.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Male_Nurses-_Life_at_Runwell_Hospital%2C_Wickford%2C_Essex%2C_1943_D14313.jpg",
+      "kind": "photo_candidate",
+      "medicine_candidates": [
+        "insulin"
       ],
       "rights_review": "pending",
       "visual_review": "pending",
