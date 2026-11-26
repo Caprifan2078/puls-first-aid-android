@@ -27,7 +27,10 @@ try{
   assert.ok(await page.locator("#home-browse").isVisible());
   await page.locator('nav a[href="#/sos"]').click();
   await page.locator(".sos-heading").waitFor({state:"visible"});
-  assert.ok(await page.locator(".emergency-tile").count()>=8);
+  assert.equal(await page.locator(".emergency-tile:visible").count(),8);
+  await page.locator('[data-sos-category="children"] summary').click();
+  assert.ok(await page.locator('[data-sos-category="children"] a[href="#/topic/infant-choking"]').isVisible());
+  await page.locator('[data-sos-category="children"] summary').click();
   await noOverflow();
   await page.locator('.emergency-tile[href="#/topic/cpr"]').click();
   await page.locator(".step-list").waitFor({state:"visible"});
@@ -64,7 +67,7 @@ try{
   await page.locator("#medicine-search").fill("zznoresults");
   assert.equal(await page.locator(".medicine-row").count(),0);
   await page.locator("#medicine-search").fill("");
-  assert.equal(await page.locator(".medicine-row").count(),70);
+  assert.equal(await page.locator(".medicine-row").count(),100);
   await noOverflow();
   await page.screenshot({path:"puls-medicines-"+width+".png"});
   await page.locator('nav a[href="#/catalog"]').click();
