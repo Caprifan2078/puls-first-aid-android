@@ -28,6 +28,7 @@ try{
   await page.locator('nav a[href="#/sos"]').click();
   await page.locator(".sos-heading").waitFor({state:"visible"});
   assert.equal(await page.locator(".emergency-tile:visible").count(),8);
+  assert.ok(await page.locator('.scene-safety-link[href="#/topic/scene-safety"]').isVisible());
   await page.locator('[data-sos-category="children"] summary').click();
   assert.ok(await page.locator('[data-sos-category="children"] a[href="#/topic/infant-choking"]').isVisible());
   await page.locator('[data-sos-category="children"] summary').click();
