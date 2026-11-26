@@ -66,6 +66,16 @@ try{
   assert.ok(await page.evaluate(()=>window.scrollY)>0,"saving must not reset scroll");
   await page.locator(".sav").evaluate(el=>el.click());
   await page.screenshot({path:"puls-sos-"+width+".png"});
+  // Start a clean navigation chain and exercise two consecutive article Back actions.
+  await page.goto(url+"#/sos");
+  await page.locator('.emergency-tile[href="#/topic/cpr"]').click();
+  await page.locator('.age-guide-links a[href="#/topic/child-cpr"]').click();
+  await page.locator('#back').click();
+  await page.waitForURL('**/#/topic/cpr');
+  await page.locator('#back').click();
+  await page.waitForURL('**/#/sos');
+  await page.locator('.sos-heading').waitFor({state:"visible"});
+  assert.equal(await page.locator('.emergency-tile:visible').count(),8);
   await page.locator('nav a[href="#/kits"]').click();
   await page.locator(".kit-switch").waitFor({state:"visible"});
   assert.equal(await page.locator(".kit-v84").count(),3);
@@ -82,6 +92,9 @@ try{
   await page.locator('[data-check="travel:0"]').waitFor();
   assert.equal(await page.locator('.kit-v84 input[data-check]').count(),14);
   await page.locator('[data-kit="outdoor"]').click();
+  await page.locator('[data-check="outdoor:0"]').waitFor();
+  assert.equal(await page.locator('.kit-v84 input[data-check]').count(),15);
+  await page.reload();
   await page.locator('[data-check="outdoor:0"]').waitFor();
   assert.equal(await page.locator('.kit-v84 input[data-check]').count(),15);
   await noOverflow();

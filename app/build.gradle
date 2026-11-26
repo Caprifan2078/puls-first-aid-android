@@ -6,8 +6,8 @@ android {
         applicationId 'com.puls.firstaid.rebuild.ui83'
         minSdk 26
         targetSdk 36
-        versionCode 27
-        versionName '8.19.2-qa-scroll-recovery'
+        versionCode 28
+        versionName '8.19.3-qa-navigation-reliability'
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17

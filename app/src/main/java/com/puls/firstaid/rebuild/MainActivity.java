@@ -30,6 +30,23 @@ public final class MainActivity extends Activity {
     private WebView web;
     private ValueCallback<Uri[]> uploadCallback;
     private WebViewAssetLoader loader;
+    private int readyGeneration;
+
+    private boolean isAppPage(String url) {
+        Uri uri = Uri.parse(url == null ? "" : url);
+        return "https".equals(uri.getScheme()) && "appassets.androidplatform.net".equalsIgnoreCase(uri.getHost())
+                && (uri.getPort() == -1 || uri.getPort() == 443) && "/assets/index.html".equals(uri.getPath());
+    }
+
+    private void checkUiReady(WebView view, int generation, int attempt) {
+        if (view != web || generation != readyGeneration || isFinishing() || isDestroyed()) return;
+        view.evaluateJavascript("document.readyState !== 'loading' && !!document.querySelector('#app h1') && !!document.querySelector('#nav a')", result -> {
+            if (view != web || generation != readyGeneration || isFinishing() || isDestroyed()) return;
+            if ("true".equals(result)) Log.i("PULS_QA", "UI_READY:true");
+            else if (attempt < 30) view.postDelayed(() -> checkUiReady(view, generation, attempt + 1), 1000);
+            else Log.e("PULS_QA", "UI_READY:false");
+        });
+    }
 
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
@@ -67,15 +84,11 @@ public final class MainActivity extends Activity {
                 return new WebResourceResponse("text/plain", "UTF-8", 403, "Blocked", java.util.Collections.emptyMap(), new java.io.ByteArrayInputStream(new byte[0]));
             }
             @Override public void onPageFinished(WebView view, String url) {
-                if (START_URL.equals(url)) {
-                    view.evaluateJavascript(
-                            "document.readyState === 'complete' && !!document.body && document.body.innerText.length > 100",
-                            result -> Log.i("PULS_QA", "UI_READY:" + result));
-                }
+                if (isAppPage(url)) checkUiReady(view, ++readyGeneration, 0);
             }
             @Override public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                 Uri uri = request.getUrl();
-                if ("https".equals(uri.getScheme()) && "appassets.androidplatform.net".equalsIgnoreCase(uri.getHost()) && "/assets/index.html".equals(uri.getPath())) return false;
+                if (isAppPage(uri.toString())) return false;
                 try {
                     if (!request.isForMainFrame() || !request.hasGesture()) return true;
                     if ("tel".equalsIgnoreCase(uri.getScheme()) && uri.getSchemeSpecificPart().matches("\\+?[0-9]{2,7}")) {
@@ -111,7 +124,8 @@ public final class MainActivity extends Activity {
                     return true;
                 } catch (Exception ex) {
                     uploadCallback = null;
-                    return false;
+                    callback.onReceiveValue(null);
+                    return true;
                 }
             }
         });
@@ -197,7 +211,8 @@ public final class MainActivity extends Activity {
     }
     @Override protected void onDestroy() {
         if (uploadCallback != null) uploadCallback.onReceiveValue(null);
-        if (web != null) web.destroy();
+        readyGeneration++;
+        if (web != null) { web.destroy(); web = null; }
         super.onDestroy();
     }
 }

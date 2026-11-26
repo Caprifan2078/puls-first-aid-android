@@ -16,13 +16,13 @@ try {
  execFileSync("ffmpeg",["-nostdin","-v","error","-f","lavfi","-i","testsrc2=size=320x180:rate=15","-t","5","-c:v","libx264","-pix_fmt","yuv420p","-movflags","+faststart",filename]);
  const bytes=await readFile(filename);
  const record={topic:"cpr",file:"fixture.mp4",sha256:createHash("sha256").update(bytes).digest("hex"),author:"Synthetic QA fixture",license:"CC0 1.0",license_url:"https://creativecommons.org/publicdomain/zero/1.0/",source:"https://commons.wikimedia.org/wiki/File:Test-only-fixture.mp4",ru:"Тестовый ролик",en:"Test clip",clinical_approval:true,visual_review:"approved",review_ref:"SYNTHETIC TEST ONLY"};
- const manifest=[record,{...record,file:"missing.mp4"},{...record,file:"rejected.mp4",clinical_approval:false}];
+ const manifest=[record,{...record,file:"second.mp4"},{...record,file:"missing.mp4"},{...record,file:"rejected.mp4",clinical_approval:false}];
  const requests=[];
  server=createServer(async(req,res)=>{
   try {
    const path=new URL(req.url,"http://localhost").pathname;
    if(path==="/media/firstaid/manifest.json"){res.writeHead(200,{"Content-Type":"application/json"});return res.end(JSON.stringify(manifest))}
-   if(path==="/media/firstaid/fixture.mp4"){
+   if(path==="/media/firstaid/fixture.mp4"||path==="/media/firstaid/second.mp4"){
     requests.push(req.headers.range||"full");
     const header=req.headers.range;
     const range=/^bytes=(\d*)-(\d*)$/.exec(header||"");
@@ -52,13 +52,17 @@ try {
  page.on("pageerror",e=>errors.push(e.message));
  await page.goto("http://127.0.0.1:"+server.address().port+"/index.html#/topic/cpr");
  await page.locator(".aid-media summary").waitFor({state:"visible"});
- assert.equal(await page.locator(".aid-media video").count(),2,"unapproved record must not render");
+ assert.equal(await page.locator(".aid-media video").count(),3,"unapproved record must not render");
  assert.equal(await page.locator('video[src$="rejected.mp4"]').count(),0);
  assert.ok(await page.locator(".step-list").isVisible(),"medical steps remain visible");
  await clickMediaSummary();
  const video=page.locator('video[src$="fixture.mp4"]');
  await video.evaluate(async v=>{v.muted=true;await v.play()});
  await page.waitForFunction(()=>document.querySelector('video[src$="fixture.mp4"]').currentTime>0.15);
+ const second=page.locator('video[src$="second.mp4"]');
+ await second.evaluate(async v=>{v.muted=true;await v.play()});
+ await page.waitForFunction(()=>document.querySelector('video[src$="fixture.mp4"]').paused);
+ await second.evaluate(v=>v.pause());
  await video.evaluate(v=>{v.pause();v.currentTime=2.5});
  await page.waitForFunction(()=>{const v=document.querySelector('video[src$="fixture.mp4"]');return !v.seeking&&Math.abs(v.currentTime-2.5)<0.25});
  await video.evaluate(async v=>{await v.play()});
@@ -75,7 +79,7 @@ try {
  const missing=page.locator('video[src$="missing.mp4"]');
  await missing.evaluate(v=>v.load());
  await missing.waitFor({state:"detached"});
- assert.equal(await page.locator(".aid-media video").count(),1);
+ assert.equal(await page.locator(".aid-media video").count(),2);
  assert.ok(requests.length>0,"fixture actually requested");
  assert.deepEqual(errors,[]);
  console.log("PASS browser media: playback, seek, collapse pause, route pause, corrupt/missing removal, unapproved hidden");
