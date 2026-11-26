@@ -1,0 +1,35 @@
+name: PULS unified offline review gallery
+on:
+  push:
+    branches: [qa/puls-media-review-gallery-20261127]
+    paths: ['tools/build_review_gallery.py','.github/workflows/review-gallery.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  gallery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 45886700273
+          pattern: PULS-mass-review-*
+          path: review-input/original
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 45887753101
+          pattern: PULS-expansion-review-*
+          path: review-input/expansion
+      - run: python3 tools/build_review_gallery.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PULS-unified-review-gallery
+          path: review-gallery/
+          if-no-files-found: error
