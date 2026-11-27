@@ -369,9 +369,6 @@ function renderLibraryStatus(){const ru=state.lang==="ru";const critical=PAGES.f
 function renderMediaCredits(){const ru=state.lang==="ru";return '<details class="panel secondary media-credits"><summary>'+(ru?"Авторы и лицензии медиа":"Media credits and licenses")+' · '+mediaCredits.length+'</summary><p class="minor">'+(ru?"Лицензии отдельных материалов сохраняются. Авторы не подтверждают и не рекламируют ПУЛЬС.":"Each media item retains its license. Creators do not endorse PULS.")+'</p><p class="minor">'+(ru?"Пиктограммы оснащения и памяток созданы для ПУЛЬС без сторонних изображений; не демонстрируют медицинскую технику.":"Equipment and reminder pictograms are original project artwork, not demonstrations of medical technique.")+'</p>'+mediaCredits.map(a=>'<div class="credit-item"><strong>'+esc(a.title)+'</strong><small>'+esc(a.author+" · "+a.license)+'</small><small>'+esc(a.modifications)+'</small><a class="link" href="'+esc(a.source)+'">'+(ru?"Оригинал":"Original")+'</a> <a class="link" href="'+esc(a.license_url)+'">'+(ru?"Лицензия":"License")+'</a></div>').join("")+'</details>'}
 function loadMediaCredits(){fetch("media/credits.json").then(r=>r.ok?r.json():null).then(data=>{if(!data||!Array.isArray(data.items))return;mediaCredits=data.items.filter(a=>a&&a.title&&a.author&&a.license&&typeof a.source==="string"&&a.source.startsWith("https://commons.wikimedia.org/wiki/File:")&&AID_MEDIA_LICENSES.has(a.license_url));if(location.hash==="#/more"&&!document.querySelector("#backup[open]"))route(true)}).catch(()=>{})}
 function renderArchivedMediaLinks(){const ru=state.lang==="ru";return '<details class="panel secondary archive-media"><summary>'+(ru?"Архив учебных материалов (онлайн)":"Archived educational materials (online)")+'</summary><p class="minor">'+(ru?"Восстановленные источники старой версии. Материалы не прошли независимую клиническую проверку; не используй их вместо текущих инструкций или указаний диспетчера. Видео открываются в браузере и не входят в офлайн-базу.":"Recovered sources from the older version. These materials have not been independently clinically reviewed; do not use them instead of current instructions or dispatcher advice. Videos open in the browser and are not part of the offline library.")+'</p><a class="tile" href="https://commons.wikimedia.org/wiki/File:CPR.webm"><div><strong>'+(ru?"Архивный ролик о СЛР":"Archived CPR video")+'</strong><p class="minor">Simpleshow Japan · CC BY-SA 4.0</p></div></a><a class="tile" href="https://commons.wikimedia.org/wiki/File:Auvi-Q_Injection.webm"><div><strong>'+(ru?"Архивный ролик об автоинъекторе":"Archived autoinjector video")+'</strong><p class="minor">Z22 · CC BY-SA 4.0</p></div></a></details>'}
-function notifyEmergencyAwake(){const active=state.keepAwake&&document.body.classList.contains("emergency-mode")&&!document.hidden;try{window.PulsDisplay?.postMessage(active?"on":"off")}catch(_){}}
-function refreshLibraryStatus(){const section=document.querySelector(".library-status");if(!section)return;const open=section.open;const holder=document.createElement("div");holder.innerHTML=renderLibraryStatus();const next=holder.firstElementChild;next.open=open;section.replaceWith(next)}
-
 let reviewMedia=null,reviewLoading=false,reviewFailed=false,reviewOffset=0;
 function loadReviewMedia(){
  if(reviewLoading||reviewMedia||reviewFailed)return;
@@ -415,10 +412,9 @@ function renderReview(){
  const opts=(pairs)=>pairs.map(x=>'<option value="'+x[0]+'">'+x[ru?1:2]+'</option>').join("");
  return header+warning+'<p>'+reviewMedia.filter(r=>r.file.endsWith(".jpg")).length+' '+(ru?"фото":"photos")+' · '+reviewMedia.filter(r=>r.file.endsWith(".mp4")).length+' '+(ru?"видео":"videos")+'</p><label for="review-q">'+(ru?"Поиск":"Search")+'</label><input id="review-q" class="input" style="width:100%" placeholder="'+(ru?"Тема, название, автор":"Topic, title, author")+'"><div style="display:flex;flex-wrap:wrap;gap:8px;margin:12px 0"><select id="review-kind" aria-label="'+(ru?"Формат":"Format")+'">'+opts([["","Все форматы","All formats"],["photo","Фото","Photos"],["video","Видео","Videos"]])+'</select><select id="review-group" aria-label="'+(ru?"Раздел":"Group")+'">'+opts([["","Все разделы","All groups"],["guide","Инструкции","Guides"],["medicine","Лекарства","Medicines"],["kit","Аптечки","Kits"],["equipment","Оснащение","Equipment"]])+'</select></div><p id="review-count" role="status">'+(ru?"Найдено: ":"Found: ")+reviewMedia.length+'</p><div id="review-results">'+reviewCards(reviewMedia)+'</div><button id="review-next" class="topbtn" '+(reviewMedia.length<=12?"hidden":"")+'>'+(ru?"Показать ещё 12":"Show 12 more")+'</button>'
 }
-document.addEventListener("input",e=>{if(e.target.id==="review-q")updateReviewGallery()});
-document.addEventListener("change",e=>{if(["review-kind","review-group"].includes(e.target.id))updateReviewGallery()});
-document.addEventListener("click",e=>{if(e.target.id==="review-next"){reviewOffset+=12;updateReviewGallery(false)}});
-document.addEventListener("error",e=>{if(e.target.matches?.(".review-card img,.review-card video")){const p=document.createElement("p");p.textContent=state.lang==="ru"?"Файл не воспроизводится":"Media unavailable";e.target.replaceWith(p)}},true);
+
+function notifyEmergencyAwake(){const active=state.keepAwake&&document.body.classList.contains("emergency-mode")&&!document.hidden;try{window.PulsDisplay?.postMessage(active?"on":"off")}catch(_){}}
+function refreshLibraryStatus(){const section=document.querySelector(".library-status");if(!section)return;const open=section.open;const holder=document.createElement("div");holder.innerHTML=renderLibraryStatus();const next=holder.firstElementChild;next.open=open;section.replaceWith(next)}
 
 function renderMore(){
  return title(t("more"),t("moretxt"))+reviewLink()+
@@ -552,5 +548,11 @@ document.addEventListener("click",ev=>{
  document.querySelectorAll("#sos-browse details[open]").forEach(d=>d.open=false);
  restoreRouteScroll(0);
 });
+document.addEventListener("input",e=>{if(e.target.id==="review-q")updateReviewGallery()});
+document.addEventListener("change",e=>{if(["review-kind","review-group"].includes(e.target.id))updateReviewGallery()});
+document.addEventListener("click",e=>{if(e.target.id==="review-next"){reviewOffset+=12;updateReviewGallery(false)}});
+document.addEventListener("error",e=>{if(e.target.matches?.(".review-card img,.review-card video")){const p=document.createElement("p");p.textContent=state.lang==="ru"?"Файл не воспроизводится":"Media unavailable";e.target.replaceWith(p)}},true);
+
+
 window.addEventListener("hashchange",()=>route());if(!location.hash)history.replaceState(null,"","#/home");route();loadMedicineMedia();loadKitMedia();loadAidMedia();loadMediaCredits();
 </script><div id="puls-toast" class="puls-toast" role="status" aria-live="polite" hidden></div></body></html>
