@@ -1,0 +1,534 @@
+{
+  "schema": 1,
+  "source_commit_parent": "1c47a1eda311ae06c7cde8de30ef8a5cac38eeda",
+  "targets": [
+    {
+      "id": "guide:severe-hypoglycaemia",
+      "kind": "guide",
+      "ru": "Тяжёлая гипогликемия: потеря сознания",
+      "en": "Severe hypoglycaemia with unconsciousness",
+      "critical": true,
+      "steps": [
+        {
+          "index": 0,
+          "ru": "Вызови экстренную помощь, проверь реакцию и нормальное дыхание.",
+          "en": "Call emergency services and assess responsiveness and normal breathing."
+        },
+        {
+          "index": 1,
+          "ru": "Если человек дышит нормально и нет подозрения на травму, уложи его на бок. Если дыхание ненормальное, следуй указаниям диспетчера и начни СЛР.",
+          "en": "If breathing normally and there is no suspected trauma, place them on their side. If breathing is abnormal, follow the dispatcher and start CPR."
+        },
+        {
+          "index": 2,
+          "ru": "Если доступен назначенный человеку глюкагон и ты знаешь, как его применить, используй по инструкции, не откладывая помощь.",
+          "en": "If their prescribed glucagon is available and you know how to use it, follow its instructions without delaying help."
+        }
+      ]
+    },
+    {
+      "id": "guide:neck-compression",
+      "kind": "guide",
+      "ru": "После сдавления шеи",
+      "en": "After neck compression",
+      "critical": true,
+      "steps": [
+        {
+          "index": 0,
+          "ru": "Перейди в безопасное место. При затруднении дыхания, потере сознания или других серьёзных симптомах немедленно вызови экстренную помощь.",
+          "en": "Move to safety. Call emergency services immediately for breathing difficulty, loss of consciousness or other serious symptoms."
+        },
+        {
+          "index": 1,
+          "ru": "После сдавления шеи нужна срочная медицинская оценка, даже если внешних следов нет.",
+          "en": "Seek urgent medical assessment after neck compression even if there are no visible marks."
+        },
+        {
+          "index": 2,
+          "ru": "Если человек без сознания, проверь дыхание и выполняй указания диспетчера.",
+          "en": "If unresponsive, assess breathing and follow the dispatcher's instructions."
+        }
+      ]
+    },
+    {
+      "id": "guide:nonblanching-rash",
+      "kind": "guide",
+      "ru": "Сыпь не бледнеет при надавливании и человек болен",
+      "en": "Non-blanching rash with illness",
+      "critical": true,
+      "steps": [
+        {
+          "index": 0,
+          "ru": "При сыпи, которая не бледнеет при надавливании, вместе с выраженным недомоганием немедленно вызови экстренную помощь.",
+          "en": "Call emergency services immediately for a non-blanching rash with marked illness."
+        },
+        {
+          "index": 1,
+          "ru": "Сообщи диспетчеру о температуре, изменении сознания, дыхания и сыпи, если они есть.",
+          "en": "Tell the dispatcher about fever, altered responsiveness, breathing changes and the rash if present."
+        },
+        {
+          "index": 2,
+          "ru": "Наблюдай за дыханием и реакцией человека до прибытия помощи.",
+          "en": "Monitor breathing and responsiveness until help arrives."
+        }
+      ]
+    },
+    {
+      "id": "guide:infant-dehydration",
+      "kind": "guide",
+      "ru": "Младенец: признаки обезвоживания",
+      "en": "Infant dehydration warning signs",
+      "critical": false,
+      "steps": [
+        {
+          "index": 0,
+          "ru": "Обрати внимание на уменьшение числа мокрых подгузников, сухость рта и необычную сонливость.",
+          "en": "Look for fewer wet nappies, a dry mouth and unusual sleepiness."
+        },
+        {
+          "index": 1,
+          "ru": "При признаках обезвоживания у младенца срочно свяжись с медицинским специалистом. Продолжай обычное грудное вскармливание или смесь, если ребёнок может пить.",
+          "en": "Seek urgent medical advice for signs of dehydration in an infant. Continue usual breast or formula feeds if the child can drink."
+        },
+        {
+          "index": 2,
+          "ru": "При нарушении сознания, выраженной слабости или необычном дыхании вызови экстренную помощь.",
+          "en": "Call emergency services for altered responsiveness, severe weakness or abnormal breathing."
+        }
+      ]
+    },
+    {
+      "id": "guide:shingles-eye",
+      "kind": "guide",
+      "ru": "Опоясывающий лишай около глаза",
+      "en": "Shingles near the eye",
+      "critical": false,
+      "steps": [
+        {
+          "index": 0,
+          "ru": "При болезненной пузырьковой сыпи около глаза или на носу срочно обратись за медицинской помощью.",
+          "en": "Seek urgent medical assessment for a painful blistering rash around the eye or on the nose."
+        },
+        {
+          "index": 1,
+          "ru": "Сообщи о красноте глаза, боли, ухудшении зрения и снижении иммунитета.",
+          "en": "Report eye redness, pain, changes in vision and immune suppression."
+        },
+        {
+          "index": 2,
+          "ru": "При внезапной потере зрения обращайся за экстренной помощью.",
+          "en": "Seek emergency help for sudden vision loss."
+        }
+      ]
+    },
+    {
+      "id": "guide:uveitis-warning",
+      "kind": "guide",
+      "ru": "Болезненный красный глаз и светобоязнь",
+      "en": "Painful red eye with light sensitivity",
+      "critical": false,
+      "steps": [
+        {
+          "index": 0,
+          "ru": "При боли в глазу, непереносимости света или затуманенном зрении срочно обратись к врачу или офтальмологу.",
+          "en": "Seek urgent medical or eye specialist assessment for eye pain, light sensitivity or blurred vision."
+        },
+        {
+          "index": 1,
+          "ru": "Сообщи, когда начались симптомы и были ли травмы, операции или инфекции.",
+          "en": "Report when symptoms began and any injuries, surgery or infections."
+        },
+        {
+          "index": 2,
+          "ru": "При внезапной потере зрения обращайся за экстренной помощью.",
+          "en": "Seek emergency help for sudden vision loss."
+        }
+      ]
+    },
+    {
+      "id": "guide:hand-foot-mouth",
+      "kind": "guide",
+      "ru": "Ребёнок: язвочки во рту и сыпь на кистях и стопах",
+      "en": "Child with mouth sores and hand or foot rash",
+      "critical": false,
+      "steps": [
+        {
+          "index": 0,
+          "ru": "Если ребёнок может пить, предлагай прохладное питьё небольшими порциями.",
+          "en": "Offer small amounts of cool drinks if the child can swallow."
+        },
+        {
+          "index": 1,
+          "ru": "Следи за мочеиспусканием и общим состоянием. При уменьшении мочи или невозможности пить нужна срочная консультация.",
+          "en": "Monitor urination and general condition. Seek urgent advice for reduced urination or inability to drink."
+        },
+        {
+          "index": 2,
+          "ru": "При выраженном ухудшении состояния или затруднении дыхания вызывай экстренную помощь.",
+          "en": "Call emergency services for severe deterioration or difficulty breathing."
+        }
+      ]
+    },
+    {
+      "id": "guide:chickenpox-risk",
+      "kind": "guide",
+      "ru": "Ветрянка у новорождённого или при беременности",
+      "en": "Chickenpox exposure in newborn or pregnancy",
+      "critical": false,
+      "steps": [
+        {
+          "index": 0,
+          "ru": "Если новорождённый заболел ветрянкой или контактировал с заболевшим, срочно свяжись с врачом.",
+          "en": "Contact a clinician urgently if a newborn has chickenpox or has been exposed."
+        },
+        {
+          "index": 1,
+          "ru": "Беременной или человеку с ослабленным иммунитетом при контакте с ветрянкой также нужна срочная консультация.",
+          "en": "Urgent advice is also needed after exposure during pregnancy or with a weakened immune system."
+        },
+        {
+          "index": 2,
+          "ru": "Перед посещением клиники предупреди о возможной заразной инфекции.",
+          "en": "Notify the clinic of possible contagious infection before visiting."
+        }
+      ]
+    },
+    {
+      "id": "guide:cellulitis",
+      "kind": "guide",
+      "ru": "Распространяющееся болезненное покраснение кожи",
+      "en": "Spreading painful skin redness",
+      "critical": false,
+      "steps": [
+        {
+          "index": 0,
+          "ru": "При болезненном горячем отёке или увеличивающемся покраснении кожи срочно обратись к врачу.",
+          "en": "Seek urgent medical assessment for painful hot swelling or spreading skin redness."
+        },
+        {
+          "index": 1,
+          "ru": "Сообщи о температуре, диабете, ране или ослабленном иммунитете.",
+          "en": "Report fever, diabetes, a wound or immune suppression."
+        },
+        {
+          "index": 2,
+          "ru": "При спутанности сознания, затруднении дыхания или резком ухудшении вызывай экстренную помощь.",
+          "en": "Call emergency services for confusion, breathing difficulty or rapid deterioration."
+        }
+      ]
+    },
+    {
+      "id": "guide:breast-abscess",
+      "kind": "guide",
+      "ru": "Болезненное уплотнение груди с температурой",
+      "en": "Painful breast lump with fever",
+      "critical": false,
+      "steps": [
+        {
+          "index": 0,
+          "ru": "При болезненном горячем уплотнении груди, особенно с температурой, срочно обратись к врачу.",
+          "en": "Seek urgent medical assessment for a painful hot breast lump, particularly with fever."
+        },
+        {
+          "index": 1,
+          "ru": "Сообщи о кормлении грудью, предшествующем мастите и времени появления симптомов.",
+          "en": "Report breastfeeding, previous mastitis and the timing of symptoms."
+        },
+        {
+          "index": 2,
+          "ru": "Если состояние резко ухудшается или появляется спутанность сознания, вызывай экстренную помощь.",
+          "en": "Call emergency services if there is rapid deterioration or confusion."
+        }
+      ]
+    },
+    {
+      "id": "guide:pneumonia-warning",
+      "kind": "guide",
+      "ru": "Кашель с одышкой: тревожные признаки",
+      "en": "Cough with breathlessness warning signs",
+      "critical": false,
+      "steps": [
+        {
+          "index": 0,
+          "ru": "При кашле с одышкой или болью при дыхании обратись за срочной медицинской оценкой.",
+          "en": "Seek urgent medical assessment for cough with breathlessness or pain on breathing."
+        },
+        {
+          "index": 1,
+          "ru": "При тяжёлом нарушении дыхания, синюшности или внезапной спутанности сознания немедленно вызывай экстренную помощь.",
+          "en": "Call emergency services immediately for severe breathing difficulty, blue coloration or sudden confusion."
+        },
+        {
+          "index": 2,
+          "ru": "Сообщи о длительности симптомов, хронических болезнях и принимаемых лекарствах.",
+          "en": "Report symptom duration, chronic conditions and current medicines."
+        }
+      ]
+    },
+    {
+      "id": "guide:ear-infection-warning",
+      "kind": "guide",
+      "ru": "Боль в ухе с тревожными признаками",
+      "en": "Earache with warning signs",
+      "critical": false,
+      "steps": [
+        {
+          "index": 0,
+          "ru": "При боли в ухе с выделениями, изменением слуха, высокой температурой или выраженным недомоганием обратись за срочной консультацией.",
+          "en": "Seek urgent advice for ear pain with discharge, hearing changes, high fever or marked illness."
+        },
+        {
+          "index": 1,
+          "ru": "При припухлости за ухом или быстром ухудшении нужна срочная медицинская оценка.",
+          "en": "Seek urgent assessment for swelling behind the ear or rapid deterioration."
+        },
+        {
+          "index": 2,
+          "ru": "Береги ухо от воды до консультации.",
+          "en": "Keep water out of the ear until assessed."
+        }
+      ]
+    },
+    {
+      "id": "medicine:acarbose",
+      "kind": "medicine",
+      "ru": "Акарбоза",
+      "en": "Acarbose"
+    },
+    {
+      "id": "medicine:glucagon",
+      "kind": "medicine",
+      "ru": "Глюкагон",
+      "en": "Glucagon"
+    },
+    {
+      "id": "medicine:pregabalin",
+      "kind": "medicine",
+      "ru": "Прегабалин",
+      "en": "Pregabalin"
+    },
+    {
+      "id": "medicine:venlafaxine",
+      "kind": "medicine",
+      "ru": "Венлафаксин",
+      "en": "Venlafaxine"
+    },
+    {
+      "id": "medicine:trazodone",
+      "kind": "medicine",
+      "ru": "Тразодон",
+      "en": "Trazodone"
+    },
+    {
+      "id": "medicine:vortioxetine",
+      "kind": "medicine",
+      "ru": "Вортиоксетин",
+      "en": "Vortioxetine"
+    },
+    {
+      "id": "medicine:moclobemide",
+      "kind": "medicine",
+      "ru": "Моклобемид",
+      "en": "Moclobemide"
+    },
+    {
+      "id": "medicine:lacosamide",
+      "kind": "medicine",
+      "ru": "Лакосамид",
+      "en": "Lacosamide"
+    },
+    {
+      "id": "medicine:brivaracetam",
+      "kind": "medicine",
+      "ru": "Бриварацетам",
+      "en": "Brivaracetam"
+    },
+    {
+      "id": "medicine:zonisamide",
+      "kind": "medicine",
+      "ru": "Зонисамид",
+      "en": "Zonisamide"
+    },
+    {
+      "id": "medicine:pramipexole",
+      "kind": "medicine",
+      "ru": "Прамипексол",
+      "en": "Pramipexole"
+    },
+    {
+      "id": "medicine:rasagiline",
+      "kind": "medicine",
+      "ru": "Разагилин",
+      "en": "Rasagiline"
+    },
+    {
+      "id": "medicine:entacapone",
+      "kind": "medicine",
+      "ru": "Энтакапон",
+      "en": "Entacapone"
+    },
+    {
+      "id": "medicine:rivastigmine",
+      "kind": "medicine",
+      "ru": "Ривастигмин",
+      "en": "Rivastigmine"
+    },
+    {
+      "id": "medicine:galantamine",
+      "kind": "medicine",
+      "ru": "Галантамин",
+      "en": "Galantamine"
+    },
+    {
+      "id": "medicine:sildenafil",
+      "kind": "medicine",
+      "ru": "Силденафил",
+      "en": "Sildenafil"
+    },
+    {
+      "id": "medicine:tadalafil",
+      "kind": "medicine",
+      "ru": "Тадалафил",
+      "en": "Tadalafil"
+    },
+    {
+      "id": "medicine:sodium-alginate",
+      "kind": "medicine",
+      "ru": "Альгинат натрия",
+      "en": "Sodium alginate"
+    },
+    {
+      "id": "medicine:miconazole",
+      "kind": "medicine",
+      "ru": "Миконазол",
+      "en": "Miconazole"
+    },
+    {
+      "id": "medicine:itraconazole",
+      "kind": "medicine",
+      "ru": "Итраконазол",
+      "en": "Itraconazole"
+    },
+    {
+      "id": "medicine:valaciclovir",
+      "kind": "medicine",
+      "ru": "Валацикловир",
+      "en": "Valaciclovir"
+    },
+    {
+      "id": "medicine:oseltamivir",
+      "kind": "medicine",
+      "ru": "Осельтамивир",
+      "en": "Oseltamivir"
+    },
+    {
+      "id": "medicine:rifampicin",
+      "kind": "medicine",
+      "ru": "Рифампицин",
+      "en": "Rifampicin"
+    },
+    {
+      "id": "medicine:isoniazid",
+      "kind": "medicine",
+      "ru": "Изониазид",
+      "en": "Isoniazid"
+    },
+    {
+      "id": "medicine:co-trimoxazole",
+      "kind": "medicine",
+      "ru": "Ко-тримоксазол",
+      "en": "Co-trimoxazole"
+    },
+    {
+      "id": "medicine:salmeterol",
+      "kind": "medicine",
+      "ru": "Салметерол",
+      "en": "Salmeterol"
+    },
+    {
+      "id": "medicine:formoterol",
+      "kind": "medicine",
+      "ru": "Формотерол",
+      "en": "Formoterol"
+    },
+    {
+      "id": "medicine:ipratropium",
+      "kind": "medicine",
+      "ru": "Ипратропия бромид",
+      "en": "Ipratropium bromide"
+    },
+    {
+      "id": "medicine:umeclidinium",
+      "kind": "medicine",
+      "ru": "Умеклидиний",
+      "en": "Umeclidinium"
+    },
+    {
+      "id": "medicine:brimonidine",
+      "kind": "medicine",
+      "ru": "Бримонидин",
+      "en": "Brimonidine"
+    },
+    {
+      "id": "medicine:dorzolamide",
+      "kind": "medicine",
+      "ru": "Дорзоламид",
+      "en": "Dorzolamide"
+    },
+    {
+      "id": "medicine:travoprost",
+      "kind": "medicine",
+      "ru": "Травопрост",
+      "en": "Travoprost"
+    },
+    {
+      "id": "medicine:bisoprolol-hydrochlorothiazide",
+      "kind": "medicine",
+      "ru": "Бисопролол + гидрохлоротиазид",
+      "en": "Bisoprolol and hydrochlorothiazide"
+    },
+    {
+      "id": "medicine:hydrochlorothiazide",
+      "kind": "medicine",
+      "ru": "Гидрохлоротиазид",
+      "en": "Hydrochlorothiazide"
+    },
+    {
+      "id": "medicine:dabigatran",
+      "kind": "medicine",
+      "ru": "Дабигатран",
+      "en": "Dabigatran"
+    },
+    {
+      "id": "medicine:enoxaparin",
+      "kind": "medicine",
+      "ru": "Эноксапарин",
+      "en": "Enoxaparin"
+    },
+    {
+      "id": "medicine:fondaparinux",
+      "kind": "medicine",
+      "ru": "Фондапаринукс",
+      "en": "Fondaparinux"
+    },
+    {
+      "id": "medicine:ticagrelor",
+      "kind": "medicine",
+      "ru": "Тикагрелор",
+      "en": "Ticagrelor"
+    },
+    {
+      "id": "medicine:sacubitril-valsartan",
+      "kind": "medicine",
+      "ru": "Сакубитрил + валсартан",
+      "en": "Sacubitril and valsartan"
+    },
+    {
+      "id": "medicine:febuxostat",
+      "kind": "medicine",
+      "ru": "Фебуксостат",
+      "en": "Febuxostat"
+    }
+  ]
+}
