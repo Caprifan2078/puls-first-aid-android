@@ -1,0 +1,3575 @@
+{
+  "schema": 1,
+  "targets": [
+    {
+      "id": "guide:heart:step:1",
+      "kind": "guide",
+      "ru": "Подозрение на инфаркт · шаг 2",
+      "en": "Possible heart attack · step 2",
+      "critical": true,
+      "step_binding": {
+        "topic": "heart",
+        "index": 1,
+        "ru": "Посади человека удобно, обеспечь покой, не позволяй идти пешком или самому ехать за рулём.",
+        "en": "Let the person rest comfortably; do not allow them to drive themselves."
+      },
+      "query_hint": "Possible heart attack let rest comfortably allow drive themselves"
+    },
+    {
+      "id": "guide:anaphylaxis:step:2",
+      "kind": "guide",
+      "ru": "Анафилаксия · шаг 3",
+      "en": "Anaphylaxis · step 3",
+      "critical": true,
+      "step_binding": {
+        "topic": "anaphylaxis",
+        "index": 2,
+        "ru": "Уложи человека; при выраженной одышке разреши положение с вытянутыми ногами, которое облегчает дыхание.",
+        "en": "Lay them flat; if breathing is difficult, allow a comfortable position with legs outstretched."
+      },
+      "query_hint": "Anaphylaxis lay flat breathing difficult allow comfortable"
+    },
+    {
+      "id": "guide:burn:step:1",
+      "kind": "guide",
+      "ru": "Ожог · шаг 2",
+      "en": "Burn · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "burn",
+        "index": 1,
+        "ru": "Сними украшения и тесную одежду рядом с ожогом, если она не прилипла.",
+        "en": "Remove jewellery and nearby tight clothing if not stuck to the skin."
+      },
+      "query_hint": "Burn remove jewellery nearby tight clothing stuck"
+    },
+    {
+      "id": "guide:wound:step:3",
+      "kind": "guide",
+      "ru": "Царапина и небольшой порез · шаг 4",
+      "en": "Minor scratch or cut · step 4",
+      "critical": false,
+      "step_binding": {
+        "topic": "wound",
+        "index": 3,
+        "ru": "Проверь необходимость прививки от столбняка и обращайся за помощью при глубокой, укушенной или сильно загрязнённой ране.",
+        "en": "Check tetanus immunisation and seek care for deep, bite-related or heavily contaminated wounds."
+      },
+      "query_hint": "Minor scratch or cut check tetanus immunisation seek care deep"
+    },
+    {
+      "id": "guide:fever:step:0",
+      "kind": "guide",
+      "ru": "Жар и температура · шаг 1",
+      "en": "Fever · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "fever",
+        "index": 0,
+        "ru": "Оцени самочувствие, дыхание и уровень сознания, а не только температуру.",
+        "en": "Assess wellbeing, breathing and alertness, not just the number on a thermometer."
+      },
+      "query_hint": "Fever assess wellbeing breathing alertness just number"
+    },
+    {
+      "id": "guide:fever:step:1",
+      "kind": "guide",
+      "ru": "Жар и температура · шаг 2",
+      "en": "Fever · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "fever",
+        "index": 1,
+        "ru": "Пей воду, отдыхай и одевайся комфортно.",
+        "en": "Drink fluids, rest and wear comfortable clothing."
+      },
+      "query_hint": "Fever drink fluids rest wear comfortable clothing"
+    },
+    {
+      "id": "guide:fever:step:2",
+      "kind": "guide",
+      "ru": "Жар и температура · шаг 3",
+      "en": "Fever · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "fever",
+        "index": 2,
+        "ru": "Если жар сопровождается спутанностью сознания, затруднением дыхания, сыпью, ригидностью шеи или сильным обезвоживанием, нужна срочная помощь.",
+        "en": "Seek urgent help for fever with confusion, breathing difficulty, concerning rash, neck stiffness or severe dehydration."
+      },
+      "query_hint": "Fever seek urgent help fever confusion breathing"
+    },
+    {
+      "id": "guide:fever:step:3",
+      "kind": "guide",
+      "ru": "Жар и температура · шаг 4",
+      "en": "Fever · step 4",
+      "critical": false,
+      "step_binding": {
+        "topic": "fever",
+        "index": 3,
+        "ru": "Младенцам с температурой и людям с серьёзными заболеваниями может требоваться отдельная оценка.",
+        "en": "Infants with fever and people with serious illness may need prompt individual assessment."
+      },
+      "query_hint": "Fever infants fever people serious illness may"
+    },
+    {
+      "id": "guide:headache:step:0",
+      "kind": "guide",
+      "ru": "Болит голова · шаг 1",
+      "en": "Headache · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "headache",
+        "index": 0,
+        "ru": "При обычной умеренной боли попробуй отдохнуть, пить воду и уменьшить яркий свет.",
+        "en": "For mild headache, try rest, hydration and a quieter environment."
+      },
+      "query_hint": "Headache mild headache try rest hydration quieter"
+    },
+    {
+      "id": "guide:headache:step:1",
+      "kind": "guide",
+      "ru": "Болит голова · шаг 2",
+      "en": "Headache · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "headache",
+        "index": 1,
+        "ru": "Проверь, нет ли высокой температуры, рвоты, проблем со зрением или недавней травмы.",
+        "en": "Check for fever, vomiting, vision changes or recent injury."
+      },
+      "query_hint": "Headache check fever vomiting vision changes recent"
+    },
+    {
+      "id": "guide:headache:step:2",
+      "kind": "guide",
+      "ru": "Болит голова · шаг 3",
+      "en": "Headache · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "headache",
+        "index": 2,
+        "ru": "Внезапная сильнейшая головная боль, нарушение речи, слабость одной стороны тела или потеря сознания требуют экстренной помощи.",
+        "en": "Sudden worst headache, speech problems, one-sided weakness or unconsciousness need emergency care."
+      },
+      "query_hint": "Headache sudden worst headache speech problems one-sided"
+    },
+    {
+      "id": "guide:asthma:step:0",
+      "kind": "guide",
+      "ru": "Тяжёлый приступ астмы · шаг 1",
+      "en": "Severe asthma attack · step 1",
+      "critical": true,
+      "step_binding": {
+        "topic": "asthma",
+        "index": 0,
+        "ru": "Помоги человеку сесть удобно, сохраняй спокойствие.",
+        "en": "Help the person sit upright and stay calm."
+      },
+      "query_hint": "Severe asthma attack help sit upright stay calm"
+    },
+    {
+      "id": "guide:heatstroke:step:1",
+      "kind": "guide",
+      "ru": "Тепловой удар · шаг 2",
+      "en": "Heatstroke · step 2",
+      "critical": true,
+      "step_binding": {
+        "topic": "heatstroke",
+        "index": 1,
+        "ru": "Перенеси в прохладное место, сними лишнюю одежду.",
+        "en": "Move to a cool place and remove excess clothing."
+      },
+      "query_hint": "Heatstroke move cool place remove excess clothing"
+    },
+    {
+      "id": "guide:lowbloodsugar:step:0",
+      "kind": "guide",
+      "ru": "Низкий сахар · шаг 1",
+      "en": "Low blood sugar · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "lowbloodsugar",
+        "index": 0,
+        "ru": "Если человек с диабетом в сознании и может безопасно глотать, дай быстродействующий сахар по его плану лечения.",
+        "en": "If awake and able to swallow safely, offer fast-acting sugar according to their diabetes plan."
+      },
+      "query_hint": "Low blood sugar awake able swallow safely offer fast-acting"
+    },
+    {
+      "id": "guide:lowbloodsugar:step:1",
+      "kind": "guide",
+      "ru": "Низкий сахар · шаг 2",
+      "en": "Low blood sugar · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "lowbloodsugar",
+        "index": 1,
+        "ru": "Повтори измерение сахара, если есть глюкометр, и следуй индивидуальным рекомендациям.",
+        "en": "Recheck glucose if a meter is available and follow individual instructions."
+      },
+      "query_hint": "Low blood sugar recheck glucose meter available follow individual"
+    },
+    {
+      "id": "guide:lowbloodsugar:step:2",
+      "kind": "guide",
+      "ru": "Низкий сахар · шаг 3",
+      "en": "Low blood sugar · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "lowbloodsugar",
+        "index": 2,
+        "ru": "Если человек сонлив, без сознания, не может глотать или есть судороги, вызови экстренную помощь; следи за дыханием.",
+        "en": "If drowsy, unconscious, unable to swallow or seizing, call emergency services and monitor breathing."
+      },
+      "query_hint": "Low blood sugar drowsy unconscious unable swallow seizing call"
+    },
+    {
+      "id": "guide:child:step:0",
+      "kind": "guide",
+      "ru": "Младенец: тревожные признаки · шаг 1",
+      "en": "Infant danger signs · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "child",
+        "index": 0,
+        "ru": "При отсутствии нормального дыхания или сознания немедленно вызови экстренную помощь и следуй указаниям диспетчера по СЛР младенца.",
+        "en": "Call emergency services immediately if the infant is unresponsive or not breathing normally; follow dispatcher infant CPR guidance."
+      },
+      "query_hint": "Infant danger signs call emergency services infant unresponsive breathing"
+    },
+    {
+      "id": "guide:child:step:1",
+      "kind": "guide",
+      "ru": "Младенец: тревожные признаки · шаг 2",
+      "en": "Infant danger signs · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "child",
+        "index": 1,
+        "ru": "При лихорадке у младенца младше трёх месяцев, вялости, плохом кормлении или выраженной одышке нужна срочная медицинская оценка.",
+        "en": "For fever in infants under 3 months, lethargy, poor feeding or marked breathing difficulty, seek urgent medical assessment."
+      },
+      "query_hint": "Infant danger signs fever infants under months lethargy poor"
+    },
+    {
+      "id": "guide:child:step:2",
+      "kind": "guide",
+      "ru": "Младенец: тревожные признаки · шаг 3",
+      "en": "Infant danger signs · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "child",
+        "index": 2,
+        "ru": "Не используй взрослые приёмы при удушье и реанимации младенца.",
+        "en": "Infant choking and CPR techniques differ from adult techniques."
+      },
+      "query_hint": "Infant danger signs infant choking cpr techniques differ adult"
+    },
+    {
+      "id": "guide:nosebleed:step:0",
+      "kind": "guide",
+      "ru": "Носовое кровотечение · шаг 1",
+      "en": "Nosebleed · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "nosebleed",
+        "index": 0,
+        "ru": "Сядь и немного наклони голову вперёд.",
+        "en": "Sit upright and lean slightly forward."
+      },
+      "query_hint": "Nosebleed sit upright lean slightly forward"
+    },
+    {
+      "id": "guide:sprain:step:0",
+      "kind": "guide",
+      "ru": "Растяжение связок · шаг 1",
+      "en": "Sprain · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "sprain",
+        "index": 0,
+        "ru": "Прекрати нагрузку и защити сустав от повторной травмы.",
+        "en": "Stop activity and protect the joint."
+      },
+      "query_hint": "Sprain stop activity protect joint"
+    },
+    {
+      "id": "guide:sprain:step:1",
+      "kind": "guide",
+      "ru": "Растяжение связок · шаг 2",
+      "en": "Sprain · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "sprain",
+        "index": 1,
+        "ru": "При необходимости приложи холод через ткань на короткие промежутки и обеспечь покой.",
+        "en": "Use a wrapped cold pack briefly for comfort and rest."
+      },
+      "query_hint": "Sprain use wrapped cold pack briefly comfort"
+    },
+    {
+      "id": "guide:sprain:step:2",
+      "kind": "guide",
+      "ru": "Растяжение связок · шаг 3",
+      "en": "Sprain · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "sprain",
+        "index": 2,
+        "ru": "Если невозможно опереться на конечность, есть деформация или сильная боль — обратись к врачу.",
+        "en": "Get medical assessment for inability to bear weight, deformity or severe pain."
+      },
+      "query_hint": "Sprain get medical assessment inability bear weight"
+    },
+    {
+      "id": "guide:fracture:step:0",
+      "kind": "guide",
+      "ru": "Перелом или вывих · шаг 1",
+      "en": "Fracture or dislocation · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "fracture",
+        "index": 0,
+        "ru": "Останови движение повреждённой конечности.",
+        "en": "Keep the injured limb still."
+      },
+      "query_hint": "Fracture or dislocation keep injured limb still"
+    },
+    {
+      "id": "guide:faint:step:0",
+      "kind": "guide",
+      "ru": "Обморок · шаг 1",
+      "en": "Fainting · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "faint",
+        "index": 0,
+        "ru": "Оцени реакцию и нормальное дыхание.",
+        "en": "Check responsiveness and normal breathing."
+      },
+      "query_hint": "Fainting check responsiveness normal breathing"
+    },
+    {
+      "id": "guide:faint:step:1",
+      "kind": "guide",
+      "ru": "Обморок · шаг 2",
+      "en": "Fainting · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "faint",
+        "index": 1,
+        "ru": "Если человек дышит нормально и приходит в себя, уложи на спину и обеспечь доступ воздуха.",
+        "en": "If breathing normally and recovering, lay the person down and monitor them."
+      },
+      "query_hint": "Fainting breathing normally recovering lay down monitor"
+    },
+    {
+      "id": "guide:faint:step:2",
+      "kind": "guide",
+      "ru": "Обморок · шаг 3",
+      "en": "Fainting · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "faint",
+        "index": 2,
+        "ru": "Если нет нормального дыхания — вызывай помощь и начинай СЛР. После необычного обморока нужна медицинская оценка.",
+        "en": "If not breathing normally, call emergency services and start CPR. Arrange medical assessment for unexplained fainting."
+      },
+      "query_hint": "Fainting breathing normally call emergency services start"
+    },
+    {
+      "id": "guide:headinjury:step:0",
+      "kind": "guide",
+      "ru": "Травма головы · шаг 1",
+      "en": "Head injury · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "headinjury",
+        "index": 0,
+        "ru": "После удара оцени сознание, дыхание и выраженность симптомов.",
+        "en": "Check consciousness, breathing and symptoms after injury."
+      },
+      "query_hint": "Head injury check consciousness breathing symptoms after injury"
+    },
+    {
+      "id": "guide:headinjury:step:1",
+      "kind": "guide",
+      "ru": "Травма головы · шаг 2",
+      "en": "Head injury · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "headinjury",
+        "index": 1,
+        "ru": "При потере сознания, повторной рвоте, судорогах, нарастающей боли или спутанности немедленно обращайся за экстренной помощью.",
+        "en": "Call emergency services for loss of consciousness, repeated vomiting, seizures, worsening pain or confusion."
+      },
+      "query_hint": "Head injury call emergency services loss consciousness repeated"
+    },
+    {
+      "id": "guide:headinjury:step:2",
+      "kind": "guide",
+      "ru": "Травма головы · шаг 3",
+      "en": "Head injury · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "headinjury",
+        "index": 2,
+        "ru": "Пока помощь в пути, избегай лишних движений головы и шеи.",
+        "en": "Keep head and neck movement minimal while waiting."
+      },
+      "query_hint": "Head injury keep head neck movement minimal while"
+    },
+    {
+      "id": "guide:animalbite:step:0",
+      "kind": "guide",
+      "ru": "Укус животного · шаг 1",
+      "en": "Animal bite · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "animalbite",
+        "index": 0,
+        "ru": "Промой место укуса большим количеством проточной воды с мылом.",
+        "en": "Wash the bite thoroughly under running water with soap."
+      },
+      "query_hint": "Animal bite wash bite thoroughly under running water"
+    },
+    {
+      "id": "guide:animalbite:step:1",
+      "kind": "guide",
+      "ru": "Укус животного · шаг 2",
+      "en": "Animal bite · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "animalbite",
+        "index": 1,
+        "ru": "Наложи чистую повязку, останови кровотечение прямым давлением.",
+        "en": "Apply a clean dressing and pressure for bleeding."
+      },
+      "query_hint": "Animal bite apply clean dressing pressure bleeding"
+    },
+    {
+      "id": "guide:animalbite:step:2",
+      "kind": "guide",
+      "ru": "Укус животного · шаг 3",
+      "en": "Animal bite · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "animalbite",
+        "index": 2,
+        "ru": "Обратись за медицинской помощью для оценки риска бешенства, инфекции и столбняка.",
+        "en": "Seek medical advice about rabies, infection and tetanus risk."
+      },
+      "query_hint": "Animal bite seek medical advice about rabies infection"
+    },
+    {
+      "id": "guide:insect:step:0",
+      "kind": "guide",
+      "ru": "Укус или ужаление насекомого · шаг 1",
+      "en": "Insect sting or bite · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "insect",
+        "index": 0,
+        "ru": "Если жало видно в коже, осторожно удали его, не задерживая помощь.",
+        "en": "Remove a visible stinger promptly and gently."
+      },
+      "query_hint": "Insect sting or bite remove visible stinger promptly gently"
+    },
+    {
+      "id": "guide:insect:step:1",
+      "kind": "guide",
+      "ru": "Укус или ужаление насекомого · шаг 2",
+      "en": "Insect sting or bite · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "insect",
+        "index": 1,
+        "ru": "Промой кожу, приложи прохладный компресс через ткань.",
+        "en": "Wash the skin and use a wrapped cool compress."
+      },
+      "query_hint": "Insect sting or bite wash skin use wrapped cool compress"
+    },
+    {
+      "id": "guide:insect:step:2",
+      "kind": "guide",
+      "ru": "Укус или ужаление насекомого · шаг 3",
+      "en": "Insect sting or bite · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "insect",
+        "index": 2,
+        "ru": "При отёке языка или горла, одышке или слабости вызывай экстренную помощь: возможна анафилаксия.",
+        "en": "Call emergency services for throat swelling, breathing difficulty or collapse: possible anaphylaxis."
+      },
+      "query_hint": "Insect sting or bite call emergency services throat swelling breathing"
+    },
+    {
+      "id": "guide:tick:step:0",
+      "kind": "guide",
+      "ru": "Присосался клещ · шаг 1",
+      "en": "Tick bite · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "tick",
+        "index": 0,
+        "ru": "Аккуратно захвати клеща чистым пинцетом как можно ближе к коже.",
+        "en": "Use clean fine-tipped tweezers close to the skin."
+      },
+      "query_hint": "Tick bite use clean fine-tipped tweezers close skin"
+    },
+    {
+      "id": "guide:tick:step:1",
+      "kind": "guide",
+      "ru": "Присосался клещ · шаг 2",
+      "en": "Tick bite · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "tick",
+        "index": 1,
+        "ru": "Потяни ровно, без рывков. Очисти место укуса.",
+        "en": "Pull steadily without twisting. Clean the bite area."
+      },
+      "query_hint": "Tick bite pull steadily without twisting clean bite"
+    },
+    {
+      "id": "guide:tick:step:2",
+      "kind": "guide",
+      "ru": "Присосался клещ · шаг 3",
+      "en": "Tick bite · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "tick",
+        "index": 2,
+        "ru": "Если появляется расширяющееся покраснение, лихорадка или другие симптомы — обратись к врачу.",
+        "en": "Seek medical attention for spreading rash, fever or other symptoms."
+      },
+      "query_hint": "Tick bite seek medical attention spreading rash fever"
+    },
+    {
+      "id": "guide:dehydration:step:1",
+      "kind": "guide",
+      "ru": "Обезвоживание · шаг 2",
+      "en": "Dehydration · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "dehydration",
+        "index": 1,
+        "ru": "При сильной жажде и слабости ограничь нагрузку, перейди в прохладное место.",
+        "en": "Rest and move to a cooler place."
+      },
+      "query_hint": "Dehydration rest move cooler place"
+    },
+    {
+      "id": "guide:vomit:step:0",
+      "kind": "guide",
+      "ru": "Рвота · шаг 1",
+      "en": "Vomiting · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "vomit",
+        "index": 0,
+        "ru": "Отдыхай и пробуй частые маленькие глотки воды или раствора для регидратации.",
+        "en": "Rest and take frequent small sips of water or oral rehydration solution."
+      },
+      "query_hint": "Vomiting rest take frequent small sips water"
+    },
+    {
+      "id": "guide:vomit:step:1",
+      "kind": "guide",
+      "ru": "Рвота · шаг 2",
+      "en": "Vomiting · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "vomit",
+        "index": 1,
+        "ru": "Следи за признаками обезвоживания.",
+        "en": "Watch for dehydration."
+      },
+      "query_hint": "Vomiting watch dehydration"
+    },
+    {
+      "id": "guide:vomit:step:2",
+      "kind": "guide",
+      "ru": "Рвота · шаг 3",
+      "en": "Vomiting · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "vomit",
+        "index": 2,
+        "ru": "Кровь в рвоте, сильная боль, спутанность, симптомы у младенца — повод для срочной оценки.",
+        "en": "Seek urgent care for blood in vomit, severe pain, confusion or concerning infant symptoms."
+      },
+      "query_hint": "Vomiting seek urgent care blood vomit severe"
+    },
+    {
+      "id": "guide:diarrhea:step:0",
+      "kind": "guide",
+      "ru": "Диарея · шаг 1",
+      "en": "Diarrhoea · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "diarrhea",
+        "index": 0,
+        "ru": "Пей жидкости и при необходимости раствор для регидратации.",
+        "en": "Drink fluids and use oral rehydration solution if needed."
+      },
+      "query_hint": "Diarrhoea drink fluids use oral rehydration solution"
+    },
+    {
+      "id": "guide:diarrhea:step:1",
+      "kind": "guide",
+      "ru": "Диарея · шаг 2",
+      "en": "Diarrhoea · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "diarrhea",
+        "index": 1,
+        "ru": "Мой руки и избегай приготовления еды другим при кишечной инфекции.",
+        "en": "Wash hands and avoid preparing food for others during a stomach infection."
+      },
+      "query_hint": "Diarrhoea wash hands avoid preparing food others"
+    },
+    {
+      "id": "guide:diarrhea:step:2",
+      "kind": "guide",
+      "ru": "Диарея · шаг 3",
+      "en": "Diarrhoea · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "diarrhea",
+        "index": 2,
+        "ru": "Если есть кровь, сильное обезвоживание, выраженная боль или длительные симптомы — обратись к врачу.",
+        "en": "Seek medical advice for blood, severe dehydration, severe pain or persistent symptoms."
+      },
+      "query_hint": "Diarrhoea seek medical advice blood severe dehydration"
+    },
+    {
+      "id": "guide:abdominal:step:0",
+      "kind": "guide",
+      "ru": "Боль в животе · шаг 1",
+      "en": "Abdominal pain · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "abdominal",
+        "index": 0,
+        "ru": "Оцени силу, место и длительность боли.",
+        "en": "Note the location, intensity and duration."
+      },
+      "query_hint": "Abdominal pain note location intensity duration"
+    },
+    {
+      "id": "guide:abdominal:step:1",
+      "kind": "guide",
+      "ru": "Боль в животе · шаг 2",
+      "en": "Abdominal pain · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "abdominal",
+        "index": 1,
+        "ru": "Отдыхай, пей понемногу, если нет рвоты и можешь глотать.",
+        "en": "Rest and sip fluid if you can swallow without vomiting."
+      },
+      "query_hint": "Abdominal pain rest sip fluid swallow without vomiting"
+    },
+    {
+      "id": "guide:abdominal:step:2",
+      "kind": "guide",
+      "ru": "Боль в животе · шаг 3",
+      "en": "Abdominal pain · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "abdominal",
+        "index": 2,
+        "ru": "Внезапная сильная боль, напряжение живота, обморок, кровь или беременность — повод для неотложной помощи.",
+        "en": "Sudden severe pain, rigid abdomen, fainting, blood or pregnancy need urgent evaluation."
+      },
+      "query_hint": "Abdominal pain sudden severe pain rigid abdomen fainting"
+    },
+    {
+      "id": "guide:eye:step:0",
+      "kind": "guide",
+      "ru": "Инородное тело в глазу · шаг 1",
+      "en": "Something in the eye · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "eye",
+        "index": 0,
+        "ru": "Не три глаз.",
+        "en": "Do not rub the eye."
+      },
+      "query_hint": "Something in the eye rub eye"
+    },
+    {
+      "id": "guide:eye:step:1",
+      "kind": "guide",
+      "ru": "Инородное тело в глазу · шаг 2",
+      "en": "Something in the eye · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "eye",
+        "index": 1,
+        "ru": "При мелкой пыли осторожно промой глаз чистой водой или физраствором.",
+        "en": "For loose dust, gently rinse with clean water or sterile saline."
+      },
+      "query_hint": "Something in the eye loose dust gently rinse clean water"
+    },
+    {
+      "id": "guide:eye:step:2",
+      "kind": "guide",
+      "ru": "Инородное тело в глазу · шаг 3",
+      "en": "Something in the eye · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "eye",
+        "index": 2,
+        "ru": "При застрявшем предмете, травме, химическом воздействии или ухудшении зрения срочно обратись за помощью.",
+        "en": "Seek urgent help for an embedded object, injury, chemicals or vision changes."
+      },
+      "query_hint": "Something in the eye seek urgent help embedded object injury"
+    },
+    {
+      "id": "guide:chemical:step:1",
+      "kind": "guide",
+      "ru": "Химический ожог · шаг 2",
+      "en": "Chemical burn · step 2",
+      "critical": true,
+      "step_binding": {
+        "topic": "chemical",
+        "index": 1,
+        "ru": "Сними загрязнённую одежду, избегая контакта с веществом.",
+        "en": "Remove contaminated clothing without touching the chemical."
+      },
+      "query_hint": "Chemical burn remove contaminated clothing without touching chemical"
+    },
+    {
+      "id": "guide:cold:step:0",
+      "kind": "guide",
+      "ru": "Переохлаждение · шаг 1",
+      "en": "Hypothermia · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "cold",
+        "index": 0,
+        "ru": "Перенеси человека в тёплое укрытие, сними мокрую одежду, укутай сухими слоями.",
+        "en": "Move into shelter, remove wet clothes and wrap in dry layers."
+      },
+      "query_hint": "Hypothermia move into shelter remove wet clothes"
+    },
+    {
+      "id": "guide:cold:step:1",
+      "kind": "guide",
+      "ru": "Переохлаждение · шаг 2",
+      "en": "Hypothermia · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "cold",
+        "index": 1,
+        "ru": "Давай тёплое питьё только если человек полностью в сознании и может глотать.",
+        "en": "Offer a warm drink only when fully alert and able to swallow."
+      },
+      "query_hint": "Hypothermia offer warm drink only fully alert"
+    },
+    {
+      "id": "guide:cold:step:2",
+      "kind": "guide",
+      "ru": "Переохлаждение · шаг 3",
+      "en": "Hypothermia · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "cold",
+        "index": 2,
+        "ru": "При спутанности, сильной сонливости или нарушении дыхания вызывай экстренную помощь.",
+        "en": "Call emergency services for confusion, extreme drowsiness or breathing problems."
+      },
+      "query_hint": "Hypothermia call emergency services confusion extreme drowsiness"
+    },
+    {
+      "id": "guide:frostbite:step:0",
+      "kind": "guide",
+      "ru": "Обморожение · шаг 1",
+      "en": "Frostbite · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "frostbite",
+        "index": 0,
+        "ru": "Уйди с холода, сними мокрые или тесные вещи.",
+        "en": "Get out of the cold and remove wet or tight clothing."
+      },
+      "query_hint": "Frostbite get out cold remove wet tight"
+    },
+    {
+      "id": "guide:frostbite:step:1",
+      "kind": "guide",
+      "ru": "Обморожение · шаг 2",
+      "en": "Frostbite · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "frostbite",
+        "index": 1,
+        "ru": "Защити участок от повторного охлаждения и обратись за медицинской оценкой при выраженном изменении цвета или онемении.",
+        "en": "Protect the area from refreezing; seek medical assessment for discoloration or numbness."
+      },
+      "query_hint": "Frostbite protect area refreezing seek medical assessment"
+    },
+    {
+      "id": "guide:frostbite:step:2",
+      "kind": "guide",
+      "ru": "Обморожение · шаг 3",
+      "en": "Frostbite · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "frostbite",
+        "index": 2,
+        "ru": "Не нагружай обмороженную стопу при возможности.",
+        "en": "Avoid walking on a badly frostbitten foot if possible."
+      },
+      "query_hint": "Frostbite avoid walking badly frostbitten foot possible"
+    },
+    {
+      "id": "guide:panic:step:0",
+      "kind": "guide",
+      "ru": "Паническая атака · шаг 1",
+      "en": "Panic attack · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "panic",
+        "index": 0,
+        "ru": "Перейди в спокойное безопасное место и постарайся замедлить дыхание без задержек.",
+        "en": "Move to a quiet, safe place and slow breathing gently without breath-holding."
+      },
+      "query_hint": "Panic attack move quiet safe place slow breathing"
+    },
+    {
+      "id": "guide:panic:step:1",
+      "kind": "guide",
+      "ru": "Паническая атака · шаг 2",
+      "en": "Panic attack · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "panic",
+        "index": 1,
+        "ru": "Назови несколько предметов вокруг, почувствуй опору ног — это помогает заземлиться.",
+        "en": "Name objects around you and feel your feet on the ground."
+      },
+      "query_hint": "Panic attack name objects around feel feet ground"
+    },
+    {
+      "id": "guide:panic:step:2",
+      "kind": "guide",
+      "ru": "Паническая атака · шаг 3",
+      "en": "Panic attack · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "panic",
+        "index": 2,
+        "ru": "При первой в жизни боли в груди, потере сознания или выраженной одышке нужна медицинская оценка.",
+        "en": "New chest pain, fainting or severe breathlessness need medical evaluation."
+      },
+      "query_hint": "Panic attack new chest pain fainting severe breathlessness"
+    },
+    {
+      "id": "guide:tooth:step:0",
+      "kind": "guide",
+      "ru": "Зубная боль · шаг 1",
+      "en": "Toothache · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "tooth",
+        "index": 0,
+        "ru": "Аккуратно очисти рот и прополощи водой.",
+        "en": "Rinse the mouth gently with water."
+      },
+      "query_hint": "Toothache rinse mouth gently water"
+    },
+    {
+      "id": "guide:tooth:step:1",
+      "kind": "guide",
+      "ru": "Зубная боль · шаг 2",
+      "en": "Toothache · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "tooth",
+        "index": 1,
+        "ru": "Избегай слишком горячего и холодного, договорись об осмотре стоматолога.",
+        "en": "Avoid very hot or cold foods and arrange dental care."
+      },
+      "query_hint": "Toothache avoid very hot cold foods arrange"
+    },
+    {
+      "id": "guide:tooth:step:2",
+      "kind": "guide",
+      "ru": "Зубная боль · шаг 3",
+      "en": "Toothache · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "tooth",
+        "index": 2,
+        "ru": "При отёке лица или шеи, лихорадке, затруднении дыхания или глотания нужна срочная помощь.",
+        "en": "Seek urgent care for face or neck swelling, fever, breathing or swallowing difficulties."
+      },
+      "query_hint": "Toothache seek urgent care face neck swelling"
+    },
+    {
+      "id": "guide:childfever:step:0",
+      "kind": "guide",
+      "ru": "Температура у ребёнка · шаг 1",
+      "en": "Fever in a child · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "childfever",
+        "index": 0,
+        "ru": "Следи за общим состоянием, дыханием, питьём и активностью.",
+        "en": "Watch alertness, breathing, feeding and hydration."
+      },
+      "query_hint": "Fever in a child watch alertness breathing feeding hydration"
+    },
+    {
+      "id": "guide:childfever:step:1",
+      "kind": "guide",
+      "ru": "Температура у ребёнка · шаг 2",
+      "en": "Fever in a child · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "childfever",
+        "index": 1,
+        "ru": "Обеспечь комфорт, предлагай пить по возрасту.",
+        "en": "Keep comfortable and offer age-appropriate fluids."
+      },
+      "query_hint": "Fever in a child keep comfortable offer age-appropriate fluids"
+    },
+    {
+      "id": "guide:childfever:step:2",
+      "kind": "guide",
+      "ru": "Температура у ребёнка · шаг 3",
+      "en": "Fever in a child · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "childfever",
+        "index": 2,
+        "ru": "При температуре у ребёнка до 3 месяцев, затруднении дыхания, сонливости, судорогах или необычной сыпи обратись за срочной медицинской оценкой.",
+        "en": "Urgent assessment is needed for fever in babies under 3 months, breathing difficulty, unusual drowsiness, seizures or concerning rash."
+      },
+      "query_hint": "Fever in a child urgent assessment needed fever babies under"
+    },
+    {
+      "id": "guide:eyebleeding:step:0",
+      "kind": "guide",
+      "ru": "Травма глаза · шаг 1",
+      "en": "Eye injury · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "eyebleeding",
+        "index": 0,
+        "ru": "Не дави на глаз и не три его.",
+        "en": "Do not press or rub the eye."
+      },
+      "query_hint": "Eye injury press rub eye"
+    },
+    {
+      "id": "guide:eyebleeding:step:1",
+      "kind": "guide",
+      "ru": "Травма глаза · шаг 2",
+      "en": "Eye injury · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "eyebleeding",
+        "index": 1,
+        "ru": "Если есть инородное тело, не извлекай его самостоятельно; защити глаз без давления.",
+        "en": "Do not remove an embedded object; protect the eye without pressure."
+      },
+      "query_hint": "Eye injury remove embedded object protect eye without"
+    },
+    {
+      "id": "guide:eyebleeding:step:2",
+      "kind": "guide",
+      "ru": "Травма глаза · шаг 3",
+      "en": "Eye injury · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "eyebleeding",
+        "index": 2,
+        "ru": "При боли, ухудшении зрения, химическом воздействии или кровотечении — срочно за медицинской помощью.",
+        "en": "Seek urgent care for pain, vision changes, chemical exposure or bleeding."
+      },
+      "query_hint": "Eye injury seek urgent care pain vision changes"
+    },
+    {
+      "id": "guide:dentalavulsion:step:0",
+      "kind": "guide",
+      "ru": "Выбит постоянный зуб · шаг 1",
+      "en": "Knocked-out adult tooth · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "dentalavulsion",
+        "index": 0,
+        "ru": "Возьми выбитый постоянный зуб за коронку, не трогая корень.",
+        "en": "Hold a knocked-out permanent tooth by the crown, not the root."
+      },
+      "query_hint": "Knocked-out adult tooth hold knocked-out permanent tooth crown root"
+    },
+    {
+      "id": "guide:dentalavulsion:step:1",
+      "kind": "guide",
+      "ru": "Выбит постоянный зуб · шаг 2",
+      "en": "Knocked-out adult tooth · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "dentalavulsion",
+        "index": 1,
+        "ru": "Если загрязнён, кратко ополосни физраствором или молоком, не скреби.",
+        "en": "If dirty, gently rinse briefly in saline or milk, do not scrub."
+      },
+      "query_hint": "Knocked-out adult tooth dirty gently rinse briefly saline milk"
+    },
+    {
+      "id": "guide:dentalavulsion:step:2",
+      "kind": "guide",
+      "ru": "Выбит постоянный зуб · шаг 3",
+      "en": "Knocked-out adult tooth · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "dentalavulsion",
+        "index": 2,
+        "ru": "Незамедлительно обратись к стоматологу. Для транспортировки держи зуб во влажной среде (например, молоке).",
+        "en": "Seek emergency dental care. Transport the tooth in milk or appropriate tooth storage solution."
+      },
+      "query_hint": "Knocked-out adult tooth seek emergency dental care transport tooth"
+    },
+    {
+      "id": "guide:co-poison:step:3",
+      "kind": "guide",
+      "ru": "Подозрение на отравление угарным газом · шаг 4",
+      "en": "Suspected carbon monoxide poisoning · step 4",
+      "critical": true,
+      "step_binding": {
+        "topic": "co-poison",
+        "index": 3,
+        "ru": "Даже при улучшении самочувствия необходима медицинская оценка.",
+        "en": "Seek medical assessment even if symptoms improve."
+      },
+      "query_hint": "Suspected carbon monoxide poisoning seek medical assessment even symptoms improve"
+    },
+    {
+      "id": "guide:battery-ingestion:step:2",
+      "kind": "guide",
+      "ru": "Ребёнок проглотил батарейку или магнит · шаг 3",
+      "en": "Child swallowed a battery or magnet · step 3",
+      "critical": true,
+      "step_binding": {
+        "topic": "battery-ingestion",
+        "index": 2,
+        "ru": "Следуй указаниям специалиста о еде и питье. При нарушении дыхания действуй по возрастному алгоритму удушья.",
+        "en": "Follow professional advice about food or drink. If breathing is obstructed, follow age-specific choking guidance."
+      },
+      "query_hint": "Child swallowed a battery or magnet follow professional advice about food drink"
+    },
+    {
+      "id": "guide:sepsis:step:0",
+      "kind": "guide",
+      "ru": "Подозрение на сепсис · шаг 1",
+      "en": "Suspected sepsis · step 1",
+      "critical": true,
+      "step_binding": {
+        "topic": "sepsis",
+        "index": 0,
+        "ru": "На фоне инфекции спутанность сознания, выраженная одышка, необычная бледность или резкое ухудшение могут означать опасное состояние.",
+        "en": "Confusion, severe breathing difficulty, unusual pallor or rapid deterioration during an infection can signal a dangerous condition."
+      },
+      "query_hint": "Suspected sepsis confusion severe breathing difficulty unusual pallor"
+    },
+    {
+      "id": "guide:meningitis:step:0",
+      "kind": "guide",
+      "ru": "Подозрение на менингит · шаг 1",
+      "en": "Suspected meningitis · step 1",
+      "critical": true,
+      "step_binding": {
+        "topic": "meningitis",
+        "index": 0,
+        "ru": "Сильная головная боль с температурой, скованностью шеи, светобоязнью, сонливостью или необычной сыпью требует срочной оценки.",
+        "en": "Severe headache with fever, stiff neck, sensitivity to light, drowsiness or an unusual rash needs urgent assessment."
+      },
+      "query_hint": "Suspected meningitis severe headache fever stiff neck sensitivity"
+    },
+    {
+      "id": "guide:dka:step:0",
+      "kind": "guide",
+      "ru": "Диабет: подозрение на кетоацидоз · шаг 1",
+      "en": "Suspected diabetic ketoacidosis · step 1",
+      "critical": true,
+      "step_binding": {
+        "topic": "dka",
+        "index": 0,
+        "ru": "У человека с диабетом выраженная жажда, рвота, глубокое дыхание, фруктовый запах изо рта или сонливость могут указывать на кетоацидоз.",
+        "en": "In diabetes, marked thirst, vomiting, deep breathing, fruity breath or drowsiness can suggest ketoacidosis."
+      },
+      "query_hint": "Suspected diabetic ketoacidosis diabetes marked thirst vomiting deep breathing"
+    },
+    {
+      "id": "guide:ectopic:step:0",
+      "kind": "guide",
+      "ru": "Беременность: резкая боль и обморок · шаг 1",
+      "en": "Pregnancy: sudden pain and fainting · step 1",
+      "critical": true,
+      "step_binding": {
+        "topic": "ectopic",
+        "index": 0,
+        "ru": "При возможной беременности резкая боль в животе, слабость, обморок или боль в кончике плеча могут указывать на внутреннее кровотечение.",
+        "en": "With possible pregnancy, sudden abdominal pain, weakness, fainting or shoulder-tip pain may indicate internal bleeding."
+      },
+      "query_hint": "Pregnancy: sudden pain and fainting possible pregnancy sudden abdominal pain weakness"
+    },
+    {
+      "id": "guide:testicular-pain:step:0",
+      "kind": "guide",
+      "ru": "Внезапная сильная боль в яичке · шаг 1",
+      "en": "Sudden severe testicular pain · step 1",
+      "critical": true,
+      "step_binding": {
+        "topic": "testicular-pain",
+        "index": 0,
+        "ru": "Внезапная сильная боль в яичке, особенно с тошнотой или болью в животе, требует немедленного осмотра.",
+        "en": "Sudden severe testicular pain, especially with nausea or abdominal pain, requires immediate assessment."
+      },
+      "query_hint": "Sudden severe testicular pain sudden severe testicular pain especially nausea"
+    },
+    {
+      "id": "guide:rabies-exposure:step:0",
+      "kind": "guide",
+      "ru": "Укус с риском бешенства · шаг 1",
+      "en": "Possible rabies exposure · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "rabies-exposure",
+        "index": 0,
+        "ru": "После укуса или царапины потенциально заражённого млекопитающего промой рану водой с мылом в течение 15 минут.",
+        "en": "After a bite or scratch from a potentially infected mammal, wash the wound with soap and water for 15 minutes."
+      },
+      "query_hint": "Possible rabies exposure after bite scratch potentially infected mammal"
+    },
+    {
+      "id": "guide:rabies-exposure:step:1",
+      "kind": "guide",
+      "ru": "Укус с риском бешенства · шаг 2",
+      "en": "Possible rabies exposure · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "rabies-exposure",
+        "index": 1,
+        "ru": "Как можно быстрее обратись за медицинской оценкой риска бешенства, даже при небольшой ране или контакте с летучей мышью.",
+        "en": "Seek prompt rabies risk assessment even for a small wound or bat contact."
+      },
+      "query_hint": "Possible rabies exposure seek prompt rabies risk assessment even"
+    },
+    {
+      "id": "guide:rabies-exposure:step:2",
+      "kind": "guide",
+      "ru": "Укус с риском бешенства · шаг 3",
+      "en": "Possible rabies exposure · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "rabies-exposure",
+        "index": 2,
+        "ru": "Сообщи место и время контакта и сведения о животном; врач решит вопрос профилактики.",
+        "en": "Tell clinicians when and where exposure occurred and what animal was involved; they will assess preventive treatment."
+      },
+      "query_hint": "Possible rabies exposure tell clinicians where exposure occurred what"
+    },
+    {
+      "id": "guide:retinal-warning:step:0",
+      "kind": "guide",
+      "ru": "Вспышки и тёмная завеса перед глазом · шаг 1",
+      "en": "Flashes and a dark curtain in vision · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "retinal-warning",
+        "index": 0,
+        "ru": "Внезапные вспышки, новые множественные плавающие пятна или тёмная завеса требуют срочной оценки глазным специалистом.",
+        "en": "New flashes, many new floaters or a dark curtain require urgent eye assessment."
+      },
+      "query_hint": "Flashes and a dark curtain in vision new flashes many floaters dark curtain"
+    },
+    {
+      "id": "guide:retinal-warning:step:1",
+      "kind": "guide",
+      "ru": "Вспышки и тёмная завеса перед глазом · шаг 2",
+      "en": "Flashes and a dark curtain in vision · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "retinal-warning",
+        "index": 1,
+        "ru": "Организуй осмотр без промедления. Если зрение внезапно пропало, обращайся за экстренной помощью.",
+        "en": "Arrange assessment without delay. Seek emergency help if vision is suddenly lost."
+      },
+      "query_hint": "Flashes and a dark curtain in vision arrange assessment without delay seek emergency"
+    },
+    {
+      "id": "guide:retinal-warning:step:2",
+      "kind": "guide",
+      "ru": "Вспышки и тёмная завеса перед глазом · шаг 3",
+      "en": "Flashes and a dark curtain in vision · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "retinal-warning",
+        "index": 2,
+        "ru": "Сообщи о недавних травмах или операциях на глазах.",
+        "en": "Report recent eye injuries or surgery."
+      },
+      "query_hint": "Flashes and a dark curtain in vision report recent eye injuries surgery"
+    },
+    {
+      "id": "guide:cauda-equina:step:0",
+      "kind": "guide",
+      "ru": "Боль в спине и нарушение мочеиспускания · шаг 1",
+      "en": "Back pain with new bladder problems · step 1",
+      "critical": true,
+      "step_binding": {
+        "topic": "cauda-equina",
+        "index": 0,
+        "ru": "Если вместе с болью в спине появились нарушение мочеиспускания, онемение промежности или слабость ног, нужна немедленная оценка в отделении экстренной помощи.",
+        "en": "Back pain with new bladder problems, numbness around the saddle area or leg weakness requires immediate emergency department assessment."
+      },
+      "query_hint": "Back pain with new bladder problems back pain new bladder problems numbness"
+    },
+    {
+      "id": "guide:pregnancy-warning:step:0",
+      "kind": "guide",
+      "ru": "Беременность: сильная головная боль или нарушение зрения · шаг 1",
+      "en": "Pregnancy: severe headache or visual changes · step 1",
+      "critical": true,
+      "step_binding": {
+        "topic": "pregnancy-warning",
+        "index": 0,
+        "ru": "Во время беременности или вскоре после родов сильная головная боль, необычные нарушения зрения или резкое увеличение отёков требуют немедленной медицинской оценки.",
+        "en": "Severe headache, visual changes or rapidly increasing swelling during pregnancy or soon after birth need immediate medical assessment."
+      },
+      "query_hint": "Pregnancy: severe headache or visual changes severe headache visual changes rapidly increasing"
+    },
+    {
+      "id": "guide:adrenal-crisis:step:0",
+      "kind": "guide",
+      "ru": "Надпочечниковая недостаточность: резкое ухудшение · шаг 1",
+      "en": "Adrenal insufficiency: sudden deterioration · step 1",
+      "critical": true,
+      "step_binding": {
+        "topic": "adrenal-crisis",
+        "index": 0,
+        "ru": "При известной надпочечниковой недостаточности резкая слабость, рвота, обморок или спутанность могут означать опасное состояние.",
+        "en": "In known adrenal insufficiency, sudden weakness, vomiting, collapse or confusion can indicate a dangerous condition."
+      },
+      "query_hint": "Adrenal insufficiency: sudden deterioration known adrenal insufficiency sudden weakness vomiting"
+    },
+    {
+      "id": "guide:head-injury-anticoagulant:step:0",
+      "kind": "guide",
+      "ru": "Удар головой на фоне антикоагулянтов · шаг 1",
+      "en": "Head injury while taking anticoagulants · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "head-injury-anticoagulant",
+        "index": 0,
+        "ru": "После удара головой у человека, принимающего антикоагулянты, организуй срочную медицинскую оценку даже при внешне хорошем самочувствии.",
+        "en": "Arrange urgent medical assessment after head injury in a person taking anticoagulants, even if they appear well."
+      },
+      "query_hint": "Head injury while taking anticoagulants arrange urgent medical assessment after head"
+    },
+    {
+      "id": "guide:head-injury-anticoagulant:step:1",
+      "kind": "guide",
+      "ru": "Удар головой на фоне антикоагулянтов · шаг 2",
+      "en": "Head injury while taking anticoagulants · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "head-injury-anticoagulant",
+        "index": 1,
+        "ru": "При потере сознания, судорогах, выраженной сонливости или нарушении движений вызови экстренную помощь.",
+        "en": "Call emergency services for unconsciousness, seizures, severe drowsiness or movement problems."
+      },
+      "query_hint": "Head injury while taking anticoagulants call emergency services unconsciousness seizures severe"
+    },
+    {
+      "id": "guide:head-injury-anticoagulant:step:2",
+      "kind": "guide",
+      "ru": "Удар головой на фоне антикоагулянтов · шаг 3",
+      "en": "Head injury while taking anticoagulants · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "head-injury-anticoagulant",
+        "index": 2,
+        "ru": "Сообщи медикам название препарата и время травмы.",
+        "en": "Tell clinicians the medicine name and time of injury."
+      },
+      "query_hint": "Head injury while taking anticoagulants tell clinicians medicine name time injury"
+    },
+    {
+      "id": "guide:severe-eye-pain:step:0",
+      "kind": "guide",
+      "ru": "Сильная боль в глазу · шаг 1",
+      "en": "Severe eye pain · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "severe-eye-pain",
+        "index": 0,
+        "ru": "Сильная боль в глазу, особенно с нарушением зрения, требует срочной медицинской оценки.",
+        "en": "Severe eye pain, especially with changes in vision, requires urgent medical assessment."
+      },
+      "query_hint": "Severe eye pain severe eye pain especially changes vision"
+    },
+    {
+      "id": "guide:severe-eye-pain:step:1",
+      "kind": "guide",
+      "ru": "Сильная боль в глазу · шаг 2",
+      "en": "Severe eye pain · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "severe-eye-pain",
+        "index": 1,
+        "ru": "Если зрение пропало внезапно, вызывай экстренную помощь; при химическом воздействии переходи к инструкции промывания.",
+        "en": "Seek emergency help for sudden vision loss; for chemical exposure follow the irrigation guide."
+      },
+      "query_hint": "Severe eye pain seek emergency help sudden vision loss"
+    },
+    {
+      "id": "guide:severe-eye-pain:step:2",
+      "kind": "guide",
+      "ru": "Сильная боль в глазу · шаг 3",
+      "en": "Severe eye pain · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "severe-eye-pain",
+        "index": 2,
+        "ru": "Не дави на глаз и не садись за руль при нарушенном зрении.",
+        "en": "Do not press on the eye or drive with impaired vision."
+      },
+      "query_hint": "Severe eye pain press eye drive impaired vision"
+    },
+    {
+      "id": "guide:dvt:step:0",
+      "kind": "guide",
+      "ru": "Односторонний отёк и боль в ноге · шаг 1",
+      "en": "One-sided leg swelling and pain · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "dvt",
+        "index": 0,
+        "ru": "Новая боль и отёк одной ноги требуют срочной медицинской оценки.",
+        "en": "New swelling and pain in one leg require urgent medical assessment."
+      },
+      "query_hint": "One-sided leg swelling and pain new swelling pain one leg require"
+    },
+    {
+      "id": "guide:dvt:step:1",
+      "kind": "guide",
+      "ru": "Односторонний отёк и боль в ноге · шаг 2",
+      "en": "One-sided leg swelling and pain · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "dvt",
+        "index": 1,
+        "ru": "Если одновременно появилась одышка или боль в груди, немедленно вызови экстренную помощь.",
+        "en": "Call emergency services if breathlessness or chest pain also develops."
+      },
+      "query_hint": "One-sided leg swelling and pain call emergency services breathlessness chest pain"
+    },
+    {
+      "id": "guide:dvt:step:2",
+      "kind": "guide",
+      "ru": "Односторонний отёк и боль в ноге · шаг 3",
+      "en": "One-sided leg swelling and pain · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "dvt",
+        "index": 2,
+        "ru": "Сообщи врачу о недавних операциях, длительной неподвижности и принимаемых лекарствах.",
+        "en": "Tell clinicians about recent surgery, prolonged immobility and medicines."
+      },
+      "query_hint": "One-sided leg swelling and pain tell clinicians about recent surgery prolonged"
+    },
+    {
+      "id": "guide:dental-abscess:step:0",
+      "kind": "guide",
+      "ru": "Зубная инфекция и отёк лица · шаг 1",
+      "en": "Dental infection and facial swelling · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "dental-abscess",
+        "index": 0,
+        "ru": "При подозрении на зубной абсцесс организуй срочный осмотр стоматологом.",
+        "en": "Arrange urgent dental assessment for a suspected dental abscess."
+      },
+      "query_hint": "Dental infection and facial swelling arrange urgent dental assessment suspected abscess"
+    },
+    {
+      "id": "guide:dental-abscess:step:1",
+      "kind": "guide",
+      "ru": "Зубная инфекция и отёк лица · шаг 2",
+      "en": "Dental infection and facial swelling · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "dental-abscess",
+        "index": 1,
+        "ru": "При затруднённом дыхании или глотании, выраженном отёке рта либо распространении отёка на глаз обращайся за экстренной помощью.",
+        "en": "Seek emergency help for breathing or swallowing difficulty, marked swelling inside the mouth or swelling affecting the eye."
+      },
+      "query_hint": "Dental infection and facial swelling seek emergency help breathing swallowing difficulty"
+    },
+    {
+      "id": "guide:dental-abscess:step:2",
+      "kind": "guide",
+      "ru": "Зубная инфекция и отёк лица · шаг 3",
+      "en": "Dental infection and facial swelling · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "dental-abscess",
+        "index": 2,
+        "ru": "Сообщи о температуре, аллергиях и лекарствах.",
+        "en": "Report fever, allergies and medicines."
+      },
+      "query_hint": "Dental infection and facial swelling report fever allergies medicines"
+    },
+    {
+      "id": "guide:sudden-hearing:step:0",
+      "kind": "guide",
+      "ru": "Внезапное снижение слуха · шаг 1",
+      "en": "Sudden hearing loss · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "sudden-hearing",
+        "index": 0,
+        "ru": "При внезапной потере слуха на одном или обоих ушах организуй срочную медицинскую оценку.",
+        "en": "Arrange urgent medical assessment for sudden hearing loss in one or both ears."
+      },
+      "query_hint": "Sudden hearing loss arrange urgent medical assessment sudden hearing"
+    },
+    {
+      "id": "guide:sudden-hearing:step:1",
+      "kind": "guide",
+      "ru": "Внезапное снижение слуха · шаг 2",
+      "en": "Sudden hearing loss · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "sudden-hearing",
+        "index": 1,
+        "ru": "Сообщи о времени начала, травме, шумовом воздействии и головокружении.",
+        "en": "Report onset, injury, noise exposure and dizziness."
+      },
+      "query_hint": "Sudden hearing loss report onset injury noise exposure dizziness"
+    },
+    {
+      "id": "guide:sudden-hearing:step:2",
+      "kind": "guide",
+      "ru": "Внезапное снижение слуха · шаг 3",
+      "en": "Sudden hearing loss · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "sudden-hearing",
+        "index": 2,
+        "ru": "Если появились признаки инсульта, вызывай экстренную помощь.",
+        "en": "Call emergency services if stroke signs develop."
+      },
+      "query_hint": "Sudden hearing loss call emergency services stroke signs develop"
+    },
+    {
+      "id": "guide:mastoiditis:step:0",
+      "kind": "guide",
+      "ru": "Отёк и боль за ухом · шаг 1",
+      "en": "Pain and swelling behind the ear · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "mastoiditis",
+        "index": 0,
+        "ru": "Боль, припухлость за ухом, температура или выпирающая ушная раковина требуют срочной медицинской оценки.",
+        "en": "Pain or swelling behind the ear, fever or an ear pushed outward require urgent medical assessment."
+      },
+      "query_hint": "Pain and swelling behind the ear pain swelling behind ear fever pushed"
+    },
+    {
+      "id": "guide:mastoiditis:step:1",
+      "kind": "guide",
+      "ru": "Отёк и боль за ухом · шаг 2",
+      "en": "Pain and swelling behind the ear · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "mastoiditis",
+        "index": 1,
+        "ru": "Сообщи о недавнем воспалении уха и лечении.",
+        "en": "Report recent ear infection and treatment."
+      },
+      "query_hint": "Pain and swelling behind the ear report recent ear infection treatment"
+    },
+    {
+      "id": "guide:mastoiditis:step:2",
+      "kind": "guide",
+      "ru": "Отёк и боль за ухом · шаг 3",
+      "en": "Pain and swelling behind the ear · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "mastoiditis",
+        "index": 2,
+        "ru": "При резком ухудшении, спутанности или нарушении дыхания вызови экстренную помощь.",
+        "en": "Call emergency services for rapid deterioration, confusion or breathing problems."
+      },
+      "query_hint": "Pain and swelling behind the ear call emergency services rapid deterioration confusion"
+    },
+    {
+      "id": "guide:wound-infection:step:0",
+      "kind": "guide",
+      "ru": "Признаки инфекции раны · шаг 1",
+      "en": "Signs of wound infection · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "wound-infection",
+        "index": 0,
+        "ru": "При нарастающих боли, отёке, горячей коже или выделениях из раны организуй срочный осмотр.",
+        "en": "Seek urgent assessment for increasing pain, swelling, heat or discharge from a wound."
+      },
+      "query_hint": "Signs of wound infection seek urgent assessment increasing pain swelling"
+    },
+    {
+      "id": "guide:wound-infection:step:1",
+      "kind": "guide",
+      "ru": "Признаки инфекции раны · шаг 2",
+      "en": "Signs of wound infection · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "wound-infection",
+        "index": 1,
+        "ru": "При резком ухудшении, спутанности, необычно частом дыхании или обмороке вызывай экстренную помощь.",
+        "en": "Call emergency services for rapid deterioration, confusion, unusually fast breathing or fainting."
+      },
+      "query_hint": "Signs of wound infection call emergency services rapid deterioration confusion"
+    },
+    {
+      "id": "guide:wound-infection:step:2",
+      "kind": "guide",
+      "ru": "Признаки инфекции раны · шаг 3",
+      "en": "Signs of wound infection · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "wound-infection",
+        "index": 2,
+        "ru": "Защити рану чистой повязкой и сообщи врачу о травме и прививках.",
+        "en": "Protect the wound with a clean dressing and report the injury and vaccination history."
+      },
+      "query_hint": "Signs of wound infection protect wound clean dressing report injury"
+    },
+    {
+      "id": "guide:toxic-shock:step:0",
+      "kind": "guide",
+      "ru": "Подозрение на токсический шок · шаг 1",
+      "en": "Suspected toxic shock syndrome · step 1",
+      "critical": true,
+      "step_binding": {
+        "topic": "toxic-shock",
+        "index": 0,
+        "ru": "При резком ухудшении с температурой, сыпью, рвотой, головокружением или спутанностью организуй срочную медицинскую помощь.",
+        "en": "Seek urgent medical help for rapid illness with fever, rash, vomiting, dizziness or confusion."
+      },
+      "query_hint": "Suspected toxic shock syndrome seek urgent medical help rapid illness"
+    },
+    {
+      "id": "guide:shoulder-dislocation:step:0",
+      "kind": "guide",
+      "ru": "Подозрение на вывих плеча · шаг 1",
+      "en": "Suspected shoulder dislocation · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "shoulder-dislocation",
+        "index": 0,
+        "ru": "При сильной боли, деформации или невозможности двигать плечом после травмы организуй срочный осмотр.",
+        "en": "Arrange urgent assessment for severe shoulder pain, deformity or inability to move it after injury."
+      },
+      "query_hint": "Suspected shoulder dislocation arrange urgent assessment severe shoulder pain"
+    },
+    {
+      "id": "guide:shoulder-dislocation:step:1",
+      "kind": "guide",
+      "ru": "Подозрение на вывих плеча · шаг 2",
+      "en": "Suspected shoulder dislocation · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "shoulder-dislocation",
+        "index": 1,
+        "ru": "Поддержи руку в удобном положении; можно приложить холод через ткань.",
+        "en": "Support the arm comfortably; apply a wrapped cold pack if appropriate."
+      },
+      "query_hint": "Suspected shoulder dislocation support arm comfortably apply wrapped cold"
+    },
+    {
+      "id": "guide:shoulder-dislocation:step:2",
+      "kind": "guide",
+      "ru": "Подозрение на вывих плеча · шаг 3",
+      "en": "Suspected shoulder dislocation · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "shoulder-dislocation",
+        "index": 2,
+        "ru": "При тяжёлой травме или невозможности безопасной поездки вызови экстренную помощь.",
+        "en": "Call emergency services for major trauma or if safe transport is unavailable."
+      },
+      "query_hint": "Suspected shoulder dislocation call emergency services major trauma safe"
+    },
+    {
+      "id": "guide:compartment:step:0",
+      "kind": "guide",
+      "ru": "Резко усиливающаяся боль в конечности после травмы · шаг 1",
+      "en": "Rapidly worsening limb pain after injury · step 1",
+      "critical": true,
+      "step_binding": {
+        "topic": "compartment",
+        "index": 0,
+        "ru": "Внезапная очень сильная боль в конечности, особенно после травмы или под гипсом, требует экстренной оценки.",
+        "en": "Sudden severe limb pain, especially after injury or under a cast, requires emergency assessment."
+      },
+      "query_hint": "Rapidly worsening limb pain after injury sudden severe limb pain especially after"
+    },
+    {
+      "id": "guide:rib-injury:step:0",
+      "kind": "guide",
+      "ru": "Травма рёбер · шаг 1",
+      "en": "Rib injury · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "rib-injury",
+        "index": 0,
+        "ru": "После сильного удара по грудной клетке оцени дыхание и наличие других травм.",
+        "en": "Assess breathing and other injuries after a major blow to the chest."
+      },
+      "query_hint": "Rib injury assess breathing other injuries after major"
+    },
+    {
+      "id": "guide:rib-injury:step:1",
+      "kind": "guide",
+      "ru": "Травма рёбер · шаг 2",
+      "en": "Rib injury · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "rib-injury",
+        "index": 1,
+        "ru": "При ухудшении дыхания, нарастающей боли, кровохарканье или серьёзной аварии вызови экстренную помощь.",
+        "en": "Call emergency services for worsening breathlessness, increasing pain, coughing blood or a serious accident."
+      },
+      "query_hint": "Rib injury call emergency services worsening breathlessness increasing"
+    },
+    {
+      "id": "guide:rib-injury:step:2",
+      "kind": "guide",
+      "ru": "Травма рёбер · шаг 3",
+      "en": "Rib injury · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "rib-injury",
+        "index": 2,
+        "ru": "При подозрении на перелом организуй медицинскую оценку.",
+        "en": "Arrange medical assessment if a fracture is suspected."
+      },
+      "query_hint": "Rib injury arrange medical assessment fracture suspected"
+    },
+    {
+      "id": "guide:broken-nose:step:0",
+      "kind": "guide",
+      "ru": "Травма носа · шаг 1",
+      "en": "Nose injury · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "broken-nose",
+        "index": 0,
+        "ru": "Если идёт кровь, сядь с наклоном вперёд и прижми мягкую часть носа.",
+        "en": "If bleeding, sit leaning forward and pinch the soft part of the nose."
+      },
+      "query_hint": "Nose injury bleeding sit leaning forward pinch soft"
+    },
+    {
+      "id": "guide:broken-nose:step:1",
+      "kind": "guide",
+      "ru": "Травма носа · шаг 2",
+      "en": "Nose injury · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "broken-nose",
+        "index": 1,
+        "ru": "При деформации, сильной боли или нарушении дыхания организуй медицинскую оценку.",
+        "en": "Arrange medical assessment for deformity, severe pain or breathing problems."
+      },
+      "query_hint": "Nose injury arrange medical assessment deformity severe pain"
+    },
+    {
+      "id": "guide:broken-nose:step:2",
+      "kind": "guide",
+      "ru": "Травма носа · шаг 3",
+      "en": "Nose injury · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "broken-nose",
+        "index": 2,
+        "ru": "После серьёзного удара, потери сознания или выделения прозрачной жидкости из носа обратись за экстренной помощью.",
+        "en": "Seek emergency help after major injury, unconsciousness or clear fluid from the nose."
+      },
+      "query_hint": "Nose injury seek emergency help after major injury"
+    },
+    {
+      "id": "guide:heat-exhaustion:step:0",
+      "kind": "guide",
+      "ru": "Тепловое истощение · шаг 1",
+      "en": "Heat exhaustion · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "heat-exhaustion",
+        "index": 0,
+        "ru": "Переведи человека в прохладное место, убери лишнюю одежду.",
+        "en": "Move the person to a cool place and remove excess clothing."
+      },
+      "query_hint": "Heat exhaustion move cool place remove excess clothing"
+    },
+    {
+      "id": "guide:heat-exhaustion:step:1",
+      "kind": "guide",
+      "ru": "Тепловое истощение · шаг 2",
+      "en": "Heat exhaustion · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "heat-exhaustion",
+        "index": 1,
+        "ru": "Охлаждай кожу прохладной водой и движением воздуха. Если человек бодр и нормально глотает, предложи прохладную жидкость.",
+        "en": "Cool the skin with cool water and airflow. Offer cool fluids if alert and able to swallow."
+      },
+      "query_hint": "Heat exhaustion cool skin water airflow offer fluids"
+    },
+    {
+      "id": "guide:heat-exhaustion:step:2",
+      "kind": "guide",
+      "ru": "Тепловое истощение · шаг 3",
+      "en": "Heat exhaustion · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "heat-exhaustion",
+        "index": 2,
+        "ru": "Если за 30 минут не становится лучше либо появились спутанность, судороги или потеря сознания, вызови экстренную помощь и продолжай охлаждать.",
+        "en": "Call emergency services and continue cooling if not improving within 30 minutes or if confusion, seizures or unconsciousness occur."
+      },
+      "query_hint": "Heat exhaustion call emergency services continue cooling improving"
+    },
+    {
+      "id": "guide:sunburn:step:0",
+      "kind": "guide",
+      "ru": "Солнечный ожог · шаг 1",
+      "en": "Sunburn · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "sunburn",
+        "index": 0,
+        "ru": "Уйди с солнца, охлаждай кожу прохладной водой или влажной тканью.",
+        "en": "Get out of the sun and cool the skin with cool water or a damp cloth."
+      },
+      "query_hint": "Sunburn get out sun cool skin water"
+    },
+    {
+      "id": "guide:sunburn:step:1",
+      "kind": "guide",
+      "ru": "Солнечный ожог · шаг 2",
+      "en": "Sunburn · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "sunburn",
+        "index": 1,
+        "ru": "Пей воду, если можешь нормально глотать, и защищай кожу от солнца.",
+        "en": "Drink water if able to swallow and protect the skin from sunlight."
+      },
+      "query_hint": "Sunburn drink water able swallow protect skin"
+    },
+    {
+      "id": "guide:sunburn:step:2",
+      "kind": "guide",
+      "ru": "Солнечный ожог · шаг 3",
+      "en": "Sunburn · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "sunburn",
+        "index": 2,
+        "ru": "При выраженных волдырях, отёке, лихорадке или головокружении обратись за медицинской помощью.",
+        "en": "Seek medical advice for extensive blistering, swelling, fever or dizziness."
+      },
+      "query_hint": "Sunburn seek medical advice extensive blistering swelling"
+    },
+    {
+      "id": "guide:kidney-infection:step:0",
+      "kind": "guide",
+      "ru": "Температура и боль в боку · шаг 1",
+      "en": "Fever with flank pain · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "kidney-infection",
+        "index": 0,
+        "ru": "При температуре с болью в боку или спине, особенно с нарушением мочеиспускания, организуй срочную медицинскую оценку.",
+        "en": "Arrange urgent medical assessment for fever with flank or back pain, especially with urinary symptoms."
+      },
+      "query_hint": "Fever with flank pain arrange urgent medical assessment fever flank"
+    },
+    {
+      "id": "guide:kidney-infection:step:1",
+      "kind": "guide",
+      "ru": "Температура и боль в боку · шаг 2",
+      "en": "Fever with flank pain · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "kidney-infection",
+        "index": 1,
+        "ru": "При спутанности, выраженной сонливости или нарушении дыхания вызови экстренную помощь.",
+        "en": "Call emergency services for confusion, marked drowsiness or abnormal breathing."
+      },
+      "query_hint": "Fever with flank pain call emergency services confusion marked drowsiness"
+    },
+    {
+      "id": "guide:kidney-infection:step:2",
+      "kind": "guide",
+      "ru": "Температура и боль в боку · шаг 3",
+      "en": "Fever with flank pain · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "kidney-infection",
+        "index": 2,
+        "ru": "Сообщи врачу о беременности, болезнях почек и принимаемых лекарствах.",
+        "en": "Report pregnancy, kidney disease and medicines."
+      },
+      "query_hint": "Fever with flank pain report pregnancy kidney disease medicines"
+    },
+    {
+      "id": "guide:acute-pancreatitis:step:0",
+      "kind": "guide",
+      "ru": "Сильная постоянная боль вверху живота · шаг 1",
+      "en": "Severe persistent upper abdominal pain · step 1",
+      "critical": true,
+      "step_binding": {
+        "topic": "acute-pancreatitis",
+        "index": 0,
+        "ru": "Внезапная сильная боль вверху живота, которая не проходит, особенно с рвотой, требует срочной оценки.",
+        "en": "Sudden severe persistent upper abdominal pain, especially with vomiting, needs urgent assessment."
+      },
+      "query_hint": "Severe persistent upper abdominal pain sudden severe persistent upper abdominal pain"
+    },
+    {
+      "id": "guide:drug-rash:step:0",
+      "kind": "guide",
+      "ru": "Распространённая сыпь с волдырями после лекарства · шаг 1",
+      "en": "Widespread blistering rash after medicine · step 1",
+      "critical": true,
+      "step_binding": {
+        "topic": "drug-rash",
+        "index": 0,
+        "ru": "Если после нового лекарства появилась распространяющаяся сыпь с волдырями, шелушением кожи или болезненными поражениями рта и глаз, необходима экстренная оценка.",
+        "en": "A spreading rash with blisters, peeling skin or painful mouth and eye lesions after a new medicine requires emergency assessment."
+      },
+      "query_hint": "Widespread blistering rash after medicine spreading rash blisters peeling skin painful"
+    },
+    {
+      "id": "guide:sickle-crisis:step:0",
+      "kind": "guide",
+      "ru": "Серповидноклеточная болезнь: опасное ухудшение · шаг 1",
+      "en": "Sickle cell disease: dangerous deterioration · step 1",
+      "critical": true,
+      "step_binding": {
+        "topic": "sickle-crisis",
+        "index": 0,
+        "ru": "При известной серповидноклеточной болезни выраженная боль, не поддающаяся индивидуальному плану, или лихорадка требуют срочного обращения за помощью.",
+        "en": "In known sickle cell disease, severe pain not controlled by the personal plan or fever requires urgent medical advice."
+      },
+      "query_hint": "Sickle cell disease: dangerous deterioration known sickle cell disease severe pain"
+    },
+    {
+      "id": "guide:appendicitis:step:0",
+      "kind": "guide",
+      "ru": "Нарастающая боль в правой нижней части живота · шаг 1",
+      "en": "Worsening lower-right abdominal pain · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "appendicitis",
+        "index": 0,
+        "ru": "Нарастающая боль, особенно перемещающаяся к правой нижней части живота, требует срочной медицинской оценки.",
+        "en": "Worsening pain, especially moving to the lower right abdomen, needs urgent medical assessment."
+      },
+      "query_hint": "Worsening lower-right abdominal pain worsening pain especially moving lower right"
+    },
+    {
+      "id": "guide:appendicitis:step:1",
+      "kind": "guide",
+      "ru": "Нарастающая боль в правой нижней части живота · шаг 2",
+      "en": "Worsening lower-right abdominal pain · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "appendicitis",
+        "index": 1,
+        "ru": "При очень сильной боли, спутанности или резком ухудшении вызывай экстренную помощь.",
+        "en": "Call emergency services for severe pain, confusion or rapid deterioration."
+      },
+      "query_hint": "Worsening lower-right abdominal pain call emergency services severe pain confusion"
+    },
+    {
+      "id": "guide:appendicitis:step:2",
+      "kind": "guide",
+      "ru": "Нарастающая боль в правой нижней части живота · шаг 3",
+      "en": "Worsening lower-right abdominal pain · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "appendicitis",
+        "index": 2,
+        "ru": "Сообщи время начала, температуру, тошноту и другие признаки.",
+        "en": "Report onset, fever, nausea and other symptoms."
+      },
+      "query_hint": "Worsening lower-right abdominal pain report onset fever nausea other symptoms"
+    },
+    {
+      "id": "guide:pregnancy-bleeding:step:0",
+      "kind": "guide",
+      "ru": "Кровотечение во время беременности · шаг 1",
+      "en": "Bleeding during pregnancy · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "pregnancy-bleeding",
+        "index": 0,
+        "ru": "При любом кровотечении во время беременности свяжись с медицинской или акушерской службой.",
+        "en": "Contact a clinician or maternity service for any bleeding during pregnancy."
+      },
+      "query_hint": "Bleeding during pregnancy contact clinician maternity service any bleeding"
+    },
+    {
+      "id": "guide:pregnancy-bleeding:step:1",
+      "kind": "guide",
+      "ru": "Кровотечение во время беременности · шаг 2",
+      "en": "Bleeding during pregnancy · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "pregnancy-bleeding",
+        "index": 1,
+        "ru": "При обильной кровопотере, сильной боли, слабости или обмороке вызови экстренную помощь.",
+        "en": "Call emergency services for heavy bleeding, severe pain, weakness or fainting."
+      },
+      "query_hint": "Bleeding during pregnancy call emergency services heavy bleeding severe"
+    },
+    {
+      "id": "guide:pregnancy-bleeding:step:2",
+      "kind": "guide",
+      "ru": "Кровотечение во время беременности · шаг 3",
+      "en": "Bleeding during pregnancy · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "pregnancy-bleeding",
+        "index": 2,
+        "ru": "Сообщи срок беременности и примерный объём кровопотери.",
+        "en": "Report gestational age and approximate blood loss."
+      },
+      "query_hint": "Bleeding during pregnancy report gestational age approximate blood loss"
+    },
+    {
+      "id": "guide:newborn-jaundice:step:0",
+      "kind": "guide",
+      "ru": "Желтуха у новорождённого: тревожные признаки · шаг 1",
+      "en": "Newborn jaundice: warning signs · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "newborn-jaundice",
+        "index": 0,
+        "ru": "Жёлтая окраска кожи или глаз в первые сутки жизни требует немедленной медицинской оценки.",
+        "en": "Yellow skin or eyes in the first 24 hours of life require immediate medical assessment."
+      },
+      "query_hint": "Newborn jaundice: warning signs yellow skin eyes first hours life"
+    },
+    {
+      "id": "guide:newborn-jaundice:step:1",
+      "kind": "guide",
+      "ru": "Желтуха у новорождённого: тревожные признаки · шаг 2",
+      "en": "Newborn jaundice: warning signs · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "newborn-jaundice",
+        "index": 1,
+        "ru": "Если ребёнок трудно просыпается, не ест, плохо дышит или необычно вялый, организуй экстренную помощь.",
+        "en": "Seek emergency help for difficulty waking, poor feeding, breathing problems or unusual lethargy."
+      },
+      "query_hint": "Newborn jaundice: warning signs seek emergency help difficulty waking poor"
+    },
+    {
+      "id": "guide:newborn-jaundice:step:2",
+      "kind": "guide",
+      "ru": "Желтуха у новорождённого: тревожные признаки · шаг 3",
+      "en": "Newborn jaundice: warning signs · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "newborn-jaundice",
+        "index": 2,
+        "ru": "При появлении желтухи позже первых суток также свяжись с медицинским специалистом.",
+        "en": "Contact a health professional if jaundice appears later as well."
+      },
+      "query_hint": "Newborn jaundice: warning signs contact health professional jaundice appears later"
+    },
+    {
+      "id": "guide:urinary-retention:step:0",
+      "kind": "guide",
+      "ru": "Внезапная невозможность помочиться · шаг 1",
+      "en": "Sudden inability to pass urine · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "urinary-retention",
+        "index": 0,
+        "ru": "Если человек внезапно не может помочиться, особенно при боли и распирании внизу живота, требуется немедленная медицинская оценка.",
+        "en": "Sudden inability to pass urine, especially with lower abdominal pain and distension, requires immediate medical assessment."
+      },
+      "query_hint": "Sudden inability to pass urine sudden inability pass urine especially lower"
+    },
+    {
+      "id": "guide:urinary-retention:step:1",
+      "kind": "guide",
+      "ru": "Внезапная невозможность помочиться · шаг 2",
+      "en": "Sudden inability to pass urine · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "urinary-retention",
+        "index": 1,
+        "ru": "Организуй безопасную доставку в отделение экстренной помощи; вызови экстренную службу при тяжёлом состоянии.",
+        "en": "Arrange safe transport to an emergency department; call emergency services if severely unwell."
+      },
+      "query_hint": "Sudden inability to pass urine arrange safe transport emergency department call"
+    },
+    {
+      "id": "guide:urinary-retention:step:2",
+      "kind": "guide",
+      "ru": "Внезапная невозможность помочиться · шаг 3",
+      "en": "Sudden inability to pass urine · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "urinary-retention",
+        "index": 2,
+        "ru": "Сообщи о лекарствах, операциях и новых нарушениях чувствительности или движений ног.",
+        "en": "Report medicines, surgery and new leg weakness or sensory changes."
+      },
+      "query_hint": "Sudden inability to pass urine report medicines surgery new leg weakness"
+    },
+    {
+      "id": "guide:embedded-object:step:0",
+      "kind": "guide",
+      "ru": "Предмет застрял в ране · шаг 1",
+      "en": "Object embedded in a wound · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "embedded-object",
+        "index": 0,
+        "ru": "При серьёзной ране или сильном кровотечении вызови экстренную помощь.",
+        "en": "Call emergency services for serious wounds or severe bleeding."
+      },
+      "query_hint": "Object embedded in a wound call emergency services serious wounds severe"
+    },
+    {
+      "id": "guide:embedded-object:step:1",
+      "kind": "guide",
+      "ru": "Предмет застрял в ране · шаг 2",
+      "en": "Object embedded in a wound · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "embedded-object",
+        "index": 1,
+        "ru": "Не извлекай предмет. При кровотечении прижимай края раны вокруг него, избегая давления на сам предмет.",
+        "en": "Leave the object in place. For bleeding, apply pressure around it rather than directly on it."
+      },
+      "query_hint": "Object embedded in a wound leave object place bleeding apply pressure"
+    },
+    {
+      "id": "guide:embedded-object:step:2",
+      "kind": "guide",
+      "ru": "Предмет застрял в ране · шаг 3",
+      "en": "Object embedded in a wound · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "embedded-object",
+        "index": 2,
+        "ru": "Защити рану чистой повязкой вокруг предмета и следи за состоянием.",
+        "en": "Protect the wound with clean dressings around the object and monitor the person."
+      },
+      "query_hint": "Object embedded in a wound protect wound clean dressings around object"
+    },
+    {
+      "id": "guide:wrist-fracture:step:0",
+      "kind": "guide",
+      "ru": "Подозрение на перелом кисти или предплечья · шаг 1",
+      "en": "Suspected wrist or forearm fracture · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "wrist-fracture",
+        "index": 0,
+        "ru": "После травмы с выраженной болью, отёком или деформацией организуй срочный осмотр.",
+        "en": "Arrange urgent assessment for marked pain, swelling or deformity after injury."
+      },
+      "query_hint": "Suspected wrist or forearm fracture arrange urgent assessment marked pain swelling"
+    },
+    {
+      "id": "guide:wrist-fracture:step:1",
+      "kind": "guide",
+      "ru": "Подозрение на перелом кисти или предплечья · шаг 2",
+      "en": "Suspected wrist or forearm fracture · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "wrist-fracture",
+        "index": 1,
+        "ru": "Поддержи руку в удобном положении, сними кольца и часы, если это легко.",
+        "en": "Support the arm comfortably; remove rings and watches if easy."
+      },
+      "query_hint": "Suspected wrist or forearm fracture support arm comfortably remove rings watches"
+    },
+    {
+      "id": "guide:wrist-fracture:step:2",
+      "kind": "guide",
+      "ru": "Подозрение на перелом кисти или предплечья · шаг 3",
+      "en": "Suspected wrist or forearm fracture · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "wrist-fracture",
+        "index": 2,
+        "ru": "При открытом переломе, сильном кровотечении или тяжёлой травме вызови экстренную помощь.",
+        "en": "Call emergency services for an open fracture, major bleeding or severe trauma."
+      },
+      "query_hint": "Suspected wrist or forearm fracture call emergency services open fracture major"
+    },
+    {
+      "id": "guide:ankle-fracture:step:0",
+      "kind": "guide",
+      "ru": "Подозрение на перелом лодыжки · шаг 1",
+      "en": "Suspected broken ankle · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "ankle-fracture",
+        "index": 0,
+        "ru": "После травмы с сильной болью, отёком или невозможностью опираться на ногу организуй срочную оценку.",
+        "en": "Arrange urgent assessment after injury with severe pain, swelling or inability to bear weight."
+      },
+      "query_hint": "Suspected broken ankle arrange urgent assessment after injury severe"
+    },
+    {
+      "id": "guide:ankle-fracture:step:1",
+      "kind": "guide",
+      "ru": "Подозрение на перелом лодыжки · шаг 2",
+      "en": "Suspected broken ankle · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "ankle-fracture",
+        "index": 1,
+        "ru": "Не нагружай повреждённую ногу; поддерживай её в удобном положении.",
+        "en": "Avoid weight-bearing and support the limb comfortably."
+      },
+      "query_hint": "Suspected broken ankle avoid weight-bearing support limb comfortably"
+    },
+    {
+      "id": "guide:ankle-fracture:step:2",
+      "kind": "guide",
+      "ru": "Подозрение на перелом лодыжки · шаг 3",
+      "en": "Suspected broken ankle · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "ankle-fracture",
+        "index": 2,
+        "ru": "При деформации, открытой ране, выраженном онемении или тяжёлой травме организуй экстренную помощь.",
+        "en": "Seek emergency help for deformity, an open wound, marked numbness or major trauma."
+      },
+      "query_hint": "Suspected broken ankle seek emergency help deformity open wound"
+    },
+    {
+      "id": "guide:blood-urine:step:0",
+      "kind": "guide",
+      "ru": "Кровь в моче · шаг 1",
+      "en": "Blood in urine · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "blood-urine",
+        "index": 0,
+        "ru": "Видимая кровь в моче требует медицинской оценки, даже если появилась впервые или боли нет.",
+        "en": "Visible blood in urine needs medical assessment, even if it is the first episode or painless."
+      },
+      "query_hint": "Blood in urine visible blood urine needs medical assessment"
+    },
+    {
+      "id": "guide:blood-urine:step:1",
+      "kind": "guide",
+      "ru": "Кровь в моче · шаг 2",
+      "en": "Blood in urine · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "blood-urine",
+        "index": 1,
+        "ru": "При невозможности мочиться, сильной боли или резком ухудшении обращайся за неотложной помощью.",
+        "en": "Seek urgent help for inability to urinate, severe pain or rapid deterioration."
+      },
+      "query_hint": "Blood in urine seek urgent help inability urinate severe"
+    },
+    {
+      "id": "guide:blood-urine:step:2",
+      "kind": "guide",
+      "ru": "Кровь в моче · шаг 3",
+      "en": "Blood in urine · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "blood-urine",
+        "index": 2,
+        "ru": "Сообщи врачу о лекарствах, травмах, температуре и сопутствующих симптомах.",
+        "en": "Report medicines, injuries, fever and accompanying symptoms."
+      },
+      "query_hint": "Blood in urine report medicines injuries fever accompanying symptoms"
+    },
+    {
+      "id": "guide:kidney-stone:step:0",
+      "kind": "guide",
+      "ru": "Приступ сильной боли в боку с отдачей в пах · шаг 1",
+      "en": "Severe flank pain radiating to the groin · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "kidney-stone",
+        "index": 0,
+        "ru": "При сильной боли в боку, особенно с тошнотой или кровью в моче, организуй срочный осмотр.",
+        "en": "Arrange urgent assessment for severe flank pain, especially with nausea or blood in urine."
+      },
+      "query_hint": "Severe flank pain radiating to the groin arrange urgent assessment severe flank pain"
+    },
+    {
+      "id": "guide:kidney-stone:step:1",
+      "kind": "guide",
+      "ru": "Приступ сильной боли в боку с отдачей в пах · шаг 2",
+      "en": "Severe flank pain radiating to the groin · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "kidney-stone",
+        "index": 1,
+        "ru": "Температура, озноб или невозможность мочиться на фоне такой боли требуют неотложной оценки.",
+        "en": "Fever, chills or inability to urinate with this pain require urgent assessment."
+      },
+      "query_hint": "Severe flank pain radiating to the groin fever chills inability urinate pain require"
+    },
+    {
+      "id": "guide:kidney-stone:step:2",
+      "kind": "guide",
+      "ru": "Приступ сильной боли в боку с отдачей в пах · шаг 3",
+      "en": "Severe flank pain radiating to the groin · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "kidney-stone",
+        "index": 2,
+        "ru": "При тяжёлом состоянии или невозможности безопасно добраться вызови экстренную службу.",
+        "en": "Call emergency services if severely unwell or safe transport is unavailable."
+      },
+      "query_hint": "Severe flank pain radiating to the groin call emergency services severely unwell safe"
+    },
+    {
+      "id": "guide:hernia-emergency:step:0",
+      "kind": "guide",
+      "ru": "Болезненная грыжа с рвотой · шаг 1",
+      "en": "Painful hernia with vomiting · step 1",
+      "critical": true,
+      "step_binding": {
+        "topic": "hernia-emergency",
+        "index": 0,
+        "ru": "Внезапная сильная боль в области грыжи, рвота или твёрдое болезненное выпячивание требуют немедленной медицинской оценки.",
+        "en": "Sudden severe hernia pain, vomiting or a firm tender lump require immediate medical assessment."
+      },
+      "query_hint": "Painful hernia with vomiting sudden severe hernia pain vomiting firm"
+    },
+    {
+      "id": "guide:swallowed-object:step:0",
+      "kind": "guide",
+      "ru": "Проглочен посторонний предмет · шаг 1",
+      "en": "Swallowed foreign object · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "swallowed-object",
+        "index": 0,
+        "ru": "Если нарушено дыхание, вызови экстренную помощь и действуй по возрастному алгоритму удушья.",
+        "en": "For breathing obstruction call emergency services and follow age-specific choking guidance."
+      },
+      "query_hint": "Swallowed foreign object breathing obstruction call emergency services follow"
+    },
+    {
+      "id": "guide:swallowed-object:step:1",
+      "kind": "guide",
+      "ru": "Проглочен посторонний предмет · шаг 2",
+      "en": "Swallowed foreign object · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "swallowed-object",
+        "index": 1,
+        "ru": "При проглатывании батарейки, магнита или острого предмета нужна немедленная медицинская оценка.",
+        "en": "A swallowed battery, magnet or sharp object needs immediate medical assessment."
+      },
+      "query_hint": "Swallowed foreign object swallowed battery magnet sharp object needs"
+    },
+    {
+      "id": "guide:swallowed-object:step:2",
+      "kind": "guide",
+      "ru": "Проглочен посторонний предмет · шаг 3",
+      "en": "Swallowed foreign object · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "swallowed-object",
+        "index": 2,
+        "ru": "При боли, слюнотечении, трудности глотания или рвоте срочно обращайся за помощью. Сообщи тип предмета.",
+        "en": "Seek urgent help for pain, drooling, swallowing difficulty or vomiting. Report the object type."
+      },
+      "query_hint": "Swallowed foreign object seek urgent help pain drooling swallowing"
+    },
+    {
+      "id": "guide:double-vision:step:0",
+      "kind": "guide",
+      "ru": "Внезапное двоение в глазах · шаг 1",
+      "en": "Sudden double vision · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "double-vision",
+        "index": 0,
+        "ru": "Внезапное двоение требует срочной медицинской оценки.",
+        "en": "Sudden double vision needs urgent assessment."
+      },
+      "query_hint": "Sudden double vision sudden double vision needs urgent assessment"
+    },
+    {
+      "id": "guide:double-vision:step:1",
+      "kind": "guide",
+      "ru": "Внезапное двоение в глазах · шаг 2",
+      "en": "Sudden double vision · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "double-vision",
+        "index": 1,
+        "ru": "Если одновременно появилась сильная головная боль, травма головы, слабость или нарушилась речь, обращайся за экстренной помощью.",
+        "en": "Seek emergency help if it follows head injury or occurs with severe headache, weakness or speech problems."
+      },
+      "query_hint": "Sudden double vision seek emergency help follows head injury"
+    },
+    {
+      "id": "guide:double-vision:step:2",
+      "kind": "guide",
+      "ru": "Внезапное двоение в глазах · шаг 3",
+      "en": "Sudden double vision · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "double-vision",
+        "index": 2,
+        "ru": "Сообщи время начала и сопутствующие симптомы.",
+        "en": "Report onset time and associated symptoms."
+      },
+      "query_hint": "Sudden double vision report onset time associated symptoms"
+    },
+    {
+      "id": "guide:hives:step:0",
+      "kind": "guide",
+      "ru": "Крапивница без нарушения дыхания · шаг 1",
+      "en": "Hives without breathing difficulty · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "hives",
+        "index": 0,
+        "ru": "При зудящих приподнятых высыпаниях следи за общим состоянием и возможным распространением отёка.",
+        "en": "For itchy raised welts, watch the person's condition and possible swelling."
+      },
+      "query_hint": "Hives without breathing difficulty itchy raised welts watch condition possible"
+    },
+    {
+      "id": "guide:hives:step:1",
+      "kind": "guide",
+      "ru": "Крапивница без нарушения дыхания · шаг 2",
+      "en": "Hives without breathing difficulty · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "hives",
+        "index": 1,
+        "ru": "Если появились внезапный отёк губ, языка, горла, затруднение дыхания или обморок, вызывай экстренную помощь.",
+        "en": "Call emergency services if sudden lip, tongue or throat swelling, breathing difficulty or collapse develops."
+      },
+      "query_hint": "Hives without breathing difficulty call emergency services sudden lip tongue"
+    },
+    {
+      "id": "guide:hives:step:2",
+      "kind": "guide",
+      "ru": "Крапивница без нарушения дыхания · шаг 3",
+      "en": "Hives without breathing difficulty · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "hives",
+        "index": 2,
+        "ru": "При сохраняющейся или усиливающейся сыпи обратись за медицинской консультацией.",
+        "en": "Seek medical advice for persistent or worsening rash."
+      },
+      "query_hint": "Hives without breathing difficulty seek medical advice persistent worsening rash"
+    },
+    {
+      "id": "guide:septic-joint:step:0",
+      "kind": "guide",
+      "ru": "Внезапно горячий, опухший и болезненный сустав · шаг 1",
+      "en": "Suddenly hot, swollen, painful joint · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "septic-joint",
+        "index": 0,
+        "ru": "Внезапная сильная боль, отёк и жар в одном суставе требуют срочной медицинской оценки.",
+        "en": "Sudden severe pain, swelling and heat in one joint require urgent assessment."
+      },
+      "query_hint": "Suddenly hot, swollen, painful joint sudden severe pain swelling heat one"
+    },
+    {
+      "id": "guide:septic-joint:step:1",
+      "kind": "guide",
+      "ru": "Внезапно горячий, опухший и болезненный сустав · шаг 2",
+      "en": "Suddenly hot, swollen, painful joint · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "septic-joint",
+        "index": 1,
+        "ru": "Сообщи о лихорадке, протезе сустава, недавних вмешательствах и лекарствах.",
+        "en": "Report fever, joint replacement, recent procedures and medicines."
+      },
+      "query_hint": "Suddenly hot, swollen, painful joint report fever joint replacement recent procedures"
+    },
+    {
+      "id": "guide:septic-joint:step:2",
+      "kind": "guide",
+      "ru": "Внезапно горячий, опухший и болезненный сустав · шаг 3",
+      "en": "Suddenly hot, swollen, painful joint · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "septic-joint",
+        "index": 2,
+        "ru": "При резком ухудшении, спутанности или нарушении дыхания вызывай экстренную помощь.",
+        "en": "Call emergency services for rapid deterioration, confusion or breathing problems."
+      },
+      "query_hint": "Suddenly hot, swollen, painful joint call emergency services rapid deterioration confusion"
+    },
+    {
+      "id": "guide:rectal-bleeding:step:0",
+      "kind": "guide",
+      "ru": "Кровь из прямой кишки · шаг 1",
+      "en": "Rectal bleeding · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "rectal-bleeding",
+        "index": 0,
+        "ru": "При непрекращающемся или обильном кровотечении, слабости или обмороке вызывай экстренную помощь.",
+        "en": "Call emergency services for heavy or ongoing bleeding, weakness or collapse."
+      },
+      "query_hint": "Rectal bleeding call emergency services heavy ongoing bleeding"
+    },
+    {
+      "id": "guide:rectal-bleeding:step:1",
+      "kind": "guide",
+      "ru": "Кровь из прямой кишки · шаг 2",
+      "en": "Rectal bleeding · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "rectal-bleeding",
+        "index": 1,
+        "ru": "При небольшом кровотечении организуй медицинскую оценку; сообщи о крови в стуле, боли и лекарствах.",
+        "en": "Arrange assessment for smaller amounts; report blood in stool, pain and medicines."
+      },
+      "query_hint": "Rectal bleeding arrange assessment smaller amounts report blood"
+    },
+    {
+      "id": "guide:rectal-bleeding:step:2",
+      "kind": "guide",
+      "ru": "Кровь из прямой кишки · шаг 3",
+      "en": "Rectal bleeding · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "rectal-bleeding",
+        "index": 2,
+        "ru": "При потере сознания оцени дыхание и следуй указаниям диспетчера.",
+        "en": "If unresponsive, assess breathing and follow dispatcher instructions."
+      },
+      "query_hint": "Rectal bleeding unresponsive assess breathing follow dispatcher instructions"
+    },
+    {
+      "id": "guide:priapism:step:0",
+      "kind": "guide",
+      "ru": "Длительная болезненная эрекция · шаг 1",
+      "en": "Prolonged painful erection · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "priapism",
+        "index": 0,
+        "ru": "Если болезненная эрекция продолжается несколько часов, нужна экстренная оценка; не дожидайся четырёх часов.",
+        "en": "A painful erection lasting several hours requires emergency assessment; do not wait until four hours."
+      },
+      "query_hint": "Prolonged painful erection painful erection lasting several hours requires"
+    },
+    {
+      "id": "guide:priapism:step:1",
+      "kind": "guide",
+      "ru": "Длительная болезненная эрекция · шаг 2",
+      "en": "Prolonged painful erection · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "priapism",
+        "index": 1,
+        "ru": "При серповидноклеточной болезни болезненная эрекция продолжительностью около часа требует экстренной оценки.",
+        "en": "In sickle cell disease, a painful erection lasting about an hour requires emergency assessment."
+      },
+      "query_hint": "Prolonged painful erection sickle cell disease painful erection lasting"
+    },
+    {
+      "id": "guide:priapism:step:2",
+      "kind": "guide",
+      "ru": "Длительная болезненная эрекция · шаг 3",
+      "en": "Prolonged painful erection · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "priapism",
+        "index": 2,
+        "ru": "Организуй немедленную безопасную поездку в больницу; при невозможности вызови экстренную помощь.",
+        "en": "Arrange immediate safe transport to hospital or call emergency services if unavailable."
+      },
+      "query_hint": "Prolonged painful erection arrange immediate safe transport hospital call"
+    },
+    {
+      "id": "guide:altitude-sickness:step:0",
+      "kind": "guide",
+      "ru": "Горная болезнь · шаг 1",
+      "en": "Altitude sickness · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "altitude-sickness",
+        "index": 0,
+        "ru": "При головной боли, тошноте или головокружении после подъёма прекрати набор высоты. Отдыхай и наблюдай за состоянием.",
+        "en": "Stop ascending if headache, nausea or dizziness develop after ascent. Rest and monitor symptoms."
+      },
+      "query_hint": "Altitude sickness stop ascending headache nausea dizziness develop"
+    },
+    {
+      "id": "guide:altitude-sickness:step:1",
+      "kind": "guide",
+      "ru": "Горная болезнь · шаг 2",
+      "en": "Altitude sickness · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "altitude-sickness",
+        "index": 1,
+        "ru": "Если симптомы усиливаются или не проходят, спускайся на меньшую высоту безопасным способом.",
+        "en": "Descend safely if symptoms persist or worsen."
+      },
+      "query_hint": "Altitude sickness descend safely symptoms persist worsen"
+    },
+    {
+      "id": "guide:altitude-sickness:step:2",
+      "kind": "guide",
+      "ru": "Горная болезнь · шаг 3",
+      "en": "Altitude sickness · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "altitude-sickness",
+        "index": 2,
+        "ru": "При одышке в покое, спутанности, нарушении координации или выраженной сонливости организуй экстренную помощь и срочный безопасный спуск с сопровождением.",
+        "en": "For breathlessness at rest, confusion, poor coordination or marked drowsiness, seek emergency help and urgent assisted descent."
+      },
+      "query_hint": "Altitude sickness breathlessness rest confusion poor coordination marked"
+    },
+    {
+      "id": "guide:marine-sting:step:0",
+      "kind": "guide",
+      "ru": "Ужаление медузы или другого морского животного · шаг 1",
+      "en": "Jellyfish or other marine sting · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "marine-sting",
+        "index": 0,
+        "ru": "Выйди из воды, если это безопасно, и обратись к спасателю. У разных видов морских животных рекомендации различаются.",
+        "en": "Leave the water safely and ask a lifeguard for help. Guidance differs by marine species."
+      },
+      "query_hint": "Jellyfish or other marine sting leave water safely ask lifeguard help"
+    },
+    {
+      "id": "guide:marine-sting:step:1",
+      "kind": "guide",
+      "ru": "Ужаление медузы или другого морского животного · шаг 2",
+      "en": "Jellyfish or other marine sting · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "marine-sting",
+        "index": 1,
+        "ru": "При нарушении дыхания, боли в груди, коллапсе или тяжёлом состоянии вызови экстренную помощь.",
+        "en": "Call emergency services for breathing difficulty, chest pain, collapse or severe illness."
+      },
+      "query_hint": "Jellyfish or other marine sting call emergency services breathing difficulty chest"
+    },
+    {
+      "id": "guide:marine-sting:step:2",
+      "kind": "guide",
+      "ru": "Ужаление медузы или другого морского животного · шаг 3",
+      "en": "Jellyfish or other marine sting · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "marine-sting",
+        "index": 2,
+        "ru": "Следуй местным рекомендациям спасателей или токсикологической службы по удалению щупалец и обработке кожи.",
+        "en": "Follow local lifeguard or poison service advice on removing tentacles and treating the skin."
+      },
+      "query_hint": "Jellyfish or other marine sting follow local lifeguard poison service advice"
+    },
+    {
+      "id": "guide:friction-blister:step:0",
+      "kind": "guide",
+      "ru": "Мозоль с пузырём от трения · шаг 1",
+      "en": "Friction blister · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "friction-blister",
+        "index": 0,
+        "ru": "Прекрати трение и аккуратно очисти кожу.",
+        "en": "Stop friction and gently clean the skin."
+      },
+      "query_hint": "Friction blister stop friction gently clean skin"
+    },
+    {
+      "id": "guide:friction-blister:step:1",
+      "kind": "guide",
+      "ru": "Мозоль с пузырём от трения · шаг 2",
+      "en": "Friction blister · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "friction-blister",
+        "index": 1,
+        "ru": "Защити пузырь чистой мягкой или гидроколлоидной повязкой; не вскрывай его намеренно.",
+        "en": "Protect the blister with a clean soft or hydrocolloid dressing; do not deliberately burst it."
+      },
+      "query_hint": "Friction blister protect blister clean soft hydrocolloid dressing"
+    },
+    {
+      "id": "guide:friction-blister:step:2",
+      "kind": "guide",
+      "ru": "Мозоль с пузырём от трения · шаг 3",
+      "en": "Friction blister · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "friction-blister",
+        "index": 2,
+        "ru": "При гное, усиливающемся покраснении, боли или признаках инфекции обратись за медицинской помощью.",
+        "en": "Seek medical help for pus, spreading redness, increasing pain or other signs of infection."
+      },
+      "query_hint": "Friction blister seek medical help pus spreading redness"
+    },
+    {
+      "id": "guide:nose-ear-object:step:0",
+      "kind": "guide",
+      "ru": "Посторонний предмет в носу или ухе · шаг 1",
+      "en": "Foreign object in nose or ear · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "nose-ear-object",
+        "index": 0,
+        "ru": "Если нарушено дыхание, немедленно вызывай экстренную помощь.",
+        "en": "Call emergency services immediately if breathing is affected."
+      },
+      "query_hint": "Foreign object in nose or ear call emergency services breathing affected"
+    },
+    {
+      "id": "guide:nose-ear-object:step:1",
+      "kind": "guide",
+      "ru": "Посторонний предмет в носу или ухе · шаг 2",
+      "en": "Foreign object in nose or ear · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "nose-ear-object",
+        "index": 1,
+        "ru": "При подозрении на батарейку или магниты нужна экстренная медицинская оценка.",
+        "en": "Suspected batteries or magnets need emergency assessment."
+      },
+      "query_hint": "Foreign object in nose or ear suspected batteries magnets need emergency assessment"
+    },
+    {
+      "id": "guide:nose-ear-object:step:2",
+      "kind": "guide",
+      "ru": "Посторонний предмет в носу или ухе · шаг 3",
+      "en": "Foreign object in nose or ear · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "nose-ear-object",
+        "index": 2,
+        "ru": "Если предмет застрял, организуй осмотр и сообщи, что это за предмет.",
+        "en": "Arrange assessment if an object is lodged and tell the clinician what it is."
+      },
+      "query_hint": "Foreign object in nose or ear arrange assessment object lodged tell clinician"
+    },
+    {
+      "id": "guide:smoke-inhalation:step:2",
+      "kind": "guide",
+      "ru": "Вдыхание дыма при пожаре · шаг 3",
+      "en": "Smoke inhalation after fire · step 3",
+      "critical": true,
+      "step_binding": {
+        "topic": "smoke-inhalation",
+        "index": 2,
+        "ru": "После вдыхания дыма нужна медицинская оценка, особенно при кашле, охриплости, одышке или ожогах лица.",
+        "en": "Smoke exposure needs medical assessment, especially with cough, hoarseness, breathlessness or facial burns."
+      },
+      "query_hint": "Smoke inhalation after fire smoke exposure needs medical assessment especially"
+    },
+    {
+      "id": "guide:motion-sickness:step:0",
+      "kind": "guide",
+      "ru": "Укачивание в транспорте · шаг 1",
+      "en": "Motion sickness · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "motion-sickness",
+        "index": 0,
+        "ru": "Если возможно, прекрати движение или сядь так, чтобы меньше ощущать его. Смотри на неподвижный горизонт.",
+        "en": "Stop moving if possible or sit where motion is less pronounced. Look at a fixed horizon."
+      },
+      "query_hint": "Motion sickness stop moving possible sit where motion"
+    },
+    {
+      "id": "guide:motion-sickness:step:1",
+      "kind": "guide",
+      "ru": "Укачивание в транспорте · шаг 2",
+      "en": "Motion sickness · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "motion-sickness",
+        "index": 1,
+        "ru": "Обеспечь свежий воздух, избегай чтения и просмотра экрана. При нормальном глотании пей небольшими глотками.",
+        "en": "Get fresh air, avoid reading and screens, and sip fluids if able to swallow."
+      },
+      "query_hint": "Motion sickness get fresh air avoid reading screens"
+    },
+    {
+      "id": "guide:motion-sickness:step:2",
+      "kind": "guide",
+      "ru": "Укачивание в транспорте · шаг 3",
+      "en": "Motion sickness · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "motion-sickness",
+        "index": 2,
+        "ru": "При необычно сильном головокружении, обмороке, неврологических симптомах или постоянной рвоте обратись за медицинской помощью.",
+        "en": "Seek medical assessment for unusually severe dizziness, collapse, neurological symptoms or persistent vomiting."
+      },
+      "query_hint": "Motion sickness seek medical assessment unusually severe dizziness"
+    },
+    {
+      "id": "guide:needlestick:step:0",
+      "kind": "guide",
+      "ru": "Укол использованной иглой · шаг 1",
+      "en": "Injury from a used needle · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "needlestick",
+        "index": 0,
+        "ru": "Промой место прокола проточной водой с мылом, не растирая рану.",
+        "en": "Wash the puncture under running water with soap without scrubbing."
+      },
+      "query_hint": "Injury from a used needle wash puncture under running water soap"
+    },
+    {
+      "id": "guide:needlestick:step:1",
+      "kind": "guide",
+      "ru": "Укол использованной иглой · шаг 2",
+      "en": "Injury from a used needle · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "needlestick",
+        "index": 1,
+        "ru": "Закрой повреждение чистой водостойкой повязкой.",
+        "en": "Cover with a clean waterproof dressing."
+      },
+      "query_hint": "Injury from a used needle cover clean waterproof dressing"
+    },
+    {
+      "id": "guide:needlestick:step:2",
+      "kind": "guide",
+      "ru": "Укол использованной иглой · шаг 3",
+      "en": "Injury from a used needle · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "needlestick",
+        "index": 2,
+        "ru": "Немедленно обратись за медицинской оценкой риска заражения. Если травма произошла на работе, сообщи ответственному за безопасность.",
+        "en": "Seek immediate medical assessment of infection risk. If the injury occurred at work, notify the relevant safety team."
+      },
+      "query_hint": "Injury from a used needle seek immediate medical assessment infection risk"
+    },
+    {
+      "id": "guide:dirty-puncture:step:0",
+      "kind": "guide",
+      "ru": "Глубокая или загрязнённая колотая рана · шаг 1",
+      "en": "Deep or contaminated puncture wound · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "dirty-puncture",
+        "index": 0,
+        "ru": "Если есть кровотечение, прижми рану чистой повязкой. Если внутри остался предмет, не извлекай его.",
+        "en": "Control bleeding with a clean dressing. If an object remains embedded, leave it in place."
+      },
+      "query_hint": "Deep or contaminated puncture wound control bleeding clean dressing object remains"
+    },
+    {
+      "id": "guide:dirty-puncture:step:1",
+      "kind": "guide",
+      "ru": "Глубокая или загрязнённая колотая рана · шаг 2",
+      "en": "Deep or contaminated puncture wound · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "dirty-puncture",
+        "index": 1,
+        "ru": "Если возможно без травмирования, промой загрязнённую рану чистой водой и защити повязкой.",
+        "en": "If possible without causing further injury, rinse contamination with clean water and protect with a dressing."
+      },
+      "query_hint": "Deep or contaminated puncture wound possible without causing further injury rinse"
+    },
+    {
+      "id": "guide:dirty-puncture:step:2",
+      "kind": "guide",
+      "ru": "Глубокая или загрязнённая колотая рана · шаг 3",
+      "en": "Deep or contaminated puncture wound · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "dirty-puncture",
+        "index": 2,
+        "ru": "Организуй срочную медицинскую оценку, сообщи о загрязнении и дате последней вакцинации от столбняка, если известна.",
+        "en": "Arrange urgent assessment; report contamination and the last tetanus vaccination date if known."
+      },
+      "query_hint": "Deep or contaminated puncture wound arrange urgent assessment report contamination last"
+    },
+    {
+      "id": "guide:human-bite:step:0",
+      "kind": "guide",
+      "ru": "Укус человека с повреждением кожи · шаг 1",
+      "en": "Human bite breaking the skin · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "human-bite",
+        "index": 0,
+        "ru": "Промой рану водой с мылом. При кровотечении приложи чистую повязку с давлением.",
+        "en": "Wash the wound with soap and water. Apply pressure with a clean dressing if bleeding."
+      },
+      "query_hint": "Human bite breaking the skin wash wound soap water apply pressure"
+    },
+    {
+      "id": "guide:human-bite:step:1",
+      "kind": "guide",
+      "ru": "Укус человека с повреждением кожи · шаг 2",
+      "en": "Human bite breaking the skin · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "human-bite",
+        "index": 1,
+        "ru": "Защити рану чистой повязкой и обратись за медицинской оценкой: укусы человека могут инфицироваться.",
+        "en": "Protect with a clean dressing and seek medical assessment because human bites can become infected."
+      },
+      "query_hint": "Human bite breaking the skin protect clean dressing seek medical assessment"
+    },
+    {
+      "id": "guide:human-bite:step:2",
+      "kind": "guide",
+      "ru": "Укус человека с повреждением кожи · шаг 3",
+      "en": "Human bite breaking the skin · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "human-bite",
+        "index": 2,
+        "ru": "Сообщи о локализации укуса, контакте с кровью и прививках. При неконтролируемом кровотечении вызывай экстренную помощь.",
+        "en": "Report the bite location, blood exposure and vaccinations. Call emergency services for uncontrolled bleeding."
+      },
+      "query_hint": "Human bite breaking the skin report bite location blood exposure vaccinations"
+    },
+    {
+      "id": "guide:broken-tooth:step:0",
+      "kind": "guide",
+      "ru": "Скол или перелом зуба · шаг 1",
+      "en": "Chipped or broken tooth · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "broken-tooth",
+        "index": 0,
+        "ru": "Найди отколовшийся фрагмент, если это безопасно. Сохрани его в чистой ёмкости с молоком или слюной, не во рту.",
+        "en": "If safe, find the broken fragment and keep it in a clean container of milk or saliva, not inside the mouth."
+      },
+      "query_hint": "Chipped or broken tooth safe find broken fragment keep clean"
+    },
+    {
+      "id": "guide:broken-tooth:step:1",
+      "kind": "guide",
+      "ru": "Скол или перелом зуба · шаг 2",
+      "en": "Chipped or broken tooth · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "broken-tooth",
+        "index": 1,
+        "ru": "Организуй осмотр стоматологом; сообщи о боли, подвижности зуба и травме.",
+        "en": "Arrange dental assessment; report pain, loose teeth and injury."
+      },
+      "query_hint": "Chipped or broken tooth arrange dental assessment report pain loose"
+    },
+    {
+      "id": "guide:broken-tooth:step:2",
+      "kind": "guide",
+      "ru": "Скол или перелом зуба · шаг 3",
+      "en": "Chipped or broken tooth · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "broken-tooth",
+        "index": 2,
+        "ru": "При серьёзной травме лица, нарушении дыхания или сильном кровотечении нужна экстренная помощь.",
+        "en": "Seek emergency help for major facial injury, breathing difficulty or severe bleeding."
+      },
+      "query_hint": "Chipped or broken tooth seek emergency help major facial injury"
+    },
+    {
+      "id": "guide:eardrum-injury:step:0",
+      "kind": "guide",
+      "ru": "Подозрение на повреждение барабанной перепонки · шаг 1",
+      "en": "Suspected eardrum injury · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "eardrum-injury",
+        "index": 0,
+        "ru": "При боли, ухудшении слуха или выделениях после удара, перепада давления или травмы уха организуй медицинскую оценку.",
+        "en": "Arrange medical assessment for pain, reduced hearing or discharge after impact, pressure change or ear injury."
+      },
+      "query_hint": "Suspected eardrum injury arrange medical assessment pain reduced hearing"
+    },
+    {
+      "id": "guide:eardrum-injury:step:1",
+      "kind": "guide",
+      "ru": "Подозрение на повреждение барабанной перепонки · шаг 2",
+      "en": "Suspected eardrum injury · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "eardrum-injury",
+        "index": 1,
+        "ru": "До осмотра сохраняй ухо сухим и защищай от попадания воды.",
+        "en": "Keep the ear dry and protected from water until assessed."
+      },
+      "query_hint": "Suspected eardrum injury keep ear dry protected water assessed"
+    },
+    {
+      "id": "guide:eardrum-injury:step:2",
+      "kind": "guide",
+      "ru": "Подозрение на повреждение барабанной перепонки · шаг 3",
+      "en": "Suspected eardrum injury · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "eardrum-injury",
+        "index": 2,
+        "ru": "При серьёзной травме головы, нарушении сознания или внезапной потере слуха обращайся за неотложной помощью.",
+        "en": "Seek urgent or emergency help for sudden hearing loss, altered consciousness or major head injury."
+      },
+      "query_hint": "Suspected eardrum injury seek urgent emergency help sudden hearing"
+    },
+    {
+      "id": "guide:contact-lens-eye:step:0",
+      "kind": "guide",
+      "ru": "Красный болезненный глаз при ношении линз · шаг 1",
+      "en": "Painful red eye in a contact lens wearer · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "contact-lens-eye",
+        "index": 0,
+        "ru": "Сними контактные линзы, если это легко сделать, и не надевай их снова до осмотра.",
+        "en": "Remove contact lenses if easy and do not wear them again until assessed."
+      },
+      "query_hint": "Painful red eye in a contact lens wearer remove contact lenses easy wear again"
+    },
+    {
+      "id": "guide:contact-lens-eye:step:1",
+      "kind": "guide",
+      "ru": "Красный болезненный глаз при ношении линз · шаг 2",
+      "en": "Painful red eye in a contact lens wearer · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "contact-lens-eye",
+        "index": 1,
+        "ru": "При болезненном красном глазе на фоне ношения линз срочно обратись к глазному специалисту.",
+        "en": "Seek urgent eye assessment for a painful red eye while wearing contact lenses."
+      },
+      "query_hint": "Painful red eye in a contact lens wearer seek urgent eye assessment painful red"
+    },
+    {
+      "id": "guide:contact-lens-eye:step:2",
+      "kind": "guide",
+      "ru": "Красный болезненный глаз при ношении линз · шаг 3",
+      "en": "Painful red eye in a contact lens wearer · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "contact-lens-eye",
+        "index": 2,
+        "ru": "При внезапном нарушении зрения, сильной боли или светобоязни нужна неотложная медицинская оценка.",
+        "en": "Sudden vision change, severe pain or light sensitivity require urgent medical assessment."
+      },
+      "query_hint": "Painful red eye in a contact lens wearer sudden vision change severe pain light"
+    },
+    {
+      "id": "guide:diabetic-foot-wound:step:0",
+      "kind": "guide",
+      "ru": "Рана или волдырь на стопе при диабете · шаг 1",
+      "en": "Foot wound or blister in diabetes · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "diabetic-foot-wound",
+        "index": 0,
+        "ru": "При новой ране, волдыре или изменении цвета стопы у человека с диабетом организуй быструю медицинскую оценку, даже если боли нет.",
+        "en": "Arrange prompt medical assessment for a new wound, blister or colour change on a foot in someone with diabetes, even without pain."
+      },
+      "query_hint": "Foot wound or blister in diabetes arrange prompt medical assessment new wound"
+    },
+    {
+      "id": "guide:diabetic-foot-wound:step:1",
+      "kind": "guide",
+      "ru": "Рана или волдырь на стопе при диабете · шаг 2",
+      "en": "Foot wound or blister in diabetes · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "diabetic-foot-wound",
+        "index": 1,
+        "ru": "Защити повреждение чистой повязкой и уменьши давление на поражённый участок.",
+        "en": "Protect the injury with a clean dressing and reduce pressure on the affected area."
+      },
+      "query_hint": "Foot wound or blister in diabetes protect injury clean dressing reduce pressure"
+    },
+    {
+      "id": "guide:diabetic-foot-wound:step:2",
+      "kind": "guide",
+      "ru": "Рана или волдырь на стопе при диабете · шаг 3",
+      "en": "Foot wound or blister in diabetes · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "diabetic-foot-wound",
+        "index": 2,
+        "ru": "При резком ухудшении, лихорадке, спутанности или признаках тяжёлой инфекции обращайся за экстренной помощью.",
+        "en": "Seek emergency help for rapid deterioration, fever with severe illness, confusion or other signs of serious infection."
+      },
+      "query_hint": "Foot wound or blister in diabetes seek emergency help rapid deterioration fever"
+    },
+    {
+      "id": "guide:reduced-fetal-movement:step:0",
+      "kind": "guide",
+      "ru": "Ребёнок в утробе стал двигаться меньше · шаг 1",
+      "en": "Reduced fetal movements · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "reduced-fetal-movement",
+        "index": 0,
+        "ru": "Если привычные движения плода ослабли, исчезли или изменились, немедленно свяжись с акушерской службой.",
+        "en": "Contact maternity services immediately if the baby's usual movements slow, stop or change."
+      },
+      "query_hint": "Reduced fetal movements contact maternity services baby usual movements"
+    },
+    {
+      "id": "guide:reduced-fetal-movement:step:1",
+      "kind": "guide",
+      "ru": "Ребёнок в утробе стал двигаться меньше · шаг 2",
+      "en": "Reduced fetal movements · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "reduced-fetal-movement",
+        "index": 1,
+        "ru": "Не жди следующего дня; сообщи срок беременности и когда заметила изменения.",
+        "en": "Do not wait until the next day; report gestational age and when the change began."
+      },
+      "query_hint": "Reduced fetal movements wait next day report gestational age"
+    },
+    {
+      "id": "guide:reduced-fetal-movement:step:2",
+      "kind": "guide",
+      "ru": "Ребёнок в утробе стал двигаться меньше · шаг 3",
+      "en": "Reduced fetal movements · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "reduced-fetal-movement",
+        "index": 2,
+        "ru": "Если после предыдущего осмотра проблема повторилась, обратись повторно.",
+        "en": "Seek help again if the problem recurs after assessment."
+      },
+      "query_hint": "Reduced fetal movements seek help again problem recurs after"
+    },
+    {
+      "id": "guide:kneecap-dislocation:step:0",
+      "kind": "guide",
+      "ru": "Подозрение на вывих надколенника · шаг 1",
+      "en": "Suspected dislocated kneecap · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "kneecap-dislocation",
+        "index": 0,
+        "ru": "При деформации колена или подозрении на вывих организуй срочную медицинскую оценку.",
+        "en": "Arrange urgent assessment for a deformed knee or suspected dislocation."
+      },
+      "query_hint": "Suspected dislocated kneecap arrange urgent assessment deformed knee suspected"
+    },
+    {
+      "id": "guide:kneecap-dislocation:step:1",
+      "kind": "guide",
+      "ru": "Подозрение на вывих надколенника · шаг 2",
+      "en": "Suspected dislocated kneecap · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "kneecap-dislocation",
+        "index": 1,
+        "ru": "Поддержи колено в найденном удобном положении, не нагружай ногу.",
+        "en": "Support the knee in its comfortable position and avoid weight-bearing."
+      },
+      "query_hint": "Suspected dislocated kneecap support knee its comfortable position avoid"
+    },
+    {
+      "id": "guide:kneecap-dislocation:step:2",
+      "kind": "guide",
+      "ru": "Подозрение на вывих надколенника · шаг 3",
+      "en": "Suspected dislocated kneecap · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "kneecap-dislocation",
+        "index": 2,
+        "ru": "При тяжёлой травме, сильном кровотечении или невозможности безопасно добраться вызови экстренную помощь.",
+        "en": "Call emergency services for major injury, severe bleeding or unsafe transport."
+      },
+      "query_hint": "Suspected dislocated kneecap call emergency services major injury severe"
+    },
+    {
+      "id": "guide:finger-fracture:step:0",
+      "kind": "guide",
+      "ru": "Подозрение на перелом пальца руки · шаг 1",
+      "en": "Suspected broken finger · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "finger-fracture",
+        "index": 0,
+        "ru": "При выраженной боли, отёке или изменении формы пальца организуй медицинский осмотр.",
+        "en": "Arrange medical assessment for marked pain, swelling or altered finger shape."
+      },
+      "query_hint": "Suspected broken finger arrange medical assessment marked pain swelling"
+    },
+    {
+      "id": "guide:finger-fracture:step:1",
+      "kind": "guide",
+      "ru": "Подозрение на перелом пальца руки · шаг 2",
+      "en": "Suspected broken finger · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "finger-fracture",
+        "index": 1,
+        "ru": "Сними кольца, если это можно сделать без усилия. Поддержи кисть, приложи холод через ткань.",
+        "en": "Remove rings if easy. Support the hand and apply a wrapped cold pack."
+      },
+      "query_hint": "Suspected broken finger remove rings easy support hand apply"
+    },
+    {
+      "id": "guide:finger-fracture:step:2",
+      "kind": "guide",
+      "ru": "Подозрение на перелом пальца руки · шаг 3",
+      "en": "Suspected broken finger · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "finger-fracture",
+        "index": 2,
+        "ru": "Если палец побледнел, посинел, онемел, сильно деформирован или видна кость, нужна экстренная оценка.",
+        "en": "Seek emergency assessment for a pale, blue, numb or badly deformed finger or exposed bone."
+      },
+      "query_hint": "Suspected broken finger seek emergency assessment pale blue numb"
+    },
+    {
+      "id": "guide:toe-fracture:step:0",
+      "kind": "guide",
+      "ru": "Травма пальца ноги · шаг 1",
+      "en": "Toe injury · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "toe-fracture",
+        "index": 0,
+        "ru": "Отдохни, приподними стопу и приложи холод через ткань.",
+        "en": "Rest, elevate the foot and apply a wrapped cold pack."
+      },
+      "query_hint": "Toe injury rest elevate foot apply wrapped cold"
+    },
+    {
+      "id": "guide:toe-fracture:step:1",
+      "kind": "guide",
+      "ru": "Травма пальца ноги · шаг 2",
+      "en": "Toe injury · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "toe-fracture",
+        "index": 1,
+        "ru": "При сильной боли, травме большого пальца, выраженной деформации или повреждении кожи организуй медицинский осмотр.",
+        "en": "Arrange assessment for severe pain, big toe injury, marked deformity or a wound."
+      },
+      "query_hint": "Toe injury arrange assessment severe pain big toe"
+    },
+    {
+      "id": "guide:toe-fracture:step:2",
+      "kind": "guide",
+      "ru": "Травма пальца ноги · шаг 3",
+      "en": "Toe injury · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "toe-fracture",
+        "index": 2,
+        "ru": "При онемении, нарушении кровоснабжения или видимой кости нужна неотложная оценка.",
+        "en": "Seek urgent assessment for numbness, impaired circulation or exposed bone."
+      },
+      "query_hint": "Toe injury seek urgent assessment numbness impaired circulation"
+    },
+    {
+      "id": "guide:achilles-rupture:step:0",
+      "kind": "guide",
+      "ru": "Резкая боль над пяткой после движения · шаг 1",
+      "en": "Sudden pain above heel after movement · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "achilles-rupture",
+        "index": 0,
+        "ru": "После резкого щелчка или боли над пяткой прекрати нагрузку.",
+        "en": "Stop exertion after a sudden snap or pain above the heel."
+      },
+      "query_hint": "Sudden pain above heel after movement stop exertion after sudden snap pain"
+    },
+    {
+      "id": "guide:achilles-rupture:step:1",
+      "kind": "guide",
+      "ru": "Резкая боль над пяткой после движения · шаг 2",
+      "en": "Sudden pain above heel after movement · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "achilles-rupture",
+        "index": 1,
+        "ru": "Если трудно оттолкнуться стопой или ходить, организуй срочный медицинский осмотр.",
+        "en": "Arrange urgent assessment if pushing off or walking becomes difficult."
+      },
+      "query_hint": "Sudden pain above heel after movement arrange urgent assessment pushing off walking"
+    },
+    {
+      "id": "guide:achilles-rupture:step:2",
+      "kind": "guide",
+      "ru": "Резкая боль над пяткой после движения · шаг 3",
+      "en": "Sudden pain above heel after movement · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "achilles-rupture",
+        "index": 2,
+        "ru": "Поддерживай ногу в удобном положении, избегай опоры до получения указаний специалиста.",
+        "en": "Support the leg comfortably and avoid weight-bearing until advised."
+      },
+      "query_hint": "Sudden pain above heel after movement support leg comfortably avoid weight-bearing advised"
+    },
+    {
+      "id": "guide:paracetamol-overdose:step:0",
+      "kind": "guide",
+      "ru": "Возможная передозировка парацетамола · шаг 1",
+      "en": "Possible paracetamol overdose · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "paracetamol-overdose",
+        "index": 0,
+        "ru": "Если принято больше рекомендованного количества парацетамола или есть сомнение, срочно обратись в токсикологическую или экстренную медицинскую службу.",
+        "en": "If more than the recommended amount of paracetamol may have been taken, seek urgent poison service or emergency medical advice."
+      },
+      "query_hint": "Possible paracetamol overdose more than recommended amount paracetamol may"
+    },
+    {
+      "id": "guide:paracetamol-overdose:step:1",
+      "kind": "guide",
+      "ru": "Возможная передозировка парацетамола · шаг 2",
+      "en": "Possible paracetamol overdose · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "paracetamol-overdose",
+        "index": 1,
+        "ru": "Сообщи названия препаратов, количество и время приёма, если известны. Возьми упаковки.",
+        "en": "Report medicine names, amounts and timing if known. Keep the packaging."
+      },
+      "query_hint": "Possible paracetamol overdose report medicine names amounts timing known"
+    },
+    {
+      "id": "guide:paracetamol-overdose:step:2",
+      "kind": "guide",
+      "ru": "Возможная передозировка парацетамола · шаг 3",
+      "en": "Possible paracetamol overdose · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "paracetamol-overdose",
+        "index": 2,
+        "ru": "При потере сознания или нарушении дыхания вызывай экстренную помощь; следуй диспетчеру.",
+        "en": "Call emergency services for unconsciousness or abnormal breathing; follow dispatcher directions."
+      },
+      "query_hint": "Possible paracetamol overdose call emergency services unconsciousness abnormal breathing"
+    },
+    {
+      "id": "guide:bowel-obstruction:step:0",
+      "kind": "guide",
+      "ru": "Вздутие живота с рвотой и задержкой стула · шаг 1",
+      "en": "Abdominal distension with vomiting and no stool or gas · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "bowel-obstruction",
+        "index": 0,
+        "ru": "Если появились боль и вздутие живота, рвота и невозможность отхождения стула или газов, организуй немедленную медицинскую оценку.",
+        "en": "Arrange immediate medical assessment for abdominal pain and distension with vomiting and inability to pass stool or gas."
+      },
+      "query_hint": "Abdominal distension with vomiting and no stool or gas arrange immediate medical assessment abdominal pain"
+    },
+    {
+      "id": "guide:bowel-obstruction:step:1",
+      "kind": "guide",
+      "ru": "Вздутие живота с рвотой и задержкой стула · шаг 2",
+      "en": "Abdominal distension with vomiting and no stool or gas · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "bowel-obstruction",
+        "index": 1,
+        "ru": "При сильной боли, слабости, обмороке или резком ухудшении вызывай экстренную помощь.",
+        "en": "Call emergency services for severe pain, weakness, fainting or rapid deterioration."
+      },
+      "query_hint": "Abdominal distension with vomiting and no stool or gas call emergency services severe pain weakness"
+    },
+    {
+      "id": "guide:bowel-obstruction:step:2",
+      "kind": "guide",
+      "ru": "Вздутие живота с рвотой и задержкой стула · шаг 3",
+      "en": "Abdominal distension with vomiting and no stool or gas · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "bowel-obstruction",
+        "index": 2,
+        "ru": "Сообщи о прежних операциях, грыжах и времени начала симптомов.",
+        "en": "Report previous surgery, hernias and symptom onset."
+      },
+      "query_hint": "Abdominal distension with vomiting and no stool or gas report previous surgery hernias symptom onset"
+    },
+    {
+      "id": "guide:hyperglycemia:step:0",
+      "kind": "guide",
+      "ru": "Диабет: высокий сахар и ухудшение состояния · шаг 1",
+      "en": "Diabetes: high blood sugar and deterioration · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "hyperglycemia",
+        "index": 0,
+        "ru": "При известном диабете и признаках высокого сахара, если возможно, измерь глюкозу и следуй индивидуальному плану.",
+        "en": "In known diabetes with signs of high glucose, check blood glucose if possible and follow the personal care plan."
+      },
+      "query_hint": "Diabetes: high blood sugar and deterioration known diabetes signs high glucose check"
+    },
+    {
+      "id": "guide:hyperglycemia:step:1",
+      "kind": "guide",
+      "ru": "Диабет: высокий сахар и ухудшение состояния · шаг 2",
+      "en": "Diabetes: high blood sugar and deterioration · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "hyperglycemia",
+        "index": 1,
+        "ru": "При рвоте, необычном дыхании, сильной сонливости или спутанности немедленно обратись за экстренной помощью.",
+        "en": "Seek emergency help for vomiting, unusual breathing, marked drowsiness or confusion."
+      },
+      "query_hint": "Diabetes: high blood sugar and deterioration seek emergency help vomiting unusual breathing"
+    },
+    {
+      "id": "guide:hyperglycemia:step:2",
+      "kind": "guide",
+      "ru": "Диабет: высокий сахар и ухудшение состояния · шаг 3",
+      "en": "Diabetes: high blood sugar and deterioration · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "hyperglycemia",
+        "index": 2,
+        "ru": "Сообщи медикам результаты измерений и лекарства; не оставляй человека с ухудшением состояния одного.",
+        "en": "Report measurements and medicines; stay with a deteriorating person."
+      },
+      "query_hint": "Diabetes: high blood sugar and deterioration report measurements medicines stay deteriorating"
+    },
+    {
+      "id": "guide:whooping-cough:step:0",
+      "kind": "guide",
+      "ru": "Приступы кашля у младенца: тревожные признаки · шаг 1",
+      "en": "Infant coughing fits: warning signs · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "whooping-cough",
+        "index": 0,
+        "ru": "Если у малыша есть паузы дыхания, посинение или выраженная одышка, вызывай экстренную помощь.",
+        "en": "Call emergency services for pauses in breathing, blue colouring or severe breathing difficulty."
+      },
+      "query_hint": "Infant coughing fits: warning signs call emergency services pauses breathing blue"
+    },
+    {
+      "id": "guide:whooping-cough:step:1",
+      "kind": "guide",
+      "ru": "Приступы кашля у младенца: тревожные признаки · шаг 2",
+      "en": "Infant coughing fits: warning signs · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "whooping-cough",
+        "index": 1,
+        "ru": "При подозрении на коклюш у ребёнка младше шести месяцев немедленно свяжись с медицинской службой.",
+        "en": "Contact a medical service immediately for suspected pertussis in an infant under six months."
+      },
+      "query_hint": "Infant coughing fits: warning signs contact medical service suspected pertussis infant"
+    },
+    {
+      "id": "guide:whooping-cough:step:2",
+      "kind": "guide",
+      "ru": "Приступы кашля у младенца: тревожные признаки · шаг 3",
+      "en": "Infant coughing fits: warning signs · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "whooping-cough",
+        "index": 2,
+        "ru": "Следи за дыханием и кормлением; сообщи о контактах с больными и прививках.",
+        "en": "Monitor breathing and feeding; report exposure and vaccination history."
+      },
+      "query_hint": "Infant coughing fits: warning signs monitor breathing feeding report exposure vaccination"
+    },
+    {
+      "id": "guide:acute-glaucoma:step:0",
+      "kind": "guide",
+      "ru": "Внезапная боль в глазу с радужными кругами и тошнотой · шаг 1",
+      "en": "Sudden eye pain with halos and nausea · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "acute-glaucoma",
+        "index": 0,
+        "ru": "Внезапная сильная боль в глазу вместе с ухудшением зрения, радужными кругами или тошнотой требует экстренной медицинской оценки.",
+        "en": "Sudden severe eye pain with reduced vision, halos or nausea requires emergency assessment."
+      },
+      "query_hint": "Sudden eye pain with halos and nausea sudden severe eye pain reduced vision"
+    },
+    {
+      "id": "guide:acute-glaucoma:step:1",
+      "kind": "guide",
+      "ru": "Внезапная боль в глазу с радужными кругами и тошнотой · шаг 2",
+      "en": "Sudden eye pain with halos and nausea · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "acute-glaucoma",
+        "index": 1,
+        "ru": "Организуй немедленный осмотр в отделении экстренной помощи; не управляй транспортом.",
+        "en": "Arrange immediate emergency department assessment and do not drive."
+      },
+      "query_hint": "Sudden eye pain with halos and nausea arrange immediate emergency department assessment drive"
+    },
+    {
+      "id": "guide:acute-glaucoma:step:2",
+      "kind": "guide",
+      "ru": "Внезапная боль в глазу с радужными кругами и тошнотой · шаг 3",
+      "en": "Sudden eye pain with halos and nausea · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "acute-glaucoma",
+        "index": 2,
+        "ru": "Сообщи о глазных заболеваниях и недавно использованных каплях.",
+        "en": "Report eye conditions and recently used eye drops."
+      },
+      "query_hint": "Sudden eye pain with halos and nausea report eye conditions recently used drops"
+    },
+    {
+      "id": "guide:chemo-fever:step:0",
+      "kind": "guide",
+      "ru": "Лихорадка или недомогание после химиотерапии · шаг 1",
+      "en": "Fever or illness after chemotherapy · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "chemo-fever",
+        "index": 0,
+        "ru": "Если после противоопухолевого лечения появился жар, озноб или необычное недомогание, немедленно свяжись с выданной онкологической службой.",
+        "en": "For fever, chills or unusual illness after anticancer treatment, immediately contact the oncology service provided to the patient."
+      },
+      "query_hint": "Fever or illness after chemotherapy fever chills unusual illness after anticancer"
+    },
+    {
+      "id": "guide:chemo-fever:step:1",
+      "kind": "guide",
+      "ru": "Лихорадка или недомогание после химиотерапии · шаг 2",
+      "en": "Fever or illness after chemotherapy · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "chemo-fever",
+        "index": 1,
+        "ru": "Если есть выраженная одышка, спутанность, коллапс или тяжёлое состояние, вызывай экстренную помощь.",
+        "en": "Call emergency services for marked breathlessness, confusion, collapse or severe illness."
+      },
+      "query_hint": "Fever or illness after chemotherapy call emergency services marked breathlessness confusion"
+    },
+    {
+      "id": "guide:chemo-fever:step:2",
+      "kind": "guide",
+      "ru": "Лихорадка или недомогание после химиотерапии · шаг 3",
+      "en": "Fever or illness after chemotherapy · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "chemo-fever",
+        "index": 2,
+        "ru": "Сообщи дату последнего лечения, температуру и лекарства; покажи карточку пациента, если она есть.",
+        "en": "Report the last treatment date, temperature and medicines; show the patient alert card if available."
+      },
+      "query_hint": "Fever or illness after chemotherapy report last treatment date temperature medicines"
+    },
+    {
+      "id": "guide:mushroom-poisoning:step:0",
+      "kind": "guide",
+      "ru": "Подозрение на отравление дикорастущими грибами · шаг 1",
+      "en": "Suspected wild mushroom poisoning · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "mushroom-poisoning",
+        "index": 0,
+        "ru": "Если есть подозрение на употребление ядовитых грибов, немедленно обращайся в токсикологическую или экстренную медицинскую службу, даже без симптомов.",
+        "en": "Seek immediate poison service or emergency medical advice for suspected poisonous mushroom ingestion, even without symptoms."
+      },
+      "query_hint": "Suspected wild mushroom poisoning seek immediate poison service emergency medical"
+    },
+    {
+      "id": "guide:mushroom-poisoning:step:1",
+      "kind": "guide",
+      "ru": "Подозрение на отравление дикорастущими грибами · шаг 2",
+      "en": "Suspected wild mushroom poisoning · step 2",
+      "critical": false,
+      "step_binding": {
+        "topic": "mushroom-poisoning",
+        "index": 1,
+        "ru": "Сообщи время употребления, количество, признаки и кто ещё ел грибы. Если безопасно, сохрани остатки или фотографии для специалистов.",
+        "en": "Report timing, quantity, symptoms and other diners. Keep leftovers or photos for professionals if safe."
+      },
+      "query_hint": "Suspected wild mushroom poisoning report timing quantity symptoms other diners"
+    },
+    {
+      "id": "guide:mushroom-poisoning:step:2",
+      "kind": "guide",
+      "ru": "Подозрение на отравление дикорастущими грибами · шаг 3",
+      "en": "Suspected wild mushroom poisoning · step 3",
+      "critical": false,
+      "step_binding": {
+        "topic": "mushroom-poisoning",
+        "index": 2,
+        "ru": "При нарушении сознания или дыхания вызови экстренную помощь и следуй диспетчеру.",
+        "en": "Call emergency services for altered consciousness or breathing and follow dispatcher directions."
+      },
+      "query_hint": "Suspected wild mushroom poisoning call emergency services altered consciousness breathing"
+    },
+    {
+      "id": "guide:infant-dehydration:step:0",
+      "kind": "guide",
+      "ru": "Младенец: признаки обезвоживания · шаг 1",
+      "en": "Infant dehydration warning signs · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "infant-dehydration",
+        "index": 0,
+        "ru": "Обрати внимание на уменьшение числа мокрых подгузников, сухость рта и необычную сонливость.",
+        "en": "Look for fewer wet nappies, a dry mouth and unusual sleepiness."
+      },
+      "query_hint": "Infant dehydration warning signs look fewer wet nappies dry mouth"
+    },
+    {
+      "id": "guide:shingles-eye:step:0",
+      "kind": "guide",
+      "ru": "Опоясывающий лишай около глаза · шаг 1",
+      "en": "Shingles near the eye · step 1",
+      "critical": false,
+      "step_binding": {
+        "topic": "shingles-eye",
+        "index": 0,
+        "ru": "При болезненной пузырьковой сыпи около глаза или на носу срочно обратись за медицинской помощью.",
+        "en": "Seek urgent medical assessment for a painful blistering rash around the eye or on the nose."
+      },
+      "query_hint": "Shingles near the eye seek urgent medical assessment painful blistering"
+    }
+  ]
+}

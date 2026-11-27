@@ -1,0 +1,30 @@
+name: PULS actual APK media quality inventory
+on:
+  push:
+    branches: [qa/puls-media-quality-20261127]
+    paths: ['tools/review_candidate_quality.py','tools/test_review_candidate_quality.py','media-inventory-remaining-steps-20261127.json','.github/workflows/media-quality.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - run: python3 -m unittest discover -s tools -p 'test_review_candidate_quality.py'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 46006594588
+          name: PULS-Android-Compiled-APK
+          path: apk
+      - run: python3 tools/review_candidate_quality.py --apk apk/app-debug.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PULS-review-priority-and-gaps
+          path: review-quality/
+          if-no-files-found: error
