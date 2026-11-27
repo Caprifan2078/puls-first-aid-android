@@ -78,6 +78,14 @@ try{
  assert.ok(await page.locator(".review-card").count()>0);
  await page.locator("#review-clear").click();
  assert.equal(await page.locator("#review-group").inputValue(),"");
+ const pageOptions=await page.locator("#review-page option").count();
+ assert.equal(pageOptions,Math.ceil(rows.length/12));
+ await page.locator("#review-page").selectOption(String(pageOptions));
+ assert.equal(await page.locator(".review-card").count(),rows.length%12||12);
+ await page.locator("#review-sort").selectOption("priority");
+ assert.equal(await page.locator("#review-page").inputValue(),"1");
+ await page.locator("#review-clear").click();
+ assert.equal(await page.locator("#review-sort").inputValue(),"");
  assert.deepEqual(external,[]);assert.deepEqual(errors,[]);
  console.log("PASS: packaged photos, playback/seek, pause on exit, filter persistence, language change, reset, pagination and no external requests");
 }finally{await browser?.close();await new Promise(r=>server.close(r))}

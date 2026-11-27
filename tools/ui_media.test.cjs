@@ -297,3 +297,21 @@ test('quality filters and coverage panel never imply approval',()=>{
  assert.match(vm.runInContext('reviewCoveragePanel()',ctx),/224\/501/);
  assert.match(vm.runInContext('reviewCoveragePanel()',ctx),/не подтверждённые/);
 });
+
+test('large gallery jump and sorting preserve bounded rendering and reset',()=>{
+ const a=js.indexOf("let reviewMedia=null"),b=js.indexOf("function notifyEmergencyAwake(",a);
+ const ctx=vm.createContext({state:{lang:"ru"},esc:String,title:v=>"<h1>"+v+"</h1>"});
+ vm.runInContext(js.slice(a,b),ctx);
+ ctx.records=Array.from({length:2204},(_,i)=>({file:i.toString(16).padStart(40,"0")+".jpg",title:"QA "+i,labels:[],review_quality:{priority:i===2203?0:2}}));
+ vm.runInContext("reviewMedia=records",ctx);
+ assert.equal(vm.runInContext("reviewPageCount(reviewSelection())",ctx),184);
+ assert.equal(vm.runInContext('reviewJump("184")',ctx),true);
+ assert.equal(vm.runInContext("reviewOffset",ctx),2196);
+ assert.equal((vm.runInContext("reviewCards(reviewSelection())",ctx).match(/class="panel secondary review-card"/g)||[]).length,8);
+ assert.equal(vm.runInContext('reviewJump("9999");reviewOffset',ctx),2196);
+ assert.equal(vm.runInContext('reviewJump("bad")',ctx),false);
+ assert.equal(vm.runInContext('reviewFilters.sort="priority";reviewSelection(true)[0].title',ctx),"QA 2203");
+ assert.match(vm.runInContext("renderReview()",ctx),/id="review-page"/);
+ assert.equal(vm.runInContext('clearReviewFilters();reviewOffset',ctx),0);
+ assert.equal(vm.runInContext('reviewFilters.sort',ctx),"");
+});

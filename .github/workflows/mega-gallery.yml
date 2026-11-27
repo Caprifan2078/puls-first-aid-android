@@ -1,0 +1,40 @@
+name: PULS large gallery regression
+on:
+  push:
+    branches: [qa/puls-mega-gallery-20261127]
+    paths: ['app/src/main/assets/index.html','tools/ui_media.test.cjs','tools/browser_review_smoke.mjs','.github/workflows/mega-gallery.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - run: node --test tools/ui_media.test.cjs
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 46009156801
+          name: PULS-8.23.0-Expanded-Media-APK-Tested
+          path: apk
+      - run: |
+          set -euo pipefail
+          APK=$(find apk -name '*.apk' -type f -print -quit)
+          test -n "$APK"
+          python3 - "$APK" <<'PY'
+          import sys,zipfile
+          from pathlib import Path
+          root=Path("app/src/debug")
+          with zipfile.ZipFile(sys.argv[1]) as z:
+              for n in z.namelist():
+                  if n.startswith("assets/media/review/") and not n.endswith("/"):
+                      z.extract(n,root)
+          PY
+          npm install --no-save --ignore-scripts playwright@1.56.1
+          npx playwright install --with-deps chromium chrome
+          node tools/browser_review_smoke.mjs
