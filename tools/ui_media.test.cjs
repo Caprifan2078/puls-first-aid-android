@@ -244,3 +244,15 @@ test('expanded gallery keeps a bounded twelve-card window across pages and suppo
  assert.match(html,/<strong>Тест 12<\/strong>/);assert.doesNotMatch(html,/<strong>Тест 0<\/strong>/);
  assert.equal(vm.runInContext('reviewRows("лекарство QA","photo","medicine").length',ctx),826);
 });
+
+test('gallery search normalizes punctuation and Cyrillic, caches immutable record text',()=>{
+ const a=js.indexOf("let reviewMedia=null"),b=js.indexOf("function notifyEmergencyAwake(",a);
+ const ctx=vm.createContext({state:{lang:"ru"},esc:String});
+ vm.runInContext(js.slice(a,b),ctx);
+ ctx.records=[{file:"a".repeat(40)+".jpg",title:"Ожёг — тест",author:"QA",labels:[{group:"guide",ru:"Первая помощь",en:"First aid"}]},{file:"b".repeat(40)+".mp4",title:"Other",author:"QA",labels:[]}];
+ vm.runInContext("reviewMedia=records",ctx);
+ assert.equal(vm.runInContext('reviewRows("ожег, помощь","photo","guide").length',ctx),1);
+ assert.equal(vm.runInContext('reviewRows("first-aid","","guide").length',ctx),1);
+ assert.equal(vm.runInContext('reviewRows("unknown","","").length',ctx),0);
+ assert.equal(vm.runInContext('reviewSearchCache.has(records[0])',ctx),true);
+});

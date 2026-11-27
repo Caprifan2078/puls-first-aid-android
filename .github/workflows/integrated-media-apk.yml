@@ -2,7 +2,7 @@ name: PULS integrated offline media APK
 on:
   workflow_dispatch:
   push:
-    branches: [qa/puls-integrated-media-20261127]
+    branches: [qa/puls-gallery-coverage-20261127]
 concurrency:
   group: puls-android-${{ github.ref }}
   cancel-in-progress: true
@@ -36,7 +36,7 @@ jobs:
             exit 1
           fi
       - name: Acquire QA medicine photographs (compact UI branch only)
-        if: (github.ref_name == 'qa/puls-integrated-media-20261127' || github.ref_name == 'qa/puls-integrated-media-20261127')
+        if: (github.ref_name == 'qa/puls-gallery-coverage-20261127' || github.ref_name == 'qa/puls-gallery-coverage-20261127')
         run: |
           if ! command -v ffmpeg >/dev/null; then
             sudo apt-get update -qq
@@ -49,7 +49,7 @@ jobs:
           node --test tools/ui_media.test.cjs
           python3 tools/audit_media_rights.py --mode qa
       - name: Publish medicine photo QA report
-        if: always() && (github.ref_name == 'qa/puls-integrated-media-20261127' || github.ref_name == 'qa/puls-integrated-media-20261127')
+        if: always() && (github.ref_name == 'qa/puls-gallery-coverage-20261127' || github.ref_name == 'qa/puls-gallery-coverage-20261127')
         uses: actions/upload-artifact@v4
         with:
           name: PULS-Medicine-Photo-QA-Report
@@ -81,7 +81,7 @@ jobs:
           PY
           node --check webview_app_check.js
       - name: Test local video byte ranges on JVM
-        if: (github.ref_name == 'qa/puls-integrated-media-20261127' || github.ref_name == 'qa/puls-integrated-media-20261127')
+        if: (github.ref_name == 'qa/puls-gallery-coverage-20261127' || github.ref_name == 'qa/puls-gallery-coverage-20261127')
         run: |
           TMP="$(mktemp -d)"
           trap 'rm -rf "$TMP"' EXIT
@@ -124,7 +124,7 @@ jobs:
           python3 -c 'import json;from pathlib import Path;p=Path("app/src/debug/assets/media/review/manifest.json");Path("puls-media-coverage.json").write_text(json.dumps(json.loads(p.read_text())["summary"],ensure_ascii=False,indent=2))'
       - uses: actions/upload-artifact@v4
         with:
-          name: PULS-8.21.0-Media-Coverage
+          name: PULS-8.21.1-Media-Coverage
           path: puls-media-coverage.json
           if-no-files-found: error
       - name: Check review gallery UI and player
@@ -139,7 +139,7 @@ jobs:
           test -s app/build/outputs/apk/debug/app-debug.apk
           sha256sum app/build/outputs/apk/debug/app-debug.apk
       - name: Verify packaged media licenses and checksums
-        if: (github.ref_name == 'qa/puls-integrated-media-20261127' || github.ref_name == 'qa/puls-integrated-media-20261127')
+        if: (github.ref_name == 'qa/puls-gallery-coverage-20261127' || github.ref_name == 'qa/puls-gallery-coverage-20261127')
         run: python3 tools/audit_media_rights.py --mode qa --apk app/build/outputs/apk/debug/app-debug.apk --review-root app/src/debug/assets/media/review
       - name: Verify signed Android package
         run: |
@@ -159,7 +159,7 @@ jobs:
           if [ -e /dev/kvm ]; then sudo chmod a+rw /dev/kvm; else echo 'KVM unavailable; using explicit software fallback'; fi
       - name: Install and open in Android emulator
         id: emulator
-        if: github.event_name == 'workflow_dispatch' || (github.ref_name == 'qa/puls-integrated-media-20261127' || github.ref_name == 'qa/puls-integrated-media-20261127')
+        if: github.event_name == 'workflow_dispatch' || (github.ref_name == 'qa/puls-gallery-coverage-20261127' || github.ref_name == 'qa/puls-gallery-coverage-20261127')
         timeout-minutes: 25
         env:
           ANDROID_I_WANT_MY_TCG: 'yes'
@@ -194,7 +194,7 @@ jobs:
 
   modern-android:
     name: Android 15 installation and edge-to-edge smoke
-    if: github.event_name == 'workflow_dispatch' || github.ref_name == 'qa/puls-integrated-media-20261127' || github.ref_name == 'qa/puls-integrated-media-20261127'
+    if: github.event_name == 'workflow_dispatch' || github.ref_name == 'qa/puls-gallery-coverage-20261127' || github.ref_name == 'qa/puls-gallery-coverage-20261127'
     needs: android
     runs-on: ubuntu-24.04
     timeout-minutes: 30
@@ -236,7 +236,7 @@ jobs:
       - name: Publish API 30 and 35 installation-tested APK
         uses: actions/upload-artifact@v4
         with:
-          name: PULS-8.21.0-Expanded-Media-APK-Tested
+          name: PULS-8.21.1-Expanded-Media-APK-Tested
           path: apk/
           if-no-files-found: error
       - name: Publish Android 15 diagnostics

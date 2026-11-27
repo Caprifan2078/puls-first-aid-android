@@ -32,6 +32,30 @@ def read_targets():
                 result[t["id"]]=t
     return result
 
+def summarize_coverage(targets,rows):
+    """Count query associations, not clinically verified coverage; split steps from guide topics."""
+    def group(t):return "guide_step" if t.get("step_binding") else t["kind"]
+    coverage={}
+    for t in targets.values():
+        coverage.setdefault(group(t),{"targets":0,"photo_targets":0,"video_targets":0,"any_targets":0})["targets"]+=1
+    by_target={}
+    for row in rows:
+        kind="video" if row["file"].endswith(".mp4") else "photo"
+        for label in row["labels"]:
+            key=label.get("id")
+            if key not in targets:continue
+            by_target.setdefault(key,set()).add(kind)
+            step=targets[key].get("step_binding")
+            if step:
+                parent="guide:"+step["topic"]
+                if parent in targets:by_target.setdefault(parent,set()).add(kind)
+    for key,kinds in by_target.items():
+        stats=coverage[group(targets[key])]
+        stats["any_targets"]+=1
+        stats["photo_targets"]+=("photo" in kinds)
+        stats["video_targets"]+=("video" in kinds)
+    return coverage
+
 def package(root,dest,targets):
     if dest.exists():shutil.rmtree(dest)
     dest.mkdir(parents=True)
@@ -57,7 +81,7 @@ def package(root,dest,targets):
                     t=targets.get(target,{})
                     group=target.split(":")[0]
                     if group not in ("guide","medicine","kit","equipment"):continue
-                    labels.append({"id":target,"group":group,"ru":t.get("ru",target),"en":t.get("en",target)})
+                    labels.append({"id":target,"group":group,"ru":t.get("ru",target),"en":t.get("en",target),"step":bool(t.get("step_binding"))})
                 hint=row.get("topic_hint") or row.get("topic")
                 if isinstance(hint,str) and hint:
                     target=targets.get("guide:"+hint,{})
@@ -76,15 +100,7 @@ def package(root,dest,targets):
             except (ValueError,TypeError,KeyError,OSError) as exc:
                 rejected.append({"file":str(name)[:150],"reason":str(exc)[:180]})
     rows=list(records.values())
-    coverage={}
-    for target,t in targets.items():
-        group=t["kind"];coverage.setdefault(group,{"targets":0,"photo_targets":0,"video_targets":0,"any_targets":0});coverage[group]["targets"]+=1
-    by_target={}
-    for row in rows:
-        for label in row["labels"]:
-            if label.get("id") in targets:by_target.setdefault(label["id"],set()).add("video" if row["file"].endswith(".mp4") else "photo")
-    for target,kinds in by_target.items():
-        stats=coverage[targets[target]["kind"]];stats["any_targets"]+=1;stats["photo_targets"]+=("photo" in kinds);stats["video_targets"]+=("video" in kinds)
+    coverage=summarize_coverage(targets,rows)
     summary={"coverage":coverage,"photos":sum(r["file"].endswith(".jpg") for r in rows),"videos":sum(r["file"].endswith(".mp4") for r in rows),"bytes":used,"duplicates":duplicates,"rejected":rejected,"approved":0}
     require(not any(r["reason"]=="budget exceeded" for r in rejected),"media pack exceeds budget: do not silently discard files")
     require(summary["photos"]>=630 and summary["videos"]>=115 and len(rows)>=800,"expanded review pack incomplete")
