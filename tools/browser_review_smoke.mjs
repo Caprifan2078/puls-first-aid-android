@@ -46,8 +46,12 @@ try{
  await video.evaluate(v=>{v.pause();v.currentTime=v.duration/2});
  await page.waitForFunction(()=>{const v=document.querySelector(".review-card video");return !v.seeking&&v.currentTime>0});
  await page.screenshot({path:"puls-review-gallery.png"});
+ // Hash navigation schedules rendering asynchronously; test the actual completed transition.
+ await video.evaluate(async v=>{window.__reviewExitVideo=v;await v.play()});
  await page.locator('#nav a[href="#/sos"]').click();
+ await page.waitForFunction(()=>location.hash==="#/sos"&&!document.querySelector(".review-card")&&!!document.querySelector("#sos-search"));
  assert.equal(await page.locator(".review-card video").count(),0);
+ assert.equal(await page.evaluate(()=>window.__reviewExitVideo.paused),true,"exiting the gallery must pause the playing video");
  assert.deepEqual(external,[]);assert.deepEqual(errors,[]);
  console.log("PASS: packaged review photos, video playback/seek, navigation and no external requests");
 }finally{await browser?.close();await new Promise(r=>server.close(r))}
