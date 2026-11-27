@@ -1,0 +1,125 @@
+name: PULS step-specific illustration and video discovery
+on:
+  push:
+    branches: [qa/puls-step-media-20261127]
+    paths: ['tools/step_media.py','.github/workflows/coverage-media.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  source-ready:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Wait for complete prior discovery data
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          for i in $(seq 1 60); do
+            result=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/45993773040" --jq '.status+":"+(.conclusion // "pending")')
+            if [ "$result" = completed:success ]; then exit 0; fi
+            if [[ "$result" == completed:* ]]; then exit 1; fi
+            sleep 15
+          done
+          exit 1
+  plan:
+    needs: source-ready
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 45886700273
+          pattern: PULS-mass-review-*
+          path: previous/original
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 45887753101
+          pattern: PULS-expansion-review-*
+          path: previous/expansion
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 45900294710
+          pattern: PULS-mass-review-*
+          path: previous/mass
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 45905163614
+          pattern: PULS-video-review-*
+          path: previous/priority
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 45935061646
+          pattern: PULS-scale-review-*
+          path: previous/scale
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 45993773040
+          pattern: PULS-coverage-review-*
+          path: previous/coverage
+      - run: python3 tools/step_media.py prepare
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PULS-step-plan
+          path: step-plan/
+          if-no-files-found: error
+  search:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        shard: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: PULS-step-plan
+          path: step-plan
+      - run: |
+          command -v ffmpeg || { sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends ffmpeg; }
+          python3 tools/step_media.py download --shard ${{ matrix.shard }} --shards 20
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: PULS-step-review-${{ matrix.shard }}
+          path: step-review/
+          if-no-files-found: warn
+  summary:
+    needs: search
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: PULS-step-plan
+          path: step-plan
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: PULS-step-review-*
+          path: step-results
+      - run: python3 tools/step_media.py summary
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PULS-step-summary
+          path: step-summary/
+          if-no-files-found: error
