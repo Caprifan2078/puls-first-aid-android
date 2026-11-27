@@ -384,12 +384,12 @@ function reviewLink(){
  return '<a class="tile" href="#/review"><span class="tileicon">▧</span><span style="flex:1"><span class="name">'+(state.lang==="ru"?"Офлайн-медиагалерея · QA":"Offline media gallery · QA")+'</span><span class="sub">'+reviewMedia.length+' '+(state.lang==="ru"?"материалов для проверки":"review candidates")+'</span></span><span class="arrow">›</span></a>'
 }
 function reviewRows(q="",kind="",group=""){
- const ru=state.lang==="ru",needle=q.trim().toLowerCase();
- return (reviewMedia||[]).filter(r=>(!kind||r.file.endsWith(kind==="video"?".mp4":".jpg"))&&(!group||(r.labels||[]).some(x=>x.group===group))&&(!needle||[r.title,r.author,...(r.labels||[]).flatMap(x=>[x.ru,x.en])].join(" ").toLowerCase().includes(needle)))
+ const ru=state.lang==="ru",terms=q.trim().toLowerCase().replaceAll("ё","е").split(/\s+/).filter(Boolean);
+ return (reviewMedia||[]).filter(r=>(!kind||r.file.endsWith(kind==="video"?".mp4":".jpg"))&&(!group||(r.labels||[]).some(x=>x.group===group))&&terms.every(term=>[r.title,r.author,...(r.labels||[]).flatMap(x=>[x.ru,x.en])].join(" ").toLowerCase().replaceAll("ё","е").includes(term)))
 }
 function reviewCards(rows){
  const ru=state.lang==="ru";
- return rows.slice(0,reviewOffset+12).map(r=>{
+ return rows.slice(reviewOffset,reviewOffset+12).map(r=>{
  const path="media/review/"+r.file;
  const media=r.file.endsWith(".mp4")?'<video controls playsinline preload="none" style="width:100%;max-height:280px" src="'+path+'"></video>':'<img loading="lazy" style="width:100%;max-height:280px;object-fit:contain" src="'+path+'" alt="'+esc(r.title)+'">';
  const labels=(r.labels||[]).map(x=>ru?x.ru:x.en).join(" · ");
@@ -401,7 +401,8 @@ function updateReviewGallery(reset=true){
  if(reset)reviewOffset=0;
  const rows=reviewRows($("#review-q").value,$("#review-kind").value,$("#review-group").value);
  pauseAidVideos(list);list.innerHTML=reviewCards(rows);
- $("#review-count").textContent=(state.lang==="ru"?"Найдено: ":"Found: ")+rows.length;
+ $("#review-count").textContent=(state.lang==="ru"?"Найдено: ":"Found: ")+rows.length+(rows.length?" · "+(reviewOffset+1)+"–"+Math.min(reviewOffset+12,rows.length):"");
+ $("#review-prev").hidden=reviewOffset===0;
  $("#review-next").hidden=rows.length<=reviewOffset+12;
 }
 function renderReview(){
@@ -410,7 +411,7 @@ function renderReview(){
  const warning='<div class="avoid"><b>'+(ru?"Не проверено врачом. Не инструкция.":"Not clinically reviewed. Not instructions.")+'</b><p>'+(ru?"Возможны неправильные или устаревшие действия. Не используй эти материалы для оказания помощи, диагностики или выбора лекарства.":"May contain incorrect or outdated actions. Do not use for first aid, diagnosis or medication selection.")+'</p></div>';
  if(!reviewMedia)return header+warning+'<p>'+(reviewFailed?(ru?"Медиапакет не установлен.":"Media pack not installed."):(ru?"Загрузка локального списка…":"Loading local list…"))+'</p>';
  const opts=(pairs)=>pairs.map(x=>'<option value="'+x[0]+'">'+x[ru?1:2]+'</option>').join("");
- return header+warning+'<p>'+reviewMedia.filter(r=>r.file.endsWith(".jpg")).length+' '+(ru?"фото":"photos")+' · '+reviewMedia.filter(r=>r.file.endsWith(".mp4")).length+' '+(ru?"видео":"videos")+'</p><label for="review-q">'+(ru?"Поиск":"Search")+'</label><input id="review-q" class="input" style="width:100%" placeholder="'+(ru?"Тема, название, автор":"Topic, title, author")+'"><div style="display:flex;flex-wrap:wrap;gap:8px;margin:12px 0"><select id="review-kind" aria-label="'+(ru?"Формат":"Format")+'">'+opts([["","Все форматы","All formats"],["photo","Фото","Photos"],["video","Видео","Videos"]])+'</select><select id="review-group" aria-label="'+(ru?"Раздел":"Group")+'">'+opts([["","Все разделы","All groups"],["guide","Инструкции","Guides"],["medicine","Лекарства","Medicines"],["kit","Аптечки","Kits"],["equipment","Оснащение","Equipment"]])+'</select></div><p id="review-count" role="status">'+(ru?"Найдено: ":"Found: ")+reviewMedia.length+'</p><div id="review-results">'+reviewCards(reviewMedia)+'</div><button id="review-next" class="topbtn" '+(reviewMedia.length<=12?"hidden":"")+'>'+(ru?"Показать ещё 12":"Show 12 more")+'</button>'
+ return header+warning+'<p>'+reviewMedia.filter(r=>r.file.endsWith(".jpg")).length+' '+(ru?"фото":"photos")+' · '+reviewMedia.filter(r=>r.file.endsWith(".mp4")).length+' '+(ru?"видео":"videos")+'</p><label for="review-q">'+(ru?"Поиск":"Search")+'</label><input id="review-q" class="input" style="width:100%" placeholder="'+(ru?"Тема, название, автор":"Topic, title, author")+'"><div style="display:flex;flex-wrap:wrap;gap:8px;margin:12px 0"><select id="review-kind" aria-label="'+(ru?"Формат":"Format")+'">'+opts([["","Все форматы","All formats"],["photo","Фото","Photos"],["video","Видео","Videos"]])+'</select><select id="review-group" aria-label="'+(ru?"Раздел":"Group")+'">'+opts([["","Все разделы","All groups"],["guide","Инструкции","Guides"],["medicine","Лекарства","Medicines"],["kit","Аптечки","Kits"],["equipment","Оснащение","Equipment"]])+'</select></div><p id="review-count" role="status">'+(ru?"Найдено: ":"Found: ")+reviewMedia.length+'</p><div id="review-results">'+reviewCards(reviewMedia)+'</div><div style="display:flex;justify-content:space-between;gap:10px"><button id="review-prev" class="topbtn" hidden>'+(ru?"Назад 12":"Previous 12")+'</button><button id="review-next" class="topbtn" '+(reviewMedia.length<=12?"hidden":"")+'>'+(ru?"Следующие 12":"Next 12")+'</button></div>'
 }
 
 function notifyEmergencyAwake(){const active=state.keepAwake&&document.body.classList.contains("emergency-mode")&&!document.hidden;try{window.PulsDisplay?.postMessage(active?"on":"off")}catch(_){}}
@@ -550,7 +551,7 @@ document.addEventListener("click",ev=>{
 });
 document.addEventListener("input",e=>{if(e.target.id==="review-q")updateReviewGallery()});
 document.addEventListener("change",e=>{if(["review-kind","review-group"].includes(e.target.id))updateReviewGallery()});
-document.addEventListener("click",e=>{if(e.target.id==="review-next"){reviewOffset+=12;updateReviewGallery(false)}});
+document.addEventListener("click",e=>{if(e.target.id==="review-next"||e.target.id==="review-prev"){reviewOffset=Math.max(0,reviewOffset+(e.target.id==="review-next"?12:-12));updateReviewGallery(false);$("#review-count")?.scrollIntoView({block:"start",behavior:"instant"})}});
 document.addEventListener("error",e=>{if(e.target.matches?.(".review-card img,.review-card video")){const p=document.createElement("p");p.textContent=state.lang==="ru"?"Файл не воспроизводится":"Media unavailable";e.target.replaceWith(p)}},true);
 
 

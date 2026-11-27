@@ -111,10 +111,22 @@ jobs:
           run-id: 45905163614
           pattern: PULS-video-review-*
           path: review-input/priority
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 45935061646
+          pattern: PULS-scale-review-*
+          path: review-input/scale
       - name: Validate and package isolated review media
         run: |
           python3 -m unittest discover -s tools -p 'test_review_package.py'
           python3 tools/package_review_media.py
+          python3 -c 'import json;from pathlib import Path;p=Path("app/src/debug/assets/media/review/manifest.json");Path("puls-media-coverage.json").write_text(json.dumps(json.loads(p.read_text())["summary"],ensure_ascii=False,indent=2))'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PULS-8.21.0-Media-Coverage
+          path: puls-media-coverage.json
+          if-no-files-found: error
       - name: Check review gallery UI and player
         run: |
           npm install --no-save --ignore-scripts playwright@1.56.1
@@ -157,7 +169,7 @@ jobs:
           target: google_apis
           arch: x86_64
           profile: pixel_6
-          emulator-options: -no-snapshot -no-window -no-audio -gpu swiftshader
+          emulator-options: -no-snapshot -no-window -no-audio -gpu swiftshader -partition-size 8192
           disable-animations: true
           script: |
             set -e
@@ -208,7 +220,7 @@ jobs:
           target: google_apis
           arch: x86_64
           profile: pixel_6
-          emulator-options: -no-snapshot -no-window -no-audio -gpu swiftshader
+          emulator-options: -no-snapshot -no-window -no-audio -gpu swiftshader -partition-size 8192
           disable-animations: true
           script: |
             set -e
@@ -224,7 +236,7 @@ jobs:
       - name: Publish API 30 and 35 installation-tested APK
         uses: actions/upload-artifact@v4
         with:
-          name: PULS-8.20.0-Offline-Media-APK-Tested
+          name: PULS-8.21.0-Expanded-Media-APK-Tested
           path: apk/
           if-no-files-found: error
       - name: Publish Android 15 diagnostics

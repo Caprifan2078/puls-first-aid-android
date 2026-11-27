@@ -232,3 +232,15 @@ test('review gallery never auto-plays, filters and separates candidates from eme
  assert.doesNotMatch(vm.runInContext("reviewCards(records)",ctx),/autoplay/);
  assert.doesNotMatch(js.slice(js.indexOf("function renderTopic("),js.indexOf("function drawNav(")),/reviewMedia|media\/review/);
 });
+
+test('expanded gallery keeps a bounded twelve-card window across pages and supports multiword searches',()=>{
+ const a=js.indexOf("let reviewMedia=null"),b=js.indexOf("function notifyEmergencyAwake(",a);
+ const ctx=vm.createContext({state:{lang:"ru"},esc:v=>String(v||""),document:{addEventListener(){}}});
+ vm.runInContext(js.slice(a,b),ctx);
+ ctx.records=Array.from({length:826},(_,i)=>({file:i.toString(16).padStart(40,"0")+".jpg",title:"Тест "+i,author:"QA",labels:[{group:"medicine",ru:"Лекарство",en:"Drug"}]}));
+ vm.runInContext("reviewMedia=records;reviewOffset=12",ctx);
+ const html=vm.runInContext("reviewCards(records)",ctx);
+ assert.equal((html.match(/class="panel secondary review-card"/g)||[]).length,12);
+ assert.match(html,/<strong>Тест 12<\/strong>/);assert.doesNotMatch(html,/<strong>Тест 0<\/strong>/);
+ assert.equal(vm.runInContext('reviewRows("лекарство QA","photo","medicine").length',ctx),826);
+});
