@@ -9,7 +9,7 @@ concurrency:
 jobs:
   coverage-ready:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 50
     permissions:
       actions: read
       contents: read
@@ -19,7 +19,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          for i in $(seq 1 120); do
+          for i in $(seq 1 180); do
             result=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/45993773040" --jq '.status+":"+(.conclusion // "pending")')
             echo "$result"
             if [ "$result" = completed:success ]; then exit 0; fi

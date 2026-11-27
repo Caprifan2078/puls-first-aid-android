@@ -267,3 +267,20 @@ test('step-only filter and long search-label list remain bounded in the QA galle
  assert.equal(vm.runInContext('reviewRows("","","guide").length',ctx),2);
  assert.match(vm.runInContext("reviewCards(records)",ctx),/Ещё поисковые темы: 27/);
 });
+
+test('review filters and page survive rerender and clear safely',()=>{
+ const a=js.indexOf("let reviewMedia=null"),b=js.indexOf("function notifyEmergencyAwake(",a);
+ const ctx=vm.createContext({state:{lang:"ru"},esc:v=>String(v??"").replace(/"/g,"&quot;"),title:v=>"<h1>"+v+"</h1>"});
+ vm.runInContext(js.slice(a,b),ctx);
+ ctx.records=Array.from({length:35},(_,i)=>({file:i.toString(16).padStart(40,"0")+".jpg",title:"QA "+i,author:"QA",labels:[{group:"medicine",ru:"Препарат",en:"Drug"}]}));
+ vm.runInContext('reviewMedia=records;reviewFilters.q="Препарат";reviewFilters.kind="photo";reviewFilters.group="medicine";reviewOffset=24',ctx);
+ let html=vm.runInContext("renderReview()",ctx);
+ assert.match(html,/value="Препарат"/);assert.match(html,/value="photo" selected/);assert.match(html,/25–35/);
+ html=vm.runInContext('state.lang="en";renderReview()',ctx);
+ assert.match(html,/25–35/);assert.match(html,/Found: 35/);
+ vm.runInContext('reviewFilters.q="none";reviewSelection()',ctx);
+ assert.equal(vm.runInContext("reviewOffset",ctx),0);
+ assert.match(vm.runInContext("renderReview()",ctx),/No matches/);
+ vm.runInContext("clearReviewFilters()",ctx);
+ assert.equal(vm.runInContext("reviewSelection().length",ctx),35);
+});

@@ -370,6 +370,7 @@ function renderMediaCredits(){const ru=state.lang==="ru";return '<details class=
 function loadMediaCredits(){fetch("media/credits.json").then(r=>r.ok?r.json():null).then(data=>{if(!data||!Array.isArray(data.items))return;mediaCredits=data.items.filter(a=>a&&a.title&&a.author&&a.license&&typeof a.source==="string"&&a.source.startsWith("https://commons.wikimedia.org/wiki/File:")&&AID_MEDIA_LICENSES.has(a.license_url));if(location.hash==="#/more"&&!document.querySelector("#backup[open]"))route(true)}).catch(()=>{})}
 function renderArchivedMediaLinks(){const ru=state.lang==="ru";return '<details class="panel secondary archive-media"><summary>'+(ru?"Архив учебных материалов (онлайн)":"Archived educational materials (online)")+'</summary><p class="minor">'+(ru?"Восстановленные источники старой версии. Материалы не прошли независимую клиническую проверку; не используй их вместо текущих инструкций или указаний диспетчера. Видео открываются в браузере и не входят в офлайн-базу.":"Recovered sources from the older version. These materials have not been independently clinically reviewed; do not use them instead of current instructions or dispatcher advice. Videos open in the browser and are not part of the offline library.")+'</p><a class="tile" href="https://commons.wikimedia.org/wiki/File:CPR.webm"><div><strong>'+(ru?"Архивный ролик о СЛР":"Archived CPR video")+'</strong><p class="minor">Simpleshow Japan · CC BY-SA 4.0</p></div></a><a class="tile" href="https://commons.wikimedia.org/wiki/File:Auvi-Q_Injection.webm"><div><strong>'+(ru?"Архивный ролик об автоинъекторе":"Archived autoinjector video")+'</strong><p class="minor">Z22 · CC BY-SA 4.0</p></div></a></details>'}
 let reviewMedia=null,reviewLoading=false,reviewFailed=false,reviewOffset=0;
+const reviewFilters={q:"",kind:"",group:""};
 function loadReviewMedia(){
  if(reviewLoading||reviewMedia||reviewFailed)return;
  reviewLoading=true;
@@ -402,22 +403,33 @@ function reviewCards(rows){
  return '<article class="panel secondary review-card"><strong>'+esc(r.title)+'</strong><p class="minor">'+esc(labelPreview)+'</p>'+extraLabels+media+'<p class="minor">'+esc(r.author)+' · '+esc(r.license)+'</p><p class="minor">'+(ru?"Изменения: ":"Changes: ")+esc(r.modifications)+'</p><details><summary>'+(ru?"Источник и права":"Source and rights")+'</summary><p>'+esc(r.credit_line)+' '+esc(r.copyright_notice)+' '+esc(r.restrictions_notice)+'</p><p>'+esc(r.license_url)+'</p><a class="link" href="'+esc(r.source)+'">'+(ru?"Оригинал (интернет)":"Original (online)")+'</a></details></article>'
  }).join("")
 }
+function reviewSelection(reset=false){
+ if(reset)reviewOffset=0;
+ const rows=reviewRows(reviewFilters.q,reviewFilters.kind,reviewFilters.group);
+ reviewOffset=Math.max(0,Math.min(reviewOffset,Math.max(0,Math.floor((rows.length-1)/12)*12)));
+ return rows;
+}
+function reviewCountText(rows){return (state.lang==="ru"?"Найдено: ":"Found: ")+rows.length+(rows.length?" · "+(reviewOffset+1)+"–"+Math.min(reviewOffset+12,rows.length):"")}
+function reviewResultHtml(rows){return rows.length?reviewCards(rows):'<p class="panel secondary" role="status">'+(state.lang==="ru"?"Ничего не найдено. Измени запрос или фильтры.":"No matches. Change your search or filters.")+'</p>'}
+function clearReviewFilters(){reviewFilters.q="";reviewFilters.kind="";reviewFilters.group="";reviewOffset=0}
 function updateReviewGallery(reset=true){
  const list=$("#review-results");if(!list)return;
- if(reset)reviewOffset=0;
- const rows=reviewRows($("#review-q").value,$("#review-kind").value,$("#review-group").value);
- pauseAidVideos(list);list.innerHTML=rows.length?reviewCards(rows):'<p class="panel secondary" role="status">'+(state.lang==="ru"?"Ничего не найдено. Измени запрос или фильтры.":"No matches. Change your search or filters.")+'</p>';
- $("#review-count").textContent=(state.lang==="ru"?"Найдено: ":"Found: ")+rows.length+(rows.length?" · "+(reviewOffset+1)+"–"+Math.min(reviewOffset+12,rows.length):"");
+ reviewFilters.q=$("#review-q").value;reviewFilters.kind=$("#review-kind").value;reviewFilters.group=$("#review-group").value;
+ const rows=reviewSelection(reset);
+ pauseAidVideos(list);list.innerHTML=reviewResultHtml(rows);
+ $("#review-count").textContent=reviewCountText(rows);
  $("#review-prev").hidden=reviewOffset===0;
  $("#review-next").hidden=rows.length<=reviewOffset+12;
+ $("#review-clear").disabled=!reviewFilters.q&&!reviewFilters.kind&&!reviewFilters.group;
 }
 function renderReview(){
- const ru=state.lang==="ru";reviewOffset=0;loadReviewMedia();
+ const ru=state.lang==="ru";loadReviewMedia();
  const header=title(ru?"Медиагалерея · QA":"Media gallery · QA",ru?"Поисковые совпадения, не подтверждённые инструкции":"Search matches, not verified instructions");
  const warning='<div class="avoid"><b>'+(ru?"Не проверено врачом. Не инструкция.":"Not clinically reviewed. Not instructions.")+'</b><p>'+(ru?"Возможны неправильные или устаревшие действия. Не используй эти материалы для оказания помощи, диагностики или выбора лекарства.":"May contain incorrect or outdated actions. Do not use for first aid, diagnosis or medication selection.")+'</p></div>';
  if(!reviewMedia)return header+warning+'<p>'+(reviewFailed?(ru?"Медиапакет не установлен.":"Media pack not installed."):(ru?"Загрузка локального списка…":"Loading local list…"))+'</p>';
- const opts=(pairs)=>pairs.map(x=>'<option value="'+x[0]+'">'+x[ru?1:2]+'</option>').join("");
- return header+warning+'<p>'+reviewMedia.filter(r=>r.file.endsWith(".jpg")).length+' '+(ru?"фото":"photos")+' · '+reviewMedia.filter(r=>r.file.endsWith(".mp4")).length+' '+(ru?"видео":"videos")+'</p><label for="review-q">'+(ru?"Поиск":"Search")+'</label><input id="review-q" class="input" style="width:100%" placeholder="'+(ru?"Тема, название, автор":"Topic, title, author")+'"><div style="display:flex;flex-wrap:wrap;gap:8px;margin:12px 0"><select id="review-kind" aria-label="'+(ru?"Формат":"Format")+'">'+opts([["","Все форматы","All formats"],["photo","Фото","Photos"],["video","Видео","Videos"]])+'</select><select id="review-group" aria-label="'+(ru?"Раздел":"Group")+'">'+opts([["","Все разделы","All groups"],["guide","Инструкции","Guides"],["step","Шаги инструкций","Guide steps"],["medicine","Лекарства","Medicines"],["kit","Аптечки","Kits"],["equipment","Оснащение","Equipment"]])+'</select></div><p id="review-count" role="status" aria-live="polite">'+(ru?"Найдено: ":"Found: ")+reviewMedia.length+" · 1–"+Math.min(12,reviewMedia.length)+'</p><div id="review-results">'+reviewCards(reviewMedia)+'</div><div style="display:flex;justify-content:space-between;gap:10px"><button id="review-prev" class="topbtn" hidden>'+(ru?"Назад 12":"Previous 12")+'</button><button id="review-next" class="topbtn" '+(reviewMedia.length<=12?"hidden":"")+'>'+(ru?"Следующие 12":"Next 12")+'</button></div>'
+ const rows=reviewSelection();
+ const opts=(pairs,selected)=>pairs.map(x=>'<option value="'+x[0]+'" '+(x[0]===selected?"selected":"")+'>'+x[ru?1:2]+'</option>').join("");
+ return header+warning+'<p>'+reviewMedia.filter(r=>r.file.endsWith(".jpg")).length+' '+(ru?"фото":"photos")+' · '+reviewMedia.filter(r=>r.file.endsWith(".mp4")).length+' '+(ru?"видео":"videos")+'</p><label for="review-q">'+(ru?"Поиск":"Search")+'</label><input id="review-q" type="search" maxlength="160" class="input" style="width:100%" value="'+esc(reviewFilters.q)+'" placeholder="'+(ru?"Тема, название, автор":"Topic, title, author")+'"><div style="display:flex;flex-wrap:wrap;gap:8px;margin:12px 0"><select id="review-kind" aria-label="'+(ru?"Формат":"Format")+'">'+opts([["","Все форматы","All formats"],["photo","Фото","Photos"],["video","Видео","Videos"]],reviewFilters.kind)+'</select><select id="review-group" aria-label="'+(ru?"Раздел":"Group")+'">'+opts([["","Все разделы","All groups"],["guide","Инструкции","Guides"],["step","Шаги инструкций","Guide steps"],["medicine","Лекарства","Medicines"],["kit","Аптечки","Kits"],["equipment","Оснащение","Equipment"]],reviewFilters.group)+'</select><button class="topbtn" id="review-clear" '+(!reviewFilters.q&&!reviewFilters.kind&&!reviewFilters.group?"disabled":"")+'>'+(ru?"Сбросить":"Reset")+'</button></div><p id="review-count" role="status" aria-live="polite">'+esc(reviewCountText(rows))+'</p><div id="review-results">'+reviewResultHtml(rows)+'</div><div style="display:flex;justify-content:space-between;gap:10px"><button id="review-prev" class="topbtn" '+(reviewOffset===0?"hidden":"")+'>'+(ru?"Назад 12":"Previous 12")+'</button><button id="review-next" class="topbtn" '+(rows.length<=reviewOffset+12?"hidden":"")+'>'+(ru?"Следующие 12":"Next 12")+'</button></div>'
 }
 
 function notifyEmergencyAwake(){const active=state.keepAwake&&document.body.classList.contains("emergency-mode")&&!document.hidden;try{window.PulsDisplay?.postMessage(active?"on":"off")}catch(_){}}
@@ -557,7 +569,7 @@ document.addEventListener("click",ev=>{
 });
 document.addEventListener("input",e=>{if(e.target.id==="review-q")updateReviewGallery()});
 document.addEventListener("change",e=>{if(["review-kind","review-group"].includes(e.target.id))updateReviewGallery()});
-document.addEventListener("click",e=>{if(e.target.id==="review-next"||e.target.id==="review-prev"){reviewOffset=Math.max(0,reviewOffset+(e.target.id==="review-next"?12:-12));updateReviewGallery(false);$("#review-count")?.scrollIntoView({block:"start",behavior:"instant"})}});
+document.addEventListener("click",e=>{if(e.target.id==="review-clear"){clearReviewFilters();$("#review-q").value="";$("#review-kind").value="";$("#review-group").value="";updateReviewGallery();$("#review-q").focus();return}if(e.target.id==="review-next"||e.target.id==="review-prev"){reviewOffset=Math.max(0,reviewOffset+(e.target.id==="review-next"?12:-12));updateReviewGallery(false);$("#review-count")?.scrollIntoView({block:"start",behavior:"instant"})}});
 document.addEventListener("error",e=>{if(e.target.matches?.(".review-card img,.review-card video")){const p=document.createElement("p");p.textContent=state.lang==="ru"?"Файл не воспроизводится":"Media unavailable";e.target.replaceWith(p)}},true);
 
 

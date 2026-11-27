@@ -52,6 +52,28 @@ try{
  await page.waitForFunction(()=>location.hash==="#/sos"&&!document.querySelector(".review-card")&&!!document.querySelector("#sos-search"));
  assert.equal(await page.locator(".review-card video").count(),0);
  assert.equal(await page.evaluate(()=>window.__reviewExitVideo.paused),true,"exiting the gallery must pause the playing video");
+ // Reopen the gallery and exercise the real controls, not just the rendering helpers.
+ await page.locator('#nav a[href="#/more"]').click();
+ await page.locator('a[href="#/review"]').click();
+ await page.locator("#review-results").waitFor();
+ assert.equal(await page.locator("#review-kind").inputValue(),"video");
+ assert.ok(await page.locator(".review-card video").count()>0);
+ assert.equal(await page.locator(".review-card img").count(),0);
+ await page.locator("#langbtn").click();
+ assert.equal(await page.locator("#review-kind").inputValue(),"video");
+ await page.locator("#review-q").fill("zzzz-no-match-987654321");
+ assert.equal(await page.locator(".review-card").count(),0);
+ assert.equal(await page.locator("#review-next").isHidden(),true);
+ await page.locator("#review-clear").click();
+ assert.equal(await page.locator("#review-q").inputValue(),"");
+ assert.equal(await page.locator("#review-kind").inputValue(),"");
+ assert.equal(await page.locator(".review-card").count(),12);
+ const first=await page.locator(".review-card").first().innerText();
+ await page.locator("#review-next").click();
+ assert.equal(await page.locator(".review-card").count(),12);
+ assert.notEqual(await page.locator(".review-card").first().innerText(),first);
+ await page.locator("#review-prev").click();
+ assert.equal(await page.locator(".review-card").first().innerText(),first);
  assert.deepEqual(external,[]);assert.deepEqual(errors,[]);
- console.log("PASS: packaged review photos, video playback/seek, navigation and no external requests");
+ console.log("PASS: packaged photos, playback/seek, pause on exit, filter persistence, language change, reset, pagination and no external requests");
 }finally{await browser?.close();await new Promise(r=>server.close(r))}
