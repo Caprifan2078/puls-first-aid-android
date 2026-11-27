@@ -1,0 +1,231 @@
+name: PULS integrated offline media APK
+on:
+  workflow_dispatch:
+  push:
+    branches: [qa/puls-integrated-media-20261127]
+concurrency:
+  group: puls-android-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  android:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Import full offline assets if uploaded
+        shell: bash
+        run: |
+          set -euo pipefail
+          parts=0
+          for i in 1 2 3; do
+            FILE="PULS_offline_assets_part_${i}.zip"
+            if [[ -s "$FILE" ]]; then parts=$((parts+1)); fi
+          done
+          if [[ "$parts" == 3 ]]; then
+            for i in 1 2 3; do unzip -q -o "PULS_offline_assets_part_${i}.zip" -d .; done
+            echo "Full offline assets restored."
+            python3 tools/check_offline_content.py
+          elif [[ "$parts" == 0 ]]; then
+            echo "::notice::Building compact offline installation-test edition (no uploaded media packs)"
+            test -s app/src/main/assets/index.html
+          else
+            echo "::error::Found only $parts/3 content packs; upload all three or none."
+            exit 1
+          fi
+      - name: Acquire QA medicine photographs (compact UI branch only)
+        if: (github.ref_name == 'qa/puls-integrated-media-20261127' || github.ref_name == 'qa/puls-integrated-media-20261127')
+        run: |
+          if ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update -qq
+            sudo apt-get install -y --no-install-recommends ffmpeg
+          fi
+          ffmpeg -version | head -n 1
+          python3 -m py_compile tools/collect_ui_medicine_photos.py
+          python3 -m unittest discover -s tools -p 'test_photo*.py'
+          python3 tools/collect_ui_medicine_photos.py
+          node --test tools/ui_media.test.cjs
+          python3 tools/audit_media_rights.py --mode qa
+      - name: Publish medicine photo QA report
+        if: always() && (github.ref_name == 'qa/puls-integrated-media-20261127' || github.ref_name == 'qa/puls-integrated-media-20261127')
+        uses: actions/upload-artifact@v4
+        with:
+          name: PULS-Medicine-Photo-QA-Report
+          path: medicine-photo-qa-report.json
+          if-no-files-found: warn
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v3
+        with:
+          packages: platform-tools
+      - name: Install Android SDK
+        run: sdkmanager 'platforms;android-36' 'build-tools;35.0.0' 'platform-tools'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.13'
+      - name: Validate WebView JavaScript syntax and offline assets
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          x=Path("app/src/main/assets/index.html").read_text(encoding="utf-8")
+          assert 'id="nav"' in x and 'const PAGES=' in x
+          matches=re.findall(r"<script>(.*?)</script>",x,re.S)
+          assert len(matches)==1
+          Path("webview_app_check.js").write_text(matches[0],encoding="utf-8")
+          print("Inline JavaScript chars:",len(matches[0]))
+          PY
+          node --check webview_app_check.js
+      - name: Test local video byte ranges on JVM
+        if: (github.ref_name == 'qa/puls-integrated-media-20261127' || github.ref_name == 'qa/puls-integrated-media-20261127')
+        run: |
+          TMP="$(mktemp -d)"
+          trap 'rm -rf "$TMP"' EXIT
+          javac -d "$TMP" app/src/main/java/com/puls/firstaid/rebuild/MediaByteRange.java tools/MediaByteRangeTest.java
+          java -cp "$TMP" com.puls.firstaid.rebuild.MediaByteRangeTest
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 45886700273
+          pattern: PULS-mass-review-*
+          path: review-input/original
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 45887753101
+          pattern: PULS-expansion-review-*
+          path: review-input/expansion
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 45900294710
+          pattern: PULS-mass-review-*
+          path: review-input/mass
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 45905163614
+          pattern: PULS-video-review-*
+          path: review-input/priority
+      - name: Validate and package isolated review media
+        run: |
+          python3 -m unittest discover -s tools -p 'test_review_package.py'
+          python3 tools/package_review_media.py
+      - name: Compile real debug APK
+        run: gradle --no-daemon :app:assembleDebug --stacktrace
+      - name: Verify APK exists
+        run: |
+          test -s app/build/outputs/apk/debug/app-debug.apk
+          sha256sum app/build/outputs/apk/debug/app-debug.apk
+      - name: Verify packaged media licenses and checksums
+        if: (github.ref_name == 'qa/puls-integrated-media-20261127' || github.ref_name == 'qa/puls-integrated-media-20261127')
+        run: python3 tools/audit_media_rights.py --mode qa --apk app/build/outputs/apk/debug/app-debug.apk --review-root app/src/debug/assets/media/review
+      - name: Verify signed Android package
+        run: |
+          set -euo pipefail
+          APK="app/build/outputs/apk/debug/app-debug.apk"
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose "$APK"
+          "$ANDROID_HOME/build-tools/35.0.0/aapt" dump badging "$APK" | head -n 8
+          unzip -t "$APK" | tail -n 1
+      - name: Preserve compiled APK regardless of emulator outcome
+        uses: actions/upload-artifact@v4
+        with:
+          name: PULS-Android-Compiled-APK
+          path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+      - name: Enable KVM if provided by runner
+        run: |
+          if [ -e /dev/kvm ]; then sudo chmod a+rw /dev/kvm; else echo 'KVM unavailable; using explicit software fallback'; fi
+      - name: Install and open in Android emulator
+        id: emulator
+        if: github.event_name == 'workflow_dispatch' || (github.ref_name == 'qa/puls-integrated-media-20261127' || github.ref_name == 'qa/puls-integrated-media-20261127')
+        timeout-minutes: 25
+        env:
+          ANDROID_I_WANT_MY_TCG: 'yes'
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 30
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          emulator-options: -no-snapshot -no-window -no-audio -gpu swiftshader
+          disable-animations: true
+          script: |
+            set -e
+            adb install -r app/build/outputs/apk/debug/app-debug.apk
+            adb shell am start -W -n com.puls.firstaid.rebuild.ui83/com.puls.firstaid.rebuild.MainActivity
+            adb shell pidof com.puls.firstaid.rebuild.ui83
+            for i in $(seq 1 45); do adb logcat -d -s PULS_QA:I -v brief > puls-launch-log.txt; grep -q "UI_READY:true" puls-launch-log.txt && break; sleep 2; done
+            adb exec-out screencap -p > puls-home.png
+            adb logcat -d -s AndroidRuntime:E chromium:E PULS_QA:I -v brief > puls-runtime-log.txt
+            cat puls-launch-log.txt
+            grep -q "UI_READY:true" puls-launch-log.txt
+      - name: Publish diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: PULS-Android-Diagnostics
+          path: |
+            puls-launch-log.txt
+            puls-home.png
+            puls-runtime-log.txt
+          if-no-files-found: ignore
+
+  modern-android:
+    name: Android 15 installation and edge-to-edge smoke
+    if: github.event_name == 'workflow_dispatch' || github.ref_name == 'qa/puls-integrated-media-20261127' || github.ref_name == 'qa/puls-integrated-media-20261127'
+    needs: android
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: PULS-Android-Compiled-APK
+          path: apk
+      - uses: android-actions/setup-android@v3
+        with:
+          packages: platform-tools
+      - name: Enable KVM
+        run: |
+          if [ -e /dev/kvm ]; then sudo chmod a+rw /dev/kvm; fi
+      - name: Install exact compiled APK on API 35
+        uses: reactivecircus/android-emulator-runner@v2
+        env:
+          ANDROID_I_WANT_MY_TCG: 'yes'
+        with:
+          api-level: 35
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          emulator-options: -no-snapshot -no-window -no-audio -gpu swiftshader
+          disable-animations: true
+          script: |
+            set -e
+            adb logcat -c
+            adb install -r apk/app-debug.apk
+            adb shell am start -W -n com.puls.firstaid.rebuild.ui83/com.puls.firstaid.rebuild.MainActivity
+            for i in $(seq 1 45); do adb logcat -d -s PULS_QA:I -v brief > puls-api35-launch.txt; grep -q "UI_READY:true" puls-api35-launch.txt && break; sleep 2; done
+            grep -q "UI_READY:true" puls-api35-launch.txt
+            adb shell pidof com.puls.firstaid.rebuild.ui83
+            adb exec-out screencap -p > puls-api35-home.png
+            adb logcat -d -s AndroidRuntime:E chromium:E PULS_QA:I -v brief > puls-api35-runtime.txt
+            (cd apk && sha256sum app-debug.apk > apk.sha256)
+      - name: Publish API 30 and 35 installation-tested APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: PULS-8.20.0-Offline-Media-APK-Tested
+          path: apk/
+          if-no-files-found: error
+      - name: Publish Android 15 diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: PULS-Android-API35-Diagnostics
+          path: puls-api35-*
+          if-no-files-found: warn
