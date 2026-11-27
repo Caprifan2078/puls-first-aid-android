@@ -256,3 +256,14 @@ test('gallery search normalizes punctuation and Cyrillic, caches immutable recor
  assert.equal(vm.runInContext('reviewRows("unknown","","").length',ctx),0);
  assert.equal(vm.runInContext('reviewSearchCache.has(records[0])',ctx),true);
 });
+
+test('step-only filter and long search-label list remain bounded in the QA gallery',()=>{
+ const a=js.indexOf("let reviewMedia=null"),b=js.indexOf("function notifyEmergencyAwake(",a);
+ const ctx=vm.createContext({state:{lang:"ru"},esc:v=>String(v||"")});
+ vm.runInContext(js.slice(a,b),ctx);
+ ctx.records=[{file:"a".repeat(40)+".jpg",title:"Original",author:"QA",labels:Array.from({length:30},(_,i)=>({group:"guide",step:true,ru:"Шаг "+i,en:"Step "+i}))},{file:"b".repeat(40)+".jpg",title:"Other",author:"QA",labels:[{group:"guide",step:false,ru:"Общая тема",en:"Guide"}]}];
+ vm.runInContext("reviewMedia=records",ctx);
+ assert.equal(vm.runInContext('reviewRows("","","step").length',ctx),1);
+ assert.equal(vm.runInContext('reviewRows("","","guide").length',ctx),2);
+ assert.match(vm.runInContext("reviewCards(records)",ctx),/Ещё поисковые темы: 27/);
+});
