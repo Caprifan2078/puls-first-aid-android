@@ -1,0 +1,57 @@
+name: PULS concise technique search pilot
+on:
+  push:
+    branches: [qa/puls-technique-media-20261127]
+    paths: ['tools/technique_media.py','technique-search-20261127.json','.github/workflows/technique-media.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        shard: [0,1,2,3]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 46006898933
+          name: PULS-step-plan
+          path: step-plan
+      - run: |
+          command -v ffmpeg || { sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends ffmpeg; }
+          python3 -m py_compile tools/technique_media.py
+          python3 tools/technique_media.py download --shard ${{ matrix.shard }} --shards 4
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: PULS-technique-review-${{ matrix.shard }}
+          path: technique-review/
+          if-no-files-found: error
+  summary:
+    needs: search
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: PULS-technique-review-*
+          path: technique-results
+      - run: python3 tools/technique_media.py summary
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PULS-technique-summary
+          path: technique-summary/
+          if-no-files-found: error

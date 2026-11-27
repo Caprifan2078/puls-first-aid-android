@@ -1,0 +1,237 @@
+{
+  "schema": 1,
+  "queries": [
+    {
+      "target": "guide:cpr",
+      "term": "cardiopulmonary resuscitation"
+    },
+    {
+      "target": "guide:cpr",
+      "term": "chest compressions"
+    },
+    {
+      "target": "guide:cpr",
+      "term": "automated external defibrillator"
+    },
+    {
+      "target": "guide:cpr",
+      "term": "CPR manikin"
+    },
+    {
+      "target": "guide:bleeding",
+      "term": "direct pressure wound"
+    },
+    {
+      "target": "guide:bleeding",
+      "term": "pressure dressing"
+    },
+    {
+      "target": "guide:bleeding",
+      "term": "bleeding control"
+    },
+    {
+      "target": "guide:bleeding",
+      "term": "wound packing training"
+    },
+    {
+      "target": "guide:choking",
+      "term": "abdominal thrusts training"
+    },
+    {
+      "target": "guide:choking",
+      "term": "back blows choking"
+    },
+    {
+      "target": "guide:choking",
+      "term": "choking rescue training"
+    },
+    {
+      "target": "guide:infant-choking",
+      "term": "infant choking manikin"
+    },
+    {
+      "target": "guide:infant-choking",
+      "term": "infant back blows"
+    },
+    {
+      "target": "guide:infant-choking",
+      "term": "infant chest thrusts"
+    },
+    {
+      "target": "guide:child-cpr",
+      "term": "infant CPR manikin"
+    },
+    {
+      "target": "guide:child-cpr",
+      "term": "pediatric resuscitation training"
+    },
+    {
+      "target": "guide:unconscious",
+      "term": "recovery position"
+    },
+    {
+      "target": "guide:unconscious",
+      "term": "lateral recovery position"
+    },
+    {
+      "target": "guide:unconscious",
+      "term": "stable side position"
+    },
+    {
+      "target": "guide:burn",
+      "term": "burn dressing"
+    },
+    {
+      "target": "guide:burn",
+      "term": "burn first aid training"
+    },
+    {
+      "target": "guide:anaphylaxis",
+      "term": "epinephrine autoinjector training"
+    },
+    {
+      "target": "guide:anaphylaxis",
+      "term": "adrenaline autoinjector"
+    },
+    {
+      "target": "guide:asthma",
+      "term": "inhaler spacer"
+    },
+    {
+      "target": "guide:asthma",
+      "term": "metered dose inhaler demonstration"
+    },
+    {
+      "target": "guide:fracture",
+      "term": "splint first aid"
+    },
+    {
+      "target": "guide:fracture",
+      "term": "arm sling bandage"
+    },
+    {
+      "target": "guide:fracture",
+      "term": "vacuum splint"
+    },
+    {
+      "target": "guide:sprain",
+      "term": "elastic bandage ankle"
+    },
+    {
+      "target": "guide:sprain",
+      "term": "compression bandage"
+    },
+    {
+      "target": "guide:wound",
+      "term": "wound irrigation"
+    },
+    {
+      "target": "guide:wound",
+      "term": "adhesive bandage"
+    },
+    {
+      "target": "guide:wound",
+      "term": "sterile dressing"
+    },
+    {
+      "target": "guide:eye",
+      "term": "eye wash station"
+    },
+    {
+      "target": "guide:eye",
+      "term": "eye irrigation"
+    },
+    {
+      "target": "guide:chemical-eye",
+      "term": "emergency eyewash"
+    },
+    {
+      "target": "guide:chemical-eye",
+      "term": "eye wash demonstration"
+    },
+    {
+      "target": "guide:nosebleed",
+      "term": "epistaxis first aid"
+    },
+    {
+      "target": "guide:tick",
+      "term": "tick removal tweezers"
+    },
+    {
+      "target": "guide:tick",
+      "term": "tick removal tool"
+    },
+    {
+      "target": "guide:stroke",
+      "term": "stroke FAST demonstration"
+    },
+    {
+      "target": "guide:stroke",
+      "term": "facial droop stroke"
+    },
+    {
+      "target": "guide:drowning",
+      "term": "water rescue training"
+    },
+    {
+      "target": "guide:drowning",
+      "term": "lifeguard resuscitation"
+    },
+    {
+      "target": "guide:cold",
+      "term": "hypothermia rescue blanket"
+    },
+    {
+      "target": "guide:cold",
+      "term": "emergency thermal blanket"
+    },
+    {
+      "target": "guide:heatstroke",
+      "term": "heat illness cooling"
+    },
+    {
+      "target": "guide:heatstroke",
+      "term": "heat stroke first aid"
+    },
+    {
+      "target": "guide:spine",
+      "term": "spinal motion restriction training"
+    },
+    {
+      "target": "guide:spine",
+      "term": "spinal injury first aid training"
+    },
+    {
+      "target": "guide:opioid-overdose",
+      "term": "naloxone nasal spray training"
+    },
+    {
+      "target": "guide:opioid-overdose",
+      "term": "naloxone demonstration"
+    },
+    {
+      "target": "guide:shock",
+      "term": "shock first aid training"
+    },
+    {
+      "target": "guide:seizure",
+      "term": "seizure first aid training"
+    },
+    {
+      "target": "guide:electric",
+      "term": "electrical accident first aid training"
+    },
+    {
+      "target": "guide:dehydration",
+      "term": "oral rehydration solution preparation"
+    },
+    {
+      "target": "guide:frostbite",
+      "term": "frostbite first aid training"
+    },
+    {
+      "target": "guide:animalbite",
+      "term": "animal bite wound dressing"
+    }
+  ]
+}
