@@ -1,0 +1,92 @@
+name: PULS expanded offline media search
+on:
+  push:
+    branches: [qa/puls-media-scale-20261127]
+    paths: ['tools/scale_media.py','media-inventory-new-medicines-20261127.json','.github/workflows/scale-media.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 45886700273
+          pattern: PULS-mass-review-*
+          path: previous/original
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 45887753101
+          pattern: PULS-expansion-review-*
+          path: previous/expansion
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 45900294710
+          pattern: PULS-mass-review-*
+          path: previous/mass
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 45905163614
+          pattern: PULS-video-review-*
+          path: previous/priority
+      - run: python3 tools/scale_media.py prepare
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PULS-scale-plan
+          path: scale-plan/
+          if-no-files-found: error
+  search:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        shard: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          name: PULS-scale-plan
+          path: scale-plan
+      - run: |
+          command -v ffmpeg || { sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends ffmpeg; }
+          python3 tools/scale_media.py download --shard ${{ matrix.shard }} --shards 16
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: PULS-scale-review-${{ matrix.shard }}
+          path: scale-media-review/
+          if-no-files-found: warn
+  summary:
+    needs: search
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: PULS-scale-review-*
+          path: scale-results
+      - run: python3 tools/scale_media.py summary
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PULS-scale-summary
+          path: scale-summary/
+          if-no-files-found: error
