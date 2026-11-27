@@ -115,6 +115,11 @@ jobs:
         run: |
           python3 -m unittest discover -s tools -p 'test_review_package.py'
           python3 tools/package_review_media.py
+      - name: Check review gallery UI and player
+        run: |
+          npm install --no-save --ignore-scripts playwright@1.56.1
+          npx playwright install --with-deps chromium chrome
+          node tools/browser_review_smoke.mjs
       - name: Compile real debug APK
         run: gradle --no-daemon :app:assembleDebug --stacktrace
       - name: Verify APK exists

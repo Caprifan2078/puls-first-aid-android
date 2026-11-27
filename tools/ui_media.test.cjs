@@ -218,3 +218,17 @@ test('all 162 bilingual guides and seven primary screens render complete steps a
 });
 
 test('294 source-only medicine cards use unique MedlinePlus links and omit dosing',()=>{const ctx=vm.createContext({state:{lang:"ru"},esc:String,norm:v=>String(v||"").toLowerCase()});vm.runInContext(js.slice(js.indexOf("const MEDICINES="),js.indexOf("const KIT_GROUPS=")),ctx);const result=vm.runInContext('MEDICINES.filter(m=>m.group==="reference").map(m=>({id:m.id,source:MED_DETAILS[m.id].source,kind:MED_DETAILS[m.id].sourceKind,redflag:MED_DETAILS[m.id].redflag,interaction:MED_DETAILS[m.id].interaction}))',ctx);assert.equal(result.length,referenceCount);assert.equal(new Set(result.map(m=>m.source)).size,referenceCount);for(const m of result){assert.match(m.source,/^https:\/\/medlineplus\.gov\/druginfo\/meds\/a\d+\.html$/);assert.equal(m.kind,"external-reference");assert.equal(m.redflag,undefined);assert.equal(m.interaction,undefined)}assert.equal(vm.runInContext('medRows("дезлоратадин")[0].id',ctx),"desloratadine")});
+
+test('review gallery never auto-plays, filters and separates candidates from emergency guide',()=>{
+ const a=js.indexOf("let reviewMedia=null"),b=js.indexOf("function renderMore()",a);
+ const ctx=vm.createContext({state:{lang:"ru"},esc:v=>String(v||"").replace(/"/g,"&quot;"),title:v=>"<h1>"+v+"</h1>",document:{addEventListener(){}},fetch:()=>Promise.resolve({ok:false})});
+ vm.runInContext(js.slice(a,b),ctx);
+ ctx.records=[{file:"a".repeat(40)+".jpg",title:"Test image",author:"QA",license:"CC0",labels:[{group:"medicine",ru:"Аптека",en:"Pharmacy"}]},{file:"b".repeat(40)+".mp4",title:"Test video",author:"QA",license:"CC0",labels:[{group:"guide",ru:"Проверка",en:"Review"}]}];
+ vm.runInContext("reviewMedia=records",ctx);
+ assert.equal(vm.runInContext('reviewRows("аптека","photo","medicine").length',ctx),1);
+ assert.equal(vm.runInContext('reviewRows("","video","medicine").length',ctx),0);
+ assert.match(vm.runInContext("renderReview()",ctx),/Не проверено врачом/);
+ assert.match(vm.runInContext("reviewCards(records)",ctx),/preload="none"/);
+ assert.doesNotMatch(vm.runInContext("reviewCards(records)",ctx),/autoplay/);
+ assert.doesNotMatch(js.slice(js.indexOf("function renderTopic("),js.indexOf("function drawNav(")),/reviewMedia|media\/review/);
+});
