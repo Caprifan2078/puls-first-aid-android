@@ -1,0 +1,19 @@
+name: PULS gallery usability regression
+on:
+  push:
+    branches: [qa/puls-review-usability-20261127]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  ui:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tools/ui_media.test.cjs
