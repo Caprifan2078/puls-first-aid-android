@@ -429,7 +429,7 @@ function reviewCountText(rows){return (state.lang==="ru"?"Найдено: ":"Fou
 function reviewResultHtml(rows){return rows.length?reviewCards(rows):'<p class="panel secondary" role="status">'+(state.lang==="ru"?"Ничего не найдено. Измени запрос или фильтры.":"No matches. Change your search or filters.")+'</p>'}
 function reviewPageCount(rows){return Math.max(1,Math.ceil(rows.length/12))}
 function reviewJump(value){const n=Number(value);if(!Number.isFinite(n)||!Number.isInteger(n))return false;const pages=reviewPageCount(reviewSelection());reviewOffset=(Math.max(1,Math.min(n,pages))-1)*12;return true}
-function reviewPageOptions(rows){return Array.from({length:reviewPageCount(rows)},(_,i)=>'<option value="'+(i+1)+'" '+(i===Math.floor(reviewOffset/12)?"selected":"")+">'+(i+1)+"</option>").join("")}
+function reviewPageOptions(rows){return Array.from({length:reviewPageCount(rows)},(_,i)=>'<option value="'+(i+1)+'" '+(i===Math.floor(reviewOffset/12)?"selected":"")+'>'+(i+1)+'</option>').join("")}
 function clearReviewFilters(){reviewFilters.q="";reviewFilters.kind="";reviewFilters.group="";reviewFilters.sort="";reviewOffset=0}
 function updateReviewGallery(reset=true){
  const list=$("#review-results");if(!list)return;
