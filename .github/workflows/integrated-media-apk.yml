@@ -2,79 +2,29 @@ name: PULS integrated offline media APK
 on:
   workflow_dispatch:
   push:
-    branches: [qa/puls-consolidated-20261127]
+    branches: [qa/puls-mega-integrated-20261127]
 concurrency:
   group: puls-android-${{ github.ref }}
   cancel-in-progress: true
 jobs:
   source-ready:
     runs-on: ubuntu-latest
-    timeout-minutes: 70
     permissions:
       actions: read
       contents: read
     steps:
-      - name: Require complete previous discovery runs
+      - name: Require tested baseline and completed mega discovery
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          for i in $(seq 1 240); do
-            a=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/45993773040" --jq '.status+":"+(.conclusion // "pending")')
-            b=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/46006898933" --jq '.status+":"+(.conclusion // "pending")')
-            c=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/46008354693" --jq '.status+":"+(.conclusion // "pending")')
-            echo "$a $b $c"
-            if [[ "$a" == completed:* && "$a" != completed:success ]]; then exit 1; fi
-            if [[ "$c" == completed:* && "$c" != completed:success ]]; then exit 1; fi
-            if [[ "$a" == completed:success && "$b" == completed:* && "$c" == completed:success ]]; then
-              gh api "repos/$GITHUB_REPOSITORY/actions/runs/46006898933/jobs?per_page=100" --jq '[.jobs[] | select(.name|startswith("search (")) | select(.conclusion=="success")] | length' | grep -qx 20
-              exit 0
-            fi
-            sleep 15
+          for id in 46009156801 46012140376; do
+            gh api "repos/$GITHUB_REPOSITORY/actions/runs/$id" --jq '.status+":"+(.conclusion // "pending")' | grep -qx completed:success
           done
-          echo 'Source discovery not yet complete; rerun this workflow after it completes.'
-          exit 1
-  gap-search:
-    runs-on: ubuntu-latest
-    timeout-minutes: 25
-    permissions:
-      contents: read
-      actions: read
-    strategy:
-      fail-fast: false
-      max-parallel: 2
-      matrix:
-        shard: [0,1,2,3]
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-      - uses: actions/download-artifact@v4
-        with:
-          github-token: ${{ github.token }}
-          run-id: 46008717739
-          name: PULS-review-priority-and-gaps
-          path: prior-quality
-      - uses: actions/download-artifact@v4
-        with:
-          github-token: ${{ github.token }}
-          run-id: 46006898933
-          name: PULS-step-plan
-          path: step-plan
-      - run: |
-          command -v ffmpeg || { sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends ffmpeg; }
-          python3 -m unittest discover -s tools -p 'test_targeted_gap_media.py'
-          python3 tools/targeted_gap_media.py --shard ${{ matrix.shard }} --shards 4
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: PULS-gap-review-${{ matrix.shard }}
-          path: gap-review/
-          if-no-files-found: error
   android:
-    needs: [source-ready, gap-search]
+    needs: source-ready
     runs-on: ubuntu-24.04
-    timeout-minutes: 45
+    timeout-minutes: 120
     permissions:
       contents: read
       actions: read
@@ -101,7 +51,7 @@ jobs:
             exit 1
           fi
       - name: Acquire QA medicine photographs (compact UI branch only)
-        if: (github.ref_name == 'qa/puls-consolidated-20261127' || github.ref_name == 'qa/puls-consolidated-20261127')
+        if: (github.ref_name == 'qa/puls-mega-integrated-20261127' || github.ref_name == 'qa/puls-mega-integrated-20261127')
         run: |
           if ! command -v ffmpeg >/dev/null; then
             sudo apt-get update -qq
@@ -114,7 +64,7 @@ jobs:
           node --test tools/ui_media.test.cjs
           python3 tools/audit_media_rights.py --mode qa
       - name: Publish medicine photo QA report
-        if: always() && (github.ref_name == 'qa/puls-consolidated-20261127' || github.ref_name == 'qa/puls-consolidated-20261127')
+        if: always() && (github.ref_name == 'qa/puls-mega-integrated-20261127' || github.ref_name == 'qa/puls-mega-integrated-20261127')
         uses: actions/upload-artifact@v4
         with:
           name: PULS-Medicine-Photo-QA-Report
@@ -146,7 +96,7 @@ jobs:
           PY
           node --check webview_app_check.js
       - name: Test local video byte ranges on JVM
-        if: (github.ref_name == 'qa/puls-consolidated-20261127' || github.ref_name == 'qa/puls-consolidated-20261127')
+        if: (github.ref_name == 'qa/puls-mega-integrated-20261127' || github.ref_name == 'qa/puls-mega-integrated-20261127')
         run: |
           TMP="$(mktemp -d)"
           trap 'rm -rf "$TMP"' EXIT
@@ -205,27 +155,39 @@ jobs:
           path: review-input/technique
       - uses: actions/download-artifact@v4
         with:
+          github-token: ${{ github.token }}
+          run-id: 46009156801
           pattern: PULS-gap-review-*
           path: review-input/gap
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 46012140376
+          pattern: PULS-mega-review-*
+          path: review-input/mega
       - name: Require complete new source reports
         run: |
           test "$(find review-input/step -name download-report.json | wc -l)" -eq 20
           test "$(find review-input/technique -name download-report.json | wc -l)" -eq 4
           test "$(find review-input/gap -name download-report.json | wc -l)" -eq 4
+          test "$(find review-input/mega -name download-report.json | wc -l)" -eq 16
       - name: Validate and package isolated review media
         run: |
           python3 -m unittest discover -s tools -p 'test_review*.py'
+          python3 -m unittest discover -s tools -p 'test_compact_review_videos.py'
           python3 tools/package_review_media.py
           python3 -c 'import json;from pathlib import Path;p=Path("app/src/debug/assets/media/review/manifest.json");Path("puls-media-coverage.json").write_text(json.dumps(json.loads(p.read_text())["summary"],ensure_ascii=False,indent=2))'
       - uses: actions/upload-artifact@v4
         with:
-          name: PULS-8.23.0-Media-Coverage
+          name: PULS-8.24.0-Media-Coverage
           path: puls-media-coverage.json
           if-no-files-found: error
       - uses: actions/upload-artifact@v4
         with:
-          name: PULS-8.23.0-Review-Quality
-          path: review-quality/
+          name: PULS-8.24.0-Review-Quality
+          path: |
+            review-quality/
+            review-compaction.json
           if-no-files-found: error
       - name: Check review gallery UI and player
         run: |
@@ -233,13 +195,21 @@ jobs:
           npx playwright install --with-deps chromium chrome
           node tools/browser_review_smoke.mjs
       - name: Compile real debug APK
-        run: gradle --no-daemon :app:assembleDebug --stacktrace
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            if gradle --no-daemon --max-workers=2 :app:assembleDebug --stacktrace >gradle-build.log 2>&1; then tail -n 30 gradle-build.log; exit 0; fi
+            tail -n 50 gradle-build.log
+            if ! grep -qE '429|Too Many Requests|503 Service Unavailable' gradle-build.log; then exit 1; fi
+            if [ "$attempt" = 3 ]; then exit 1; fi
+            sleep $((attempt * 90))
+          done
       - name: Verify APK exists
         run: |
           test -s app/build/outputs/apk/debug/app-debug.apk
           sha256sum app/build/outputs/apk/debug/app-debug.apk
       - name: Verify packaged media licenses and checksums
-        if: (github.ref_name == 'qa/puls-consolidated-20261127' || github.ref_name == 'qa/puls-consolidated-20261127')
+        if: (github.ref_name == 'qa/puls-mega-integrated-20261127' || github.ref_name == 'qa/puls-mega-integrated-20261127')
         run: python3 tools/audit_media_rights.py --mode qa --apk app/build/outputs/apk/debug/app-debug.apk --review-root app/src/debug/assets/media/review
       - name: Verify signed Android package
         run: |
@@ -259,7 +229,7 @@ jobs:
           if [ -e /dev/kvm ]; then sudo chmod a+rw /dev/kvm; else echo 'KVM unavailable; using explicit software fallback'; fi
       - name: Install and open in Android emulator
         id: emulator
-        if: github.event_name == 'workflow_dispatch' || (github.ref_name == 'qa/puls-consolidated-20261127' || github.ref_name == 'qa/puls-consolidated-20261127')
+        if: github.event_name == 'workflow_dispatch' || (github.ref_name == 'qa/puls-mega-integrated-20261127' || github.ref_name == 'qa/puls-mega-integrated-20261127')
         timeout-minutes: 25
         env:
           ANDROID_I_WANT_MY_TCG: 'yes'
@@ -294,7 +264,7 @@ jobs:
 
   modern-android:
     name: Android 15 installation and edge-to-edge smoke
-    if: github.event_name == 'workflow_dispatch' || github.ref_name == 'qa/puls-consolidated-20261127' || github.ref_name == 'qa/puls-consolidated-20261127'
+    if: github.event_name == 'workflow_dispatch' || github.ref_name == 'qa/puls-mega-integrated-20261127' || github.ref_name == 'qa/puls-mega-integrated-20261127'
     needs: android
     runs-on: ubuntu-24.04
     timeout-minutes: 30
@@ -336,7 +306,7 @@ jobs:
       - name: Publish API 30 and 35 installation-tested APK
         uses: actions/upload-artifact@v4
         with:
-          name: PULS-8.23.0-Expanded-Media-APK-Tested
+          name: PULS-8.24.0-Expanded-Media-APK-Tested
           path: apk/
           if-no-files-found: error
       - name: Publish Android 15 diagnostics

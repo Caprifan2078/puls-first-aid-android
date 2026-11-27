@@ -4,12 +4,14 @@ import argparse, hashlib, json, re, shutil
 from pathlib import Path
 from audit_media_rights import validate_record, require
 from review_candidate_quality import evaluate,save_csv
+from compact_review_videos import compact_to_budget
 
 ROOT=Path(__file__).resolve().parents[1]
 DEST=ROOT/"app/src/debug/assets/media/review"
 INPUT=ROOT/"review-input"
 MAX_BYTES=1_850_000_000
-MAX_FILES=2000
+MAX_FILES=3000
+MAX_INPUT_BYTES=3_300_000_000
 
 def sha(path):
     with path.open("rb") as f:
@@ -61,7 +63,7 @@ def package(root,dest,targets):
     if dest.exists():shutil.rmtree(dest)
     dest.mkdir(parents=True)
     records={}; hashes={}; rejected=[]; used=0; duplicates=0
-    for report in sorted(root.rglob("*.json"),key=lambda p:({"original":0,"expansion":1,"mass":2,"priority":3,"scale":4,"coverage":5,"step":6,"technique":7,"gap":8}.get(p.relative_to(root).parts[0],6),str(p))):
+    for report in sorted(root.rglob("*.json"),key=lambda p:({"original":0,"expansion":1,"mass":2,"priority":3,"scale":4,"coverage":5,"step":6,"technique":7,"gap":8,"mega":9}.get(p.relative_to(root).parts[0],6),str(p))):
         if report.name not in ("download-report.json","report.json","manifest.json"):continue
         payload=json.loads(report.read_text(encoding="utf-8"))
         if not isinstance(payload,dict):continue
@@ -93,7 +95,7 @@ def package(root,dest,targets):
                     for label in labels:
                         if label not in records[existing]["labels"]:records[existing]["labels"].append(label)
                     continue
-                require(len(records)<MAX_FILES and used+row["bytes"]<=MAX_BYTES,"budget exceeded")
+                require(len(records)<MAX_FILES and used+row["bytes"]<=MAX_INPUT_BYTES,"budget exceeded")
                 output=key+source.suffix
                 shutil.copyfile(source,dest/output)
                 records[key]={**row,"file":output,"labels":labels,"clinical_approval":False,"rights_review":"pending","visual_review":"pending","publication":"debug-review-only"}
@@ -101,6 +103,11 @@ def package(root,dest,targets):
             except (ValueError,TypeError,KeyError,OSError) as exc:
                 rejected.append({"file":str(name)[:150],"reason":str(exc)[:180]})
     rows=list(records.values())
+    require(not any(r["reason"]=="budget exceeded" for r in rejected),"raw media exceeds budget; no silent discard")
+    compact=compact_to_budget(rows,dest,1_790_000_000)
+    used=compact["after_bytes"]
+    (ROOT/"review-compaction.json").write_text(json.dumps(compact,ensure_ascii=False,indent=2),encoding="utf-8")
+    require(used<=MAX_BYTES,"compacted media exceeds safe APK budget; no files discarded")
     coverage=summarize_coverage(targets,rows)
     queue,gaps,quality=evaluate(targets,rows)
     quality_by_file={q["file"]:q for q in queue}
@@ -110,9 +117,9 @@ def package(root,dest,targets):
     audit_dir=ROOT/"review-quality";audit_dir.mkdir(exist_ok=True)
     save_csv(audit_dir/"review-queue.csv",queue);save_csv(audit_dir/"missing-topics.csv",gaps)
     (audit_dir/"summary.json").write_text(json.dumps(quality,ensure_ascii=False,indent=2),encoding="utf-8")
-    summary={"quality":quality,"coverage":coverage,"photos":sum(r["file"].endswith(".jpg") for r in rows),"videos":sum(r["file"].endswith(".mp4") for r in rows),"bytes":used,"duplicates":duplicates,"rejected":rejected,"approved":0}
+    summary={"compaction":{"before_bytes":compact["before_bytes"],"after_bytes":compact["after_bytes"],"reencoded":len(compact["changes"])},"quality":quality,"coverage":coverage,"photos":sum(r["file"].endswith(".jpg") for r in rows),"videos":sum(r["file"].endswith(".mp4") for r in rows),"bytes":used,"duplicates":duplicates,"rejected":rejected,"approved":0}
     require(not any(r["reason"]=="budget exceeded" for r in rejected),"media pack exceeds budget: do not silently discard files")
-    require(summary["photos"]>=1075 and summary["videos"]>=184 and len(rows)>=1259,"baseline media lost during consolidation")
+    require(summary["photos"]>=1850 and summary["videos"]>=295 and len(rows)>=2150,"mega media pack incomplete")
     (dest/"manifest.json").write_text(json.dumps({"schema":1,"review_only":rows,"summary":summary},ensure_ascii=False),encoding="utf-8")
     print(json.dumps({k:v for k,v in summary.items() if k!="rejected"},ensure_ascii=False))
     return summary
@@ -130,7 +137,8 @@ def verify(root):
         expected["assets/media/review/"+name]=row["sha256"]
     summary=payload["summary"]
     require(summary["photos"]==sum(n.endswith(".jpg") for n in expected) and summary["videos"]==sum(n.endswith(".mp4") for n in expected) and summary["approved"]==0,"incorrect coverage")
-    require(summary["photos"]>=1075 and summary["videos"]>=184 and len(rows)>=1259,"baseline media lost during consolidation")
+    require(summary["photos"]>=1850 and summary["videos"]>=295 and len(rows)>=2150,"mega media pack incomplete")
+    require(sum(r["bytes"] for r in rows)==summary["bytes"] and summary["bytes"]<=MAX_BYTES,"invalid final byte budget")
     require({p.name for p in root.iterdir()}=={r["file"] for r in rows}|{"manifest.json"},"unexpected review files")
     expected["assets/media/review/manifest.json"]=sha(manifest)
     return expected
