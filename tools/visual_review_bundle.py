@@ -2,6 +2,7 @@
 """Offline contact sheets for human QA. No approval, diagnosis or instruction generation."""
 import argparse, concurrent.futures, hashlib, html, json, re, shutil, subprocess, tempfile, zipfile
 from pathlib import Path
+from PIL import Image,ImageOps
 from review_candidate_quality import evaluate,inventory,save_csv
 PREFIX="assets/media/review/"
 def esc(value):return html.escape(str(value or ""),quote=True)
@@ -10,10 +11,17 @@ def run(args,timeout=45):
 def sample_times(duration):
     if not isinstance(duration,(float,int)) or not 0<duration<86400: return [0]
     return [round(duration*p,2) for p in (.1,.5,.85)]
+def photo_preview(source,dest):
+    with Image.open(source) as im:
+        im=ImageOps.exif_transpose(im).convert("RGB")
+        im.thumbnail((320,240),Image.Resampling.LANCZOS)
+        im.save(dest,"JPEG",quality=82,optimize=True)
+def video_preview(source,dest,at):
+    run(["ffmpeg","-hide_banner","-loglevel","error","-nostdin","-y","-threads","1","-ss",str(at),"-i",str(source),"-frames:v","1","-vf","scale=320:240:force_original_aspect_ratio=decrease:force_divisible_by=2","-q:v","5","-threads","1",str(dest)])
 def make_previews(apk,row,out):
     file=row["file"]
     if not re.fullmatch(r"[a-f0-9]{40}\.(jpg|mp4)",file):raise ValueError("invalid name")
-    digest=hashlib.sha256();written=[]
+    digest=hashlib.sha256();written=[];errors=[]
     with tempfile.TemporaryDirectory() as tmp:
         source=Path(tmp)/file
         with zipfile.ZipFile(apk) as z,z.open(PREFIX+file) as src,source.open("wb") as dst:
@@ -32,12 +40,15 @@ def make_previews(apk,row,out):
         for i,at in enumerate(times):
             dest=out/f"{source.stem}-{i}.jpg"
             try:
-                run(["ffmpeg","-hide_banner","-loglevel","error","-nostdin","-y","-threads","1","-ss",str(at),"-i",str(source),"-frames:v","1","-vf","scale=320:240:force_original_aspect_ratio=decrease:force_divisible_by=2","-q:v","5","-threads","1",str(dest)])
+                if video:video_preview(source,dest,at)
+                else:photo_preview(source,dest)
                 if not dest.is_file() or dest.stat().st_size==0:raise ValueError("empty preview")
                 written.append({"path":"thumbs/"+dest.name,"at":at})
-            except (ValueError,subprocess.SubprocessError):
+            except (ValueError,OSError,subprocess.SubprocessError) as exc:
                 dest.unlink(missing_ok=True)
-        return {"file":file,"duration":duration,"previews":written,"expected":len(times)}
+                detail=getattr(exc,"stderr",b"") or b""
+                errors.append({"at":at,"reason":(detail.decode("utf-8","replace") if isinstance(detail,bytes) else str(detail))[-350:] or str(exc)[:350]})
+        return {"file":file,"duration":duration,"previews":written,"expected":len(times),"errors":errors}
 def card(row,q,preview):
     labels=" · ".join(dict.fromkeys(x.get("ru") or x.get("en") or "" for x in row.get("labels",[])))
     pictures="".join('<figure><img loading="lazy" src="'+esc(x["path"])+'" alt="QA preview"><figcaption>'+esc(str(x["at"])+" s" if q["format"]=="video" else "Фото")+'</figcaption></figure>' for x in preview["previews"])
@@ -65,6 +76,7 @@ def main():
     summary={"files":len(queue),"photos":sum(q["format"]=="photo" for q in queue),"videos":sum(q["format"]=="video" for q in queue),"preview_frames":sum(len(r["previews"]) for r in previews.values()),"missing_previews":missing,"partial_previews":partial,"pages":len(sections),"approved":0}
     (out/"index.html").write_text(page("PULS · визуальная проверка",f"<p>Файлы: {len(queue)} · страницы: {len(sections)} · без превью: {len(missing)}</p><p>Сначала спорные совпадения и ограничения, затем критические темы.</p><ul>"+''.join(sections)+"</ul><p><a href='review-queue.csv'>Очередь проверки</a> · <a href='missing-topics.csv'>Пробелы</a></p>"),encoding="utf-8")
     save_csv(out/"review-queue.csv",queue);save_csv(out/"missing-topics.csv",gaps)
+    (out/"preview-errors.json").write_text(json.dumps([r for r in previews.values() if r["errors"]],ensure_ascii=False,indent=2),encoding="utf-8")
     (out/"summary.json").write_text(json.dumps(summary,ensure_ascii=False,indent=2),encoding="utf-8")
     print(json.dumps({**summary,"missing_previews":len(missing),"partial_previews":len(partial)},ensure_ascii=False),flush=True)
     if len(missing)>max(1,len(queue)//100):raise ValueError("too many unavailable previews")
