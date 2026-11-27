@@ -3,6 +3,7 @@
 import argparse, hashlib, json, re, shutil
 from pathlib import Path
 from audit_media_rights import validate_record, require
+from review_candidate_quality import evaluate,save_csv
 
 ROOT=Path(__file__).resolve().parents[1]
 DEST=ROOT/"app/src/debug/assets/media/review"
@@ -26,7 +27,7 @@ def validate(row,source):
 
 def read_targets():
     result={}
-    for path in (ROOT/"media-inventory-20261126.json",ROOT/"media-inventory-expansion-20261126.json",ROOT/"media-inventory-new-medicines-20261127.json"):
+    for path in (ROOT/"media-inventory-20261126.json",ROOT/"media-inventory-expansion-20261126.json",ROOT/"media-inventory-new-medicines-20261127.json",ROOT/"media-inventory-remaining-steps-20261127.json"):
         if path.exists():
             for t in json.loads(path.read_text(encoding="utf-8"))["targets"]:
                 result[t["id"]]=t
@@ -60,7 +61,7 @@ def package(root,dest,targets):
     if dest.exists():shutil.rmtree(dest)
     dest.mkdir(parents=True)
     records={}; hashes={}; rejected=[]; used=0; duplicates=0
-    for report in sorted(root.rglob("*.json"),key=lambda p:({"original":0,"expansion":1,"mass":2,"priority":3,"scale":4,"coverage":5}.get(p.relative_to(root).parts[0],6),str(p))):
+    for report in sorted(root.rglob("*.json"),key=lambda p:({"original":0,"expansion":1,"mass":2,"priority":3,"scale":4,"coverage":5,"step":6,"technique":7,"gap":8}.get(p.relative_to(root).parts[0],6),str(p))):
         if report.name not in ("download-report.json","report.json","manifest.json"):continue
         payload=json.loads(report.read_text(encoding="utf-8"))
         if not isinstance(payload,dict):continue
@@ -101,9 +102,17 @@ def package(root,dest,targets):
                 rejected.append({"file":str(name)[:150],"reason":str(exc)[:180]})
     rows=list(records.values())
     coverage=summarize_coverage(targets,rows)
-    summary={"coverage":coverage,"photos":sum(r["file"].endswith(".jpg") for r in rows),"videos":sum(r["file"].endswith(".mp4") for r in rows),"bytes":used,"duplicates":duplicates,"rejected":rejected,"approved":0}
+    queue,gaps,quality=evaluate(targets,rows)
+    quality_by_file={q["file"]:q for q in queue}
+    for r in rows:
+        q=quality_by_file[r["file"]]
+        r["review_quality"]={"priority":q["priority"],"flags":q["flags"].split(" | ") if q["flags"] else []}
+    audit_dir=ROOT/"review-quality";audit_dir.mkdir(exist_ok=True)
+    save_csv(audit_dir/"review-queue.csv",queue);save_csv(audit_dir/"missing-topics.csv",gaps)
+    (audit_dir/"summary.json").write_text(json.dumps(quality,ensure_ascii=False,indent=2),encoding="utf-8")
+    summary={"quality":quality,"coverage":coverage,"photos":sum(r["file"].endswith(".jpg") for r in rows),"videos":sum(r["file"].endswith(".mp4") for r in rows),"bytes":used,"duplicates":duplicates,"rejected":rejected,"approved":0}
     require(not any(r["reason"]=="budget exceeded" for r in rejected),"media pack exceeds budget: do not silently discard files")
-    require(summary["photos"]>=900 and summary["videos"]>=145 and len(rows)>=1050,"expanded review pack incomplete")
+    require(summary["photos"]>=1075 and summary["videos"]>=184 and len(rows)>=1259,"baseline media lost during consolidation")
     (dest/"manifest.json").write_text(json.dumps({"schema":1,"review_only":rows,"summary":summary},ensure_ascii=False),encoding="utf-8")
     print(json.dumps({k:v for k,v in summary.items() if k!="rejected"},ensure_ascii=False))
     return summary
@@ -121,11 +130,13 @@ def verify(root):
         expected["assets/media/review/"+name]=row["sha256"]
     summary=payload["summary"]
     require(summary["photos"]==sum(n.endswith(".jpg") for n in expected) and summary["videos"]==sum(n.endswith(".mp4") for n in expected) and summary["approved"]==0,"incorrect coverage")
-    require(summary["photos"]>=900 and summary["videos"]>=145 and len(rows)>=1050,"expanded review pack incomplete")
+    require(summary["photos"]>=1075 and summary["videos"]>=184 and len(rows)>=1259,"baseline media lost during consolidation")
     require({p.name for p in root.iterdir()}=={r["file"] for r in rows}|{"manifest.json"},"unexpected review files")
     expected["assets/media/review/manifest.json"]=sha(manifest)
     return expected
 
 if __name__=="__main__":
-    package(INPUT,DEST,read_targets())
+    targets=read_targets()
+    require(sum(bool(t.get("step_binding")) for t in targets.values())==501,"step inventory incomplete")
+    package(INPUT,DEST,targets)
     verify(DEST)

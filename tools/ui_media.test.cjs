@@ -284,3 +284,16 @@ test('review filters and page survive rerender and clear safely',()=>{
  vm.runInContext("clearReviewFilters()",ctx);
  assert.equal(vm.runInContext("reviewSelection().length",ctx),35);
 });
+
+test('quality filters and coverage panel never imply approval',()=>{
+ const a=js.indexOf("let reviewMedia=null"),b=js.indexOf("function notifyEmergencyAwake(",a);
+ const ctx=vm.createContext({state:{lang:"ru"},esc:v=>String(v??"")});
+ vm.runInContext(js.slice(a,b),ctx);
+ ctx.records=[{file:"a".repeat(40)+".jpg",title:"QA",review_quality:{priority:0,flags:["multiple-drug-identities","no-title-token-match"]},labels:[]},{file:"b".repeat(40)+".mp4",title:"Other",review_quality:{priority:2,flags:[]},labels:[]}];
+ vm.runInContext('reviewMedia=records;reviewSummary={coverage:{guide_step:{targets:501,photo_targets:224,video_targets:136}}}',ctx);
+ assert.equal(vm.runInContext('reviewRows("","","priority").length',ctx),1);
+ assert.equal(vm.runInContext('reviewRows("","","unmatched").length',ctx),1);
+ assert.match(vm.runInContext('reviewCards(records)',ctx),/Несколько препаратов/);
+ assert.match(vm.runInContext('reviewCoveragePanel()',ctx),/224\/501/);
+ assert.match(vm.runInContext('reviewCoveragePanel()',ctx),/не подтверждённые/);
+});

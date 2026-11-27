@@ -1,0 +1,2138 @@
+{
+  "medicine:paracetamol": {
+    "en": "Paracetamol",
+    "aliases": "ацетаминофен acetaminophen панадол"
+  },
+  "medicine:ibuprofen": {
+    "en": "Ibuprofen",
+    "aliases": "нурофен"
+  },
+  "medicine:cetirizine": {
+    "en": "Cetirizine",
+    "aliases": "цетрин зиртек"
+  },
+  "medicine:loratadine": {
+    "en": "Loratadine",
+    "aliases": "кларитин"
+  },
+  "medicine:ors": {
+    "en": "Oral rehydration salts",
+    "aliases": "регидрон ors oral rehydration"
+  },
+  "medicine:salbutamol": {
+    "en": "Salbutamol",
+    "aliases": "вентолин albuterol"
+  },
+  "medicine:diclofenac": {
+    "en": "Diclofenac gel",
+    "aliases": "вольтарен"
+  },
+  "medicine:omeprazole": {
+    "en": "Omeprazole",
+    "aliases": "омез"
+  },
+  "medicine:loperamide": {
+    "en": "Loperamide",
+    "aliases": "имодиум"
+  },
+  "medicine:aspirin": {
+    "en": "Aspirin",
+    "aliases": "аспирин"
+  },
+  "medicine:hydrocortisone": {
+    "en": "Hydrocortisone cream",
+    "aliases": "гидрокортизон"
+  },
+  "medicine:clotrimazole": {
+    "en": "Clotrimazole",
+    "aliases": "клотримазол"
+  },
+  "medicine:chlorhexidine": {
+    "en": "Chlorhexidine",
+    "aliases": "хлоргексидин"
+  },
+  "medicine:fexofenadine": {
+    "en": "Fexofenadine",
+    "aliases": "аллегра"
+  },
+  "medicine:macrogol": {
+    "en": "Macrogol",
+    "aliases": "форлакс"
+  },
+  "medicine:epinephrine": {
+    "en": "Epinephrine autoinjector",
+    "aliases": "эпинефрин эпипен adrenaline epipen"
+  },
+  "medicine:amlodipine": {
+    "en": "Amlodipine",
+    "aliases": "амлодипин"
+  },
+  "medicine:metformin": {
+    "en": "Metformin",
+    "aliases": "глюкофаж"
+  },
+  "medicine:naproxen": {
+    "en": "Naproxen",
+    "aliases": "напроксен"
+  },
+  "medicine:levothyroxine": {
+    "en": "Levothyroxine",
+    "aliases": "левотироксин"
+  },
+  "medicine:lactulose": {
+    "en": "Lactulose",
+    "aliases": "лактулоза"
+  },
+  "medicine:pantoprazole": {
+    "en": "Pantoprazole",
+    "aliases": "пантопразол"
+  },
+  "medicine:beclometasone": {
+    "en": "Beclometasone",
+    "aliases": "беклометазон"
+  },
+  "medicine:budesonide": {
+    "en": "Budesonide",
+    "aliases": "будесонид"
+  },
+  "medicine:calamine": {
+    "en": "Calamine",
+    "aliases": "каламин"
+  },
+  "medicine:povidone-iodine": {
+    "en": "Povidone-iodine",
+    "aliases": "повидон йод"
+  },
+  "medicine:insulin": {
+    "en": "Insulin",
+    "aliases": "инсулин"
+  },
+  "medicine:chlorphenamine": {
+    "en": "Chlorphenamine",
+    "aliases": "хлорфенирамин"
+  },
+  "medicine:acrivastine": {
+    "en": "Acrivastine",
+    "aliases": ""
+  },
+  "medicine:diphenhydramine": {
+    "en": "Diphenhydramine",
+    "aliases": "димедрол"
+  },
+  "medicine:cyclizine": {
+    "en": "Cyclizine",
+    "aliases": ""
+  },
+  "medicine:hyoscine": {
+    "en": "Hyoscine hydrobromide",
+    "aliases": "скополамин"
+  },
+  "medicine:bisacodyl": {
+    "en": "Bisacodyl",
+    "aliases": ""
+  },
+  "medicine:senna": {
+    "en": "Senna",
+    "aliases": "сеннозиды"
+  },
+  "medicine:simeticone": {
+    "en": "Simeticone",
+    "aliases": "simethicone эспумизан"
+  },
+  "medicine:antacids": {
+    "en": "Antacids",
+    "aliases": "антацид изжога"
+  },
+  "medicine:benzydamine": {
+    "en": "Benzydamine",
+    "aliases": "тантум верде"
+  },
+  "medicine:benzoyl-peroxide": {
+    "en": "Benzoyl peroxide",
+    "aliases": ""
+  },
+  "medicine:aciclovir": {
+    "en": "Aciclovir",
+    "aliases": "acyclovir зовиракс"
+  },
+  "medicine:terbinafine": {
+    "en": "Terbinafine",
+    "aliases": "ламизил"
+  },
+  "medicine:carmellose": {
+    "en": "Carmellose sodium eye drops",
+    "aliases": "искусственная слеза"
+  },
+  "medicine:fluticasone": {
+    "en": "Fluticasone",
+    "aliases": "фликсоназе"
+  },
+  "medicine:gtn": {
+    "en": "Glyceryl trinitrate",
+    "aliases": "gtn nitroglycerin"
+  },
+  "medicine:naloxone": {
+    "en": "Naloxone",
+    "aliases": ""
+  },
+  "medicine:apixaban": {
+    "en": "Apixaban",
+    "aliases": "эликвис"
+  },
+  "medicine:warfarin": {
+    "en": "Warfarin",
+    "aliases": ""
+  },
+  "medicine:clopidogrel": {
+    "en": "Clopidogrel",
+    "aliases": "плавикс"
+  },
+  "medicine:esomeprazole": {
+    "en": "Esomeprazole",
+    "aliases": "нексиум"
+  },
+  "medicine:lansoprazole": {
+    "en": "Lansoprazole",
+    "aliases": ""
+  },
+  "medicine:mebeverine": {
+    "en": "Mebeverine",
+    "aliases": "дюспаталин"
+  },
+  "medicine:hyoscine-butylbromide": {
+    "en": "Hyoscine butylbromide",
+    "aliases": "бускопан"
+  },
+  "medicine:ispaghula": {
+    "en": "Ispaghula husk",
+    "aliases": "подорожник шелуха"
+  },
+  "medicine:peppermint-oil": {
+    "en": "Peppermint oil",
+    "aliases": ""
+  },
+  "medicine:bismuth-subsalicylate": {
+    "en": "Bismuth subsalicylate",
+    "aliases": ""
+  },
+  "medicine:metoclopramide": {
+    "en": "Metoclopramide",
+    "aliases": "церукал"
+  },
+  "medicine:cinnarizine": {
+    "en": "Cinnarizine",
+    "aliases": ""
+  },
+  "medicine:promethazine": {
+    "en": "Promethazine",
+    "aliases": ""
+  },
+  "medicine:carbocisteine": {
+    "en": "Carbocisteine",
+    "aliases": ""
+  },
+  "medicine:tiotropium": {
+    "en": "Tiotropium",
+    "aliases": "спирива"
+  },
+  "medicine:montelukast": {
+    "en": "Montelukast",
+    "aliases": "сингуляр"
+  },
+  "medicine:mometasone": {
+    "en": "Mometasone",
+    "aliases": "назонекс"
+  },
+  "medicine:ketoconazole": {
+    "en": "Ketoconazole",
+    "aliases": ""
+  },
+  "medicine:nystatin": {
+    "en": "Nystatin",
+    "aliases": ""
+  },
+  "medicine:fusidic-acid": {
+    "en": "Fusidic acid",
+    "aliases": ""
+  },
+  "medicine:lidocaine": {
+    "en": "Lidocaine skin cream",
+    "aliases": ""
+  },
+  "medicine:sumatriptan": {
+    "en": "Sumatriptan",
+    "aliases": ""
+  },
+  "medicine:prednisolone": {
+    "en": "Prednisolone",
+    "aliases": ""
+  },
+  "medicine:hydrocortisone-injection": {
+    "en": "Hydrocortisone injection",
+    "aliases": ""
+  },
+  "medicine:gliclazide": {
+    "en": "Gliclazide",
+    "aliases": ""
+  },
+  "medicine:levetiracetam": {
+    "en": "Levetiracetam",
+    "aliases": ""
+  },
+  "medicine:amoxicillin": {
+    "en": "Amoxicillin",
+    "aliases": ""
+  },
+  "medicine:co-amoxiclav": {
+    "en": "Co-amoxiclav",
+    "aliases": ""
+  },
+  "medicine:doxycycline": {
+    "en": "Doxycycline",
+    "aliases": ""
+  },
+  "medicine:azithromycin": {
+    "en": "Azithromycin",
+    "aliases": ""
+  },
+  "medicine:cefalexin": {
+    "en": "Cefalexin",
+    "aliases": ""
+  },
+  "medicine:nitrofurantoin": {
+    "en": "Nitrofurantoin",
+    "aliases": ""
+  },
+  "medicine:fluconazole": {
+    "en": "Fluconazole",
+    "aliases": ""
+  },
+  "medicine:chloramphenicol": {
+    "en": "Chloramphenicol eye preparations",
+    "aliases": ""
+  },
+  "medicine:flucloxacillin": {
+    "en": "Flucloxacillin",
+    "aliases": ""
+  },
+  "medicine:ramipril": {
+    "en": "Ramipril",
+    "aliases": ""
+  },
+  "medicine:losartan": {
+    "en": "Losartan",
+    "aliases": ""
+  },
+  "medicine:bisoprolol": {
+    "en": "Bisoprolol",
+    "aliases": ""
+  },
+  "medicine:atenolol": {
+    "en": "Atenolol",
+    "aliases": ""
+  },
+  "medicine:atorvastatin": {
+    "en": "Atorvastatin",
+    "aliases": ""
+  },
+  "medicine:furosemide": {
+    "en": "Furosemide",
+    "aliases": ""
+  },
+  "medicine:indapamide": {
+    "en": "Indapamide",
+    "aliases": ""
+  },
+  "medicine:candesartan": {
+    "en": "Candesartan",
+    "aliases": ""
+  },
+  "medicine:enalapril": {
+    "en": "Enalapril",
+    "aliases": ""
+  },
+  "medicine:edoxaban": {
+    "en": "Edoxaban",
+    "aliases": ""
+  },
+  "medicine:diltiazem": {
+    "en": "Diltiazem",
+    "aliases": ""
+  },
+  "medicine:empagliflozin": {
+    "en": "Empagliflozin",
+    "aliases": ""
+  },
+  "medicine:dapagliflozin": {
+    "en": "Dapagliflozin",
+    "aliases": ""
+  },
+  "medicine:sitagliptin": {
+    "en": "Sitagliptin",
+    "aliases": ""
+  },
+  "medicine:linagliptin": {
+    "en": "Linagliptin",
+    "aliases": ""
+  },
+  "medicine:carbimazole": {
+    "en": "Carbimazole",
+    "aliases": ""
+  },
+  "medicine:allopurinol": {
+    "en": "Allopurinol",
+    "aliases": ""
+  },
+  "medicine:ferrous-sulfate": {
+    "en": "Ferrous sulfate",
+    "aliases": ""
+  },
+  "medicine:folic-acid": {
+    "en": "Folic acid",
+    "aliases": ""
+  },
+  "medicine:docusate": {
+    "en": "Docusate",
+    "aliases": ""
+  },
+  "medicine:betahistine": {
+    "en": "Betahistine",
+    "aliases": ""
+  },
+  "medicine:clarithromycin": {
+    "en": "Clarithromycin",
+    "aliases": ""
+  },
+  "medicine:erythromycin": {
+    "en": "Erythromycin",
+    "aliases": ""
+  },
+  "medicine:metronidazole": {
+    "en": "Metronidazole",
+    "aliases": ""
+  },
+  "medicine:phenoxymethylpenicillin": {
+    "en": "Phenoxymethylpenicillin",
+    "aliases": ""
+  },
+  "medicine:trimethoprim": {
+    "en": "Trimethoprim",
+    "aliases": ""
+  },
+  "medicine:mebendazole": {
+    "en": "Mebendazole",
+    "aliases": ""
+  },
+  "medicine:rivaroxaban": {
+    "en": "Rivaroxaban",
+    "aliases": ""
+  },
+  "medicine:rosuvastatin": {
+    "en": "Rosuvastatin",
+    "aliases": ""
+  },
+  "medicine:simvastatin": {
+    "en": "Simvastatin",
+    "aliases": ""
+  },
+  "medicine:metoprolol": {
+    "en": "Metoprolol",
+    "aliases": ""
+  },
+  "medicine:carvedilol": {
+    "en": "Carvedilol",
+    "aliases": ""
+  },
+  "medicine:spironolactone": {
+    "en": "Spironolactone",
+    "aliases": ""
+  },
+  "medicine:eplerenone": {
+    "en": "Eplerenone",
+    "aliases": ""
+  },
+  "medicine:valsartan": {
+    "en": "Valsartan",
+    "aliases": ""
+  },
+  "medicine:perindopril": {
+    "en": "Perindopril",
+    "aliases": ""
+  },
+  "medicine:verapamil": {
+    "en": "Verapamil",
+    "aliases": ""
+  },
+  "medicine:digoxin": {
+    "en": "Digoxin",
+    "aliases": ""
+  },
+  "medicine:tranexamic-acid": {
+    "en": "Tranexamic acid",
+    "aliases": ""
+  },
+  "medicine:lamotrigine": {
+    "en": "Lamotrigine",
+    "aliases": ""
+  },
+  "medicine:carbamazepine": {
+    "en": "Carbamazepine",
+    "aliases": ""
+  },
+  "medicine:topiramate": {
+    "en": "Topiramate",
+    "aliases": ""
+  },
+  "medicine:baclofen": {
+    "en": "Baclofen",
+    "aliases": ""
+  },
+  "medicine:sertraline": {
+    "en": "Sertraline",
+    "aliases": ""
+  },
+  "medicine:fluoxetine": {
+    "en": "Fluoxetine",
+    "aliases": ""
+  },
+  "medicine:escitalopram": {
+    "en": "Escitalopram",
+    "aliases": ""
+  },
+  "medicine:colecalciferol": {
+    "en": "Colecalciferol",
+    "aliases": ""
+  },
+  "medicine:cyanocobalamin": {
+    "en": "Cyanocobalamin",
+    "aliases": ""
+  },
+  "medicine:thiamine": {
+    "en": "Thiamine",
+    "aliases": ""
+  },
+  "medicine:tamsulosin": {
+    "en": "Tamsulosin",
+    "aliases": ""
+  },
+  "medicine:oxybutynin": {
+    "en": "Oxybutynin",
+    "aliases": ""
+  },
+  "medicine:alendronic-acid": {
+    "en": "Alendronic acid",
+    "aliases": ""
+  },
+  "medicine:alogliptin": {
+    "en": "Alogliptin",
+    "aliases": ""
+  },
+  "medicine:bendroflumethiazide": {
+    "en": "Bendroflumethiazide",
+    "aliases": ""
+  },
+  "medicine:bumetanide": {
+    "en": "Bumetanide",
+    "aliases": ""
+  },
+  "medicine:ezetimibe": {
+    "en": "Ezetimibe",
+    "aliases": ""
+  },
+  "medicine:felodipine": {
+    "en": "Felodipine",
+    "aliases": ""
+  },
+  "medicine:lisinopril": {
+    "en": "Lisinopril",
+    "aliases": ""
+  },
+  "medicine:doxazosin": {
+    "en": "Doxazosin",
+    "aliases": ""
+  },
+  "medicine:citalopram": {
+    "en": "Citalopram",
+    "aliases": ""
+  },
+  "medicine:duloxetine": {
+    "en": "Duloxetine",
+    "aliases": ""
+  },
+  "medicine:donepezil": {
+    "en": "Donepezil",
+    "aliases": ""
+  },
+  "medicine:memantine": {
+    "en": "Memantine",
+    "aliases": ""
+  },
+  "medicine:mesalazine": {
+    "en": "Mesalazine",
+    "aliases": ""
+  },
+  "medicine:calcipotriol": {
+    "en": "Calcipotriol",
+    "aliases": ""
+  },
+  "medicine:clobetasol": {
+    "en": "Clobetasol",
+    "aliases": ""
+  },
+  "medicine:clobetasone": {
+    "en": "Clobetasone",
+    "aliases": ""
+  },
+  "medicine:latanoprost": {
+    "en": "Latanoprost",
+    "aliases": ""
+  },
+  "medicine:bimatoprost": {
+    "en": "Bimatoprost",
+    "aliases": ""
+  },
+  "medicine:brinzolamide": {
+    "en": "Brinzolamide",
+    "aliases": ""
+  },
+  "medicine:timolol": {
+    "en": "Timolol eye drops",
+    "aliases": ""
+  },
+  "medicine:adalimumab": {
+    "en": "Adalimumab",
+    "aliases": ""
+  },
+  "medicine:azathioprine": {
+    "en": "Azathioprine",
+    "aliases": ""
+  },
+  "medicine:anastrozole": {
+    "en": "Anastrozole",
+    "aliases": ""
+  },
+  "medicine:letrozole": {
+    "en": "Letrozole",
+    "aliases": ""
+  },
+  "medicine:aripiprazole": {
+    "en": "Aripiprazole",
+    "aliases": ""
+  },
+  "medicine:amitriptyline": {
+    "en": "Amitriptyline",
+    "aliases": ""
+  },
+  "medicine:betamethasone-skin": {
+    "en": "Betamethasone for skin",
+    "aliases": ""
+  },
+  "medicine:ciprofloxacin": {
+    "en": "Ciprofloxacin",
+    "aliases": ""
+  },
+  "medicine:lymecycline": {
+    "en": "Lymecycline",
+    "aliases": ""
+  },
+  "medicine:clonidine": {
+    "en": "Clonidine",
+    "aliases": ""
+  },
+  "medicine:colchicine": {
+    "en": "Colchicine",
+    "aliases": ""
+  },
+  "medicine:dexamethasone": {
+    "en": "Dexamethasone",
+    "aliases": ""
+  },
+  "medicine:dexamethasone-eye": {
+    "en": "Dexamethasone eye drops",
+    "aliases": ""
+  },
+  "medicine:dipyridamole": {
+    "en": "Dipyridamole",
+    "aliases": ""
+  },
+  "medicine:domperidone": {
+    "en": "Domperidone",
+    "aliases": ""
+  },
+  "medicine:ferrous-fumarate": {
+    "en": "Ferrous fumarate",
+    "aliases": ""
+  },
+  "medicine:finasteride": {
+    "en": "Finasteride",
+    "aliases": ""
+  },
+  "medicine:hydroxocobalamin": {
+    "en": "Hydroxocobalamin",
+    "aliases": ""
+  },
+  "medicine:irbesartan": {
+    "en": "Irbesartan",
+    "aliases": ""
+  },
+  "medicine:lercanidipine": {
+    "en": "Lercanidipine",
+    "aliases": ""
+  },
+  "medicine:liraglutide": {
+    "en": "Liraglutide",
+    "aliases": ""
+  },
+  "medicine:lithium": {
+    "en": "Lithium",
+    "aliases": ""
+  },
+  "medicine:co-beneldopa": {
+    "en": "Co-beneldopa",
+    "aliases": ""
+  },
+  "medicine:gabapentin": {
+    "en": "Gabapentin",
+    "aliases": ""
+  },
+  "medicine:hydroxychloroquine": {
+    "en": "Hydroxychloroquine",
+    "aliases": ""
+  },
+  "medicine:isosorbide-mononitrate": {
+    "en": "Isosorbide mononitrate",
+    "aliases": ""
+  },
+  "medicine:isotretinoin": {
+    "en": "Isotretinoin",
+    "aliases": ""
+  },
+  "medicine:medroxyprogesterone": {
+    "en": "Medroxyprogesterone",
+    "aliases": ""
+  },
+  "medicine:melatonin": {
+    "en": "Melatonin",
+    "aliases": ""
+  },
+  "medicine:methotrexate": {
+    "en": "Methotrexate",
+    "aliases": ""
+  },
+  "medicine:mirabegron": {
+    "en": "Mirabegron",
+    "aliases": ""
+  },
+  "medicine:mirtazapine": {
+    "en": "Mirtazapine",
+    "aliases": ""
+  },
+  "medicine:nefopam": {
+    "en": "Nefopam",
+    "aliases": ""
+  },
+  "medicine:nicorandil": {
+    "en": "Nicorandil",
+    "aliases": ""
+  },
+  "medicine:nifedipine": {
+    "en": "Nifedipine",
+    "aliases": ""
+  },
+  "medicine:nortriptyline": {
+    "en": "Nortriptyline",
+    "aliases": ""
+  },
+  "medicine:olanzapine": {
+    "en": "Olanzapine",
+    "aliases": ""
+  },
+  "medicine:orlistat": {
+    "en": "Orlistat",
+    "aliases": ""
+  },
+  "medicine:paroxetine": {
+    "en": "Paroxetine",
+    "aliases": ""
+  },
+  "medicine:pravastatin": {
+    "en": "Pravastatin",
+    "aliases": ""
+  },
+  "medicine:prochlorperazine": {
+    "en": "Prochlorperazine",
+    "aliases": ""
+  },
+  "medicine:propranolol": {
+    "en": "Propranolol",
+    "aliases": ""
+  },
+  "medicine:quetiapine": {
+    "en": "Quetiapine",
+    "aliases": ""
+  },
+  "medicine:risperidone": {
+    "en": "Risperidone",
+    "aliases": ""
+  },
+  "medicine:ropinirole": {
+    "en": "Ropinirole",
+    "aliases": ""
+  },
+  "medicine:semaglutide": {
+    "en": "Semaglutide",
+    "aliases": ""
+  },
+  "medicine:sodium-valproate": {
+    "en": "Sodium valproate",
+    "aliases": ""
+  },
+  "medicine:solifenacin": {
+    "en": "Solifenacin",
+    "aliases": ""
+  },
+  "medicine:sotalol": {
+    "en": "Sotalol",
+    "aliases": ""
+  },
+  "medicine:sulfasalazine": {
+    "en": "Sulfasalazine",
+    "aliases": ""
+  },
+  "medicine:acarbose": {
+    "en": "Acarbose",
+    "aliases": "Акарбоза Acarbose"
+  },
+  "medicine:glucagon": {
+    "en": "Glucagon",
+    "aliases": "Глюкагон Glucagon"
+  },
+  "medicine:pregabalin": {
+    "en": "Pregabalin",
+    "aliases": "Прегабалин Pregabalin"
+  },
+  "medicine:venlafaxine": {
+    "en": "Venlafaxine",
+    "aliases": "Венлафаксин Venlafaxine"
+  },
+  "medicine:trazodone": {
+    "en": "Trazodone",
+    "aliases": "Тразодон Trazodone"
+  },
+  "medicine:vortioxetine": {
+    "en": "Vortioxetine",
+    "aliases": "Вортиоксетин Vortioxetine"
+  },
+  "medicine:moclobemide": {
+    "en": "Moclobemide",
+    "aliases": "Моклобемид Moclobemide"
+  },
+  "medicine:lacosamide": {
+    "en": "Lacosamide",
+    "aliases": "Лакосамид Lacosamide"
+  },
+  "medicine:brivaracetam": {
+    "en": "Brivaracetam",
+    "aliases": "Бриварацетам Brivaracetam"
+  },
+  "medicine:zonisamide": {
+    "en": "Zonisamide",
+    "aliases": "Зонисамид Zonisamide"
+  },
+  "medicine:pramipexole": {
+    "en": "Pramipexole",
+    "aliases": "Прамипексол Pramipexole"
+  },
+  "medicine:rasagiline": {
+    "en": "Rasagiline",
+    "aliases": "Разагилин Rasagiline"
+  },
+  "medicine:entacapone": {
+    "en": "Entacapone",
+    "aliases": "Энтакапон Entacapone"
+  },
+  "medicine:rivastigmine": {
+    "en": "Rivastigmine",
+    "aliases": "Ривастигмин Rivastigmine"
+  },
+  "medicine:galantamine": {
+    "en": "Galantamine",
+    "aliases": "Галантамин Galantamine"
+  },
+  "medicine:sildenafil": {
+    "en": "Sildenafil",
+    "aliases": "Силденафил Sildenafil"
+  },
+  "medicine:tadalafil": {
+    "en": "Tadalafil",
+    "aliases": "Тадалафил Tadalafil"
+  },
+  "medicine:sodium-alginate": {
+    "en": "Sodium alginate",
+    "aliases": "Альгинат натрия Sodium alginate"
+  },
+  "medicine:miconazole": {
+    "en": "Miconazole",
+    "aliases": "Миконазол Miconazole"
+  },
+  "medicine:itraconazole": {
+    "en": "Itraconazole",
+    "aliases": "Итраконазол Itraconazole"
+  },
+  "medicine:valaciclovir": {
+    "en": "Valaciclovir",
+    "aliases": "Валацикловир Valaciclovir"
+  },
+  "medicine:oseltamivir": {
+    "en": "Oseltamivir",
+    "aliases": "Осельтамивир Oseltamivir"
+  },
+  "medicine:rifampicin": {
+    "en": "Rifampicin",
+    "aliases": "Рифампицин Rifampicin"
+  },
+  "medicine:isoniazid": {
+    "en": "Isoniazid",
+    "aliases": "Изониазид Isoniazid"
+  },
+  "medicine:co-trimoxazole": {
+    "en": "Co-trimoxazole",
+    "aliases": "Ко-тримоксазол Co-trimoxazole"
+  },
+  "medicine:salmeterol": {
+    "en": "Salmeterol",
+    "aliases": "Салметерол Salmeterol"
+  },
+  "medicine:formoterol": {
+    "en": "Formoterol",
+    "aliases": "Формотерол Formoterol"
+  },
+  "medicine:ipratropium": {
+    "en": "Ipratropium bromide",
+    "aliases": "Ипратропия бромид Ipratropium bromide"
+  },
+  "medicine:umeclidinium": {
+    "en": "Umeclidinium",
+    "aliases": "Умеклидиний Umeclidinium"
+  },
+  "medicine:brimonidine": {
+    "en": "Brimonidine",
+    "aliases": "Бримонидин Brimonidine"
+  },
+  "medicine:dorzolamide": {
+    "en": "Dorzolamide",
+    "aliases": "Дорзоламид Dorzolamide"
+  },
+  "medicine:travoprost": {
+    "en": "Travoprost",
+    "aliases": "Травопрост Travoprost"
+  },
+  "medicine:bisoprolol-hydrochlorothiazide": {
+    "en": "Bisoprolol and hydrochlorothiazide",
+    "aliases": "Бисопролол + гидрохлоротиазид Bisoprolol and hydrochlorothiazide"
+  },
+  "medicine:hydrochlorothiazide": {
+    "en": "Hydrochlorothiazide",
+    "aliases": "Гидрохлоротиазид Hydrochlorothiazide"
+  },
+  "medicine:dabigatran": {
+    "en": "Dabigatran",
+    "aliases": "Дабигатран Dabigatran"
+  },
+  "medicine:enoxaparin": {
+    "en": "Enoxaparin",
+    "aliases": "Эноксапарин Enoxaparin"
+  },
+  "medicine:fondaparinux": {
+    "en": "Fondaparinux",
+    "aliases": "Фондапаринукс Fondaparinux"
+  },
+  "medicine:ticagrelor": {
+    "en": "Ticagrelor",
+    "aliases": "Тикагрелор Ticagrelor"
+  },
+  "medicine:sacubitril-valsartan": {
+    "en": "Sacubitril and valsartan",
+    "aliases": "Сакубитрил + валсартан Sacubitril and valsartan"
+  },
+  "medicine:febuxostat": {
+    "en": "Febuxostat",
+    "aliases": "Фебуксостат Febuxostat"
+  },
+  "medicine:abacavir": {
+    "en": "Abacavir",
+    "aliases": ""
+  },
+  "medicine:acamprosate": {
+    "en": "Acamprosate",
+    "aliases": ""
+  },
+  "medicine:acebutolol": {
+    "en": "Acebutolol",
+    "aliases": ""
+  },
+  "medicine:acetazolamide": {
+    "en": "Acetazolamide",
+    "aliases": ""
+  },
+  "medicine:alfuzosin": {
+    "en": "Alfuzosin",
+    "aliases": ""
+  },
+  "medicine:amantadine": {
+    "en": "Amantadine",
+    "aliases": ""
+  },
+  "medicine:amiloride": {
+    "en": "Amiloride",
+    "aliases": ""
+  },
+  "medicine:amiodarone": {
+    "en": "Amiodarone",
+    "aliases": ""
+  },
+  "medicine:anagrelide": {
+    "en": "Anagrelide",
+    "aliases": ""
+  },
+  "medicine:apremilast": {
+    "en": "Apremilast",
+    "aliases": ""
+  },
+  "medicine:asenapine": {
+    "en": "Asenapine",
+    "aliases": ""
+  },
+  "medicine:atomoxetine": {
+    "en": "Atomoxetine",
+    "aliases": ""
+  },
+  "medicine:atovaquone": {
+    "en": "Atovaquone",
+    "aliases": ""
+  },
+  "medicine:auranofin": {
+    "en": "Auranofin",
+    "aliases": ""
+  },
+  "medicine:benztropine": {
+    "en": "Benztropine",
+    "aliases": ""
+  },
+  "medicine:bosentan": {
+    "en": "Bosentan",
+    "aliases": ""
+  },
+  "medicine:bupropion": {
+    "en": "Bupropion",
+    "aliases": ""
+  },
+  "medicine:buspirone": {
+    "en": "Buspirone",
+    "aliases": ""
+  },
+  "medicine:cabergoline": {
+    "en": "Cabergoline",
+    "aliases": ""
+  },
+  "medicine:captopril": {
+    "en": "Captopril",
+    "aliases": ""
+  },
+  "medicine:cefadroxil": {
+    "en": "Cefadroxil",
+    "aliases": ""
+  },
+  "medicine:cefdinir": {
+    "en": "Cefdinir",
+    "aliases": ""
+  },
+  "medicine:cefixime": {
+    "en": "Cefixime",
+    "aliases": ""
+  },
+  "medicine:cefpodoxime": {
+    "en": "Cefpodoxime",
+    "aliases": ""
+  },
+  "medicine:cefuroxime": {
+    "en": "Cefuroxime",
+    "aliases": ""
+  },
+  "medicine:celecoxib": {
+    "en": "Celecoxib",
+    "aliases": ""
+  },
+  "medicine:chlorthalidone": {
+    "en": "Chlorthalidone",
+    "aliases": ""
+  },
+  "medicine:cilostazol": {
+    "en": "Cilostazol",
+    "aliases": ""
+  },
+  "medicine:clindamycin": {
+    "en": "Clindamycin",
+    "aliases": ""
+  },
+  "medicine:clobazam": {
+    "en": "Clobazam",
+    "aliases": ""
+  },
+  "medicine:clomipramine": {
+    "en": "Clomipramine",
+    "aliases": ""
+  },
+  "medicine:clozapine": {
+    "en": "Clozapine",
+    "aliases": ""
+  },
+  "medicine:dapsone": {
+    "en": "Dapsone",
+    "aliases": ""
+  },
+  "medicine:desloratadine": {
+    "en": "Desloratadine",
+    "aliases": ""
+  },
+  "medicine:desvenlafaxine": {
+    "en": "Desvenlafaxine",
+    "aliases": ""
+  },
+  "medicine:dutasteride": {
+    "en": "Dutasteride",
+    "aliases": ""
+  },
+  "medicine:eletriptan": {
+    "en": "Eletriptan",
+    "aliases": ""
+  },
+  "medicine:entecavir": {
+    "en": "Entecavir",
+    "aliases": ""
+  },
+  "medicine:ertugliflozin": {
+    "en": "Ertugliflozin",
+    "aliases": ""
+  },
+  "medicine:ethambutol": {
+    "en": "Ethambutol",
+    "aliases": ""
+  },
+  "medicine:ethosuximide": {
+    "en": "Ethosuximide",
+    "aliases": ""
+  },
+  "medicine:fluvoxamine": {
+    "en": "Fluvoxamine",
+    "aliases": ""
+  },
+  "medicine:glimepiride": {
+    "en": "Glimepiride",
+    "aliases": ""
+  },
+  "medicine:glipizide": {
+    "en": "Glipizide",
+    "aliases": ""
+  },
+  "medicine:guanfacine": {
+    "en": "Guanfacine",
+    "aliases": ""
+  },
+  "medicine:haloperidol": {
+    "en": "Haloperidol",
+    "aliases": ""
+  },
+  "medicine:hydralazine": {
+    "en": "Hydralazine",
+    "aliases": ""
+  },
+  "medicine:indomethacin": {
+    "en": "Indomethacin",
+    "aliases": ""
+  },
+  "medicine:ivabradine": {
+    "en": "Ivabradine",
+    "aliases": ""
+  },
+  "medicine:leflunomide": {
+    "en": "Leflunomide",
+    "aliases": ""
+  },
+  "medicine:levofloxacin": {
+    "en": "Levofloxacin",
+    "aliases": ""
+  },
+  "medicine:liothyronine": {
+    "en": "Liothyronine",
+    "aliases": ""
+  },
+  "medicine:lurasidone": {
+    "en": "Lurasidone",
+    "aliases": ""
+  },
+  "medicine:meloxicam": {
+    "en": "Meloxicam",
+    "aliases": ""
+  },
+  "medicine:minocycline": {
+    "en": "Minocycline",
+    "aliases": ""
+  },
+  "medicine:moxifloxacin": {
+    "en": "Moxifloxacin",
+    "aliases": ""
+  },
+  "medicine:nadolol": {
+    "en": "Nadolol",
+    "aliases": ""
+  },
+  "medicine:naltrexone": {
+    "en": "Naltrexone",
+    "aliases": ""
+  },
+  "medicine:nebivolol": {
+    "en": "Nebivolol",
+    "aliases": ""
+  },
+  "medicine:nitazoxanide": {
+    "en": "Nitazoxanide",
+    "aliases": ""
+  },
+  "medicine:oxcarbazepine": {
+    "en": "Oxcarbazepine",
+    "aliases": ""
+  },
+  "medicine:paliperidone": {
+    "en": "Paliperidone",
+    "aliases": ""
+  },
+  "medicine:pioglitazone": {
+    "en": "Pioglitazone",
+    "aliases": ""
+  },
+  "medicine:prazosin": {
+    "en": "Prazosin",
+    "aliases": ""
+  },
+  "medicine:probenecid": {
+    "en": "Probenecid",
+    "aliases": ""
+  },
+  "medicine:raloxifene": {
+    "en": "Raloxifene",
+    "aliases": ""
+  },
+  "medicine:ranolazine": {
+    "en": "Ranolazine",
+    "aliases": ""
+  },
+  "medicine:repaglinide": {
+    "en": "Repaglinide",
+    "aliases": ""
+  },
+  "medicine:rifabutin": {
+    "en": "Rifabutin",
+    "aliases": ""
+  },
+  "medicine:rizatriptan": {
+    "en": "Rizatriptan",
+    "aliases": ""
+  },
+  "medicine:silodosin": {
+    "en": "Silodosin",
+    "aliases": ""
+  },
+  "medicine:tamoxifen": {
+    "en": "Tamoxifen",
+    "aliases": ""
+  },
+  "medicine:terazosin": {
+    "en": "Terazosin",
+    "aliases": ""
+  },
+  "medicine:teriflunomide": {
+    "en": "Teriflunomide",
+    "aliases": ""
+  },
+  "medicine:tizanidine": {
+    "en": "Tizanidine",
+    "aliases": ""
+  },
+  "medicine:tolterodine": {
+    "en": "Tolterodine",
+    "aliases": ""
+  },
+  "medicine:ursodiol": {
+    "en": "Ursodiol",
+    "aliases": "ursodeoxycholic acid удхк"
+  },
+  "medicine:varenicline": {
+    "en": "Varenicline",
+    "aliases": ""
+  },
+  "medicine:vigabatrin": {
+    "en": "Vigabatrin",
+    "aliases": ""
+  },
+  "medicine:zaleplon": {
+    "en": "Zaleplon",
+    "aliases": ""
+  },
+  "medicine:ziprasidone": {
+    "en": "Ziprasidone",
+    "aliases": ""
+  },
+  "medicine:zolmitriptan": {
+    "en": "Zolmitriptan",
+    "aliases": ""
+  },
+  "medicine:acitretin": {
+    "en": "Acitretin",
+    "aliases": ""
+  },
+  "medicine:adapalene": {
+    "en": "Adapalene",
+    "aliases": ""
+  },
+  "medicine:albendazole": {
+    "en": "Albendazole",
+    "aliases": ""
+  },
+  "medicine:aliskiren": {
+    "en": "Aliskiren",
+    "aliases": ""
+  },
+  "medicine:almotriptan": {
+    "en": "Almotriptan",
+    "aliases": ""
+  },
+  "medicine:ambrisentan": {
+    "en": "Ambrisentan",
+    "aliases": ""
+  },
+  "medicine:aminophylline": {
+    "en": "Aminophylline",
+    "aliases": ""
+  },
+  "medicine:ampicillin": {
+    "en": "Ampicillin",
+    "aliases": ""
+  },
+  "medicine:anakinra": {
+    "en": "Anakinra",
+    "aliases": ""
+  },
+  "medicine:aprepitant": {
+    "en": "Aprepitant",
+    "aliases": ""
+  },
+  "medicine:atazanavir": {
+    "en": "Atazanavir",
+    "aliases": ""
+  },
+  "medicine:azilsartan": {
+    "en": "Azilsartan",
+    "aliases": ""
+  },
+  "medicine:balsalazide": {
+    "en": "Balsalazide",
+    "aliases": ""
+  },
+  "medicine:baricitinib": {
+    "en": "Baricitinib",
+    "aliases": ""
+  },
+  "medicine:bedaquiline": {
+    "en": "Bedaquiline",
+    "aliases": ""
+  },
+  "medicine:benazepril": {
+    "en": "Benazepril",
+    "aliases": ""
+  },
+  "medicine:benznidazole": {
+    "en": "Benznidazole",
+    "aliases": ""
+  },
+  "medicine:betaxolol": {
+    "en": "Betaxolol",
+    "aliases": ""
+  },
+  "medicine:bicalutamide": {
+    "en": "Bicalutamide",
+    "aliases": ""
+  },
+  "medicine:bromocriptine": {
+    "en": "Bromocriptine",
+    "aliases": ""
+  },
+  "medicine:calcifediol": {
+    "en": "Calcifediol",
+    "aliases": ""
+  },
+  "medicine:calcitriol": {
+    "en": "Calcitriol",
+    "aliases": ""
+  },
+  "medicine:canagliflozin": {
+    "en": "Canagliflozin",
+    "aliases": ""
+  },
+  "medicine:capecitabine": {
+    "en": "Capecitabine",
+    "aliases": ""
+  },
+  "medicine:cariprazine": {
+    "en": "Cariprazine",
+    "aliases": ""
+  },
+  "medicine:cefaclor": {
+    "en": "Cefaclor",
+    "aliases": ""
+  },
+  "medicine:cefditoren": {
+    "en": "Cefditoren",
+    "aliases": ""
+  },
+  "medicine:cefprozil": {
+    "en": "Cefprozil",
+    "aliases": ""
+  },
+  "medicine:ceftibuten": {
+    "en": "Ceftibuten",
+    "aliases": ""
+  },
+  "medicine:cenobamate": {
+    "en": "Cenobamate",
+    "aliases": ""
+  },
+  "medicine:chlorambucil": {
+    "en": "Chlorambucil",
+    "aliases": ""
+  },
+  "medicine:chloroquine": {
+    "en": "Chloroquine",
+    "aliases": ""
+  },
+  "medicine:chlorothiazide": {
+    "en": "Chlorothiazide",
+    "aliases": ""
+  },
+  "medicine:chlorpromazine": {
+    "en": "Chlorpromazine",
+    "aliases": ""
+  },
+  "medicine:cimetidine": {
+    "en": "Cimetidine",
+    "aliases": ""
+  },
+  "medicine:cinacalcet": {
+    "en": "Cinacalcet",
+    "aliases": ""
+  },
+  "medicine:clemastine": {
+    "en": "Clemastine",
+    "aliases": ""
+  },
+  "medicine:clomiphene": {
+    "en": "Clomiphene",
+    "aliases": ""
+  },
+  "medicine:colesevelam": {
+    "en": "Colesevelam",
+    "aliases": ""
+  },
+  "medicine:colestipol": {
+    "en": "Colestipol",
+    "aliases": ""
+  },
+  "medicine:cyclophosphamide": {
+    "en": "Cyclophosphamide",
+    "aliases": ""
+  },
+  "medicine:cyclosporine": {
+    "en": "Cyclosporine",
+    "aliases": ""
+  },
+  "medicine:cyproheptadine": {
+    "en": "Cyproheptadine",
+    "aliases": ""
+  },
+  "medicine:dabrafenib": {
+    "en": "Dabrafenib",
+    "aliases": ""
+  },
+  "medicine:daclatasvir": {
+    "en": "Daclatasvir",
+    "aliases": ""
+  },
+  "medicine:danazol": {
+    "en": "Danazol",
+    "aliases": ""
+  },
+  "medicine:dantrolene": {
+    "en": "Dantrolene",
+    "aliases": ""
+  },
+  "medicine:darifenacin": {
+    "en": "Darifenacin",
+    "aliases": ""
+  },
+  "medicine:darunavir": {
+    "en": "Darunavir",
+    "aliases": ""
+  },
+  "medicine:dasatinib": {
+    "en": "Dasatinib",
+    "aliases": ""
+  },
+  "medicine:deferasirox": {
+    "en": "Deferasirox",
+    "aliases": ""
+  },
+  "medicine:deferiprone": {
+    "en": "Deferiprone",
+    "aliases": ""
+  },
+  "medicine:deflazacort": {
+    "en": "Deflazacort",
+    "aliases": ""
+  },
+  "medicine:desipramine": {
+    "en": "Desipramine",
+    "aliases": ""
+  },
+  "medicine:desmopressin": {
+    "en": "Desmopressin",
+    "aliases": ""
+  },
+  "medicine:dexlansoprazole": {
+    "en": "Dexlansoprazole",
+    "aliases": ""
+  },
+  "medicine:dextromethorphan": {
+    "en": "Dextromethorphan",
+    "aliases": ""
+  },
+  "medicine:dicloxacillin": {
+    "en": "Dicloxacillin",
+    "aliases": ""
+  },
+  "medicine:dicyclomine": {
+    "en": "Dicyclomine",
+    "aliases": ""
+  },
+  "medicine:diflunisal": {
+    "en": "Diflunisal",
+    "aliases": ""
+  },
+  "medicine:dimenhydrinate": {
+    "en": "Dimenhydrinate",
+    "aliases": ""
+  },
+  "medicine:disopyramide": {
+    "en": "Disopyramide",
+    "aliases": ""
+  },
+  "medicine:disulfiram": {
+    "en": "Disulfiram",
+    "aliases": ""
+  },
+  "medicine:dofetilide": {
+    "en": "Dofetilide",
+    "aliases": ""
+  },
+  "medicine:dolutegravir": {
+    "en": "Dolutegravir",
+    "aliases": ""
+  },
+  "medicine:doxylamine": {
+    "en": "Doxylamine",
+    "aliases": ""
+  },
+  "medicine:dronedarone": {
+    "en": "Dronedarone",
+    "aliases": ""
+  },
+  "medicine:droxidopa": {
+    "en": "Droxidopa",
+    "aliases": ""
+  },
+  "medicine:efavirenz": {
+    "en": "Efavirenz",
+    "aliases": ""
+  },
+  "medicine:eflornithine": {
+    "en": "Eflornithine",
+    "aliases": ""
+  },
+  "medicine:eltrombopag": {
+    "en": "Eltrombopag",
+    "aliases": ""
+  },
+  "medicine:emtricitabine": {
+    "en": "Emtricitabine",
+    "aliases": ""
+  },
+  "medicine:enzalutamide": {
+    "en": "Enzalutamide",
+    "aliases": ""
+  },
+  "medicine:eprosartan": {
+    "en": "Eprosartan",
+    "aliases": ""
+  },
+  "medicine:ergocalciferol": {
+    "en": "Ergocalciferol",
+    "aliases": ""
+  },
+  "medicine:erlotinib": {
+    "en": "Erlotinib",
+    "aliases": ""
+  },
+  "medicine:eslicarbazepine": {
+    "en": "Eslicarbazepine",
+    "aliases": ""
+  },
+  "medicine:etodolac": {
+    "en": "Etodolac",
+    "aliases": ""
+  },
+  "medicine:everolimus": {
+    "en": "Everolimus",
+    "aliases": ""
+  },
+  "medicine:exemestane": {
+    "en": "Exemestane",
+    "aliases": ""
+  },
+  "medicine:famciclovir": {
+    "en": "Famciclovir",
+    "aliases": ""
+  },
+  "medicine:famotidine": {
+    "en": "Famotidine",
+    "aliases": ""
+  },
+  "medicine:felbamate": {
+    "en": "Felbamate",
+    "aliases": ""
+  },
+  "medicine:fenofibrate": {
+    "en": "Fenofibrate",
+    "aliases": ""
+  },
+  "medicine:fenoprofen": {
+    "en": "Fenoprofen",
+    "aliases": ""
+  },
+  "medicine:fesoterodine": {
+    "en": "Fesoterodine",
+    "aliases": ""
+  },
+  "medicine:fidaxomicin": {
+    "en": "Fidaxomicin",
+    "aliases": ""
+  },
+  "medicine:finerenone": {
+    "en": "Finerenone",
+    "aliases": ""
+  },
+  "medicine:fingolimod": {
+    "en": "Fingolimod",
+    "aliases": ""
+  },
+  "medicine:flecainide": {
+    "en": "Flecainide",
+    "aliases": ""
+  },
+  "medicine:flurbiprofen": {
+    "en": "Flurbiprofen",
+    "aliases": ""
+  },
+  "medicine:flutamide": {
+    "en": "Flutamide",
+    "aliases": ""
+  },
+  "medicine:fluvastatin": {
+    "en": "Fluvastatin",
+    "aliases": ""
+  },
+  "medicine:fosfomycin": {
+    "en": "Fosfomycin",
+    "aliases": ""
+  },
+  "medicine:fosinopril": {
+    "en": "Fosinopril",
+    "aliases": ""
+  },
+  "medicine:frovatriptan": {
+    "en": "Frovatriptan",
+    "aliases": ""
+  },
+  "medicine:ganciclovir": {
+    "en": "Ganciclovir",
+    "aliases": ""
+  },
+  "medicine:gefitinib": {
+    "en": "Gefitinib",
+    "aliases": ""
+  },
+  "medicine:gemfibrozil": {
+    "en": "Gemfibrozil",
+    "aliases": ""
+  },
+  "medicine:gemifloxacin": {
+    "en": "Gemifloxacin",
+    "aliases": ""
+  },
+  "medicine:granisetron": {
+    "en": "Granisetron",
+    "aliases": ""
+  },
+  "medicine:griseofulvin": {
+    "en": "Griseofulvin",
+    "aliases": ""
+  },
+  "medicine:guaifenesin": {
+    "en": "Guaifenesin",
+    "aliases": ""
+  },
+  "medicine:hydroxyzine": {
+    "en": "Hydroxyzine",
+    "aliases": ""
+  },
+  "medicine:ibandronate": {
+    "en": "Ibandronate",
+    "aliases": ""
+  },
+  "medicine:ibrutinib": {
+    "en": "Ibrutinib",
+    "aliases": ""
+  },
+  "medicine:imatinib": {
+    "en": "Imatinib",
+    "aliases": ""
+  },
+  "medicine:imipramine": {
+    "en": "Imipramine",
+    "aliases": ""
+  },
+  "medicine:indinavir": {
+    "en": "Indinavir",
+    "aliases": ""
+  },
+  "medicine:isradipine": {
+    "en": "Isradipine",
+    "aliases": ""
+  },
+  "medicine:ivacaftor": {
+    "en": "Ivacaftor",
+    "aliases": ""
+  },
+  "medicine:ivermectin": {
+    "en": "Ivermectin",
+    "aliases": ""
+  },
+  "medicine:ketoprofen": {
+    "en": "Ketoprofen",
+    "aliases": ""
+  },
+  "medicine:ketorolac": {
+    "en": "Ketorolac",
+    "aliases": ""
+  },
+  "medicine:labetalol": {
+    "en": "Labetalol",
+    "aliases": ""
+  },
+  "medicine:lamivudine": {
+    "en": "Lamivudine",
+    "aliases": ""
+  },
+  "medicine:lapatinib": {
+    "en": "Lapatinib",
+    "aliases": ""
+  },
+  "medicine:lenalidomide": {
+    "en": "Lenalidomide",
+    "aliases": ""
+  },
+  "medicine:letermovir": {
+    "en": "Letermovir",
+    "aliases": ""
+  },
+  "medicine:leucovorin": {
+    "en": "Leucovorin",
+    "aliases": ""
+  },
+  "medicine:levocetirizine": {
+    "en": "Levocetirizine",
+    "aliases": ""
+  },
+  "medicine:levonorgestrel": {
+    "en": "Levonorgestrel",
+    "aliases": ""
+  },
+  "medicine:linaclotide": {
+    "en": "Linaclotide",
+    "aliases": ""
+  },
+  "medicine:linezolid": {
+    "en": "Linezolid",
+    "aliases": ""
+  },
+  "medicine:lovastatin": {
+    "en": "Lovastatin",
+    "aliases": ""
+  },
+  "medicine:lubiprostone": {
+    "en": "Lubiprostone",
+    "aliases": ""
+  },
+  "medicine:macitentan": {
+    "en": "Macitentan",
+    "aliases": ""
+  },
+  "medicine:mefloquine": {
+    "en": "Mefloquine",
+    "aliases": ""
+  },
+  "medicine:mercaptopurine": {
+    "en": "Mercaptopurine",
+    "aliases": ""
+  },
+  "medicine:methenamine": {
+    "en": "Methenamine",
+    "aliases": ""
+  },
+  "medicine:methocarbamol": {
+    "en": "Methocarbamol",
+    "aliases": ""
+  },
+  "medicine:methyldopa": {
+    "en": "Methyldopa",
+    "aliases": ""
+  },
+  "medicine:methylprednisolone": {
+    "en": "Methylprednisolone",
+    "aliases": ""
+  },
+  "medicine:metolazone": {
+    "en": "Metolazone",
+    "aliases": ""
+  },
+  "medicine:mexiletine": {
+    "en": "Mexiletine",
+    "aliases": ""
+  },
+  "medicine:midodrine": {
+    "en": "Midodrine",
+    "aliases": ""
+  },
+  "medicine:miglitol": {
+    "en": "Miglitol",
+    "aliases": ""
+  },
+  "medicine:milnacipran": {
+    "en": "Milnacipran",
+    "aliases": ""
+  },
+  "medicine:minoxidil": {
+    "en": "Minoxidil",
+    "aliases": ""
+  },
+  "medicine:moxidectin": {
+    "en": "Moxidectin",
+    "aliases": ""
+  },
+  "medicine:mycophenolate": {
+    "en": "Mycophenolate",
+    "aliases": ""
+  },
+  "medicine:nabumetone": {
+    "en": "Nabumetone",
+    "aliases": ""
+  },
+  "medicine:naratriptan": {
+    "en": "Naratriptan",
+    "aliases": ""
+  },
+  "medicine:nateglinide": {
+    "en": "Nateglinide",
+    "aliases": ""
+  },
+  "medicine:nevirapine": {
+    "en": "Nevirapine",
+    "aliases": ""
+  },
+  "medicine:nicardipine": {
+    "en": "Nicardipine",
+    "aliases": ""
+  },
+  "medicine:nimodipine": {
+    "en": "Nimodipine",
+    "aliases": ""
+  },
+  "medicine:nintedanib": {
+    "en": "Nintedanib",
+    "aliases": ""
+  },
+  "medicine:nizatidine": {
+    "en": "Nizatidine",
+    "aliases": ""
+  },
+  "medicine:ofloxacin": {
+    "en": "Ofloxacin",
+    "aliases": ""
+  },
+  "medicine:olmesartan": {
+    "en": "Olmesartan",
+    "aliases": ""
+  },
+  "medicine:ondansetron": {
+    "en": "Ondansetron",
+    "aliases": ""
+  },
+  "medicine:opicapone": {
+    "en": "Opicapone",
+    "aliases": ""
+  },
+  "medicine:palbociclib": {
+    "en": "Palbociclib",
+    "aliases": ""
+  },
+  "medicine:papaverine": {
+    "en": "Papaverine",
+    "aliases": ""
+  },
+  "medicine:pentoxifylline": {
+    "en": "Pentoxifylline",
+    "aliases": ""
+  },
+  "medicine:perampanel": {
+    "en": "Perampanel",
+    "aliases": ""
+  },
+  "medicine:pilocarpine": {
+    "en": "Pilocarpine",
+    "aliases": ""
+  },
+  "medicine:pindolol": {
+    "en": "Pindolol",
+    "aliases": ""
+  },
+  "medicine:pirfenidone": {
+    "en": "Pirfenidone",
+    "aliases": ""
+  },
+  "medicine:piroxicam": {
+    "en": "Piroxicam",
+    "aliases": ""
+  },
+  "medicine:pitavastatin": {
+    "en": "Pitavastatin",
+    "aliases": ""
+  },
+  "medicine:posaconazole": {
+    "en": "Posaconazole",
+    "aliases": ""
+  },
+  "medicine:prasugrel": {
+    "en": "Prasugrel",
+    "aliases": ""
+  },
+  "medicine:praziquantel": {
+    "en": "Praziquantel",
+    "aliases": ""
+  },
+  "medicine:prednisone": {
+    "en": "Prednisone",
+    "aliases": ""
+  },
+  "medicine:primidone": {
+    "en": "Primidone",
+    "aliases": ""
+  },
+  "medicine:propafenone": {
+    "en": "Propafenone",
+    "aliases": ""
+  },
+  "medicine:prucalopride": {
+    "en": "Prucalopride",
+    "aliases": ""
+  },
+  "medicine:pyrantel": {
+    "en": "Pyrantel",
+    "aliases": ""
+  },
+  "medicine:pyrazinamide": {
+    "en": "Pyrazinamide",
+    "aliases": ""
+  },
+  "medicine:pyridostigmine": {
+    "en": "Pyridostigmine",
+    "aliases": ""
+  },
+  "medicine:pyridoxine": {
+    "en": "Pyridoxine",
+    "aliases": ""
+  },
+  "medicine:rabeprazole": {
+    "en": "Rabeprazole",
+    "aliases": ""
+  },
+  "medicine:raltegravir": {
+    "en": "Raltegravir",
+    "aliases": ""
+  },
+  "medicine:ribavirin": {
+    "en": "Ribavirin",
+    "aliases": ""
+  },
+  "medicine:rifapentine": {
+    "en": "Rifapentine",
+    "aliases": ""
+  },
+  "medicine:rifaximin": {
+    "en": "Rifaximin",
+    "aliases": ""
+  },
+  "medicine:rilpivirine": {
+    "en": "Rilpivirine",
+    "aliases": ""
+  },
+  "medicine:riluzole": {
+    "en": "Riluzole",
+    "aliases": ""
+  },
+  "medicine:rimantadine": {
+    "en": "Rimantadine",
+    "aliases": ""
+  },
+  "medicine:risedronate": {
+    "en": "Risedronate",
+    "aliases": ""
+  },
+  "medicine:ritonavir": {
+    "en": "Ritonavir",
+    "aliases": ""
+  },
+  "medicine:roflumilast": {
+    "en": "Roflumilast",
+    "aliases": ""
+  },
+  "medicine:rosiglitazone": {
+    "en": "Rosiglitazone",
+    "aliases": ""
+  },
+  "medicine:rufinamide": {
+    "en": "Rufinamide",
+    "aliases": ""
+  },
+  "medicine:saxagliptin": {
+    "en": "Saxagliptin",
+    "aliases": ""
+  },
+  "medicine:selegiline": {
+    "en": "Selegiline",
+    "aliases": ""
+  },
+  "medicine:sevelamer": {
+    "en": "Sevelamer",
+    "aliases": ""
+  },
+  "medicine:sirolimus": {
+    "en": "Sirolimus",
+    "aliases": ""
+  },
+  "medicine:sofosbuvir": {
+    "en": "Sofosbuvir",
+    "aliases": ""
+  },
+  "medicine:sucralfate": {
+    "en": "Sucralfate",
+    "aliases": ""
+  },
+  "medicine:sulindac": {
+    "en": "Sulindac",
+    "aliases": ""
+  },
+  "medicine:tacrolimus": {
+    "en": "Tacrolimus",
+    "aliases": ""
+  },
+  "medicine:telmisartan": {
+    "en": "Telmisartan",
+    "aliases": ""
+  },
+  "medicine:tetracycline": {
+    "en": "Tetracycline",
+    "aliases": ""
+  },
+  "medicine:tiagabine": {
+    "en": "Tiagabine",
+    "aliases": ""
+  },
+  "medicine:tinidazole": {
+    "en": "Tinidazole",
+    "aliases": ""
+  },
+  "medicine:tofacitinib": {
+    "en": "Tofacitinib",
+    "aliases": ""
+  },
+  "medicine:torsemide": {
+    "en": "Torsemide",
+    "aliases": ""
+  },
+  "medicine:trandolapril": {
+    "en": "Trandolapril",
+    "aliases": ""
+  },
+  "medicine:triamcinolone": {
+    "en": "Triamcinolone",
+    "aliases": ""
+  },
+  "medicine:triamterene": {
+    "en": "Triamterene",
+    "aliases": ""
+  },
+  "medicine:triclabendazole": {
+    "en": "Triclabendazole",
+    "aliases": ""
+  },
+  "medicine:trospium": {
+    "en": "Trospium",
+    "aliases": ""
+  },
+  "medicine:valganciclovir": {
+    "en": "Valganciclovir",
+    "aliases": ""
+  },
+  "medicine:vancomycin": {
+    "en": "Vancomycin",
+    "aliases": ""
+  },
+  "medicine:vericiguat": {
+    "en": "Vericiguat",
+    "aliases": ""
+  },
+  "medicine:voriconazole": {
+    "en": "Voriconazole",
+    "aliases": ""
+  },
+  "medicine:zafirlukast": {
+    "en": "Zafirlukast",
+    "aliases": ""
+  },
+  "medicine:zidovudine": {
+    "en": "Zidovudine",
+    "aliases": ""
+  },
+  "medicine:zileuton": {
+    "en": "Zileuton",
+    "aliases": ""
+  }
+}

@@ -74,6 +74,10 @@ try{
  assert.notEqual(await page.locator(".review-card").first().innerText(),first);
  await page.locator("#review-prev").click();
  assert.equal(await page.locator(".review-card").first().innerText(),first);
+ await page.locator("#review-group").selectOption("priority");
+ assert.ok(await page.locator(".review-card").count()>0);
+ await page.locator("#review-clear").click();
+ assert.equal(await page.locator("#review-group").inputValue(),"");
  assert.deepEqual(external,[]);assert.deepEqual(errors,[]);
  console.log("PASS: packaged photos, playback/seek, pause on exit, filter persistence, language change, reset, pagination and no external requests");
 }finally{await browser?.close();await new Promise(r=>server.close(r))}
