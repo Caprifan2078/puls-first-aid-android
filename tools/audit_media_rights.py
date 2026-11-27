@@ -93,7 +93,7 @@ def audit(root,mode):
     actual={p.relative_to(root).as_posix() for p in root.rglob("*") if p.is_file() and p.suffix.lower() in MEDIA_EXT}
     require(actual==seen,"unregistered assets: "+", ".join(sorted(actual-seen))+"; missing assets: "+", ".join(sorted(seen-actual)))
     return sorted(rows,key=lambda a:a["asset"])
-def verify_apk(apk,root,rows):
+def verify_apk(apk,root,rows,review_root=None):
     expected={"assets/"+a["asset"]:a["sha256"] for a in rows}
     metadata={"assets/index.html","assets/media/credits.json"}
     for category in ("medicines","kits","firstaid"):
@@ -102,6 +102,11 @@ def verify_apk(apk,root,rows):
             metadata.add("assets/"+manifest.relative_to(root).as_posix())
     for name in metadata:
         expected[name]=hashlib.sha256((root/name.removeprefix("assets/")).read_bytes()).hexdigest()
+    if review_root is not None:
+        from package_review_media import verify
+        review=verify(review_root)
+        expected.update(review)
+        metadata.add('assets/media/review/manifest.json')
     with zipfile.ZipFile(apk) as z:
         names=z.namelist()
         require(len(names)==len(set(names)),"duplicate APK entries")
@@ -114,7 +119,9 @@ def main():
     p=argparse.ArgumentParser()
     p.add_argument("--mode",choices=["qa","release"],required=True)
     p.add_argument("--apk",type=Path)
+    p.add_argument("--review-root",type=Path)
     args=p.parse_args()
+    require(args.review_root is None or (args.mode=="qa" and args.apk is not None),"debug review assets cannot be audited as release")
     if args.mode=="release":
         approval=ASSETS.parents[3]/"release-review.json"
         require(approval.is_file(),"production release blocked: independent review record missing")
@@ -124,7 +131,7 @@ def main():
         require(review.get("approved") is True,"production release not approved")
     rows=audit(ASSETS,args.mode)
     credits=ASSETS/"media/credits.json"
-    if args.apk:verify_apk(args.apk,ASSETS,rows)
+    if args.apk:verify_apk(args.apk,ASSETS,rows,args.review_root)
     else:
         credits.parent.mkdir(parents=True,exist_ok=True)
         credits.write_text(json.dumps({"mode":args.mode,"items":rows},ensure_ascii=False,indent=2),encoding="utf-8")

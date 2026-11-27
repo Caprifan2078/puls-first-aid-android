@@ -1,0 +1,1769 @@
+{
+  "schema": 1,
+  "targets": [
+    {
+      "id": "medicine:abacavir",
+      "kind": "medicine",
+      "ru": "Абакавир",
+      "en": "Abacavir"
+    },
+    {
+      "id": "medicine:acamprosate",
+      "kind": "medicine",
+      "ru": "Акампросат",
+      "en": "Acamprosate"
+    },
+    {
+      "id": "medicine:acebutolol",
+      "kind": "medicine",
+      "ru": "Ацебутолол",
+      "en": "Acebutolol"
+    },
+    {
+      "id": "medicine:acetazolamide",
+      "kind": "medicine",
+      "ru": "Ацетазоламид",
+      "en": "Acetazolamide"
+    },
+    {
+      "id": "medicine:alfuzosin",
+      "kind": "medicine",
+      "ru": "Алфузозин",
+      "en": "Alfuzosin"
+    },
+    {
+      "id": "medicine:amantadine",
+      "kind": "medicine",
+      "ru": "Амантадин",
+      "en": "Amantadine"
+    },
+    {
+      "id": "medicine:amiloride",
+      "kind": "medicine",
+      "ru": "Амилорид",
+      "en": "Amiloride"
+    },
+    {
+      "id": "medicine:amiodarone",
+      "kind": "medicine",
+      "ru": "Амиодарон",
+      "en": "Amiodarone"
+    },
+    {
+      "id": "medicine:anagrelide",
+      "kind": "medicine",
+      "ru": "Анагрелид",
+      "en": "Anagrelide"
+    },
+    {
+      "id": "medicine:apremilast",
+      "kind": "medicine",
+      "ru": "Апремиласт",
+      "en": "Apremilast"
+    },
+    {
+      "id": "medicine:asenapine",
+      "kind": "medicine",
+      "ru": "Азенапин",
+      "en": "Asenapine"
+    },
+    {
+      "id": "medicine:atomoxetine",
+      "kind": "medicine",
+      "ru": "Атомоксетин",
+      "en": "Atomoxetine"
+    },
+    {
+      "id": "medicine:atovaquone",
+      "kind": "medicine",
+      "ru": "Атоваквон",
+      "en": "Atovaquone"
+    },
+    {
+      "id": "medicine:auranofin",
+      "kind": "medicine",
+      "ru": "Ауранофин",
+      "en": "Auranofin"
+    },
+    {
+      "id": "medicine:benztropine",
+      "kind": "medicine",
+      "ru": "Бензтропин",
+      "en": "Benztropine"
+    },
+    {
+      "id": "medicine:bosentan",
+      "kind": "medicine",
+      "ru": "Бозентан",
+      "en": "Bosentan"
+    },
+    {
+      "id": "medicine:bupropion",
+      "kind": "medicine",
+      "ru": "Бупропион",
+      "en": "Bupropion"
+    },
+    {
+      "id": "medicine:buspirone",
+      "kind": "medicine",
+      "ru": "Буспирон",
+      "en": "Buspirone"
+    },
+    {
+      "id": "medicine:cabergoline",
+      "kind": "medicine",
+      "ru": "Каберголин",
+      "en": "Cabergoline"
+    },
+    {
+      "id": "medicine:captopril",
+      "kind": "medicine",
+      "ru": "Каптоприл",
+      "en": "Captopril"
+    },
+    {
+      "id": "medicine:cefadroxil",
+      "kind": "medicine",
+      "ru": "Цефадроксил",
+      "en": "Cefadroxil"
+    },
+    {
+      "id": "medicine:cefdinir",
+      "kind": "medicine",
+      "ru": "Цефдинир",
+      "en": "Cefdinir"
+    },
+    {
+      "id": "medicine:cefixime",
+      "kind": "medicine",
+      "ru": "Цефиксим",
+      "en": "Cefixime"
+    },
+    {
+      "id": "medicine:cefpodoxime",
+      "kind": "medicine",
+      "ru": "Цефподоксим",
+      "en": "Cefpodoxime"
+    },
+    {
+      "id": "medicine:cefuroxime",
+      "kind": "medicine",
+      "ru": "Цефуроксим",
+      "en": "Cefuroxime"
+    },
+    {
+      "id": "medicine:celecoxib",
+      "kind": "medicine",
+      "ru": "Целекоксиб",
+      "en": "Celecoxib"
+    },
+    {
+      "id": "medicine:chlorthalidone",
+      "kind": "medicine",
+      "ru": "Хлорталидон",
+      "en": "Chlorthalidone"
+    },
+    {
+      "id": "medicine:cilostazol",
+      "kind": "medicine",
+      "ru": "Цилостазол",
+      "en": "Cilostazol"
+    },
+    {
+      "id": "medicine:clindamycin",
+      "kind": "medicine",
+      "ru": "Клиндамицин",
+      "en": "Clindamycin"
+    },
+    {
+      "id": "medicine:clobazam",
+      "kind": "medicine",
+      "ru": "Клобазам",
+      "en": "Clobazam"
+    },
+    {
+      "id": "medicine:clomipramine",
+      "kind": "medicine",
+      "ru": "Кломипрамин",
+      "en": "Clomipramine"
+    },
+    {
+      "id": "medicine:clozapine",
+      "kind": "medicine",
+      "ru": "Клозапин",
+      "en": "Clozapine"
+    },
+    {
+      "id": "medicine:dapsone",
+      "kind": "medicine",
+      "ru": "Дапсон",
+      "en": "Dapsone"
+    },
+    {
+      "id": "medicine:desloratadine",
+      "kind": "medicine",
+      "ru": "Дезлоратадин",
+      "en": "Desloratadine"
+    },
+    {
+      "id": "medicine:desvenlafaxine",
+      "kind": "medicine",
+      "ru": "Десвенлафаксин",
+      "en": "Desvenlafaxine"
+    },
+    {
+      "id": "medicine:dutasteride",
+      "kind": "medicine",
+      "ru": "Дутастерид",
+      "en": "Dutasteride"
+    },
+    {
+      "id": "medicine:eletriptan",
+      "kind": "medicine",
+      "ru": "Элетриптан",
+      "en": "Eletriptan"
+    },
+    {
+      "id": "medicine:entecavir",
+      "kind": "medicine",
+      "ru": "Энтекавир",
+      "en": "Entecavir"
+    },
+    {
+      "id": "medicine:ertugliflozin",
+      "kind": "medicine",
+      "ru": "Эртуглифлозин",
+      "en": "Ertugliflozin"
+    },
+    {
+      "id": "medicine:ethambutol",
+      "kind": "medicine",
+      "ru": "Этамбутол",
+      "en": "Ethambutol"
+    },
+    {
+      "id": "medicine:ethosuximide",
+      "kind": "medicine",
+      "ru": "Этосуксимид",
+      "en": "Ethosuximide"
+    },
+    {
+      "id": "medicine:fluvoxamine",
+      "kind": "medicine",
+      "ru": "Флувоксамин",
+      "en": "Fluvoxamine"
+    },
+    {
+      "id": "medicine:glimepiride",
+      "kind": "medicine",
+      "ru": "Глимепирид",
+      "en": "Glimepiride"
+    },
+    {
+      "id": "medicine:glipizide",
+      "kind": "medicine",
+      "ru": "Глипизид",
+      "en": "Glipizide"
+    },
+    {
+      "id": "medicine:guanfacine",
+      "kind": "medicine",
+      "ru": "Гуанфацин",
+      "en": "Guanfacine"
+    },
+    {
+      "id": "medicine:haloperidol",
+      "kind": "medicine",
+      "ru": "Галоперидол",
+      "en": "Haloperidol"
+    },
+    {
+      "id": "medicine:hydralazine",
+      "kind": "medicine",
+      "ru": "Гидралазин",
+      "en": "Hydralazine"
+    },
+    {
+      "id": "medicine:indomethacin",
+      "kind": "medicine",
+      "ru": "Индометацин",
+      "en": "Indomethacin"
+    },
+    {
+      "id": "medicine:ivabradine",
+      "kind": "medicine",
+      "ru": "Ивабрадин",
+      "en": "Ivabradine"
+    },
+    {
+      "id": "medicine:leflunomide",
+      "kind": "medicine",
+      "ru": "Лефлуномид",
+      "en": "Leflunomide"
+    },
+    {
+      "id": "medicine:levofloxacin",
+      "kind": "medicine",
+      "ru": "Левофлоксацин",
+      "en": "Levofloxacin"
+    },
+    {
+      "id": "medicine:liothyronine",
+      "kind": "medicine",
+      "ru": "Лиотиронин",
+      "en": "Liothyronine"
+    },
+    {
+      "id": "medicine:lurasidone",
+      "kind": "medicine",
+      "ru": "Луразидон",
+      "en": "Lurasidone"
+    },
+    {
+      "id": "medicine:meloxicam",
+      "kind": "medicine",
+      "ru": "Мелоксикам",
+      "en": "Meloxicam"
+    },
+    {
+      "id": "medicine:minocycline",
+      "kind": "medicine",
+      "ru": "Миноциклин",
+      "en": "Minocycline"
+    },
+    {
+      "id": "medicine:moxifloxacin",
+      "kind": "medicine",
+      "ru": "Моксифлоксацин",
+      "en": "Moxifloxacin"
+    },
+    {
+      "id": "medicine:nadolol",
+      "kind": "medicine",
+      "ru": "Надолол",
+      "en": "Nadolol"
+    },
+    {
+      "id": "medicine:naltrexone",
+      "kind": "medicine",
+      "ru": "Налтрексон",
+      "en": "Naltrexone"
+    },
+    {
+      "id": "medicine:nebivolol",
+      "kind": "medicine",
+      "ru": "Небиволол",
+      "en": "Nebivolol"
+    },
+    {
+      "id": "medicine:nitazoxanide",
+      "kind": "medicine",
+      "ru": "Нитазоксанид",
+      "en": "Nitazoxanide"
+    },
+    {
+      "id": "medicine:oxcarbazepine",
+      "kind": "medicine",
+      "ru": "Окскарбазепин",
+      "en": "Oxcarbazepine"
+    },
+    {
+      "id": "medicine:paliperidone",
+      "kind": "medicine",
+      "ru": "Палиперидон",
+      "en": "Paliperidone"
+    },
+    {
+      "id": "medicine:pioglitazone",
+      "kind": "medicine",
+      "ru": "Пиоглитазон",
+      "en": "Pioglitazone"
+    },
+    {
+      "id": "medicine:prazosin",
+      "kind": "medicine",
+      "ru": "Празозин",
+      "en": "Prazosin"
+    },
+    {
+      "id": "medicine:probenecid",
+      "kind": "medicine",
+      "ru": "Пробенецид",
+      "en": "Probenecid"
+    },
+    {
+      "id": "medicine:raloxifene",
+      "kind": "medicine",
+      "ru": "Ралоксифен",
+      "en": "Raloxifene"
+    },
+    {
+      "id": "medicine:ranolazine",
+      "kind": "medicine",
+      "ru": "Ранолазин",
+      "en": "Ranolazine"
+    },
+    {
+      "id": "medicine:repaglinide",
+      "kind": "medicine",
+      "ru": "Репаглинид",
+      "en": "Repaglinide"
+    },
+    {
+      "id": "medicine:rifabutin",
+      "kind": "medicine",
+      "ru": "Рифабутин",
+      "en": "Rifabutin"
+    },
+    {
+      "id": "medicine:rizatriptan",
+      "kind": "medicine",
+      "ru": "Ризатриптан",
+      "en": "Rizatriptan"
+    },
+    {
+      "id": "medicine:silodosin",
+      "kind": "medicine",
+      "ru": "Силодозин",
+      "en": "Silodosin"
+    },
+    {
+      "id": "medicine:tamoxifen",
+      "kind": "medicine",
+      "ru": "Тамоксифен",
+      "en": "Tamoxifen"
+    },
+    {
+      "id": "medicine:terazosin",
+      "kind": "medicine",
+      "ru": "Теразозин",
+      "en": "Terazosin"
+    },
+    {
+      "id": "medicine:teriflunomide",
+      "kind": "medicine",
+      "ru": "Терифлуномид",
+      "en": "Teriflunomide"
+    },
+    {
+      "id": "medicine:tizanidine",
+      "kind": "medicine",
+      "ru": "Тизанидин",
+      "en": "Tizanidine"
+    },
+    {
+      "id": "medicine:tolterodine",
+      "kind": "medicine",
+      "ru": "Толтеродин",
+      "en": "Tolterodine"
+    },
+    {
+      "id": "medicine:ursodiol",
+      "kind": "medicine",
+      "ru": "Урсодезоксихолевая кислота",
+      "en": "Ursodiol"
+    },
+    {
+      "id": "medicine:varenicline",
+      "kind": "medicine",
+      "ru": "Варениклин",
+      "en": "Varenicline"
+    },
+    {
+      "id": "medicine:vigabatrin",
+      "kind": "medicine",
+      "ru": "Вигабатрин",
+      "en": "Vigabatrin"
+    },
+    {
+      "id": "medicine:zaleplon",
+      "kind": "medicine",
+      "ru": "Залеплон",
+      "en": "Zaleplon"
+    },
+    {
+      "id": "medicine:ziprasidone",
+      "kind": "medicine",
+      "ru": "Зипрасидон",
+      "en": "Ziprasidone"
+    },
+    {
+      "id": "medicine:zolmitriptan",
+      "kind": "medicine",
+      "ru": "Золмитриптан",
+      "en": "Zolmitriptan"
+    },
+    {
+      "id": "medicine:acitretin",
+      "kind": "medicine",
+      "ru": "Ацитретин",
+      "en": "Acitretin"
+    },
+    {
+      "id": "medicine:adapalene",
+      "kind": "medicine",
+      "ru": "Адапален",
+      "en": "Adapalene"
+    },
+    {
+      "id": "medicine:albendazole",
+      "kind": "medicine",
+      "ru": "Альбендазол",
+      "en": "Albendazole"
+    },
+    {
+      "id": "medicine:aliskiren",
+      "kind": "medicine",
+      "ru": "Алискирен",
+      "en": "Aliskiren"
+    },
+    {
+      "id": "medicine:almotriptan",
+      "kind": "medicine",
+      "ru": "Алмотриптан",
+      "en": "Almotriptan"
+    },
+    {
+      "id": "medicine:ambrisentan",
+      "kind": "medicine",
+      "ru": "Амбризентан",
+      "en": "Ambrisentan"
+    },
+    {
+      "id": "medicine:aminophylline",
+      "kind": "medicine",
+      "ru": "Аминофиллин",
+      "en": "Aminophylline"
+    },
+    {
+      "id": "medicine:ampicillin",
+      "kind": "medicine",
+      "ru": "Ампициллин",
+      "en": "Ampicillin"
+    },
+    {
+      "id": "medicine:anakinra",
+      "kind": "medicine",
+      "ru": "Анакинра",
+      "en": "Anakinra"
+    },
+    {
+      "id": "medicine:aprepitant",
+      "kind": "medicine",
+      "ru": "Апрепитант",
+      "en": "Aprepitant"
+    },
+    {
+      "id": "medicine:atazanavir",
+      "kind": "medicine",
+      "ru": "Атазанавир",
+      "en": "Atazanavir"
+    },
+    {
+      "id": "medicine:azilsartan",
+      "kind": "medicine",
+      "ru": "Азилсартан",
+      "en": "Azilsartan"
+    },
+    {
+      "id": "medicine:balsalazide",
+      "kind": "medicine",
+      "ru": "Балсалазид",
+      "en": "Balsalazide"
+    },
+    {
+      "id": "medicine:baricitinib",
+      "kind": "medicine",
+      "ru": "Барицитиниб",
+      "en": "Baricitinib"
+    },
+    {
+      "id": "medicine:bedaquiline",
+      "kind": "medicine",
+      "ru": "Бедаквилин",
+      "en": "Bedaquiline"
+    },
+    {
+      "id": "medicine:benazepril",
+      "kind": "medicine",
+      "ru": "Беназеприл",
+      "en": "Benazepril"
+    },
+    {
+      "id": "medicine:benznidazole",
+      "kind": "medicine",
+      "ru": "Бензнидазол",
+      "en": "Benznidazole"
+    },
+    {
+      "id": "medicine:betaxolol",
+      "kind": "medicine",
+      "ru": "Бетаксолол",
+      "en": "Betaxolol"
+    },
+    {
+      "id": "medicine:bicalutamide",
+      "kind": "medicine",
+      "ru": "Бикалутамид",
+      "en": "Bicalutamide"
+    },
+    {
+      "id": "medicine:bromocriptine",
+      "kind": "medicine",
+      "ru": "Бромокриптин",
+      "en": "Bromocriptine"
+    },
+    {
+      "id": "medicine:calcifediol",
+      "kind": "medicine",
+      "ru": "Кальцифедиол",
+      "en": "Calcifediol"
+    },
+    {
+      "id": "medicine:calcitriol",
+      "kind": "medicine",
+      "ru": "Кальцитриол",
+      "en": "Calcitriol"
+    },
+    {
+      "id": "medicine:canagliflozin",
+      "kind": "medicine",
+      "ru": "Канаглифлозин",
+      "en": "Canagliflozin"
+    },
+    {
+      "id": "medicine:capecitabine",
+      "kind": "medicine",
+      "ru": "Капецитабин",
+      "en": "Capecitabine"
+    },
+    {
+      "id": "medicine:cariprazine",
+      "kind": "medicine",
+      "ru": "Карипразин",
+      "en": "Cariprazine"
+    },
+    {
+      "id": "medicine:cefaclor",
+      "kind": "medicine",
+      "ru": "Цефаклор",
+      "en": "Cefaclor"
+    },
+    {
+      "id": "medicine:cefditoren",
+      "kind": "medicine",
+      "ru": "Цефдиторен",
+      "en": "Cefditoren"
+    },
+    {
+      "id": "medicine:cefprozil",
+      "kind": "medicine",
+      "ru": "Цефпрозил",
+      "en": "Cefprozil"
+    },
+    {
+      "id": "medicine:ceftibuten",
+      "kind": "medicine",
+      "ru": "Цефтибутен",
+      "en": "Ceftibuten"
+    },
+    {
+      "id": "medicine:cenobamate",
+      "kind": "medicine",
+      "ru": "Ценобамат",
+      "en": "Cenobamate"
+    },
+    {
+      "id": "medicine:chlorambucil",
+      "kind": "medicine",
+      "ru": "Хлорамбуцил",
+      "en": "Chlorambucil"
+    },
+    {
+      "id": "medicine:chloroquine",
+      "kind": "medicine",
+      "ru": "Хлорохин",
+      "en": "Chloroquine"
+    },
+    {
+      "id": "medicine:chlorothiazide",
+      "kind": "medicine",
+      "ru": "Хлоротиазид",
+      "en": "Chlorothiazide"
+    },
+    {
+      "id": "medicine:chlorpromazine",
+      "kind": "medicine",
+      "ru": "Хлорпромазин",
+      "en": "Chlorpromazine"
+    },
+    {
+      "id": "medicine:cimetidine",
+      "kind": "medicine",
+      "ru": "Циметидин",
+      "en": "Cimetidine"
+    },
+    {
+      "id": "medicine:cinacalcet",
+      "kind": "medicine",
+      "ru": "Цинакальцет",
+      "en": "Cinacalcet"
+    },
+    {
+      "id": "medicine:clemastine",
+      "kind": "medicine",
+      "ru": "Клемастин",
+      "en": "Clemastine"
+    },
+    {
+      "id": "medicine:clomiphene",
+      "kind": "medicine",
+      "ru": "Кломифен",
+      "en": "Clomiphene"
+    },
+    {
+      "id": "medicine:colesevelam",
+      "kind": "medicine",
+      "ru": "Колесевелам",
+      "en": "Colesevelam"
+    },
+    {
+      "id": "medicine:colestipol",
+      "kind": "medicine",
+      "ru": "Колестипол",
+      "en": "Colestipol"
+    },
+    {
+      "id": "medicine:cyclophosphamide",
+      "kind": "medicine",
+      "ru": "Циклофосфамид",
+      "en": "Cyclophosphamide"
+    },
+    {
+      "id": "medicine:cyclosporine",
+      "kind": "medicine",
+      "ru": "Циклоспорин",
+      "en": "Cyclosporine"
+    },
+    {
+      "id": "medicine:cyproheptadine",
+      "kind": "medicine",
+      "ru": "Ципрогептадин",
+      "en": "Cyproheptadine"
+    },
+    {
+      "id": "medicine:dabrafenib",
+      "kind": "medicine",
+      "ru": "Дабрафениб",
+      "en": "Dabrafenib"
+    },
+    {
+      "id": "medicine:daclatasvir",
+      "kind": "medicine",
+      "ru": "Даклатасвир",
+      "en": "Daclatasvir"
+    },
+    {
+      "id": "medicine:danazol",
+      "kind": "medicine",
+      "ru": "Даназол",
+      "en": "Danazol"
+    },
+    {
+      "id": "medicine:dantrolene",
+      "kind": "medicine",
+      "ru": "Дантролен",
+      "en": "Dantrolene"
+    },
+    {
+      "id": "medicine:darifenacin",
+      "kind": "medicine",
+      "ru": "Дарифенацин",
+      "en": "Darifenacin"
+    },
+    {
+      "id": "medicine:darunavir",
+      "kind": "medicine",
+      "ru": "Дарунавир",
+      "en": "Darunavir"
+    },
+    {
+      "id": "medicine:dasatinib",
+      "kind": "medicine",
+      "ru": "Дазатиниб",
+      "en": "Dasatinib"
+    },
+    {
+      "id": "medicine:deferasirox",
+      "kind": "medicine",
+      "ru": "Деферазирокс",
+      "en": "Deferasirox"
+    },
+    {
+      "id": "medicine:deferiprone",
+      "kind": "medicine",
+      "ru": "Деферипрон",
+      "en": "Deferiprone"
+    },
+    {
+      "id": "medicine:deflazacort",
+      "kind": "medicine",
+      "ru": "Дефлазакорт",
+      "en": "Deflazacort"
+    },
+    {
+      "id": "medicine:desipramine",
+      "kind": "medicine",
+      "ru": "Дезипрамин",
+      "en": "Desipramine"
+    },
+    {
+      "id": "medicine:desmopressin",
+      "kind": "medicine",
+      "ru": "Десмопрессин",
+      "en": "Desmopressin"
+    },
+    {
+      "id": "medicine:dexlansoprazole",
+      "kind": "medicine",
+      "ru": "Декслансопразол",
+      "en": "Dexlansoprazole"
+    },
+    {
+      "id": "medicine:dextromethorphan",
+      "kind": "medicine",
+      "ru": "Декстрометорфан",
+      "en": "Dextromethorphan"
+    },
+    {
+      "id": "medicine:dicloxacillin",
+      "kind": "medicine",
+      "ru": "Диклоксациллин",
+      "en": "Dicloxacillin"
+    },
+    {
+      "id": "medicine:dicyclomine",
+      "kind": "medicine",
+      "ru": "Дицикломин",
+      "en": "Dicyclomine"
+    },
+    {
+      "id": "medicine:diflunisal",
+      "kind": "medicine",
+      "ru": "Дифлунизал",
+      "en": "Diflunisal"
+    },
+    {
+      "id": "medicine:dimenhydrinate",
+      "kind": "medicine",
+      "ru": "Дименгидринат",
+      "en": "Dimenhydrinate"
+    },
+    {
+      "id": "medicine:disopyramide",
+      "kind": "medicine",
+      "ru": "Дизопирамид",
+      "en": "Disopyramide"
+    },
+    {
+      "id": "medicine:disulfiram",
+      "kind": "medicine",
+      "ru": "Дисульфирам",
+      "en": "Disulfiram"
+    },
+    {
+      "id": "medicine:dofetilide",
+      "kind": "medicine",
+      "ru": "Дофетилид",
+      "en": "Dofetilide"
+    },
+    {
+      "id": "medicine:dolutegravir",
+      "kind": "medicine",
+      "ru": "Долутегравир",
+      "en": "Dolutegravir"
+    },
+    {
+      "id": "medicine:doxylamine",
+      "kind": "medicine",
+      "ru": "Доксиламин",
+      "en": "Doxylamine"
+    },
+    {
+      "id": "medicine:dronedarone",
+      "kind": "medicine",
+      "ru": "Дронедарон",
+      "en": "Dronedarone"
+    },
+    {
+      "id": "medicine:droxidopa",
+      "kind": "medicine",
+      "ru": "Дроксидопа",
+      "en": "Droxidopa"
+    },
+    {
+      "id": "medicine:efavirenz",
+      "kind": "medicine",
+      "ru": "Эфавиренз",
+      "en": "Efavirenz"
+    },
+    {
+      "id": "medicine:eflornithine",
+      "kind": "medicine",
+      "ru": "Эфлорнитин",
+      "en": "Eflornithine"
+    },
+    {
+      "id": "medicine:eltrombopag",
+      "kind": "medicine",
+      "ru": "Элтромбопаг",
+      "en": "Eltrombopag"
+    },
+    {
+      "id": "medicine:emtricitabine",
+      "kind": "medicine",
+      "ru": "Эмтрицитабин",
+      "en": "Emtricitabine"
+    },
+    {
+      "id": "medicine:enzalutamide",
+      "kind": "medicine",
+      "ru": "Энзалутамид",
+      "en": "Enzalutamide"
+    },
+    {
+      "id": "medicine:eprosartan",
+      "kind": "medicine",
+      "ru": "Эпросартан",
+      "en": "Eprosartan"
+    },
+    {
+      "id": "medicine:ergocalciferol",
+      "kind": "medicine",
+      "ru": "Эргокальциферол",
+      "en": "Ergocalciferol"
+    },
+    {
+      "id": "medicine:erlotinib",
+      "kind": "medicine",
+      "ru": "Эрлотиниб",
+      "en": "Erlotinib"
+    },
+    {
+      "id": "medicine:eslicarbazepine",
+      "kind": "medicine",
+      "ru": "Эсликарбазепин",
+      "en": "Eslicarbazepine"
+    },
+    {
+      "id": "medicine:etodolac",
+      "kind": "medicine",
+      "ru": "Этодолак",
+      "en": "Etodolac"
+    },
+    {
+      "id": "medicine:everolimus",
+      "kind": "medicine",
+      "ru": "Эверолимус",
+      "en": "Everolimus"
+    },
+    {
+      "id": "medicine:exemestane",
+      "kind": "medicine",
+      "ru": "Эксеместан",
+      "en": "Exemestane"
+    },
+    {
+      "id": "medicine:famciclovir",
+      "kind": "medicine",
+      "ru": "Фамцикловир",
+      "en": "Famciclovir"
+    },
+    {
+      "id": "medicine:famotidine",
+      "kind": "medicine",
+      "ru": "Фамотидин",
+      "en": "Famotidine"
+    },
+    {
+      "id": "medicine:felbamate",
+      "kind": "medicine",
+      "ru": "Фелбамат",
+      "en": "Felbamate"
+    },
+    {
+      "id": "medicine:fenofibrate",
+      "kind": "medicine",
+      "ru": "Фенофибрат",
+      "en": "Fenofibrate"
+    },
+    {
+      "id": "medicine:fenoprofen",
+      "kind": "medicine",
+      "ru": "Фенопрофен",
+      "en": "Fenoprofen"
+    },
+    {
+      "id": "medicine:fesoterodine",
+      "kind": "medicine",
+      "ru": "Фезотеродин",
+      "en": "Fesoterodine"
+    },
+    {
+      "id": "medicine:fidaxomicin",
+      "kind": "medicine",
+      "ru": "Фидаксомицин",
+      "en": "Fidaxomicin"
+    },
+    {
+      "id": "medicine:finerenone",
+      "kind": "medicine",
+      "ru": "Финеренон",
+      "en": "Finerenone"
+    },
+    {
+      "id": "medicine:fingolimod",
+      "kind": "medicine",
+      "ru": "Финголимод",
+      "en": "Fingolimod"
+    },
+    {
+      "id": "medicine:flecainide",
+      "kind": "medicine",
+      "ru": "Флекаинид",
+      "en": "Flecainide"
+    },
+    {
+      "id": "medicine:flurbiprofen",
+      "kind": "medicine",
+      "ru": "Флурбипрофен",
+      "en": "Flurbiprofen"
+    },
+    {
+      "id": "medicine:flutamide",
+      "kind": "medicine",
+      "ru": "Флутамид",
+      "en": "Flutamide"
+    },
+    {
+      "id": "medicine:fluvastatin",
+      "kind": "medicine",
+      "ru": "Флувастатин",
+      "en": "Fluvastatin"
+    },
+    {
+      "id": "medicine:fosfomycin",
+      "kind": "medicine",
+      "ru": "Фосфомицин",
+      "en": "Fosfomycin"
+    },
+    {
+      "id": "medicine:fosinopril",
+      "kind": "medicine",
+      "ru": "Фозиноприл",
+      "en": "Fosinopril"
+    },
+    {
+      "id": "medicine:frovatriptan",
+      "kind": "medicine",
+      "ru": "Фроватриптан",
+      "en": "Frovatriptan"
+    },
+    {
+      "id": "medicine:ganciclovir",
+      "kind": "medicine",
+      "ru": "Ганцикловир",
+      "en": "Ganciclovir"
+    },
+    {
+      "id": "medicine:gefitinib",
+      "kind": "medicine",
+      "ru": "Гефитиниб",
+      "en": "Gefitinib"
+    },
+    {
+      "id": "medicine:gemfibrozil",
+      "kind": "medicine",
+      "ru": "Гемфиброзил",
+      "en": "Gemfibrozil"
+    },
+    {
+      "id": "medicine:gemifloxacin",
+      "kind": "medicine",
+      "ru": "Гемифлоксацин",
+      "en": "Gemifloxacin"
+    },
+    {
+      "id": "medicine:granisetron",
+      "kind": "medicine",
+      "ru": "Гранисетрон",
+      "en": "Granisetron"
+    },
+    {
+      "id": "medicine:griseofulvin",
+      "kind": "medicine",
+      "ru": "Гризеофульвин",
+      "en": "Griseofulvin"
+    },
+    {
+      "id": "medicine:guaifenesin",
+      "kind": "medicine",
+      "ru": "Гвайфенезин",
+      "en": "Guaifenesin"
+    },
+    {
+      "id": "medicine:hydroxyzine",
+      "kind": "medicine",
+      "ru": "Гидроксизин",
+      "en": "Hydroxyzine"
+    },
+    {
+      "id": "medicine:ibandronate",
+      "kind": "medicine",
+      "ru": "Ибандронат",
+      "en": "Ibandronate"
+    },
+    {
+      "id": "medicine:ibrutinib",
+      "kind": "medicine",
+      "ru": "Ибрутиниб",
+      "en": "Ibrutinib"
+    },
+    {
+      "id": "medicine:imatinib",
+      "kind": "medicine",
+      "ru": "Иматиниб",
+      "en": "Imatinib"
+    },
+    {
+      "id": "medicine:imipramine",
+      "kind": "medicine",
+      "ru": "Имипрамин",
+      "en": "Imipramine"
+    },
+    {
+      "id": "medicine:indinavir",
+      "kind": "medicine",
+      "ru": "Индинавир",
+      "en": "Indinavir"
+    },
+    {
+      "id": "medicine:isradipine",
+      "kind": "medicine",
+      "ru": "Исрадипин",
+      "en": "Isradipine"
+    },
+    {
+      "id": "medicine:ivacaftor",
+      "kind": "medicine",
+      "ru": "Ивакафтор",
+      "en": "Ivacaftor"
+    },
+    {
+      "id": "medicine:ivermectin",
+      "kind": "medicine",
+      "ru": "Ивермектин",
+      "en": "Ivermectin"
+    },
+    {
+      "id": "medicine:ketoprofen",
+      "kind": "medicine",
+      "ru": "Кетопрофен",
+      "en": "Ketoprofen"
+    },
+    {
+      "id": "medicine:ketorolac",
+      "kind": "medicine",
+      "ru": "Кеторолак",
+      "en": "Ketorolac"
+    },
+    {
+      "id": "medicine:labetalol",
+      "kind": "medicine",
+      "ru": "Лабеталол",
+      "en": "Labetalol"
+    },
+    {
+      "id": "medicine:lamivudine",
+      "kind": "medicine",
+      "ru": "Ламивудин",
+      "en": "Lamivudine"
+    },
+    {
+      "id": "medicine:lapatinib",
+      "kind": "medicine",
+      "ru": "Лапатиниб",
+      "en": "Lapatinib"
+    },
+    {
+      "id": "medicine:lenalidomide",
+      "kind": "medicine",
+      "ru": "Леналидомид",
+      "en": "Lenalidomide"
+    },
+    {
+      "id": "medicine:letermovir",
+      "kind": "medicine",
+      "ru": "Летермовир",
+      "en": "Letermovir"
+    },
+    {
+      "id": "medicine:leucovorin",
+      "kind": "medicine",
+      "ru": "Лейковорин",
+      "en": "Leucovorin"
+    },
+    {
+      "id": "medicine:levocetirizine",
+      "kind": "medicine",
+      "ru": "Левоцетиризин",
+      "en": "Levocetirizine"
+    },
+    {
+      "id": "medicine:levonorgestrel",
+      "kind": "medicine",
+      "ru": "Левоноргестрел",
+      "en": "Levonorgestrel"
+    },
+    {
+      "id": "medicine:linaclotide",
+      "kind": "medicine",
+      "ru": "Линаклотид",
+      "en": "Linaclotide"
+    },
+    {
+      "id": "medicine:linezolid",
+      "kind": "medicine",
+      "ru": "Линезолид",
+      "en": "Linezolid"
+    },
+    {
+      "id": "medicine:lovastatin",
+      "kind": "medicine",
+      "ru": "Ловастатин",
+      "en": "Lovastatin"
+    },
+    {
+      "id": "medicine:lubiprostone",
+      "kind": "medicine",
+      "ru": "Лубипростон",
+      "en": "Lubiprostone"
+    },
+    {
+      "id": "medicine:macitentan",
+      "kind": "medicine",
+      "ru": "Мацитентан",
+      "en": "Macitentan"
+    },
+    {
+      "id": "medicine:mefloquine",
+      "kind": "medicine",
+      "ru": "Мефлохин",
+      "en": "Mefloquine"
+    },
+    {
+      "id": "medicine:mercaptopurine",
+      "kind": "medicine",
+      "ru": "Меркаптопурин",
+      "en": "Mercaptopurine"
+    },
+    {
+      "id": "medicine:methenamine",
+      "kind": "medicine",
+      "ru": "Метенамин",
+      "en": "Methenamine"
+    },
+    {
+      "id": "medicine:methocarbamol",
+      "kind": "medicine",
+      "ru": "Метокарбамол",
+      "en": "Methocarbamol"
+    },
+    {
+      "id": "medicine:methyldopa",
+      "kind": "medicine",
+      "ru": "Метилдопа",
+      "en": "Methyldopa"
+    },
+    {
+      "id": "medicine:methylprednisolone",
+      "kind": "medicine",
+      "ru": "Метилпреднизолон",
+      "en": "Methylprednisolone"
+    },
+    {
+      "id": "medicine:metolazone",
+      "kind": "medicine",
+      "ru": "Метолазон",
+      "en": "Metolazone"
+    },
+    {
+      "id": "medicine:mexiletine",
+      "kind": "medicine",
+      "ru": "Мексилетин",
+      "en": "Mexiletine"
+    },
+    {
+      "id": "medicine:midodrine",
+      "kind": "medicine",
+      "ru": "Мидодрин",
+      "en": "Midodrine"
+    },
+    {
+      "id": "medicine:miglitol",
+      "kind": "medicine",
+      "ru": "Миглитол",
+      "en": "Miglitol"
+    },
+    {
+      "id": "medicine:milnacipran",
+      "kind": "medicine",
+      "ru": "Милнаципран",
+      "en": "Milnacipran"
+    },
+    {
+      "id": "medicine:minoxidil",
+      "kind": "medicine",
+      "ru": "Миноксидил",
+      "en": "Minoxidil"
+    },
+    {
+      "id": "medicine:moxidectin",
+      "kind": "medicine",
+      "ru": "Моксидектин",
+      "en": "Moxidectin"
+    },
+    {
+      "id": "medicine:mycophenolate",
+      "kind": "medicine",
+      "ru": "Микофенолат",
+      "en": "Mycophenolate"
+    },
+    {
+      "id": "medicine:nabumetone",
+      "kind": "medicine",
+      "ru": "Набуметон",
+      "en": "Nabumetone"
+    },
+    {
+      "id": "medicine:naratriptan",
+      "kind": "medicine",
+      "ru": "Наратриптан",
+      "en": "Naratriptan"
+    },
+    {
+      "id": "medicine:nateglinide",
+      "kind": "medicine",
+      "ru": "Натеглинид",
+      "en": "Nateglinide"
+    },
+    {
+      "id": "medicine:nevirapine",
+      "kind": "medicine",
+      "ru": "Невирапин",
+      "en": "Nevirapine"
+    },
+    {
+      "id": "medicine:nicardipine",
+      "kind": "medicine",
+      "ru": "Никардипин",
+      "en": "Nicardipine"
+    },
+    {
+      "id": "medicine:nimodipine",
+      "kind": "medicine",
+      "ru": "Нимодипин",
+      "en": "Nimodipine"
+    },
+    {
+      "id": "medicine:nintedanib",
+      "kind": "medicine",
+      "ru": "Нинтеданиб",
+      "en": "Nintedanib"
+    },
+    {
+      "id": "medicine:nizatidine",
+      "kind": "medicine",
+      "ru": "Низатидин",
+      "en": "Nizatidine"
+    },
+    {
+      "id": "medicine:ofloxacin",
+      "kind": "medicine",
+      "ru": "Офлоксацин",
+      "en": "Ofloxacin"
+    },
+    {
+      "id": "medicine:olmesartan",
+      "kind": "medicine",
+      "ru": "Олмесартан",
+      "en": "Olmesartan"
+    },
+    {
+      "id": "medicine:ondansetron",
+      "kind": "medicine",
+      "ru": "Ондансетрон",
+      "en": "Ondansetron"
+    },
+    {
+      "id": "medicine:opicapone",
+      "kind": "medicine",
+      "ru": "Опикапон",
+      "en": "Opicapone"
+    },
+    {
+      "id": "medicine:palbociclib",
+      "kind": "medicine",
+      "ru": "Палбоциклиб",
+      "en": "Palbociclib"
+    },
+    {
+      "id": "medicine:papaverine",
+      "kind": "medicine",
+      "ru": "Папаверин",
+      "en": "Papaverine"
+    },
+    {
+      "id": "medicine:pentoxifylline",
+      "kind": "medicine",
+      "ru": "Пентоксифиллин",
+      "en": "Pentoxifylline"
+    },
+    {
+      "id": "medicine:perampanel",
+      "kind": "medicine",
+      "ru": "Перампанел",
+      "en": "Perampanel"
+    },
+    {
+      "id": "medicine:pilocarpine",
+      "kind": "medicine",
+      "ru": "Пилокарпин",
+      "en": "Pilocarpine"
+    },
+    {
+      "id": "medicine:pindolol",
+      "kind": "medicine",
+      "ru": "Пиндолол",
+      "en": "Pindolol"
+    },
+    {
+      "id": "medicine:pirfenidone",
+      "kind": "medicine",
+      "ru": "Пирфенидон",
+      "en": "Pirfenidone"
+    },
+    {
+      "id": "medicine:piroxicam",
+      "kind": "medicine",
+      "ru": "Пироксикам",
+      "en": "Piroxicam"
+    },
+    {
+      "id": "medicine:pitavastatin",
+      "kind": "medicine",
+      "ru": "Питавастатин",
+      "en": "Pitavastatin"
+    },
+    {
+      "id": "medicine:posaconazole",
+      "kind": "medicine",
+      "ru": "Позаконазол",
+      "en": "Posaconazole"
+    },
+    {
+      "id": "medicine:prasugrel",
+      "kind": "medicine",
+      "ru": "Прасугрел",
+      "en": "Prasugrel"
+    },
+    {
+      "id": "medicine:praziquantel",
+      "kind": "medicine",
+      "ru": "Празиквантел",
+      "en": "Praziquantel"
+    },
+    {
+      "id": "medicine:prednisone",
+      "kind": "medicine",
+      "ru": "Преднизон",
+      "en": "Prednisone"
+    },
+    {
+      "id": "medicine:primidone",
+      "kind": "medicine",
+      "ru": "Примидон",
+      "en": "Primidone"
+    },
+    {
+      "id": "medicine:propafenone",
+      "kind": "medicine",
+      "ru": "Пропафенон",
+      "en": "Propafenone"
+    },
+    {
+      "id": "medicine:prucalopride",
+      "kind": "medicine",
+      "ru": "Прукалоприд",
+      "en": "Prucalopride"
+    },
+    {
+      "id": "medicine:pyrantel",
+      "kind": "medicine",
+      "ru": "Пирантел",
+      "en": "Pyrantel"
+    },
+    {
+      "id": "medicine:pyrazinamide",
+      "kind": "medicine",
+      "ru": "Пиразинамид",
+      "en": "Pyrazinamide"
+    },
+    {
+      "id": "medicine:pyridostigmine",
+      "kind": "medicine",
+      "ru": "Пиридостигмин",
+      "en": "Pyridostigmine"
+    },
+    {
+      "id": "medicine:pyridoxine",
+      "kind": "medicine",
+      "ru": "Пиридоксин",
+      "en": "Pyridoxine"
+    },
+    {
+      "id": "medicine:rabeprazole",
+      "kind": "medicine",
+      "ru": "Рабепразол",
+      "en": "Rabeprazole"
+    },
+    {
+      "id": "medicine:raltegravir",
+      "kind": "medicine",
+      "ru": "Ралтегравир",
+      "en": "Raltegravir"
+    },
+    {
+      "id": "medicine:ribavirin",
+      "kind": "medicine",
+      "ru": "Рибавирин",
+      "en": "Ribavirin"
+    },
+    {
+      "id": "medicine:rifapentine",
+      "kind": "medicine",
+      "ru": "Рифапентин",
+      "en": "Rifapentine"
+    },
+    {
+      "id": "medicine:rifaximin",
+      "kind": "medicine",
+      "ru": "Рифаксимин",
+      "en": "Rifaximin"
+    },
+    {
+      "id": "medicine:rilpivirine",
+      "kind": "medicine",
+      "ru": "Рилпивирин",
+      "en": "Rilpivirine"
+    },
+    {
+      "id": "medicine:riluzole",
+      "kind": "medicine",
+      "ru": "Рилузол",
+      "en": "Riluzole"
+    },
+    {
+      "id": "medicine:rimantadine",
+      "kind": "medicine",
+      "ru": "Римантадин",
+      "en": "Rimantadine"
+    },
+    {
+      "id": "medicine:risedronate",
+      "kind": "medicine",
+      "ru": "Ризедронат",
+      "en": "Risedronate"
+    },
+    {
+      "id": "medicine:ritonavir",
+      "kind": "medicine",
+      "ru": "Ритонавир",
+      "en": "Ritonavir"
+    },
+    {
+      "id": "medicine:roflumilast",
+      "kind": "medicine",
+      "ru": "Рофлумиласт",
+      "en": "Roflumilast"
+    },
+    {
+      "id": "medicine:rosiglitazone",
+      "kind": "medicine",
+      "ru": "Росиглитазон",
+      "en": "Rosiglitazone"
+    },
+    {
+      "id": "medicine:rufinamide",
+      "kind": "medicine",
+      "ru": "Руфинамид",
+      "en": "Rufinamide"
+    },
+    {
+      "id": "medicine:saxagliptin",
+      "kind": "medicine",
+      "ru": "Саксаглиптин",
+      "en": "Saxagliptin"
+    },
+    {
+      "id": "medicine:selegiline",
+      "kind": "medicine",
+      "ru": "Селегилин",
+      "en": "Selegiline"
+    },
+    {
+      "id": "medicine:sevelamer",
+      "kind": "medicine",
+      "ru": "Севеламер",
+      "en": "Sevelamer"
+    },
+    {
+      "id": "medicine:sirolimus",
+      "kind": "medicine",
+      "ru": "Сиролимус",
+      "en": "Sirolimus"
+    },
+    {
+      "id": "medicine:sofosbuvir",
+      "kind": "medicine",
+      "ru": "Софосбувир",
+      "en": "Sofosbuvir"
+    },
+    {
+      "id": "medicine:sucralfate",
+      "kind": "medicine",
+      "ru": "Сукральфат",
+      "en": "Sucralfate"
+    },
+    {
+      "id": "medicine:sulindac",
+      "kind": "medicine",
+      "ru": "Сулиндак",
+      "en": "Sulindac"
+    },
+    {
+      "id": "medicine:tacrolimus",
+      "kind": "medicine",
+      "ru": "Такролимус",
+      "en": "Tacrolimus"
+    },
+    {
+      "id": "medicine:telmisartan",
+      "kind": "medicine",
+      "ru": "Телмисартан",
+      "en": "Telmisartan"
+    },
+    {
+      "id": "medicine:tetracycline",
+      "kind": "medicine",
+      "ru": "Тетрациклин",
+      "en": "Tetracycline"
+    },
+    {
+      "id": "medicine:tiagabine",
+      "kind": "medicine",
+      "ru": "Тиагабин",
+      "en": "Tiagabine"
+    },
+    {
+      "id": "medicine:tinidazole",
+      "kind": "medicine",
+      "ru": "Тинидазол",
+      "en": "Tinidazole"
+    },
+    {
+      "id": "medicine:tofacitinib",
+      "kind": "medicine",
+      "ru": "Тофацитиниб",
+      "en": "Tofacitinib"
+    },
+    {
+      "id": "medicine:torsemide",
+      "kind": "medicine",
+      "ru": "Торасемид",
+      "en": "Torsemide"
+    },
+    {
+      "id": "medicine:trandolapril",
+      "kind": "medicine",
+      "ru": "Трандолаприл",
+      "en": "Trandolapril"
+    },
+    {
+      "id": "medicine:triamcinolone",
+      "kind": "medicine",
+      "ru": "Триамцинолон",
+      "en": "Triamcinolone"
+    },
+    {
+      "id": "medicine:triamterene",
+      "kind": "medicine",
+      "ru": "Триамтерен",
+      "en": "Triamterene"
+    },
+    {
+      "id": "medicine:triclabendazole",
+      "kind": "medicine",
+      "ru": "Триклабендазол",
+      "en": "Triclabendazole"
+    },
+    {
+      "id": "medicine:trospium",
+      "kind": "medicine",
+      "ru": "Троспия хлорид",
+      "en": "Trospium"
+    },
+    {
+      "id": "medicine:valganciclovir",
+      "kind": "medicine",
+      "ru": "Валганцикловир",
+      "en": "Valganciclovir"
+    },
+    {
+      "id": "medicine:vancomycin",
+      "kind": "medicine",
+      "ru": "Ванкомицин",
+      "en": "Vancomycin"
+    },
+    {
+      "id": "medicine:vericiguat",
+      "kind": "medicine",
+      "ru": "Верицигуат",
+      "en": "Vericiguat"
+    },
+    {
+      "id": "medicine:voriconazole",
+      "kind": "medicine",
+      "ru": "Вориконазол",
+      "en": "Voriconazole"
+    },
+    {
+      "id": "medicine:zafirlukast",
+      "kind": "medicine",
+      "ru": "Зафирлукаст",
+      "en": "Zafirlukast"
+    },
+    {
+      "id": "medicine:zidovudine",
+      "kind": "medicine",
+      "ru": "Зидовудин",
+      "en": "Zidovudine"
+    },
+    {
+      "id": "medicine:zileuton",
+      "kind": "medicine",
+      "ru": "Зилеутон",
+      "en": "Zileuton"
+    }
+  ]
+}

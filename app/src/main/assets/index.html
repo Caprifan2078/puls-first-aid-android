@@ -369,10 +369,56 @@ function renderLibraryStatus(){const ru=state.lang==="ru";const critical=PAGES.f
 function renderMediaCredits(){const ru=state.lang==="ru";return '<details class="panel secondary media-credits"><summary>'+(ru?"Авторы и лицензии медиа":"Media credits and licenses")+' · '+mediaCredits.length+'</summary><p class="minor">'+(ru?"Лицензии отдельных материалов сохраняются. Авторы не подтверждают и не рекламируют ПУЛЬС.":"Each media item retains its license. Creators do not endorse PULS.")+'</p><p class="minor">'+(ru?"Пиктограммы оснащения и памяток созданы для ПУЛЬС без сторонних изображений; не демонстрируют медицинскую технику.":"Equipment and reminder pictograms are original project artwork, not demonstrations of medical technique.")+'</p>'+mediaCredits.map(a=>'<div class="credit-item"><strong>'+esc(a.title)+'</strong><small>'+esc(a.author+" · "+a.license)+'</small><small>'+esc(a.modifications)+'</small><a class="link" href="'+esc(a.source)+'">'+(ru?"Оригинал":"Original")+'</a> <a class="link" href="'+esc(a.license_url)+'">'+(ru?"Лицензия":"License")+'</a></div>').join("")+'</details>'}
 function loadMediaCredits(){fetch("media/credits.json").then(r=>r.ok?r.json():null).then(data=>{if(!data||!Array.isArray(data.items))return;mediaCredits=data.items.filter(a=>a&&a.title&&a.author&&a.license&&typeof a.source==="string"&&a.source.startsWith("https://commons.wikimedia.org/wiki/File:")&&AID_MEDIA_LICENSES.has(a.license_url));if(location.hash==="#/more"&&!document.querySelector("#backup[open]"))route(true)}).catch(()=>{})}
 function renderArchivedMediaLinks(){const ru=state.lang==="ru";return '<details class="panel secondary archive-media"><summary>'+(ru?"Архив учебных материалов (онлайн)":"Archived educational materials (online)")+'</summary><p class="minor">'+(ru?"Восстановленные источники старой версии. Материалы не прошли независимую клиническую проверку; не используй их вместо текущих инструкций или указаний диспетчера. Видео открываются в браузере и не входят в офлайн-базу.":"Recovered sources from the older version. These materials have not been independently clinically reviewed; do not use them instead of current instructions or dispatcher advice. Videos open in the browser and are not part of the offline library.")+'</p><a class="tile" href="https://commons.wikimedia.org/wiki/File:CPR.webm"><div><strong>'+(ru?"Архивный ролик о СЛР":"Archived CPR video")+'</strong><p class="minor">Simpleshow Japan · CC BY-SA 4.0</p></div></a><a class="tile" href="https://commons.wikimedia.org/wiki/File:Auvi-Q_Injection.webm"><div><strong>'+(ru?"Архивный ролик об автоинъекторе":"Archived autoinjector video")+'</strong><p class="minor">Z22 · CC BY-SA 4.0</p></div></a></details>'}
+let reviewMedia=null,reviewLoading=false,reviewFailed=false,reviewOffset=0;
+function loadReviewMedia(){
+ if(reviewLoading||reviewMedia||reviewFailed)return;
+ reviewLoading=true;
+ fetch("media/review/manifest.json").then(r=>{if(!r.ok)throw Error("missing");return r.json()}).then(data=>{
+ if(data.schema!==1||!Array.isArray(data.review_only))throw Error("invalid");
+ reviewMedia=data.review_only.filter(r=>r&&/^[a-f0-9]{40}\.(jpg|mp4)$/.test(r.file)&&r.clinical_approval===false&&r.rights_review==="pending"&&r.visual_review==="pending"&&typeof r.author==="string"&&typeof r.license==="string"&&typeof r.source==="string"&&r.source.startsWith("https://commons.wikimedia.org/wiki/File:"));
+ }).catch(()=>{reviewFailed=true}).finally(()=>{reviewLoading=false;if(["#/review","#/more"].includes(location.hash))route(true)})
+}
+function reviewLink(){
+ if(!reviewMedia){return ""}
+ if(!reviewMedia.length)return "";
+ return '<a class="tile" href="#/review"><span class="tileicon">▧</span><span style="flex:1"><span class="name">'+(state.lang==="ru"?"Офлайн-медиагалерея · QA":"Offline media gallery · QA")+'</span><span class="sub">'+reviewMedia.length+' '+(state.lang==="ru"?"материалов для проверки":"review candidates")+'</span></span><span class="arrow">›</span></a>'
+}
+function reviewRows(q="",kind="",group=""){
+ const ru=state.lang==="ru",terms=q.trim().toLowerCase().replaceAll("ё","е").split(/\s+/).filter(Boolean);
+ return (reviewMedia||[]).filter(r=>(!kind||r.file.endsWith(kind==="video"?".mp4":".jpg"))&&(!group||(r.labels||[]).some(x=>x.group===group))&&terms.every(term=>[r.title,r.author,...(r.labels||[]).flatMap(x=>[x.ru,x.en])].join(" ").toLowerCase().replaceAll("ё","е").includes(term)))
+}
+function reviewCards(rows){
+ const ru=state.lang==="ru";
+ return rows.slice(reviewOffset,reviewOffset+12).map(r=>{
+ const path="media/review/"+r.file;
+ const media=r.file.endsWith(".mp4")?'<video controls playsinline preload="none" style="width:100%;max-height:280px" src="'+path+'"></video>':'<img loading="lazy" style="width:100%;max-height:280px;object-fit:contain" src="'+path+'" alt="'+esc(r.title)+'">';
+ const labels=(r.labels||[]).map(x=>ru?x.ru:x.en).join(" · ");
+ return '<article class="panel secondary review-card"><strong>'+esc(r.title)+'</strong><p class="minor">'+esc(labels)+'</p>'+media+'<p class="minor">'+esc(r.author)+' · '+esc(r.license)+'</p><p class="minor">'+(ru?"Изменения: ":"Changes: ")+esc(r.modifications)+'</p><details><summary>'+(ru?"Источник и права":"Source and rights")+'</summary><p>'+esc(r.credit_line)+' '+esc(r.copyright_notice)+' '+esc(r.restrictions_notice)+'</p><p>'+esc(r.license_url)+'</p><a class="link" href="'+esc(r.source)+'">'+(ru?"Оригинал (интернет)":"Original (online)")+'</a></details></article>'
+ }).join("")
+}
+function updateReviewGallery(reset=true){
+ const list=$("#review-results");if(!list)return;
+ if(reset)reviewOffset=0;
+ const rows=reviewRows($("#review-q").value,$("#review-kind").value,$("#review-group").value);
+ pauseAidVideos(list);list.innerHTML=reviewCards(rows);
+ $("#review-count").textContent=(state.lang==="ru"?"Найдено: ":"Found: ")+rows.length+(rows.length?" · "+(reviewOffset+1)+"–"+Math.min(reviewOffset+12,rows.length):"");
+ $("#review-prev").hidden=reviewOffset===0;
+ $("#review-next").hidden=rows.length<=reviewOffset+12;
+}
+function renderReview(){
+ const ru=state.lang==="ru";reviewOffset=0;loadReviewMedia();
+ const header=title(ru?"Медиагалерея · QA":"Media gallery · QA",ru?"Локальные материалы для проверки":"Local review candidates");
+ const warning='<div class="avoid"><b>'+(ru?"Не проверено врачом. Не инструкция.":"Not clinically reviewed. Not instructions.")+'</b><p>'+(ru?"Возможны неправильные или устаревшие действия. Не используй эти материалы для оказания помощи, диагностики или выбора лекарства.":"May contain incorrect or outdated actions. Do not use for first aid, diagnosis or medication selection.")+'</p></div>';
+ if(!reviewMedia)return header+warning+'<p>'+(reviewFailed?(ru?"Медиапакет не установлен.":"Media pack not installed."):(ru?"Загрузка локального списка…":"Loading local list…"))+'</p>';
+ const opts=(pairs)=>pairs.map(x=>'<option value="'+x[0]+'">'+x[ru?1:2]+'</option>').join("");
+ return header+warning+'<p>'+reviewMedia.filter(r=>r.file.endsWith(".jpg")).length+' '+(ru?"фото":"photos")+' · '+reviewMedia.filter(r=>r.file.endsWith(".mp4")).length+' '+(ru?"видео":"videos")+'</p><label for="review-q">'+(ru?"Поиск":"Search")+'</label><input id="review-q" class="input" style="width:100%" placeholder="'+(ru?"Тема, название, автор":"Topic, title, author")+'"><div style="display:flex;flex-wrap:wrap;gap:8px;margin:12px 0"><select id="review-kind" aria-label="'+(ru?"Формат":"Format")+'">'+opts([["","Все форматы","All formats"],["photo","Фото","Photos"],["video","Видео","Videos"]])+'</select><select id="review-group" aria-label="'+(ru?"Раздел":"Group")+'">'+opts([["","Все разделы","All groups"],["guide","Инструкции","Guides"],["medicine","Лекарства","Medicines"],["kit","Аптечки","Kits"],["equipment","Оснащение","Equipment"]])+'</select></div><p id="review-count" role="status">'+(ru?"Найдено: ":"Found: ")+reviewMedia.length+'</p><div id="review-results">'+reviewCards(reviewMedia)+'</div><div style="display:flex;justify-content:space-between;gap:10px"><button id="review-prev" class="topbtn" hidden>'+(ru?"Назад 12":"Previous 12")+'</button><button id="review-next" class="topbtn" '+(reviewMedia.length<=12?"hidden":"")+'>'+(ru?"Следующие 12":"Next 12")+'</button></div>'
+}
+
 function notifyEmergencyAwake(){const active=state.keepAwake&&document.body.classList.contains("emergency-mode")&&!document.hidden;try{window.PulsDisplay?.postMessage(active?"on":"off")}catch(_){}}
 function refreshLibraryStatus(){const section=document.querySelector(".library-status");if(!section)return;const open=section.open;const holder=document.createElement("div");holder.innerHTML=renderLibraryStatus();const next=holder.firstElementChild;next.open=open;section.replaceWith(next)}
+
 function renderMore(){
- return title(t("more"),t("moretxt"))+
+ return title(t("more"),t("moretxt"))+reviewLink()+
  '<details class="panel secondary" open><summary>'+esc(t("settings"))+'</summary>'+
  '<div class="settingline"><div><label for="num">'+esc(t("number"))+'</label><span>'+esc(t("numdesc"))+'</span></div><input id="num" class="input" inputmode="tel" maxlength="9" value="'+esc(state.num)+'"></div>'+
  '<div class="settingline"><div><label>'+esc(t("lang"))+'</label></div><button class="mini" data-action="lang">'+(state.lang==="ru"?"Русский ↔ English":"English ↔ Русский")+'</button></div>'+
@@ -440,7 +486,7 @@ function renderTopic(p){
  '<p class="foot">'+esc(t("source"))+' '+esc(t("review"))+'</p>';
 }
 
-function drawNav(route){const current=route==="favorites"?"more":route==="topic"?(document.body.classList.contains("emergency-mode")?"sos":"catalog"):route;$("#nav").innerHTML=NAV.map(n=>'<a href="#/'+n[0]+'" class="navitem '+(current===n[0]?"active":"")+' '+(n[0]==="sos"?"sos":"")+'" '+(current===n[0]?'aria-current="page"':'')+'><span aria-hidden="true">'+uiIcon(n[0])+'</span><span>'+esc(n[state.lang==="ru"?2:3])+'</span></a>').join("")}
+function drawNav(route){const current=(route==="favorites"||route==="review")?"more":route==="topic"?(document.body.classList.contains("emergency-mode")?"sos":"catalog"):route;$("#nav").innerHTML=NAV.map(n=>'<a href="#/'+n[0]+'" class="navitem '+(current===n[0]?"active":"")+' '+(n[0]==="sos"?"sos":"")+'" '+(current===n[0]?'aria-current="page"':'')+'><span aria-hidden="true">'+uiIcon(n[0])+'</span><span>'+esc(n[state.lang==="ru"?2:3])+'</span></a>').join("")}
 let renderedHash="",renderedEntry=0,navSequence=0;
 const navSnapshots=new Map();
 if("scrollRestoration" in history)history.scrollRestoration="manual";
@@ -449,12 +495,12 @@ function rememberNav(y){if(!renderedEntry)return;navSnapshots.set(renderedEntry,
 function enterNav(hash,same,preserve,y){if(same)return null;rememberNav(y);const existing=history.state?.pulsEntry;const snapshot=navSnapshots.get(existing);if(snapshot&&snapshot.hash===hash&&existing!==renderedEntry){renderedEntry=existing;state.q=snapshot.q;catalogOffset=snapshot.catalogOffset??0;sosQuery=snapshot.sos??"";return snapshot}catalogOffset=0;if(hash==="#/sos"&&!preserve)sosQuery="";const back=renderedEntry>0&&!preserve;const previous=history.state?.pulsBack===true;renderedEntry=preserve&&renderedEntry?renderedEntry:++navSequence;history.replaceState({pulsEntry:renderedEntry,pulsBack:preserve?previous||renderedEntry>1:back},"",hash);return null}
 function currentRouteKey(){return location.hash||"#/home"}
 function restoreRouteScroll(y){window.scrollTo({top:y,behavior:"instant"});}
-function route(preserveScroll=false){const nextHash=currentRouteKey(),same=renderedHash===nextHash,oldY=window.scrollY;const keep=preserveScroll||same;const oldDetails=keep&&same?navDetails():[];const restore=enterNav(nextHash,same,preserveScroll,oldY);let parts=location.hash.replace(/^#\/?/,"").split("/");let page=parts[0]||"home";let content="";let topic=page==="topic"?PAGES.find(p=>p.id===safeTopicId(parts[1])):null;if(page==="topic"&&!topic)page="catalog";document.body.classList.toggle("emergency-mode",page==="sos"||(page==="topic"&&topic?.level==="critical"));notifyEmergencyAwake();document.documentElement.lang=state.lang;document.body.classList.toggle("light",state.light);document.documentElement.style.fontSize=state.large?"18px":"16px";document.body.classList.toggle("large",state.large);document.body.classList.toggle("hicontrast",state.hicontrast);if(page==="home")state.cat="all";if(page==="catalog")state.cat=catalogCategory(parts[1]);if(page==="topic"&&topic)markRecent(topic.id);$("#langbtn").textContent=state.lang==="ru"?"EN":"RU";let navpage=page;if(page==="topic")content=renderTopic(topic);else if(page==="home")content=renderHome();else if(page==="sos")content=renderSos();else if(page==="catalog")content=renderCatalog();else if(page==="kits")content=renderKits();else if(page==="more")content=renderMore();else if(page==="favorites")content=renderFavorites();else{location.hash="#/home";return}pauseAidVideos($("#app"));$("#app").innerHTML=content;drawNav(navpage);renderedHash=nextHash;const disclosure=restore?.details||(keep&&same?oldDetails:[]);document.querySelectorAll("#app details").forEach((d,i)=>{if(i<disclosure.length)d.open=disclosure[i]});restoreRouteScroll(restore?restore.y:keep?oldY:0);}
+function route(preserveScroll=false){const nextHash=currentRouteKey(),same=renderedHash===nextHash,oldY=window.scrollY;const keep=preserveScroll||same;const oldDetails=keep&&same?navDetails():[];const restore=enterNav(nextHash,same,preserveScroll,oldY);let parts=location.hash.replace(/^#\/?/,"").split("/");let page=parts[0]||"home";let content="";let topic=page==="topic"?PAGES.find(p=>p.id===safeTopicId(parts[1])):null;if(page==="topic"&&!topic)page="catalog";document.body.classList.toggle("emergency-mode",page==="sos"||(page==="topic"&&topic?.level==="critical"));notifyEmergencyAwake();document.documentElement.lang=state.lang;document.body.classList.toggle("light",state.light);document.documentElement.style.fontSize=state.large?"18px":"16px";document.body.classList.toggle("large",state.large);document.body.classList.toggle("hicontrast",state.hicontrast);if(page==="home")state.cat="all";if(page==="catalog")state.cat=catalogCategory(parts[1]);if(page==="topic"&&topic)markRecent(topic.id);$("#langbtn").textContent=state.lang==="ru"?"EN":"RU";let navpage=page;if(page==="topic")content=renderTopic(topic);else if(page==="home")content=renderHome();else if(page==="sos")content=renderSos();else if(page==="catalog")content=renderCatalog();else if(page==="kits")content=renderKits();else if(page==="more")content=renderMore();else if(page==="favorites")content=renderFavorites();else if(page==="review")content=renderReview();else{location.hash="#/home";return}pauseAidVideos($("#app"));$("#app").innerHTML=content;drawNav(navpage);renderedHash=nextHash;if(page==="more")loadReviewMedia();const disclosure=restore?.details||(keep&&same?oldDetails:[]);document.querySelectorAll("#app details").forEach((d,i)=>{if(i<disclosure.length)d.open=disclosure[i]});restoreRouteScroll(restore?restore.y:keep?oldY:0);}
 function liveSearch(){const q=$("#search");if(!q)return;state.q=q.value;let here=location.hash.split("/")[1];if(here==="home"){state.cat="all";const active=!!state.q.trim();$("#home-browse").hidden=active;$("#home-results").hidden=!active;$("#home-results").innerHTML=active?homeSearchResults():"";return}if(here==="catalog"){catalogOffset=0;let arr=rankedTopics();$("#results").innerHTML=catalogCards(arr);$("#resultcount").textContent=arr.length+" "+t("count")}}
 document.addEventListener("error",ev=>{if(ev.target.matches?.(".medicine-row img"))ev.target.remove();if(ev.target.matches?.(".kit-photo img"))ev.target.closest(".kit-photo")?.remove();if(ev.target.matches?.(".aid-figure img,.aid-figure video")){const section=ev.target.closest(".aid-media,.step-extra-media");ev.target.closest(".aid-figure")?.remove();if(section&&!section.querySelector(".aid-figure"))section.remove();else if(section?.matches(".step-extra-media")){const summary=section.querySelector("summary");if(summary)summary.textContent=(state.lang==="ru"?"Ещё фото и видео":"More photos and videos")+" · "+section.querySelectorAll(".aid-figure").length}syncMediaJump()}},true);
-function pauseAidVideos(root=document){if(root)root.querySelectorAll(".aid-media video,.step-media video").forEach(v=>v.pause())}
+function pauseAidVideos(root=document){if(root)root.querySelectorAll(".aid-media video,.step-media video,.review-card video").forEach(v=>v.pause())}
 document.addEventListener("toggle",ev=>{if(ev.target.matches?.(".aid-media,.step-extra-media")&&!ev.target.open)ev.target.querySelectorAll("video").forEach(v=>v.pause())},true);
-document.addEventListener("play",ev=>{if(ev.target.matches?.(".aid-media video,.step-media video"))document.querySelectorAll(".aid-media video,.step-media video").forEach(v=>{if(v!==ev.target)v.pause()})},true);
+document.addEventListener("play",ev=>{if(ev.target.matches?.(".aid-media video,.step-media video,.review-card video"))document.querySelectorAll(".aid-media video,.step-media video,.review-card video").forEach(v=>{if(v!==ev.target)v.pause()})},true);
 document.addEventListener("visibilitychange",()=>{if(document.hidden)pauseAidVideos();notifyEmergencyAwake()});
 window.addEventListener("pagehide",()=>{pauseAidVideos();try{window.PulsDisplay?.postMessage("off")}catch(_){}});
 document.addEventListener("click",ev=>{if(!ev.target.closest('[data-action="clear-medicine-search"]'))return;const f=$("#medicine-search");if(f){f.value="";updateMedicineSearch("");f.focus({preventScroll:true})}});
@@ -503,5 +549,11 @@ document.addEventListener("click",ev=>{
  document.querySelectorAll("#sos-browse details[open]").forEach(d=>d.open=false);
  restoreRouteScroll(0);
 });
+document.addEventListener("input",e=>{if(e.target.id==="review-q")updateReviewGallery()});
+document.addEventListener("change",e=>{if(["review-kind","review-group"].includes(e.target.id))updateReviewGallery()});
+document.addEventListener("click",e=>{if(e.target.id==="review-next"||e.target.id==="review-prev"){reviewOffset=Math.max(0,reviewOffset+(e.target.id==="review-next"?12:-12));updateReviewGallery(false);$("#review-count")?.scrollIntoView({block:"start",behavior:"instant"})}});
+document.addEventListener("error",e=>{if(e.target.matches?.(".review-card img,.review-card video")){const p=document.createElement("p");p.textContent=state.lang==="ru"?"Файл не воспроизводится":"Media unavailable";e.target.replaceWith(p)}},true);
+
+
 window.addEventListener("hashchange",()=>route());if(!location.hash)history.replaceState(null,"","#/home");route();loadMedicineMedia();loadKitMedia();loadAidMedia();loadMediaCredits();
 </script><div id="puls-toast" class="puls-toast" role="status" aria-live="polite" hidden></div></body></html>

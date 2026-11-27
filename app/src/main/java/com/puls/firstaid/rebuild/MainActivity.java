@@ -80,7 +80,7 @@ public final class MainActivity extends Activity {
         if (!isAppPage(url)) return START_URL;
         String hash = Uri.parse(url).getEncodedFragment();
         if (hash == null || hash.isEmpty()) return START_URL;
-        return hash.matches("/(?:home|sos|more|favorites|kits(?:/medicines)?|catalog(?:/[a-z0-9-]+)?|topic/[a-z0-9-]+)")
+        return hash.matches("/(?:home|sos|more|favorites|review|kits(?:/medicines)?|catalog(?:/[a-z0-9-]+)?|topic/[a-z0-9-]+)")
                 ? START_URL + "#" + hash : START_URL;
     }
 
@@ -141,7 +141,7 @@ public final class MainActivity extends Activity {
                 String path = uri.getPath();
                 if ("https".equals(uri.getScheme()) && "appassets.androidplatform.net".equalsIgnoreCase(uri.getHost())
                         && (uri.getPort() == -1 || uri.getPort() == 443)
-                        && path != null && path.matches("/assets/media/firstaid/[a-z0-9-]+\\.mp4")) {
+                        && path != null && path.matches("/assets/media/(?:firstaid|review)/[a-z0-9-]+\\.mp4")) {
                     return serveLocalVideo(request, path.substring("/assets/".length()));
                 }
                 WebResourceResponse response = loader.shouldInterceptRequest(uri);
