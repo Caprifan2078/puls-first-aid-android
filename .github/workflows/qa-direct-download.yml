@@ -1,0 +1,48 @@
+name: PULS direct QA APK download
+on:
+  push:
+    branches: [qa/puls-direct-download-20261128]
+    paths: ['.github/workflows/qa-direct-download.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: puls-824-qa-direct-download
+  cancel-in-progress: false
+jobs:
+  publish-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 46056588045
+          name: PULS-8.24.0-Expanded-Media-APK-Tested
+          path: tested
+      - name: Verify exact original tested APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t apks < <(find tested -name '*.apk' -type f)
+          test "${#apks[@]}" -eq 1
+          mv "${apks[0]}" PULS-8.24.0-QA.apk
+          test "$(stat -c %s PULS-8.24.0-QA.apk)" -lt 2147483648
+          unzip -tq PULS-8.24.0-QA.apk
+          sha256sum PULS-8.24.0-QA.apk > SHA256SUMS.txt
+      - name: Publish explicitly marked QA prerelease with direct APK
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag=v8.24.0-qa
+          if gh release view "$tag" >/dev/null 2>&1; then
+            gh release view "$tag" --json isPrerelease,isDraft,tagName --jq '.isPrerelease and (.isDraft|not)' | grep -qx true
+            echo "Existing prerelease; refusing to overwrite its files."
+            exit 1
+          fi
+          gh release create "$tag" PULS-8.24.0-QA.apk SHA256SUMS.txt --target 9997c2854006548029932eb43632c2974993c8a5 --prerelease --latest=false --title "PULS 8.24.0 — QA only" --notes "Technical test build, Android 11/15 smoke tests passed. The offline review gallery contains 2203 unapproved candidate media files. Not a clinically validated medical resource. Do not use review media for first aid, diagnosis, or medication decisions. Exact previously tested APK; no rebuild."
+          gh release view "$tag" --json assets,url,isPrerelease
