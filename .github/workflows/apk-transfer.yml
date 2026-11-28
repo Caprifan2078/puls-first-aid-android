@@ -1,0 +1,60 @@
+name: PULS tested APK transfer parts
+on:
+  push:
+    branches: [qa/puls-apk-transfer-20261128]
+    paths: ['.github/workflows/apk-transfer.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  split:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: 46056588045
+          name: PULS-8.24.0-Expanded-Media-APK-Tested
+          path: tested
+      - name: Split original APK without rebuilding or changing bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t apks < <(find tested -type f -name '*.apk')
+          test "${#apks[@]}" -eq 1
+          mkdir parts
+          sha256sum "${apks[0]}" | awk '{print $1 "  PULS-8.24.0-QA.apk"}' > parts/SHA256SUMS
+          split -b 420m -d -a 2 "${apks[0]}" parts/PULS-8.24.0-QA.apk.part-
+          test "$(find parts -name '*.part-*' | wc -l)" -eq 4
+          cat parts/PULS-8.24.0-QA.apk.part-* | sha256sum | cut -d' ' -f1 | grep -Fx "$(cut -d' ' -f1 parts/SHA256SUMS)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PULS-transfer-00
+          path: parts/PULS-8.24.0-QA.apk.part-00
+          compression-level: 0
+          retention-days: 2
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PULS-transfer-01
+          path: parts/PULS-8.24.0-QA.apk.part-01
+          compression-level: 0
+          retention-days: 2
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PULS-transfer-02
+          path: parts/PULS-8.24.0-QA.apk.part-02
+          compression-level: 0
+          retention-days: 2
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PULS-transfer-03
+          path: parts/PULS-8.24.0-QA.apk.part-03
+          compression-level: 0
+          retention-days: 2
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PULS-transfer-checksum
+          path: parts/SHA256SUMS
+          retention-days: 2
